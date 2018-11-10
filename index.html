@@ -46,10 +46,10 @@
     background-color:#fff;
     border:4px solid #eee;
     border-radius:25px;
+    transition-duration:0.1s;
 }
 .card:hover{
     background-color:#eee;
-    transition:0.1s;
 }
 button:focus {
     outline:0;
@@ -118,6 +118,10 @@ button:focus {
         var c2A=0;
         var c2B=0;
         var c3C=0;
+        function size(idd)
+            {
+                document.getElementById(idd).style.transform="scale(1,1)";
+            }
         function zero()
         {
             a = 0;
@@ -143,7 +147,18 @@ button:focus {
             c2B=0;
             c3C=0;
             
-            document.getElementBy(varr).style.transform="scale(1,1)";
+            size("a1A");
+            size("a1B");
+            size("a2C");
+            size("a3A");
+            size("b1B");
+            size("b2C");
+            size("b3A");
+            size("b3B");
+            size("c1C");
+            size("c2A");
+            size("c2B");
+            size("c3C");
         }
         function show()
         {
@@ -169,9 +184,9 @@ button:focus {
             else if (A%3===0&&A>0)
             {show();}
             else if (B%3===0&&B>0)
-            {show(varr);}
+            {show();}
             else if (C%3===0&&C>0)
-            {show(varr);}
+            {show();}
         }
         document.getElementById("a1A").onclick = function()
         {
@@ -192,6 +207,69 @@ button:focus {
             if(a2C===0){
                 a++; n2++; C++;
                 score("a2C");
+            }
+        }
+        document.getElementById("a3A").onclick = function()
+        {
+            if(a3A===0){
+                a++; n3++; A++;
+                score("a3A");
+            }
+        }
+        document.getElementById("b1B").onclick = function()
+        {
+            if(b1B===0){
+                b++; n1++; B++;
+                score("b1B");
+            }
+        }
+        document.getElementById("b2C").onclick = function()
+        {
+            if(b2C===0){
+                b++; n2++; C++;
+                score("b2C");
+            }
+        }
+        document.getElementById("b3A").onclick = function()
+        {
+            if(b3A===0){
+                b++; n3++; A++;
+                score("b3A");
+            }
+        }
+        document.getElementById("b3B").onclick = function()
+        {
+            if(b3B===0){
+                b++; n3++; B++;
+                score("b3B");
+            }
+        }
+        document.getElementById("c1C").onclick = function()
+        {
+            if(a2C===0){
+                c++; n1++; C++;
+                score("c1C");
+            }
+        }
+        document.getElementById("c2A").onclick = function()
+        {
+            if(c2A===0){
+                c++; n2++; A++;
+                score("c2A");
+            }
+        }
+        document.getElementById("c2B").onclick = function()
+        {
+            if(c2B===0){
+                c++; n2++; B++;
+                score("c2B");
+            }
+        }
+        document.getElementById("c3C").onclick = function()
+        {
+            if(c3C===0){
+                c++; n3++; C++;
+                score("c3C");
             }
         }
         document.getElementById("reset").onclick = function reset()
