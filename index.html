@@ -164,7 +164,8 @@ button:focus {
         function show()
         {
             z++;
-            document.getElementById("z").innerHTML = z+" points";
+            if(z===1){document.getElementById("z").innerHTML = z+" point";}
+            else{document.getElementById("z").innerHTML = z+" points";}
             zero();
             }
         function score(varr)
