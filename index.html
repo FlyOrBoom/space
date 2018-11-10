@@ -49,11 +49,7 @@
 }
 .card:hover{
     background-color:#eee;
-    transition:0.2s;
-}
-.card:focus {
-    background-color:#ddd;
-    transition:0.2s;
+    transition:0.1s;
 }
 button:focus {
     outline:0;
@@ -127,23 +123,37 @@ button:focus {
             a = 0;
             b = 0;
             c = 0;
-            n1 = 0;
-            n2 = 0;
-            n3 = 0;
+            n1= 0;
+            n2= 0;
+            n3= 0;
             A = 0;
             B = 0;
             C = 0;
+            
+            a1A=0;
+            a1B=0;
+            a2C=0;
+            a3A=0;
+            b1B=0;
+            b2C=0;
+            b3A=0;
+            b3B=0;
+            c1C=0;
+            c2A=0;
+            c2B=0;
+            c3C=0;
+            
+            document.getElementBy(varr).style.transform="scale(1,1)";
         }
         function show()
         {
             z++;
             document.getElementById("z").innerHTML = z+" points";
-            alert("score!"+A+B+C);
-            alert(A%3+" "+B%3);
             zero();
             }
-        function score()
+        function score(varr)
         {
+            document.getElementById(varr).style.transform="scale(0.9,0.9)";
             if (a%3===0&&a>0)
             {show();}
             else if (b%3===0&&b>0)
@@ -159,24 +169,30 @@ button:focus {
             else if (A%3===0&&A>0)
             {show();}
             else if (B%3===0&&B>0)
-            {show();}
+            {show(varr);}
             else if (C%3===0&&C>0)
-            {show();}
+            {show(varr);}
         }
         document.getElementById("a1A").onclick = function()
         {
-                a++; n1++; A++; 
-                score();
+            if(a1A===0){
+                a++; n1++; A++; a1A++;
+                score("a1A");
+            }
         }
         document.getElementById("a1B").onclick = function()
         {
+            if(a1B===0){
                 a++; n1++; B++;
-                score();
+                score("a1B");
+            }
         }
         document.getElementById("a2C").onclick = function()
         {
+            if(a2C===0){
                 a++; n2++; C++;
-                score();
+                score("a2C");
+            }
         }
         document.getElementById("reset").onclick = function reset()
         {
