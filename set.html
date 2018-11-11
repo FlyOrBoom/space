@@ -15,6 +15,13 @@
                 font-size:15pt;
                 left:25px;
             }
+            #XYZt {
+                position:absolute;
+                top:0;
+                right:0;
+                fill:#eee;
+                cursor:pointer;
+            }
             #reset {
                 position:fixed;
                 display:block;
@@ -67,6 +74,14 @@
             <path d="M 55 12 h 10 v 20 h -10" fill="#444" />
             <path d="M 55 37 h 10 v 5 h -10" fill="#444" />
         </svg>
+        <a href="http://flyorboom.github.io/">
+            <svg id="XYZt" height="75" width="160">
+                <path d="M 0 0 h 20 v 60 l 60 80 l 60 -80 v -60 h 20 v 60 l -67.5 90 l 67.5 90 v 60 h -20 v -60 l -60 -80 l -60 80 v 60 h -20 v -60 l 67.5 -90 l -67.5 -90 v -60 Z
+                         M 180 0 h 20 v 60 l 60 80 l 60 -80 v -60 h 20 v 60 l -70 93.3333 v 150 h -20 v -150 l -70 -93.3333 z
+                         M 360 0 h 20 v 60 h 140 l -120 160 h 120 v 80 h -20 v -60 h -140 l 120 -160 h -120 z
+                         M 580 0 h 20 v 105 h 40 v 20 h -40 v 120 l 40 53.3333 h -20 l -40 -53.3333 v -120 h -40 v -20 h 40" transform="scale(0.25 0.25)"/>
+            </svg>
+        </a>
         <svg id="shadow" width=100% height="15">
             <defs>
                 <linearGradient id="a" x1=0% y1=0% x2=0% y2=100%>
@@ -170,7 +185,7 @@
 
             function yay() {
                 z++;
-                if (z === 1) {
+                if (z === 1||z === -1) {
                     document.getElementById("z").innerHTML = z + " point";
                 } else {
                     document.getElementById("z").innerHTML = z + " points";
@@ -178,7 +193,7 @@
             }
             function oof() {
                 z--;
-                if (z === 1) {
+                if (z === 1||z === -1) {
                     document.getElementById("z").innerHTML = z + " point";
                 } else {
                     document.getElementById("z").innerHTML = z + " points";
