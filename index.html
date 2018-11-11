@@ -2,52 +2,345 @@
 <html>
 
     <head>
-        <title>XYZt Designs</title>
+        <title>Set!</title>
+        <link rel="shortcut icon" type="image/png" href="/favicon.png" />
         <style>
-            #box{
+            .x {
                 position:absolute;
-                width:100%;
-                height:100%;
+                display: block;
+                top:5px;
+                color:#444;
+                font-family:Monospace, Monospace;
+                font-weight:Bold;
+                font-size:15pt;
+                left:25px;
             }
-            .svg{
+            #XYZt {
                 position:absolute;
-            }
-            .click{
+                top:0;
+                right:0;
+                fill:#eee;
                 cursor:pointer;
             }
+            #reset {
+                position:fixed;
+                display:block;
+                right:10px;
+                bottom:10px;
+                background-color:#fff;
+                border:2px solid #44f;
+                border-radius:10px;
+                padding:5px 5px;
+                cursor:pointer;
+                fill:#44f;
+            }
+            #reset:hover {
+                background-color:#44f;
+                fill:#fff;
+                transition: 0.2s;
+            }
+            #reset:active {
+                background-color:#228;
+                fill:#fff;
+            }
+            #reset:after {
+                background-color:#fff;
+                fill:#44f;
+                transition:1s;
+            }
+            .card {
+                height:225px;
+                width:175px;
+                margin:15px;
+                background-color:#fff;
+                border:4px solid #eee;
+                border-radius:25px;
+                transition-duration:0.1s;
+            }
+            .card:hover {
+                background-color:#eee;
+            }
+            button:focus {
+                outline:0;
+            }
         </style>
-                
     </head>
-    <body style="background-color:#000; margin:0">
-        <div id="box">
-            <svg id="logo" class="svg" viewbox="0 0 640 3840">
-                <path d="M 0 0 h 20 v 60 l 60 80 l 60 -80 v -60 h 20 v 60 l -67.5 90 l 67.5 90 v 3600 h -20 v -3600 l -60 -80 l -60 80 v 3600 h -20 v -3600 l 67.5 -90 l -67.5 -90 v -60 Z
-                         M 180 0 h 20 v 60 l 60 80 l 60 -80 v -60 h 20 v 60 l -70 93.3333 v 3866.6666 h -20 v -3866.6666 l -70 -93.3333 z
-                         M 360 0 h 20 v 60 h 140 l -120 160 h 120 v 3620 h -20 v -3600 h -140 l 120 -160 h -120 z
-                         M 580 0 h 20 v 130 h 40 v 20 h -40 v 120 l 40 53.3333 v 3606.6666 h -20 v -3606.6666 l -40 -53.3333 v -120 h -40 v -20 h 40" fill="#fff"/>
+
+    <body style="margin:0; background-color:#fff">
+        <svg id="logo" width=100% height="70" x="50%" y="0" viewBox="0 0 1 50">
+            <path d="M -65 12 h 30 v 30 h -30" fill="#f44" />
+            <path d="M -25 12 h 30 v 30 h -30" fill="#4e4" />
+            <path d="M 15 12 h 30 v 30 h -30" fill="#44e" />
+            <path d="M 55 12 h 10 v 20 h -10" fill="#444" />
+            <path d="M 55 37 h 10 v 5 h -10" fill="#444" />
+        </svg>
+        <a href="http://flyorboom.github.io/">
+            <svg id="XYZt" height="75" width="160">
+                <path d="M 0 0 h 20 v 60 l 60 80 l 60 -80 v -60 h 20 v 60 l -67.5 90 l 67.5 90 v 60 h -20 v -60 l -60 -80 l -60 80 v 60 h -20 v -60 l 67.5 -90 l -67.5 -90 v -60 Z
+                         M 180 0 h 20 v 60 l 60 80 l 60 -80 v -60 h 20 v 60 l -70 93.3333 v 150 h -20 v -150 l -70 -93.3333 z
+                         M 360 0 h 20 v 60 h 140 l -120 160 h 120 v 80 h -20 v -60 h -140 l 120 -160 h -120 z
+                         M 580 0 h 20 v 105 h 40 v 20 h -40 v 120 l 40 53.3333 h -20 l -40 -53.3333 v -120 h -40 v -20 h 40" transform="scale(0.25 0.25)"/>
             </svg>
-            <svg id="links" class="svg" viewbox="0 0 640 3840">
-                <mask id="circle1">
-                    <circle cx="2000" cy="2000" r="2000" fill="#fff"/>
-                </mask>
-                <g transform="translate(400 0)">
-                    <a href="set.html">
-                        <path d="M 0 0 h 40 v 40 h -40" fill="#f44" />
-                        <path d="M 50 0 h 40 v 40 h -40" fill="#4e4" />
-                        <path d="M 100 0 h 40 v 40 h -40" fill="#44e" />
-                        <path d="M 150 0 h 13 v 25 h -13" fill="#444" />
-                        <path d="M 150 30 h 13 v 10 h -13" fill="#444" />
-                        <path class="click" d="M -10 0 h 200 v 60 h -200" opacity="0"/>
-                    </a>
-                </g>
-                <a href="curiosity.png">
-                    <image xlink:href="curiosity.png" transform="translate(290 260) scale(0.0475 0.0475)" mask="url(#circle1)"/>
-                    <circle class="click" cx="385" cy="355" r="105" opacity="0"/>
-                </a>
-                <a>
-                    <path class="click" d="M 170 75 l 60 80 l -60 70 l -56.25 -75" opacity="0"/>
-                </a>
-            </svg>
+        </a>
+        <svg id="shadow" width=100% height="15">
+            <defs>
+                <linearGradient id="a" x1=0% y1=0% x2=0% y2=100%>
+                    <stop offset="0%" stop-color="#eee" />
+                    <stop offset="100%" stop-color="#fff" />
+                </linearGradient>
+            </defs>
+            <rect width=100% height="15" fill="url(#a)" />
+        </svg>
+        <p id="z" class="x">0 points</p>
+        <div style="text-align:center;
+                    margin-right:25px;">
+                <button id="a1A" class="card">a1A</button>
+                <button id="a1B" class="card">a1B</button>
+                <button id="a2C" class="card">a2C</button>
+                <button id="a3A" class="card">a3A</button>
+                <button id="b1B" class="card">b1B</button>
+                <button id="b2C" class="card">b2C</button>
+                <br>
+                <button id="b3A" class="card">b3A</button>
+                <button id="b3B" class="card">b3B</button>
+                <button id="c1C" class="card">c1C</button>
+                <button id="c2A" class="card">c2A</button>
+                <button id="c2B" class="card">c2B</button>
+                <button id="c3C" class="card">c3C</button>
         </div>
+        <button id="reset">
+            <svg width="24" height="24" viewBox="0 0 24 24">
+                <path d="M17.65 6.35C16.2 4.9 14.21 4 12 4c-4.42 0-7.99 3.58-7.99 8s3.57 8 7.99 8c3.73 0 6.84-2.55 7.73-6h-2.08c-.82 2.33-3.04 4-5.65 4-3.31 0-6-2.69-6-6s2.69-6 6-6c1.66 0 3.14.69 4.22 1.78L13 11h7V4l-2.35 2.35z" />
+            </svg>
+        </button>
+        <script>
+            var a = 0;
+            var b = 0;
+            var c = 0;
+            var n1 = 0;
+            var n2 = 0;
+            var n3 = 0;
+            var A = 0;
+            var B = 0;
+            var C = 0;
+
+            var x = 0;
+            
+            var z = 0;
+
+            var a1A = 0;
+            var a1B = 0;
+            var a2C = 0;
+            var a3A = 0;
+            var b1B = 0;
+            var b2C = 0;
+            var b3A = 0;
+            var b3B = 0;
+            var c1C = 0;
+            var c2A = 0;
+            var c2B = 0;
+            var c3C = 0;
+
+            function size(idd) {
+                document.getElementById(idd).style.transform = "scale(1,1)";
+            }
+
+            function zero() {
+                a = 0;
+                b = 0;
+                c = 0;
+                n1 = 0;
+                n2 = 0;
+                n3 = 0;
+                A = 0;
+                B = 0;
+                C = 0;
+
+                a1A = 0;
+                a1B = 0;
+                a2C = 0;
+                a3A = 0;
+                b1B = 0;
+                b2C = 0;
+                b3A = 0;
+                b3B = 0;
+                c1C = 0;
+                c2A = 0;
+                c2B = 0;
+                c3C = 0;
+
+                size("a1A");
+                size("a1B");
+                size("a2C");
+                size("a3A");
+                size("b1B");
+                size("b2C");
+                size("b3A");
+                size("b3B");
+                size("c1C");
+                size("c2A");
+                size("c2B");
+                size("c3C");
+            }
+
+            function yay() {
+                z++;
+                if (z === 1||z === -1) {
+                    document.getElementById("z").innerHTML = z + " point";
+                } else {
+                    document.getElementById("z").innerHTML = z + " points";
+                }
+            }
+            function oof() {
+                z--;
+                if (z === 1||z === -1) {
+                    document.getElementById("z").innerHTML = z + " point";
+                } else {
+                    document.getElementById("z").innerHTML = z + " points";
+                }
+            }                
+            function score(varr) {
+                document.getElementById(varr).style.transform = "scale(0.9,0.9)";
+            if (x % 3 === 0) {
+                if (a % 3 === 0 && a > 0) {
+                    yay();
+                } else if (b % 3 === 0 && b > 0) {
+                    yay();
+                } else if (c % 3 === 0 && c > 0) {
+                    show();
+                } else if (n1 % 3 === 0 && n1 > 0) {
+                    yay();
+                } else if (n2 % 3 === 0 && n2 > 0) {
+                    yay();
+                } else if (n3 % 3 === 0 && n3 > 0) {
+                    yay();
+                } else if (A % 3 === 0 && A > 0) {
+                    yay();
+                } else if (B % 3 === 0 && B > 0) {
+                    yay();
+                } else if (C % 3 === 0 && C > 0) {
+                    yay();
+                } else {
+                    oof();
+                }
+                zero();
+                }
+            }
+            document.getElementById("a1A").onclick = function() {
+                if (a1A === 0) {
+                    a++;
+                    n1++;
+                    A++;
+                    a1A++;
+                    x++;
+                    score("a1A");
+                }
+            }
+            document.getElementById("a1B").onclick = function() {
+                if (a1B === 0) {
+                    a++;
+                    n1++;
+                    B++;
+                    x++;
+                    score("a1B");
+                }
+            }
+            document.getElementById("a2C").onclick = function() {
+                if (a2C === 0) {
+                    a++;
+                    n2++;
+                    C++;
+                    x++;
+                    score("a2C");
+                }
+            }
+            document.getElementById("a3A").onclick = function() {
+                if (a3A === 0) {
+                    a++;
+                    n3++;
+                    A++;
+                    x++;
+                    score("a3A");
+                }
+            }
+            document.getElementById("b1B").onclick = function() {
+                if (b1B === 0) {
+                    b++;
+                    n1++;
+                    B++;
+                    x++;
+                    score("b1B");
+                }
+            }
+            document.getElementById("b2C").onclick = function() {
+                if (b2C === 0) {
+                    b++;
+                    n2++;
+                    C++;
+                    x++;
+                    score("b2C");
+                }
+            }
+            document.getElementById("b3A").onclick = function() {
+                if (b3A === 0) {
+                    b++;
+                    n3++;
+                    A++;
+                    x++;
+                    score("b3A");
+                }
+            }
+            document.getElementById("b3B").onclick = function() {
+                if (b3B === 0) {
+                    b++;
+                    n3++;
+                    B++;
+                    x++;
+                    score("b3B");
+                }
+            }
+            document.getElementById("c1C").onclick = function() {
+                if (a2C === 0) {
+                    c++;
+                    n1++;
+                    C++;
+                    x++;
+                    score("c1C");
+                }
+            }
+            document.getElementById("c2A").onclick = function() {
+                if (c2A === 0) {
+                    c++;
+                    n2++;
+                    A++;
+                    x++;
+                    score("c2A");
+                }
+            }
+            document.getElementById("c2B").onclick = function() {
+                if (c2B === 0) {
+                    c++;
+                    n2++;
+                    B++;
+                    x++;
+                    score("c2B");
+                }
+            }
+            document.getElementById("c3C").onclick = function() {
+                if (c3C === 0) {
+                    c++;
+                    n3++;
+                    C++;
+                    x++;
+                    score("c3C");
+                }
+            }
+            document.getElementById("reset").onclick = function reset() {
+                zero();
+                z = 0;
+                document.getElementById("z").innerHTML = z + " points";
+            }
+        </script>
     </body>
+
 </html>
