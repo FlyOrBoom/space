@@ -44,7 +44,7 @@
             .card {
                 height:225px;
                 width:175px;
-                margin:20px;
+                margin:15px;
                 background-color:#fff;
                 border:4px solid #eee;
                 border-radius:25px;
@@ -77,20 +77,21 @@
             <rect width=100% height="15" fill="url(#a)" />
         </svg>
         <p id="z" class="x">0 points</p>
-        <div style="text-align:center; margin-right:25px">
-            <button id="a1A" class="card">a1A</button>
-            <button id="a1B" class="card">a1B</button>
-            <button id="a2C" class="card">a2C</button>
-            <button id="a3A" class="card">a3A</button>
-            <button id="b1B" class="card">b1B</button>
-            <button id="b2C" class="card">b2C</button>
-            <br>
-            <button id="b3A" class="card">b3A</button>
-            <button id="b3B" class="card">b3B</button>
-            <button id="c1C" class="card">c1C</button>
-            <button id="c2A" class="card">c2A</button>
-            <button id="c2B" class="card">c2B</button>
-            <button id="c3C" class="card">c3C</button>
+        <div style="text-align:center;
+                    margin-right:25px;">
+                <button id="a1A" class="card">a1A</button>
+                <button id="a1B" class="card">a1B</button>
+                <button id="a2C" class="card">a2C</button>
+                <button id="a3A" class="card">a3A</button>
+                <button id="b1B" class="card">b1B</button>
+                <button id="b2C" class="card">b2C</button>
+                <br>
+                <button id="b3A" class="card">b3A</button>
+                <button id="b3B" class="card">b3B</button>
+                <button id="c1C" class="card">c1C</button>
+                <button id="c2A" class="card">c2A</button>
+                <button id="c2B" class="card">c2B</button>
+                <button id="c3C" class="card">c3C</button>
         </div>
         <button id="reset">
             <svg width="24" height="24" viewBox="0 0 24 24">
@@ -108,6 +109,8 @@
             var B = 0;
             var C = 0;
 
+            var x = 0;
+            
             var z = 0;
 
             var a1A = 0;
@@ -165,36 +168,47 @@
                 size("c3C");
             }
 
-            function show() {
+            function yay() {
                 z++;
                 if (z === 1) {
                     document.getElementById("z").innerHTML = z + " point";
                 } else {
                     document.getElementById("z").innerHTML = z + " points";
                 }
-                zero();
             }
-
+            function oof() {
+                z--;
+                if (z === 1) {
+                    document.getElementById("z").innerHTML = z + " point";
+                } else {
+                    document.getElementById("z").innerHTML = z + " points";
+                }
+            }                
             function score(varr) {
                 document.getElementById(varr).style.transform = "scale(0.9,0.9)";
+            if (x % 3 === 0) {
                 if (a % 3 === 0 && a > 0) {
-                    show();
+                    yay();
                 } else if (b % 3 === 0 && b > 0) {
-                    show();
+                    yay();
                 } else if (c % 3 === 0 && c > 0) {
                     show();
                 } else if (n1 % 3 === 0 && n1 > 0) {
-                    show();
+                    yay();
                 } else if (n2 % 3 === 0 && n2 > 0) {
-                    show();
+                    yay();
                 } else if (n3 % 3 === 0 && n3 > 0) {
-                    show();
+                    yay();
                 } else if (A % 3 === 0 && A > 0) {
-                    show();
+                    yay();
                 } else if (B % 3 === 0 && B > 0) {
-                    show();
+                    yay();
                 } else if (C % 3 === 0 && C > 0) {
-                    show();
+                    yay();
+                } else {
+                    oof();
+                }
+                zero();
                 }
             }
             document.getElementById("a1A").onclick = function() {
@@ -203,6 +217,7 @@
                     n1++;
                     A++;
                     a1A++;
+                    x++;
                     score("a1A");
                 }
             }
@@ -211,6 +226,7 @@
                     a++;
                     n1++;
                     B++;
+                    x++;
                     score("a1B");
                 }
             }
@@ -219,6 +235,7 @@
                     a++;
                     n2++;
                     C++;
+                    x++;
                     score("a2C");
                 }
             }
@@ -227,6 +244,7 @@
                     a++;
                     n3++;
                     A++;
+                    x++;
                     score("a3A");
                 }
             }
@@ -235,6 +253,7 @@
                     b++;
                     n1++;
                     B++;
+                    x++;
                     score("b1B");
                 }
             }
@@ -243,6 +262,7 @@
                     b++;
                     n2++;
                     C++;
+                    x++;
                     score("b2C");
                 }
             }
@@ -251,6 +271,7 @@
                     b++;
                     n3++;
                     A++;
+                    x++;
                     score("b3A");
                 }
             }
@@ -259,6 +280,7 @@
                     b++;
                     n3++;
                     B++;
+                    x++;
                     score("b3B");
                 }
             }
@@ -267,6 +289,7 @@
                     c++;
                     n1++;
                     C++;
+                    x++;
                     score("c1C");
                 }
             }
@@ -275,6 +298,7 @@
                     c++;
                     n2++;
                     A++;
+                    x++;
                     score("c2A");
                 }
             }
@@ -283,6 +307,7 @@
                     c++;
                     n2++;
                     B++;
+                    x++;
                     score("c2B");
                 }
             }
@@ -291,6 +316,7 @@
                     c++;
                     n3++;
                     C++;
+                    x++;
                     score("c3C");
                 }
             }
