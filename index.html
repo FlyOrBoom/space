@@ -9,19 +9,35 @@
                 width:100%;
                 height:100%;
             }
+            .svg{
+                position:absolute;
+            }
+            .click{
+                cursor:pointer;
         </style>
                 
     </head>
 
     <body style="background-color:#000; margin:0">
         <div id="box">
-            <svg viewbox="0 0 640 3840">
-                <path id="logo" d="M 0 0 h 20 v 90 l 60 80 l 60 -80 v -90 h 20 v 90 l -67.5 90 l 67.5 90 v 3580 h -20 v -3580 l -60 -80 l -60 80 v 3580 h -20 v -3580 l 67.5 -90 l -67.5 -90 v -90 Z
-                         M 180 0 h 20 v 90 l 60 80 l 60 -80 v -90 h 20 v 90 l -67.5 90 v 3850 h -25 v -3850 l -67.5 -90 z
-                         M 360 0 h 20 v 90 h 140 l -120 160 h 120 v 3600 h -20 v -3580 h -140 l 120 -160 h -120 z
+            <svg id="logo" class="svg" viewbox="0 0 640 3840">
+                <path d="M 0 0 h 20 v 60 l 60 80 l 60 -80 v -60 h 20 v 60 l -67.5 90 l 67.5 90 v 3600 h -20 v -3600 l -60 -80 l -60 80 v 3600 h -20 v -3600 l 67.5 -90 l -67.5 -90 v -60 Z
+                         M 180 0 h 20 v 60 l 60 80 l 60 -80 v -60 h 20 v 60 l -67.5 90 v 3870 h -25 v -3870 l -67.5 -90 z
+                         M 360 0 h 20 v 60 h 140 l -120 160 h 120 v 3620 h -20 v -3600 h -140 l 120 -160 h -120 z
                          M 580 0 h 20 v 130 h 40 v 20 h -40 v 120 l 30 40 v 3620 h -20 v -3620 l -30 -40 v -120 h -40 v -20 h 40" fill="#fff"/>
-                <path id="set" d=""/>
             </svg>
+                <svg id="set" class="svg" viewbox="0 0 640 3840">
+                    <g transform="translate(300 270)">
+                    <a href="flyorboom.github.io/set.html">
+                        <path class="click" d="M -10 -10 h 195 v 56 h -185" fill="#000"/>
+                        <path class="click" d="M 0 0 h 36 v 36 h -36" fill="#f44" />
+                        <path class="click" d="M 53 0 h 36 v 36 h -36" fill="#4e4" />
+                        <path class="click" d="M 106 0 h 36 v 36 h -36" fill="#44e" />
+                        <path class="click" d="M 159 0 h 16 v 21 h -16" fill="#444" />
+                        <path class="click" d="M 159 26 h 16 v 10 h -16" fill="#444" />
+                    </a>
+                    </g>
+                </svg>
         </div>
     </body>
 
