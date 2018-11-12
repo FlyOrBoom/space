@@ -173,33 +173,22 @@ function color() {
 }
 function score(varr) {                      
     document.getElementById(varr).style.transform = "scale(0.9,0.9)";
-    if (x % 3 === 0) {
-        if (a % 3 === 0 && a > 0) {
-            yay();
-        } else if (b % 3 === 0 && b > 0) {
-            yay();
-        } else if (c % 3 === 0 && c > 0) {
-            yay();
-        } else if (n1 % 3 === 0 && n1 > 0) {
-            yay();
-        } else if (n2 % 3 === 0 && n2 > 0) {
-            yay();
-        } else if (n3 % 3 === 0 && n3 > 0) {
-            yay();
-        } else if (A % 3 === 0 && A > 0) {
-            yay();
-        } else if (B % 3 === 0 && B > 0) {
-            yay();
-        } else if (C % 3 === 0 && C > 0) {
-            yay();
-        } else if (d % 3 === 0 && A > 0) {
-            yay();
-        } else if (e % 3 === 0 && B > 0) {
-            yay();
-        } else if (f % 3 === 0 && C > 0) {
-            yay();
-        } else {
+    if (x === 3) {
+        if (a % 2 === 0 && a > 0 ||
+            b % 2 === 0 && b > 0 ||
+            c % 2 === 0 && c > 0 ||
+            n1% 2 === 0 && n1> 0 ||
+            n2% 2 === 0 && n2> 0 ||
+            n3% 2 === 0 && n3> 0 ||
+            A % 2 === 0 && A > 0 ||
+            B % 2 === 0 && B > 0 ||
+            C % 2 === 0 && C > 0 ||
+            d % 2 === 0 && d > 0 ||
+            e % 2 === 0 && e > 0 ||
+            f % 2 === 0 && f > 0 ) {
             oof();
+        } else {
+            yay();
         }
         zero();
     }
