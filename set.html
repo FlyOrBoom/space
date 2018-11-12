@@ -35,44 +35,335 @@
         <p id="z" class="x">0 points</p>
         <!--symbols-->
         <svg style="display: none;">
-            <symbol id="1D">
+            <symbol id="1A">
+                <path d="M 12.5 75 c 0 0 25 -20 40 -20 c 15 0 35 15 50 15  c 15 0 40 -10 40 -10 v 15 c 0 0 -25 20 -40 20 c -15 0 -35 -15 -50 -15 c -15 0 -40 10 -40 10 z"/>
+            </symbol>
+            <symbol id="2A">
+                <use xlink:href="#1A" transform="translate(0 -25)"/>
+                <use xlink:href="#1A" transform="translate(0 25)"/>
+            </symbol>
+            <symbol id="3A">
+                <use xlink:href="#1A" transform="translate(0 -50)"/>
+                <use xlink:href="#1A"/>
+                <use xlink:href="#1A" transform="translate(0 50)"/>
+            </symbol>
+
+            <symbol id="1B">
+                <rect x="12.5" y="55" width="130" height="40" rx="20"/>
+            </symbol>
+            <symbol id="2B">
+                <use xlink:href="#1B" transform="translate(0 -25)"/>
+                <use xlink:href="#1B" transform="translate(0 25)"/>
+            </symbol>
+            <symbol id="3B">
+                <use xlink:href="#1B" transform="translate(0 -50)"/>
+                <use xlink:href="#1B"/>
+                <use xlink:href="#1B" transform="translate(0 50)"/>
+            </symbol>
+
+            <symbol id="1C">
                 <path d="M 12.5 75 l 65 -20 l 65 20 l -65 20 z"/>
+            </symbol>
+            <symbol id="2C">
+                <use xlink:href="#1C" transform="translate(0 -25)"/>
+                <use xlink:href="#1C" transform="translate(0 25)"/>
+            </symbol>
+            <symbol id="3C">
+                <use xlink:href="#1C" transform="translate(0 -50)"/>
+                <use xlink:href="#1C"/>
+                <use xlink:href="#1C" transform="translate(0 50)"/>
             </symbol>
         </svg>
         <div style="text-align:center;
                     margin-right:25px;">
             <!--a: red      1: one      A: pill     d: 100%
-                b: green    2: two      B: squiggle e: 50%
-                c: blue     3: three    C: diamond  f: stroke-->
-            <button id="a1Ad" class="card">
-                <svg class="a d"><use xlink:href="#1D"/></svg>
-            </button>
-            <button id="a1Ae" class="card">
-                <svg class="a e"><use xlink:href="#1D"/></svg>
-            </button>
-            <button id="a1Af" class="card">
-                <svg class="a f"><use xlink:href="#1D"/></svg>
-            </button>
-            <button id="a1Bd" class="card">
-                <svg>
-                </svg>
-            </button>
-            <button id="a2C" class="card">a2C</button>
-            <svg>
-                <path d="M 12.5 20 l 65 -20 l 65 20 l -65 20 z
-                         M 12.5 75 l 65 -20 l 65 20 l -65 20 z
-                         M 12.5 130 l 65 -20 l 65 20 l -65 20 z"/>
-            </svg>
-            <button id="a3A" class="card">a3A</button>
-            <button id="b1B" class="card">b1B</button>
-            <button id="b2C" class="card">b2C</button>
-            <br>
-            <button id="b3A" class="card">b3A</button>
-            <button id="b3B" class="card">b3B</button>
-            <button id="c1C" class="card">c1C</button>
-            <button id="c2A" class="card">c2A</button>
-            <button id="c2B" class="card">c2B</button>
-            <button id="c3C" class="card">c3C</button>
+b: green    2: two      B: squiggle e: 50%
+c: blue     3: three    C: diamond  f: stroke-->
+            <g id="Red megagroup">
+                <g id="Group A1">
+                    <button id="a1Ad" class="card">
+                        <svg class="a d"><use xlink:href="#1A"/></svg>
+                    </button>
+                    <button id="a1Ae" class="card">
+                        <svg class="a e"><use xlink:href="#1A"/></svg>
+                    </button>
+                    <button id="a1Af" class="card">
+                        <svg class="a f"><use xlink:href="#1A"/></svg>
+                    </button>
+
+                    <button id="a1Bd" class="card">
+                        <svg class="a d"><use xlink:href="#1B"/></svg>
+                    </button>
+                    <button id="a1Be" class="card">
+                        <svg class="a e"><use xlink:href="#1B"/></svg>
+                    </button>
+                    <button id="a1Bf" class="card">
+                        <svg class="a f"><use xlink:href="#1B"/></svg>
+                    </button>
+
+                    <button id="a1Cd" class="card">
+                        <svg class="a d"><use xlink:href="#1C"/></svg>
+                    </button>
+                    <button id="a1Ce" class="card">
+                        <svg class="a e"><use xlink:href="#1C"/></svg>
+                    </button>
+                    <button id="a1Cf" class="card">
+                        <svg class="a f"><use xlink:href="#1C"/></svg>
+                    </button>
+                </g>
+                <g id="Group A2">
+                    <button id="a2Ad" class="card">
+                        <svg class="a d"><use xlink:href="#2A"/></svg>
+                    </button>
+                    <button id="a2Ae" class="card">
+                        <svg class="a e"><use xlink:href="#2A"/></svg>
+                    </button>
+                    <button id="a2Af" class="card">
+                        <svg class="a f"><use xlink:href="#2A"/></svg>
+                    </button>
+
+                    <button id="a2Bd" class="card">
+                        <svg class="a d"><use xlink:href="#2B"/></svg>
+                    </button>
+                    <button id="a2Be" class="card">
+                        <svg class="a e"><use xlink:href="#2B"/></svg>
+                    </button>
+                    <button id="a2Bf" class="card">
+                        <svg class="a f"><use xlink:href="#2B"/></svg>
+                    </button>
+
+                    <button id="a2Cd" class="card">
+                        <svg class="a d"><use xlink:href="#2C"/></svg>
+                    </button>
+                    <button id="a2Ce" class="card">
+                        <svg class="a e"><use xlink:href="#2C"/></svg>
+                    </button>
+                    <button id="a2Cf" class="card">
+                        <svg class="a f"><use xlink:href="#2C"/></svg>
+                    </button>
+                </g>
+                <g id="Group A3">
+                    <button id="a3Ad" class="card">
+                        <svg class="a d"><use xlink:href="#3A"/></svg>
+                    </button>
+                    <button id="a3Ae" class="card">
+                        <svg class="a e"><use xlink:href="#3A"/></svg>
+                    </button>
+                    <button id="a3Af" class="card">
+                        <svg class="a f"><use xlink:href="#3A"/></svg>
+                    </button>
+
+                    <button id="a3Bd" class="card">
+                        <svg class="a d"><use xlink:href="#3B"/></svg>
+                    </button>
+                    <button id="a3Be" class="card">
+                        <svg class="a e"><use xlink:href="#3B"/></svg>
+                    </button>
+                    <button id="a3Bf" class="card">
+                        <svg class="a f"><use xlink:href="#3B"/></svg>
+                    </button>
+
+                    <button id="a3Cd" class="card">
+                        <svg class="a d"><use xlink:href="#3C"/></svg>
+                    </button>
+                    <button id="a3Ce" class="card">
+                        <svg class="a e"><use xlink:href="#3C"/></svg>
+                    </button>
+                    <button id="a3Cf" class="card">
+                        <svg class="a f"><use xlink:href="#3C"/></svg>
+                    </button>
+                </g>
+            </g>
+            <g id="Green megagroup">
+                <g id="Group A1">
+                    <button id="b1Ad" class="card">
+                        <svg class="b d"><use xlink:href="#1A"/></svg>
+                    </button>
+                    <button id="b1Ae" class="card">
+                        <svg class="b e"><use xlink:href="#1A"/></svg>
+                    </button>
+                    <button id="b1Af" class="card">
+                        <svg class="b f"><use xlink:href="#1A"/></svg>
+                    </button>
+
+                    <button id="b1Bd" class="card">
+                        <svg class="b d"><use xlink:href="#1B"/></svg>
+                    </button>
+                    <button id="b1Be" class="card">
+                        <svg class="b e"><use xlink:href="#1B"/></svg>
+                    </button>
+                    <button id="b1Bf" class="card">
+                        <svg class="b f"><use xlink:href="#1B"/></svg>
+                    </button>
+
+                    <button id="b1Cd" class="card">
+                        <svg class="b d"><use xlink:href="#1C"/></svg>
+                    </button>
+                    <button id="b1Ce" class="card">
+                        <svg class="b e"><use xlink:href="#1C"/></svg>
+                    </button>
+                    <button id="b1Cf" class="card">
+                        <svg class="b f"><use xlink:href="#1C"/></svg>
+                    </button>
+                </g>
+                <g id="Group A2">
+                    <button id="b2Ad" class="card">
+                        <svg class="b d"><use xlink:href="#2A"/></svg>
+                    </button>
+                    <button id="b2Ae" class="card">
+                        <svg class="b e"><use xlink:href="#2A"/></svg>
+                    </button>
+                    <button id="b2Af" class="card">
+                        <svg class="b f"><use xlink:href="#2A"/></svg>
+                    </button>
+
+                    <button id="b2Bd" class="card">
+                        <svg class="b d"><use xlink:href="#2B"/></svg>
+                    </button>
+                    <button id="b2Be" class="card">
+                        <svg class="b e"><use xlink:href="#2B"/></svg>
+                    </button>
+                    <button id="b2Bf" class="card">
+                        <svg class="b f"><use xlink:href="#2B"/></svg>
+                    </button>
+
+                    <button id="b2Cd" class="card">
+                        <svg class="b d"><use xlink:href="#2C"/></svg>
+                    </button>
+                    <button id="b2Ce" class="card">
+                        <svg class="b e"><use xlink:href="#2C"/></svg>
+                    </button>
+                    <button id="b2Cf" class="card">
+                        <svg class="b f"><use xlink:href="#2C"/></svg>
+                    </button>
+                </g>
+                <g id="Group A3">
+                    <button id="b3Ad" class="card">
+                        <svg class="b d"><use xlink:href="#3A"/></svg>
+                    </button>
+                    <button id="b3Ae" class="card">
+                        <svg class="b e"><use xlink:href="#3A"/></svg>
+                    </button>
+                    <button id="b3Af" class="card">
+                        <svg class="b f"><use xlink:href="#3A"/></svg>
+                    </button>
+
+                    <button id="b3Bd" class="card">
+                        <svg class="b d"><use xlink:href="#3B"/></svg>
+                    </button>
+                    <button id="b3Be" class="card">
+                        <svg class="b e"><use xlink:href="#3B"/></svg>
+                    </button>
+                    <button id="b3Bf" class="card">
+                        <svg class="b f"><use xlink:href="#3B"/></svg>
+                    </button>
+
+                    <button id="b3Cd" class="card">
+                        <svg class="b d"><use xlink:href="#3C"/></svg>
+                    </button>
+                    <button id="b3Ce" class="card">
+                        <svg class="b e"><use xlink:href="#3C"/></svg>
+                    </button>
+                    <button id="b3Cf" class="card">
+                        <svg class="b f"><use xlink:href="#3C"/></svg>
+                    </button>
+                </g>
+            </g>
+            <g id="Blue megagroup">
+                <g id="Group A1">
+                    <button id="c1Ad" class="card">
+                        <svg class="c d"><use xlink:href="#1A"/></svg>
+                    </button>
+                    <button id="c1Ae" class="card">
+                        <svg class="c e"><use xlink:href="#1A"/></svg>
+                    </button>
+                    <button id="c1Af" class="card">
+                        <svg class="c f"><use xlink:href="#1A"/></svg>
+                    </button>
+
+                    <button id="c1Bd" class="card">
+                        <svg class="c d"><use xlink:href="#1B"/></svg>
+                    </button>
+                    <button id="c1Be" class="card">
+                        <svg class="c e"><use xlink:href="#1B"/></svg>
+                    </button>
+                    <button id="c1Bf" class="card">
+                        <svg class="c f"><use xlink:href="#1B"/></svg>
+                    </button>
+
+                    <button id="c1Cd" class="card">
+                        <svg class="c d"><use xlink:href="#1C"/></svg>
+                    </button>
+                    <button id="c1Ce" class="card">
+                        <svg class="c e"><use xlink:href="#1C"/></svg>
+                    </button>
+                    <button id="c1Cf" class="card">
+                        <svg class="c f"><use xlink:href="#1C"/></svg>
+                    </button>
+                </g>
+                <g id="Group A2">
+                    <button id="c2Ad" class="card">
+                        <svg class="c d"><use xlink:href="#2A"/></svg>
+                    </button>
+                    <button id="c2Ae" class="card">
+                        <svg class="c e"><use xlink:href="#2A"/></svg>
+                    </button>
+                    <button id="c2Af" class="card">
+                        <svg class="c f"><use xlink:href="#2A"/></svg>
+                    </button>
+
+                    <button id="c2Bd" class="card">
+                        <svg class="c d"><use xlink:href="#2B"/></svg>
+                    </button>
+                    <button id="c2Be" class="card">
+                        <svg class="c e"><use xlink:href="#2B"/></svg>
+                    </button>
+                    <button id="c2Bf" class="card">
+                        <svg class="c f"><use xlink:href="#2B"/></svg>
+                    </button>
+
+                    <button id="c2Cd" class="card">
+                        <svg class="c d"><use xlink:href="#2C"/></svg>
+                    </button>
+                    <button id="c2Ce" class="card">
+                        <svg class="c e"><use xlink:href="#2C"/></svg>
+                    </button>
+                    <button id="c2Cf" class="card">
+                        <svg class="c f"><use xlink:href="#2C"/></svg>
+                    </button>
+                </g>
+                <g id="Group A3">
+                    <button id="c3Ad" class="card">
+                        <svg class="c d"><use xlink:href="#3A"/></svg>
+                    </button>
+                    <button id="c3Ae" class="card">
+                        <svg class="c e"><use xlink:href="#3A"/></svg>
+                    </button>
+                    <button id="c3Af" class="card">
+                        <svg class="c f"><use xlink:href="#3A"/></svg>
+                    </button>
+
+                    <button id="c3Bd" class="card">
+                        <svg class="c d"><use xlink:href="#3B"/></svg>
+                    </button>
+                    <button id="c3Be" class="card">
+                        <svg class="c e"><use xlink:href="#3B"/></svg>
+                    </button>
+                    <button id="c3Bf" class="card">
+                        <svg class="c f"><use xlink:href="#3B"/></svg>
+                    </button>
+
+                    <button id="c3Cd" class="card">
+                        <svg class="c d"><use xlink:href="#3C"/></svg>
+                    </button>
+                    <button id="c3Ce" class="card">
+                        <svg class="c e"><use xlink:href="#3C"/></svg>
+                    </button>
+                    <button id="c3Cf" class="card">
+                        <svg class="c f"><use xlink:href="#3C"/></svg>
+                    </button>
+                </g>
+            </g>
         </div>
         <button id="reset">
             <svg width="24" height="24" viewBox="0 0 24 24">
