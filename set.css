@@ -1,4 +1,7 @@
-.x {
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}.x {
     position:absolute;
     display: block;
     top:5px;
