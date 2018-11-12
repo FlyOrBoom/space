@@ -4,65 +4,7 @@
     <head>
         <title>Set!</title>
         <link rel="shortcut icon" type="image/png" href="/favicon.png" />
-        <style>
-            .x {
-                position:absolute;
-                display: block;
-                top:5px;
-                font-family:Monospace, Monospace;
-                font-weight:Bold;
-                font-size:15pt;
-                left:25px;
-            }
-            #XYZt {
-                position:absolute;
-                top:0;
-                right:0;
-                fill:#eee;
-                cursor:pointer;
-            }
-            #reset {
-                position:fixed;
-                display:block;
-                right:10px;
-                bottom:10px;
-                background-color:#fff;
-                border:2px solid #44f;
-                border-radius:10px;
-                padding:5px 5px;
-                cursor:pointer;
-                fill:#44f;
-            }
-            #reset:hover {
-                background-color:#44f;
-                fill:#fff;
-                transition: 0.2s;
-            }
-            #reset:active {
-                background-color:#228;
-                fill:#fff;
-            }
-            #reset:after {
-                background-color:#fff;
-                fill:#44f;
-                transition:1s;
-            }
-            .card {
-                height:225px;
-                width:175px;
-                margin:15px;
-                background-color:#fff;
-                border:4px solid #eee;
-                border-radius:25px;
-                transition-duration:0.1s;
-            }
-            .card:hover {
-                background-color:#eee;
-            }
-            button:focus {
-                outline:0;
-            }
-        </style>
+        <link rel="stylesheet" href="set.css" />
     </head>
 
     <body style="margin:0; background-color:#fff">
@@ -91,272 +33,344 @@
             <rect width=100% height="15" fill="url(#a)" />
         </svg>
         <p id="z" class="x">0 points</p>
-        <div style="text-align:center;
-                    margin-right:25px;">
-                <button id="a1A" class="card">a1A</button>
-                <button id="a1B" class="card">a1B</button>
-                <button id="a2C" class="card">a2C</button>
-                <button id="a3A" class="card">a3A</button>
-                <button id="b1B" class="card">b1B</button>
-                <button id="b2C" class="card">b2C</button>
-                <br>
-                <button id="b3A" class="card">b3A</button>
-                <button id="b3B" class="card">b3B</button>
-                <button id="c1C" class="card">c1C</button>
-                <button id="c2A" class="card">c2A</button>
-                <button id="c2B" class="card">c2B</button>
-                <button id="c3C" class="card">c3C</button>
-        </div>
+        <!--symbols-->
+        <svg style="display: none;">
+            <symbol id="1A">
+                <path d="M 12.5 75 c 0 0 25 -20 40 -20 c 15 0 35 15 50 15  c 15 0 40 -10 40 -10 v 15 c 0 0 -25 20 -40 20 c -15 0 -35 -15 -50 -15 c -15 0 -40 10 -40 10 z"/>
+            </symbol>
+            <symbol id="2A">
+                <use xlink:href="#1A" transform="translate(0 -25)"/>
+                <use xlink:href="#1A" transform="translate(0 25)"/>
+            </symbol>
+            <symbol id="3A">
+                <use xlink:href="#1A" transform="translate(0 -50)"/>
+                <use xlink:href="#1A"/>
+                <use xlink:href="#1A" transform="translate(0 50)"/>
+            </symbol>
+
+            <symbol id="1B">
+                <rect x="12.5" y="55" width="130" height="40" rx="20"/>
+            </symbol>
+            <symbol id="2B">
+                <use xlink:href="#1B" transform="translate(0 -25)"/>
+                <use xlink:href="#1B" transform="translate(0 25)"/>
+            </symbol>
+            <symbol id="3B">
+                <use xlink:href="#1B" transform="translate(0 -50)"/>
+                <use xlink:href="#1B"/>
+                <use xlink:href="#1B" transform="translate(0 50)"/>
+            </symbol>
+
+            <symbol id="1C">
+                <path d="M 12.5 75 l 65 -20 l 65 20 l -65 20 z"/>
+            </symbol>
+            <symbol id="2C">
+                <use xlink:href="#1C" transform="translate(0 -25)"/>
+                <use xlink:href="#1C" transform="translate(0 25)"/>
+            </symbol>
+            <symbol id="3C">
+                <use xlink:href="#1C" transform="translate(0 -50)"/>
+                <use xlink:href="#1C"/>
+                <use xlink:href="#1C" transform="translate(0 50)"/>
+            </symbol>
+        </svg>
         <button id="reset">
             <svg width="24" height="24" viewBox="0 0 24 24">
                 <path d="M17.65 6.35C16.2 4.9 14.21 4 12 4c-4.42 0-7.99 3.58-7.99 8s3.57 8 7.99 8c3.73 0 6.84-2.55 7.73-6h-2.08c-.82 2.33-3.04 4-5.65 4-3.31 0-6-2.69-6-6s2.69-6 6-6c1.66 0 3.14.69 4.22 1.78L13 11h7V4l-2.35 2.35z" />
             </svg>
         </button>
-        <script>
-            var a = 0;
-            var b = 0;
-            var c = 0;
-            var n1 = 0;
-            var n2 = 0;
-            var n3 = 0;
-            var A = 0;
-            var B = 0;
-            var C = 0;
+        <div style="text-align:center;
+                    margin-right:25px;">
+            <!--a: red      1: one      A: pill     d: 100%
+b: green    2: two      B: squiggle e: 50%
+c: blue     3: three    C: diamond  f: stroke-->
+            <g id="Red megagroup">
+                <g id="Group 1A">
+                    <button id="a1Ad" class="card">
+                        <svg class="a d"><use xlink:href="#1A"/></svg>
+                    </button>
+                    <button id="a1Ae" class="card">
+                        <svg class="a e"><use xlink:href="#1A"/></svg>
+                    </button>
+                    <button id="a1Af" class="card">
+                        <svg class="a f"><use xlink:href="#1A"/></svg>
+                    </button>
 
-            var x = 0;
-            
-            var z = 0;
+                    <button id="a1Bd" class="card">
+                        <svg class="a d"><use xlink:href="#1B"/></svg>
+                    </button>
+                    <button id="a1Be" class="card">
+                        <svg class="a e"><use xlink:href="#1B"/></svg>
+                    </button>
+                    <button id="a1Bf" class="card">
+                        <svg class="a f"><use xlink:href="#1B"/></svg>
+                    </button>
 
-            var a1A = 0;
-            var a1B = 0;
-            var a2C = 0;
-            var a3A = 0;
-            var b1B = 0;
-            var b2C = 0;
-            var b3A = 0;
-            var b3B = 0;
-            var c1C = 0;
-            var c2A = 0;
-            var c2B = 0;
-            var c3C = 0;
+                    <button id="a1Cd" class="card">
+                        <svg class="a d"><use xlink:href="#1C"/></svg>
+                    </button>
+                    <button id="a1Ce" class="card">
+                        <svg class="a e"><use xlink:href="#1C"/></svg>
+                    </button>
+                    <button id="a1Cf" class="card">
+                        <svg class="a f"><use xlink:href="#1C"/></svg>
+                    </button>
+                </g>
+                <g id="Group 2A">
+                    <button id="a2Ad" class="card">
+                        <svg class="a d"><use xlink:href="#2A"/></svg>
+                    </button>
+                    <button id="a2Ae" class="card">
+                        <svg class="a e"><use xlink:href="#2A"/></svg>
+                    </button>
+                    <button id="a2Af" class="card">
+                        <svg class="a f"><use xlink:href="#2A"/></svg>
+                    </button>
 
-            function size(idd) {
-                document.getElementById(idd).style.transform = "scale(1,1)";
-            }
+                    <button id="a2Bd" class="card">
+                        <svg class="a d"><use xlink:href="#2B"/></svg>
+                    </button>
+                    <button id="a2Be" class="card">
+                        <svg class="a e"><use xlink:href="#2B"/></svg>
+                    </button>
+                    <button id="a2Bf" class="card">
+                        <svg class="a f"><use xlink:href="#2B"/></svg>
+                    </button>
 
-            function zero() {
-                a = 0;
-                b = 0;
-                c = 0;
-                n1 = 0;
-                n2 = 0;
-                n3 = 0;
-                A = 0;
-                B = 0;
-                C = 0;
+                    <button id="a2Cd" class="card">
+                        <svg class="a d"><use xlink:href="#2C"/></svg>
+                    </button>
+                    <button id="a2Ce" class="card">
+                        <svg class="a e"><use xlink:href="#2C"/></svg>
+                    </button>
+                    <button id="a2Cf" class="card">
+                        <svg class="a f"><use xlink:href="#2C"/></svg>
+                    </button>
+                </g>
+                <g id="Group 3A">
+                    <button id="a3Ad" class="card">
+                        <svg class="a d"><use xlink:href="#3A"/></svg>
+                    </button>
+                    <button id="a3Ae" class="card">
+                        <svg class="a e"><use xlink:href="#3A"/></svg>
+                    </button>
+                    <button id="a3Af" class="card">
+                        <svg class="a f"><use xlink:href="#3A"/></svg>
+                    </button>
 
-                x = 0;
-                
-                a1A = 0;
-                a1B = 0;
-                a2C = 0;
-                a3A = 0;
-                b1B = 0;
-                b2C = 0;
-                b3A = 0;
-                b3B = 0;
-                c1C = 0;
-                c2A = 0;
-                c2B = 0;
-                c3C = 0;
+                    <button id="a3Bd" class="card">
+                        <svg class="a d"><use xlink:href="#3B"/></svg>
+                    </button>
+                    <button id="a3Be" class="card">
+                        <svg class="a e"><use xlink:href="#3B"/></svg>
+                    </button>
+                    <button id="a3Bf" class="card">
+                        <svg class="a f"><use xlink:href="#3B"/></svg>
+                    </button>
 
-                size("a1A");
-                size("a1B");
-                size("a2C");
-                size("a3A");
-                size("b1B");
-                size("b2C");
-                size("b3A");
-                size("b3B");
-                size("c1C");
-                size("c2A");
-                size("c2B");
-                size("c3C");
-            }
+                    <button id="a3Cd" class="card">
+                        <svg class="a d"><use xlink:href="#3C"/></svg>
+                    </button>
+                    <button id="a3Ce" class="card">
+                        <svg class="a e"><use xlink:href="#3C"/></svg>
+                    </button>
+                    <button id="a3Cf" class="card">
+                        <svg class="a f"><use xlink:href="#3C"/></svg>
+                    </button>
+                </g>
+            </g>
+            <g id="Green megagroup">
+                <g id="Group 1A">
+                    <button id="b1Ad" class="card">
+                        <svg class="b d"><use xlink:href="#1A"/></svg>
+                    </button>
+                    <button id="b1Ae" class="card">
+                        <svg class="b e"><use xlink:href="#1A"/></svg>
+                    </button>
+                    <button id="b1Af" class="card">
+                        <svg class="b f"><use xlink:href="#1A"/></svg>
+                    </button>
 
-            function yay() {
-                z++;
-                if (z === 1||z === -1) {
-                    document.getElementById("z").innerHTML = z + " point";
-                } else {
-                    document.getElementById("z").innerHTML = z + " points";
-                }
-            }
-            function oof() {
-                z--;
-                if (z === 1||z === -1) {
-                    document.getElementById("z").innerHTML = z + " point";
-                } else {
-                    document.getElementById("z").innerHTML = z + " points";
-                }
-            }      
-            function color() {
-                if (z < 0) {
-                    document.getElementById("z").style.color="#d44"; 
-                }
-                else if (z > 0) {
-                    document.getElementById("z").style.color="#4b4"; 
-                }
-                else {
-                    document.getElementById("z").style.color="#44c"; 
-                }
-            }
-            function score(varr) {                      
-                document.getElementById(varr).style.transform = "scale(0.9,0.9)";
-                if (x % 3 === 0) {
-                    if (a % 3 === 0 && a > 0) {
-                        yay();
-                    } else if (b % 3 === 0 && b > 0) {
-                        yay();
-                    } else if (c % 3 === 0 && c > 0) {
-                        yay();
-                    } else if (n1 % 3 === 0 && n1 > 0) {
-                        yay();
-                    } else if (n2 % 3 === 0 && n2 > 0) {
-                        yay();
-                    } else if (n3 % 3 === 0 && n3 > 0) {
-                        yay();
-                    } else if (A % 3 === 0 && A > 0) {
-                        yay();
-                    } else if (B % 3 === 0 && B > 0) {
-                        yay();
-                    } else if (C % 3 === 0 && C > 0) {
-                        yay();
-                    } else {
-                        oof();
-                    }
-                zero();
-                }
-                color();
-            }
-            
-            color();
-            document.getElementById("a1A").onclick = function() {
-                if (a1A === 0) {
-                    a++;
-                    n1++;
-                    A++;
-                    a1A++;
-                    x++;
-                    score("a1A");
-                }
-            }
-            document.getElementById("a1B").onclick = function() {
-                if (a1B === 0) {
-                    a++;
-                    n1++;
-                    B++;
-                    x++;
-                    score("a1B");
-                }
-            }
-            document.getElementById("a2C").onclick = function() {
-                if (a2C === 0) {
-                    a++;
-                    n2++;
-                    C++;
-                    x++;
-                    score("a2C");
-                }
-            }
-            document.getElementById("a3A").onclick = function() {
-                if (a3A === 0) {
-                    a++;
-                    n3++;
-                    A++;
-                    x++;
-                    score("a3A");
-                }
-            }
-            document.getElementById("b1B").onclick = function() {
-                if (b1B === 0) {
-                    b++;
-                    n1++;
-                    B++;
-                    x++;
-                    score("b1B");
-                }
-            }
-            document.getElementById("b2C").onclick = function() {
-                if (b2C === 0) {
-                    b++;
-                    n2++;
-                    C++;
-                    x++;
-                    score("b2C");
-                }
-            }
-            document.getElementById("b3A").onclick = function() {
-                if (b3A === 0) {
-                    b++;
-                    n3++;
-                    A++;
-                    x++;
-                    score("b3A");
-                }
-            }
-            document.getElementById("b3B").onclick = function() {
-                if (b3B === 0) {
-                    b++;
-                    n3++;
-                    B++;
-                    x++;
-                    score("b3B");
-                }
-            }
-            document.getElementById("c1C").onclick = function() {
-                if (a2C === 0) {
-                    c++;
-                    n1++;
-                    C++;
-                    x++;
-                    score("c1C");
-                }
-            }
-            document.getElementById("c2A").onclick = function() {
-                if (c2A === 0) {
-                    c++;
-                    n2++;
-                    A++;
-                    x++;
-                    score("c2A");
-                }
-            }
-            document.getElementById("c2B").onclick = function() {
-                if (c2B === 0) {
-                    c++;
-                    n2++;
-                    B++;
-                    x++;
-                    score("c2B");
-                }
-            }
-            document.getElementById("c3C").onclick = function() {
-                if (c3C === 0) {
-                    c++;
-                    n3++;
-                    C++;
-                    x++;
-                    score("c3C");
-                }
-            }
-            document.getElementById("reset").onclick = function reset() {
-                z = 0;
-                zero();
-                color();
-                document.getElementById("z").innerHTML = z + " points";
-            }
-        </script>
+                    <button id="b1Bd" class="card">
+                        <svg class="b d"><use xlink:href="#1B"/></svg>
+                    </button>
+                    <button id="b1Be" class="card">
+                        <svg class="b e"><use xlink:href="#1B"/></svg>
+                    </button>
+                    <button id="b1Bf" class="card">
+                        <svg class="b f"><use xlink:href="#1B"/></svg>
+                    </button>
+
+                    <button id="b1Cd" class="card">
+                        <svg class="b d"><use xlink:href="#1C"/></svg>
+                    </button>
+                    <button id="b1Ce" class="card">
+                        <svg class="b e"><use xlink:href="#1C"/></svg>
+                    </button>
+                    <button id="b1Cf" class="card">
+                        <svg class="b f"><use xlink:href="#1C"/></svg>
+                    </button>
+                </g>
+                <g id="Group 2A">
+                    <button id="b2Ad" class="card">
+                        <svg class="b d"><use xlink:href="#2A"/></svg>
+                    </button>
+                    <button id="b2Ae" class="card">
+                        <svg class="b e"><use xlink:href="#2A"/></svg>
+                    </button>
+                    <button id="b2Af" class="card">
+                        <svg class="b f"><use xlink:href="#2A"/></svg>
+                    </button>
+
+                    <button id="b2Bd" class="card">
+                        <svg class="b d"><use xlink:href="#2B"/></svg>
+                    </button>
+                    <button id="b2Be" class="card">
+                        <svg class="b e"><use xlink:href="#2B"/></svg>
+                    </button>
+                    <button id="b2Bf" class="card">
+                        <svg class="b f"><use xlink:href="#2B"/></svg>
+                    </button>
+
+                    <button id="b2Cd" class="card">
+                        <svg class="b d"><use xlink:href="#2C"/></svg>
+                    </button>
+                    <button id="b2Ce" class="card">
+                        <svg class="b e"><use xlink:href="#2C"/></svg>
+                    </button>
+                    <button id="b2Cf" class="card">
+                        <svg class="b f"><use xlink:href="#2C"/></svg>
+                    </button>
+                </g>
+                <g id="Group 3A">
+                    <button id="b3Ad" class="card">
+                        <svg class="b d"><use xlink:href="#3A"/></svg>
+                    </button>
+                    <button id="b3Ae" class="card">
+                        <svg class="b e"><use xlink:href="#3A"/></svg>
+                    </button>
+                    <button id="b3Af" class="card">
+                        <svg class="b f"><use xlink:href="#3A"/></svg>
+                    </button>
+
+                    <button id="b3Bd" class="card">
+                        <svg class="b d"><use xlink:href="#3B"/></svg>
+                    </button>
+                    <button id="b3Be" class="card">
+                        <svg class="b e"><use xlink:href="#3B"/></svg>
+                    </button>
+                    <button id="b3Bf" class="card">
+                        <svg class="b f"><use xlink:href="#3B"/></svg>
+                    </button>
+
+                    <button id="b3Cd" class="card">
+                        <svg class="b d"><use xlink:href="#3C"/></svg>
+                    </button>
+                    <button id="b3Ce" class="card">
+                        <svg class="b e"><use xlink:href="#3C"/></svg>
+                    </button>
+                    <button id="b3Cf" class="card">
+                        <svg class="b f"><use xlink:href="#3C"/></svg>
+                    </button>
+                </g>
+            </g>
+            <g id="Blue megagroup">
+                <g id="Group 1A">
+                    <button id="c1Ad" class="card">
+                        <svg class="c d"><use xlink:href="#1A"/></svg>
+                    </button>
+                    <button id="c1Ae" class="card">
+                        <svg class="c e"><use xlink:href="#1A"/></svg>
+                    </button>
+                    <button id="c1Af" class="card">
+                        <svg class="c f"><use xlink:href="#1A"/></svg>
+                    </button>
+
+                    <button id="c1Bd" class="card">
+                        <svg class="c d"><use xlink:href="#1B"/></svg>
+                    </button>
+                    <button id="c1Be" class="card">
+                        <svg class="c e"><use xlink:href="#1B"/></svg>
+                    </button>
+                    <button id="c1Bf" class="card">
+                        <svg class="c f"><use xlink:href="#1B"/></svg>
+                    </button>
+
+                    <button id="c1Cd" class="card">
+                        <svg class="c d"><use xlink:href="#1C"/></svg>
+                    </button>
+                    <button id="c1Ce" class="card">
+                        <svg class="c e"><use xlink:href="#1C"/></svg>
+                    </button>
+                    <button id="c1Cf" class="card">
+                        <svg class="c f"><use xlink:href="#1C"/></svg>
+                    </button>
+                </g>
+                <g id="Group 2A">
+                    <button id="c2Ad" class="card">
+                        <svg class="c d"><use xlink:href="#2A"/></svg>
+                    </button>
+                    <button id="c2Ae" class="card">
+                        <svg class="c e"><use xlink:href="#2A"/></svg>
+                    </button>
+                    <button id="c2Af" class="card">
+                        <svg class="c f"><use xlink:href="#2A"/></svg>
+                    </button>
+
+                    <button id="c2Bd" class="card">
+                        <svg class="c d"><use xlink:href="#2B"/></svg>
+                    </button>
+                    <button id="c2Be" class="card">
+                        <svg class="c e"><use xlink:href="#2B"/></svg>
+                    </button>
+                    <button id="c2Bf" class="card">
+                        <svg class="c f"><use xlink:href="#2B"/></svg>
+                    </button>
+
+                    <button id="c2Cd" class="card">
+                        <svg class="c d"><use xlink:href="#2C"/></svg>
+                    </button>
+                    <button id="c2Ce" class="card">
+                        <svg class="c e"><use xlink:href="#2C"/></svg>
+                    </button>
+                    <button id="c2Cf" class="card">
+                        <svg class="c f"><use xlink:href="#2C"/></svg>
+                    </button>
+                </g>
+                <g id="Group 3A">
+                    <button id="c3Ad" class="card">
+                        <svg class="c d"><use xlink:href="#3A"/></svg>
+                    </button>
+                    <button id="c3Ae" class="card">
+                        <svg class="c e"><use xlink:href="#3A"/></svg>
+                    </button>
+                    <button id="c3Af" class="card">
+                        <svg class="c f"><use xlink:href="#3A"/></svg>
+                    </button>
+
+                    <button id="c3Bd" class="card">
+                        <svg class="c d"><use xlink:href="#3B"/></svg>
+                    </button>
+                    <button id="c3Be" class="card">
+                        <svg class="c e"><use xlink:href="#3B"/></svg>
+                    </button>
+                    <button id="c3Bf" class="card">
+                        <svg class="c f"><use xlink:href="#3B"/></svg>
+                    </button>
+
+                    <button id="c3Cd" class="card">
+                        <svg class="c d"><use xlink:href="#3C"/></svg>
+                    </button>
+                    <button id="c3Ce" class="card">
+                        <svg class="c e"><use xlink:href="#3C"/></svg>
+                    </button>
+                    <button id="c3Cf" class="card">
+                        <svg class="c f"><use xlink:href="#3C"/></svg>
+                    </button>
+                </g>
+            </g>
+        </div>
+        <script src="set.js"></script>
     </body>
 
 </html>
