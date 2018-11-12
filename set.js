@@ -51,6 +51,114 @@ var c3Ad = 0; var c3Ae = 0; var c3Af = 0;
 var c3Bd = 0; var c3Be = 0; var c3Bf = 0;
 var c3Cd = 0; var c3Ce = 0; var c3Cf = 0;
 
+var r = Math.floor(Math.random() * (82));
+
+function rand(){
+    r = Math.floor(Math.random() * (82));
+    if(r===1){r="a1Ad";} if(r===2){r="a1Ae";} if(r===3){r="a1Af";}
+    if(r===4){r="a1Bd";} if(r===5){r="a1Be";} if(r===6){r="a1Bf";}
+    if(r===7){r="a1Cd";} if(r===8){r="a1Ce";} if(r===9){r="a1Cf";}
+
+    if(r===10){r="a2Ad";} if(r===11){r="a2Ae";} if(r===12){r="a2Af";}
+    if(r===13){r="a2Bd";} if(r===14){r="a2Be";} if(r===15){r="a2Bf";}
+    if(r===16){r="a2Cd";} if(r===17){r="a2Ce";} if(r===18){r="a2Cf";}
+
+    if(r===19){r="a3Ad";} if(r===20){r="a3Ae";} if(r===21){r="a3Af";}
+    if(r===22){r="a3Bd";} if(r===23){r="a3Be";} if(r===24){r="a3Bf";}
+    if(r===25){r="a3Cd";} if(r===26){r="a3Ce";} if(r===27){r="a3Cf";}
+
+
+    if(r===28){r="b1Ad";} if(r===29){r="b1Ae";} if(r===30){r="b1Af";}
+    if(r===31){r="b1Bd";} if(r===32){r="b1Be";} if(r===33){r="b1Bf";}
+    if(r===34){r="b1Cd";} if(r===35){r="b1Ce";} if(r===36){r="b1Cf";}
+
+    if(r===37){r="b2Ad";} if(r===38){r="b2Ae";} if(r===39){r="b2Af";}
+    if(r===40){r="b2Bd";} if(r===41){r="b2Be";} if(r===42){r="b2Bf";}
+    if(r===43){r="b2Cd";} if(r===44){r="b2Ce";} if(r===45){r="b2Cf";}
+
+    if(r===46){r="b3Ad";} if(r===47){r="b3Ae";} if(r===48){r="b3Af";}
+    if(r===49){r="b3Bd";} if(r===50){r="b3Be";} if(r===51){r="b3Bf";}
+    if(r===52){r="b3Cd";} if(r===53){r="b3Ce";} if(r===54){r="b3Cf";}
+
+
+    if(r===55){r="c1Ad";} if(r===56){r="c1Ae";} if(r===57){r="c1Af";}
+    if(r===58){r="c1Bd";} if(r===59){r="c1Be";} if(r===60){r="c1Bf";}
+    if(r===61){r="c1Cd";} if(r===62){r="c1Ce";} if(r===63){r="c1Cf";}
+
+    if(r===64){r="c2Ad";} if(r===65){r="c2Ae";} if(r===66){r="c2Af";}
+    if(r===67){r="c2Bd";} if(r===68){r="c2Be";} if(r===69){r="c2Bf";}
+    if(r===70){r="c2Cd";} if(r===71){r="c2Ce";} if(r===72){r="c2Cf";}
+
+    if(r===73){r="c3Ad";} if(r===74){r="c3Ae";} if(r===75){r="c3Af";}
+    if(r===76){r="c3Bd";} if(r===77){r="c3Be";} if(r===78){r="c3Bf";}
+    if(r===79){r="c3Cd";} if(r===80){r="c3Ce";} if(r===81){r="c3Cf";} 
+}
+
+function hide(idd){
+    document.getElementById(idd).style.display = "none";
+}
+function open(idd){
+    document.getElementById(idd).style.display = "inline-block";
+}
+
+function clear() {
+
+    hide("a1Ad"); hide("a1Ae"); hide("a1Af");
+    hide("a1Bd"); hide("a1Be"); hide("a1Bf");
+    hide("a1Cd"); hide("a1Ce"); hide("a1Cf");
+
+    hide("a2Ad"); hide("a2Ae"); hide("a2Af");
+    hide("a2Bd"); hide("a2Be"); hide("a2Bf");
+    hide("a2Cd"); hide("a2Ce"); hide("a2Cf");
+
+    hide("a3Ad"); hide("a3Ae"); hide("a3Af");
+    hide("a3Bd"); hide("a3Be"); hide("a3Bf");
+    hide("a3Cd"); hide("a3Ce"); hide("a3Cf");
+
+    hide("b1Ad"); hide("b1Ae"); hide("b1Af");
+    hide("b1Bd"); hide("b1Be"); hide("b1Bf");
+    hide("b1Cd"); hide("b1Ce"); hide("b1Cf");
+
+    hide("b2Ad"); hide("b2Ae"); hide("b2Af");
+    hide("b2Bd"); hide("b2Be"); hide("b2Bf");
+    hide("b2Cd"); hide("b2Ce"); hide("b2Cf");
+
+    hide("b3Ad"); hide("b3Ae"); hide("b3Af");
+    hide("b3Bd"); hide("b3Be"); hide("b3Bf");
+    hide("b3Cd"); hide("b3Ce"); hide("b3Cf");
+
+    hide("c1Ad"); hide("c1Ae"); hide("c1Af");
+    hide("c1Bd"); hide("c1Be"); hide("c1Bf");
+    hide("c1Cd"); hide("c1Ce"); hide("c1Cf");
+
+    hide("c2Ad"); hide("c2Ae"); hide("c2Af");
+    hide("c2Bd"); hide("c2Be"); hide("c2Bf");
+    hide("c2Cd"); hide("c2Ce"); hide("c2Cf");
+
+    hide("c3Ad"); hide("c3Ae"); hide("c3Af");
+    hide("c3Bd"); hide("c3Be"); hide("c3Bf");
+    hide("c3Cd"); hide("c3Ce"); hide("c3Cf");
+}
+
+function display() {
+    rand();
+    open(r);
+}
+
+clear();
+display();
+display();
+display();
+display();
+display();
+display();
+display();
+display();
+display();
+display();
+display();
+display();
+
 function size(idd) {
     document.getElementById(idd).style.transform = "scale(1,1)";
 }
@@ -202,6 +310,19 @@ document.getElementById("reset").onclick = function reset() {
     zero();
     color();
     document.getElementById("z").innerHTML = z + " points";
+    clear();
+    display();
+    display();
+    display();
+    display();
+    display();
+    display();
+    display();
+    display();
+    display();
+    display();
+    display();
+    display();
 }
 
 /*Red megagroup*/
