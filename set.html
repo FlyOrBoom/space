@@ -9,7 +9,6 @@
                 position:absolute;
                 display: block;
                 top:5px;
-                color:#444;
                 font-family:Monospace, Monospace;
                 font-weight:Bold;
                 font-size:15pt;
@@ -200,33 +199,48 @@
                 } else {
                     document.getElementById("z").innerHTML = z + " points";
                 }
-            }                
-            function score(varr) {                document.getElementById(varr).style.transform = "scale(0.9,0.9)";
-            if (x % 3 === 0) {
-                if (a % 3 === 0 && a > 0) {
-                    yay();
-                } else if (b % 3 === 0 && b > 0) {
-                    yay();
-                } else if (c % 3 === 0 && c > 0) {
-                    yay();
-                } else if (n1 % 3 === 0 && n1 > 0) {
-                    yay();
-                } else if (n2 % 3 === 0 && n2 > 0) {
-                    yay();
-                } else if (n3 % 3 === 0 && n3 > 0) {
-                    yay();
-                } else if (A % 3 === 0 && A > 0) {
-                    yay();
-                } else if (B % 3 === 0 && B > 0) {
-                    yay();
-                } else if (C % 3 === 0 && C > 0) {
-                    yay();
-                } else {
-                    oof();
+            }      
+            function color() {
+                if (z < 0) {
+                    document.getElementById("z").style.color="#d44"; 
                 }
-                zero();
+                else if (z > 0) {
+                    document.getElementById("z").style.color="#4b4"; 
+                }
+                else {
+                    document.getElementById("z").style.color="#44c"; 
                 }
             }
+            function score(varr) {                      
+                document.getElementById(varr).style.transform = "scale(0.9,0.9)";
+                if (x % 3 === 0) {
+                    if (a % 3 === 0 && a > 0) {
+                        yay();
+                    } else if (b % 3 === 0 && b > 0) {
+                        yay();
+                    } else if (c % 3 === 0 && c > 0) {
+                        yay();
+                    } else if (n1 % 3 === 0 && n1 > 0) {
+                        yay();
+                    } else if (n2 % 3 === 0 && n2 > 0) {
+                        yay();
+                    } else if (n3 % 3 === 0 && n3 > 0) {
+                        yay();
+                    } else if (A % 3 === 0 && A > 0) {
+                        yay();
+                    } else if (B % 3 === 0 && B > 0) {
+                        yay();
+                    } else if (C % 3 === 0 && C > 0) {
+                        yay();
+                    } else {
+                        oof();
+                    }
+                zero();
+                }
+                color();
+            }
+            
+            color();
             document.getElementById("a1A").onclick = function() {
                 if (a1A === 0) {
                     a++;
@@ -337,8 +351,9 @@
                 }
             }
             document.getElementById("reset").onclick = function reset() {
-                zero();
                 z = 0;
+                zero();
+                color();
                 document.getElementById("z").innerHTML = z + " points";
             }
         </script>
