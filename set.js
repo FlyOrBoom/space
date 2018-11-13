@@ -282,13 +282,13 @@ function color() {
 function score(varr) {                      
     document.getElementById(varr).style.transform = "scale(0.9,0.9)";
     if (x === 3) {
-        if (a+b===3 && b+c===3&&a+c===3&&
-            n1+n2===3&&n2+n3===3&&n1+n3===3&&
-            A+B===3&&B+C===3&&A+C===3&&
-            d+e===3&&e+f===3&&d+f===3) {
-            oof();
-        } else {
+        if (((a===3||b===3||c===3)||((a===b)&&(b===c)))&&
+            ((n1===3||n2===3||n3===3)||((n1===n2)&&(n2===n3)))&&
+            ((A===3||B===3||C===3)||((A===B)&&(B===C)))&&
+            ((d===3||e===3||f===3)||((d===e)&&(e===f)))) {
             yay();
+        } else {
+            oof();
         }
         zero();
     }
