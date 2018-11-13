@@ -839,7 +839,7 @@ document.getElementById("a1Af").onclick = function() {
         a++;
         n1++;
         A++;
-        f++
+        f++;
         a1Af++;
         x++;
         score("a1Af");
@@ -873,7 +873,7 @@ document.getElementById("a1Bf").onclick = function() {
         a++;
         n1++;
         B++;
-        f++
+        f++;
         a1Bf++;
         x++;
         score("a1Bf");
@@ -907,7 +907,7 @@ document.getElementById("a1Cf").onclick = function() {
         a++;
         n1++;
         C++;
-        f++
+        f++;
         a1Cf++;
         x++;
         score("a1Cf");
@@ -941,7 +941,7 @@ document.getElementById("a2Af").onclick = function() {
         a++;
         n2++;
         A++;
-        f++
+        f++;
         a2Af++;
         x++;
         score("a2Af");
@@ -975,7 +975,7 @@ document.getElementById("a2Bf").onclick = function() {
         a++;
         n2++;
         B++;
-        f++
+        f++;
         a2Bf++;
         x++;
         score("a2Bf");
@@ -1009,7 +1009,7 @@ document.getElementById("a2Cf").onclick = function() {
         a++;
         n2++;
         C++;
-        f++
+        f++;
         a2Cf++;
         x++;
         score("a2Cf");
@@ -1043,7 +1043,7 @@ document.getElementById("a3Af").onclick = function() {
         a++;
         n3++;
         A++;
-        f++
+        f++;
         a3Af++;
         x++;
         score("a3Af");
@@ -1077,7 +1077,7 @@ document.getElementById("a3Bf").onclick = function() {
         a++;
         n3++;
         B++;
-        f++
+        f++;
         a3Bf++;
         x++;
         score("a3Bf");
@@ -1111,7 +1111,7 @@ document.getElementById("a3Cf").onclick = function() {
         a++;
         n3++;
         C++;
-        f++
+        f++;
         a3Cf++;
         x++;
         score("a3Cf");
@@ -1146,7 +1146,7 @@ document.getElementById("b1Af").onclick = function() {
         b++;
         n1++;
         A++;
-        f++
+        f++;
         b1Af++;
         x++;
         score("b1Af");
@@ -1180,7 +1180,7 @@ document.getElementById("b1Bf").onclick = function() {
         b++;
         n1++;
         B++;
-        f++
+        f++;
         b1Bf++;
         x++;
         score("b1Bf");
@@ -1214,7 +1214,7 @@ document.getElementById("b1Cf").onclick = function() {
         b++;
         n1++;
         C++;
-        f++
+        f++;
         b1Cf++;
         x++;
         score("b1Cf");
@@ -1248,7 +1248,7 @@ document.getElementById("b2Af").onclick = function() {
         b++;
         n2++;
         A++;
-        f++
+        f++;
         b2Af++;
         x++;
         score("b2Af");
@@ -1282,7 +1282,7 @@ document.getElementById("b2Bf").onclick = function() {
         b++;
         n2++;
         B++;
-        f++
+        f++;
         b2Bf++;
         x++;
         score("b2Bf");
@@ -1316,7 +1316,7 @@ document.getElementById("b2Cf").onclick = function() {
         b++;
         n2++;
         C++;
-        f++
+        f++;
         b2Cf++;
         x++;
         score("b2Cf");
@@ -1350,7 +1350,7 @@ document.getElementById("b3Af").onclick = function() {
         b++;
         n3++;
         A++;
-        f++
+        f++;
         b3Af++;
         x++;
         score("b3Af");
@@ -1384,7 +1384,7 @@ document.getElementById("b3Bf").onclick = function() {
         b++;
         n3++;
         B++;
-        f++
+        f++;
         b3Bf++;
         x++;
         score("b3Bf");
@@ -1418,7 +1418,7 @@ document.getElementById("b3Cf").onclick = function() {
         b++;
         n3++;
         C++;
-        f++
+        f++;
         b3Cf++;
         x++;
         score("b3Cf");
@@ -1453,7 +1453,7 @@ document.getElementById("c1Af").onclick = function() {
         c++;
         n1++;
         A++;
-        f++
+        f++;
         c1Af++;
         x++;
         score("c1Af");
@@ -1487,7 +1487,7 @@ document.getElementById("c1Bf").onclick = function() {
         c++;
         n1++;
         c++;
-        f++
+        f++;
         c1Bf++;
         x++;
         score("c1Bf");
@@ -1521,7 +1521,7 @@ document.getElementById("c1Cf").onclick = function() {
         c++;
         n1++;
         C++;
-        f++
+        f++;
         c1Cf++;
         x++;
         score("c1Cf");
@@ -1555,7 +1555,7 @@ document.getElementById("c2Af").onclick = function() {
         c++;
         n2++;
         A++;
-        f++
+        f++;
         c2Af++;
         x++;
         score("c2Af");
@@ -1589,7 +1589,7 @@ document.getElementById("c2Bf").onclick = function() {
         c++;
         n2++;
         c++;
-        f++
+        f++;
         c2Bf++;
         x++;
         score("c2Bf");
@@ -1623,7 +1623,7 @@ document.getElementById("c2Cf").onclick = function() {
         c++;
         n2++;
         C++;
-        f++
+        f++;
         c2Cf++;
         x++;
         score("c2Cf");
@@ -1657,7 +1657,7 @@ document.getElementById("c3Af").onclick = function() {
         c++;
         n3++;
         A++;
-        f++
+        f++;
         c3Af++;
         x++;
         score("c3Af");
@@ -1691,7 +1691,7 @@ document.getElementById("c3Bf").onclick = function() {
         c++;
         n3++;
         c++;
-        f++
+        f++;
         c3Bf++;
         x++;
         score("c3Bf");
@@ -1725,7 +1725,7 @@ document.getElementById("c3Cf").onclick = function() {
         c++;
         n3++;
         C++;
-        f++
+        f++;
         c3Cf++;
         x++;
         score("c3Cf");
