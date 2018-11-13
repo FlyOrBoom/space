@@ -15,6 +15,21 @@ var x = 0;
 
 var z = 0;
 
+var i = 0;
+
+var r1 = 0;
+var r2 = 0;
+var r3 = 0;
+var r4 = 0;
+var r5 = 0;
+var r6 = 0;
+var r7 = 0;
+var r8 = 0;
+var r9 = 0;
+var r10 = 0;
+var r11 = 0;
+var r12 = 0;
+
 var a1Ad = 0; var a1Ae = 0; var a1Af = 0;
 var a1Bd = 0; var a1Be = 0; var a1Bf = 0;
 var a1Cd = 0; var a1Ce = 0; var a1Cf = 0;
@@ -51,47 +66,499 @@ var c3Ad = 0; var c3Ae = 0; var c3Af = 0;
 var c3Bd = 0; var c3Be = 0; var c3Bf = 0;
 var c3Cd = 0; var c3Ce = 0; var c3Cf = 0;
 
-var r = Math.floor(Math.random() * (82));
+function rand1(){
+    r1 = Math.floor((Math.random() * 81) + 1);
+    if(r1===1){r1="a1Ad";} if(r1===2){r1="a1Ae";} if(r1===3){r1="a1Af";}
+    if(r1===4){r1="a1Bd";} if(r1===5){r1="a1Be";} if(r1===6){r1="a1Bf";}
+    if(r1===7){r1="a1Cd";} if(r1===8){r1="a1Ce";} if(r1===9){r1="a1Cf";}
 
-function rand(){
-    r = Math.floor(Math.random() * (82));
-    if(r===1){r="a1Ad";} if(r===2){r="a1Ae";} if(r===3){r="a1Af";}
-    if(r===4){r="a1Bd";} if(r===5){r="a1Be";} if(r===6){r="a1Bf";}
-    if(r===7){r="a1Cd";} if(r===8){r="a1Ce";} if(r===9){r="a1Cf";}
+    if(r1===10){r1="a2Ad";} if(r1===11){r1="a2Ae";} if(r1===12){r1="a2Af";}
+    if(r1===13){r1="a2Bd";} if(r1===14){r1="a2Be";} if(r1===15){r1="a2Bf";}
+    if(r1===16){r1="a2Cd";} if(r1===17){r1="a2Ce";} if(r1===18){r1="a2Cf";}
 
-    if(r===10){r="a2Ad";} if(r===11){r="a2Ae";} if(r===12){r="a2Af";}
-    if(r===13){r="a2Bd";} if(r===14){r="a2Be";} if(r===15){r="a2Bf";}
-    if(r===16){r="a2Cd";} if(r===17){r="a2Ce";} if(r===18){r="a2Cf";}
-
-    if(r===19){r="a3Ad";} if(r===20){r="a3Ae";} if(r===21){r="a3Af";}
-    if(r===22){r="a3Bd";} if(r===23){r="a3Be";} if(r===24){r="a3Bf";}
-    if(r===25){r="a3Cd";} if(r===26){r="a3Ce";} if(r===27){r="a3Cf";}
+    if(r1===19){r1="a3Ad";} if(r1===20){r1="a3Ae";} if(r1===21){r1="a3Af";}
+    if(r1===22){r1="a3Bd";} if(r1===23){r1="a3Be";} if(r1===24){r1="a3Bf";}
+    if(r1===25){r1="a3Cd";} if(r1===26){r1="a3Ce";} if(r1===27){r1="a3Cf";}
 
 
-    if(r===28){r="b1Ad";} if(r===29){r="b1Ae";} if(r===30){r="b1Af";}
-    if(r===31){r="b1Bd";} if(r===32){r="b1Be";} if(r===33){r="b1Bf";}
-    if(r===34){r="b1Cd";} if(r===35){r="b1Ce";} if(r===36){r="b1Cf";}
+    if(r1===28){r1="b1Ad";} if(r1===29){r1="b1Ae";} if(r1===30){r1="b1Af";}
+    if(r1===31){r1="b1Bd";} if(r1===32){r1="b1Be";} if(r1===33){r1="b1Bf";}
+    if(r1===34){r1="b1Cd";} if(r1===35){r1="b1Ce";} if(r1===36){r1="b1Cf";}
 
-    if(r===37){r="b2Ad";} if(r===38){r="b2Ae";} if(r===39){r="b2Af";}
-    if(r===40){r="b2Bd";} if(r===41){r="b2Be";} if(r===42){r="b2Bf";}
-    if(r===43){r="b2Cd";} if(r===44){r="b2Ce";} if(r===45){r="b2Cf";}
+    if(r1===37){r1="b2Ad";} if(r1===38){r1="b2Ae";} if(r1===39){r1="b2Af";}
+    if(r1===40){r1="b2Bd";} if(r1===41){r1="b2Be";} if(r1===42){r1="b2Bf";}
+    if(r1===43){r1="b2Cd";} if(r1===44){r1="b2Ce";} if(r1===45){r1="b2Cf";}
 
-    if(r===46){r="b3Ad";} if(r===47){r="b3Ae";} if(r===48){r="b3Af";}
-    if(r===49){r="b3Bd";} if(r===50){r="b3Be";} if(r===51){r="b3Bf";}
-    if(r===52){r="b3Cd";} if(r===53){r="b3Ce";} if(r===54){r="b3Cf";}
+    if(r1===46){r1="b3Ad";} if(r1===47){r1="b3Ae";} if(r1===48){r1="b3Af";}
+    if(r1===49){r1="b3Bd";} if(r1===50){r1="b3Be";} if(r1===51){r1="b3Bf";}
+    if(r1===52){r1="b3Cd";} if(r1===53){r1="b3Ce";} if(r1===54){r1="b3Cf";}
 
 
-    if(r===55){r="c1Ad";} if(r===56){r="c1Ae";} if(r===57){r="c1Af";}
-    if(r===58){r="c1Bd";} if(r===59){r="c1Be";} if(r===60){r="c1Bf";}
-    if(r===61){r="c1Cd";} if(r===62){r="c1Ce";} if(r===63){r="c1Cf";}
+    if(r1===55){r1="c1Ad";} if(r1===56){r1="c1Ae";} if(r1===57){r1="c1Af";}
+    if(r1===58){r1="c1Bd";} if(r1===59){r1="c1Be";} if(r1===60){r1="c1Bf";}
+    if(r1===61){r1="c1Cd";} if(r1===62){r1="c1Ce";} if(r1===63){r1="c1Cf";}
 
-    if(r===64){r="c2Ad";} if(r===65){r="c2Ae";} if(r===66){r="c2Af";}
-    if(r===67){r="c2Bd";} if(r===68){r="c2Be";} if(r===69){r="c2Bf";}
-    if(r===70){r="c2Cd";} if(r===71){r="c2Ce";} if(r===72){r="c2Cf";}
+    if(r1===64){r1="c2Ad";} if(r1===65){r1="c2Ae";} if(r1===66){r1="c2Af";}
+    if(r1===67){r1="c2Bd";} if(r1===68){r1="c2Be";} if(r1===69){r1="c2Bf";}
+    if(r1===70){r1="c2Cd";} if(r1===71){r1="c2Ce";} if(r1===72){r1="c2Cf";}
 
-    if(r===73){r="c3Ad";} if(r===74){r="c3Ae";} if(r===75){r="c3Af";}
-    if(r===76){r="c3Bd";} if(r===77){r="c3Be";} if(r===78){r="c3Bf";}
-    if(r===79){r="c3Cd";} if(r===80){r="c3Ce";} if(r===81){r="c3Cf";} 
+    if(r1===73){r1="c3Ad";} if(r1===74){r1="c3Ae";} if(r1===75){r1="c3Af";}
+    if(r1===76){r1="c3Bd";} if(r1===77){r1="c3Be";} if(r1===78){r1="c3Bf";}
+    if(r1===79){r1="c3Cd";} if(r1===80){r1="c3Ce";} if(r1===81){r1="c3Cf";} 
+}
+
+function rand2(){
+    r2 = Math.floor((Math.random() * 81) + 1);
+    if(r2===1){r2="a1Ad";} if(r2===2){r2="a1Ae";} if(r2===3){r2="a1Af";}
+    if(r2===4){r2="a1Bd";} if(r2===5){r2="a1Be";} if(r2===6){r2="a1Bf";}
+    if(r2===7){r2="a1Cd";} if(r2===8){r2="a1Ce";} if(r2===9){r2="a1Cf";}
+
+    if(r2===10){r2="a2Ad";} if(r2===11){r2="a2Ae";} if(r2===12){r2="a2Af";}
+    if(r2===13){r2="a2Bd";} if(r2===14){r2="a2Be";} if(r2===15){r2="a2Bf";}
+    if(r2===16){r2="a2Cd";} if(r2===17){r2="a2Ce";} if(r2===18){r2="a2Cf";}
+
+    if(r2===19){r2="a3Ad";} if(r2===20){r2="a3Ae";} if(r2===21){r2="a3Af";}
+    if(r2===22){r2="a3Bd";} if(r2===23){r2="a3Be";} if(r2===24){r2="a3Bf";}
+    if(r2===25){r2="a3Cd";} if(r2===26){r2="a3Ce";} if(r2===27){r2="a3Cf";}
+
+
+    if(r2===28){r2="b1Ad";} if(r2===29){r2="b1Ae";} if(r2===30){r2="b1Af";}
+    if(r2===31){r2="b1Bd";} if(r2===32){r2="b1Be";} if(r2===33){r2="b1Bf";}
+    if(r2===34){r2="b1Cd";} if(r2===35){r2="b1Ce";} if(r2===36){r2="b1Cf";}
+
+    if(r2===37){r2="b2Ad";} if(r2===38){r2="b2Ae";} if(r2===39){r2="b2Af";}
+    if(r2===40){r2="b2Bd";} if(r2===41){r2="b2Be";} if(r2===42){r2="b2Bf";}
+    if(r2===43){r2="b2Cd";} if(r2===44){r2="b2Ce";} if(r2===45){r2="b2Cf";}
+
+    if(r2===46){r2="b3Ad";} if(r2===47){r2="b3Ae";} if(r2===48){r2="b3Af";}
+    if(r2===49){r2="b3Bd";} if(r2===50){r2="b3Be";} if(r2===51){r2="b3Bf";}
+    if(r2===52){r2="b3Cd";} if(r2===53){r2="b3Ce";} if(r2===54){r2="b3Cf";}
+
+
+    if(r2===55){r2="c1Ad";} if(r2===56){r2="c1Ae";} if(r2===57){r2="c1Af";}
+    if(r2===58){r2="c1Bd";} if(r2===59){r2="c1Be";} if(r2===60){r2="c1Bf";}
+    if(r2===61){r2="c1Cd";} if(r2===62){r2="c1Ce";} if(r2===63){r2="c1Cf";}
+
+    if(r2===64){r2="c2Ad";} if(r2===65){r2="c2Ae";} if(r2===66){r2="c2Af";}
+    if(r2===67){r2="c2Bd";} if(r2===68){r2="c2Be";} if(r2===69){r2="c2Bf";}
+    if(r2===70){r2="c2Cd";} if(r2===71){r2="c2Ce";} if(r2===72){r2="c2Cf";}
+
+    if(r2===73){r2="c3Ad";} if(r2===74){r2="c3Ae";} if(r2===75){r2="c3Af";}
+    if(r2===76){r2="c3Bd";} if(r2===77){r2="c3Be";} if(r2===78){r2="c3Bf";}
+    if(r2===79){r2="c3Cd";} if(r2===80){r2="c3Ce";} if(r2===81){r2="c3Cf";}
+}
+
+
+function rand3(){
+    r3 = Math.floor((Math.random() * 81) + 1);
+    if(r3===1){r3="a1Ad";} if(r3===2){r3="a1Ae";} if(r3===3){r3="a1Af";}
+    if(r3===4){r3="a1Bd";} if(r3===5){r3="a1Be";} if(r3===6){r3="a1Bf";}
+    if(r3===7){r3="a1Cd";} if(r3===8){r3="a1Ce";} if(r3===9){r3="a1Cf";}
+
+    if(r3===10){r3="a2Ad";} if(r3===11){r3="a2Ae";} if(r3===12){r3="a2Af";}
+    if(r3===13){r3="a2Bd";} if(r3===14){r3="a2Be";} if(r3===15){r3="a2Bf";}
+    if(r3===16){r3="a2Cd";} if(r3===17){r3="a2Ce";} if(r3===18){r3="a2Cf";}
+
+    if(r3===19){r3="a3Ad";} if(r3===20){r3="a3Ae";} if(r3===21){r3="a3Af";}
+    if(r3===22){r3="a3Bd";} if(r3===23){r3="a3Be";} if(r3===24){r3="a3Bf";}
+    if(r3===25){r3="a3Cd";} if(r3===26){r3="a3Ce";} if(r3===27){r3="a3Cf";}
+
+
+    if(r3===28){r3="b1Ad";} if(r3===29){r3="b1Ae";} if(r3===30){r3="b1Af";}
+    if(r3===31){r3="b1Bd";} if(r3===32){r3="b1Be";} if(r3===33){r3="b1Bf";}
+    if(r3===34){r3="b1Cd";} if(r3===35){r3="b1Ce";} if(r3===36){r3="b1Cf";}
+
+    if(r3===37){r3="b2Ad";} if(r3===38){r3="b2Ae";} if(r3===39){r3="b2Af";}
+    if(r3===40){r3="b2Bd";} if(r3===41){r3="b2Be";} if(r3===42){r3="b2Bf";}
+    if(r3===43){r3="b2Cd";} if(r3===44){r3="b2Ce";} if(r3===45){r3="b2Cf";}
+
+    if(r3===46){r3="b3Ad";} if(r3===47){r3="b3Ae";} if(r3===48){r3="b3Af";}
+    if(r3===49){r3="b3Bd";} if(r3===50){r3="b3Be";} if(r3===51){r3="b3Bf";}
+    if(r3===52){r3="b3Cd";} if(r3===53){r3="b3Ce";} if(r3===54){r3="b3Cf";}
+
+
+    if(r3===55){r3="c1Ad";} if(r3===56){r3="c1Ae";} if(r3===57){r3="c1Af";}
+    if(r3===58){r3="c1Bd";} if(r3===59){r3="c1Be";} if(r3===60){r3="c1Bf";}
+    if(r3===61){r3="c1Cd";} if(r3===62){r3="c1Ce";} if(r3===63){r3="c1Cf";}
+
+    if(r3===64){r3="c2Ad";} if(r3===65){r3="c2Ae";} if(r3===66){r3="c2Af";}
+    if(r3===67){r3="c2Bd";} if(r3===68){r3="c2Be";} if(r3===69){r3="c2Bf";}
+    if(r3===70){r3="c2Cd";} if(r3===71){r3="c2Ce";} if(r3===72){r3="c2Cf";}
+
+    if(r3===73){r3="c3Ad";} if(r3===74){r3="c3Ae";} if(r3===75){r3="c3Af";}
+    if(r3===76){r3="c3Bd";} if(r3===77){r3="c3Be";} if(r3===78){r3="c3Bf";}
+    if(r3===79){r3="c3Cd";} if(r3===80){r3="c3Ce";} if(r3===81){r3="c3Cf";} 
+}
+
+function rand4(){
+    r4 = Math.floor((Math.random() * 81) + 1);
+    if(r4===1){r4="a1Ad";} if(r4===2){r4="a1Ae";} if(r4===3){r4="a1Af";}
+    if(r4===4){r4="a1Bd";} if(r4===5){r4="a1Be";} if(r4===6){r4="a1Bf";}
+    if(r4===7){r4="a1Cd";} if(r4===8){r4="a1Ce";} if(r4===9){r4="a1Cf";}
+
+    if(r4===10){r4="a2Ad";} if(r4===11){r4="a2Ae";} if(r4===12){r4="a2Af";}
+    if(r4===13){r4="a2Bd";} if(r4===14){r4="a2Be";} if(r4===15){r4="a2Bf";}
+    if(r4===16){r4="a2Cd";} if(r4===17){r4="a2Ce";} if(r4===18){r4="a2Cf";}
+
+    if(r4===19){r4="a3Ad";} if(r4===20){r4="a3Ae";} if(r4===21){r4="a3Af";}
+    if(r4===22){r4="a3Bd";} if(r4===23){r4="a3Be";} if(r4===24){r4="a3Bf";}
+    if(r4===25){r4="a3Cd";} if(r4===26){r4="a3Ce";} if(r4===27){r4="a3Cf";}
+
+
+    if(r4===28){r4="b1Ad";} if(r4===29){r4="b1Ae";} if(r4===30){r4="b1Af";}
+    if(r4===31){r4="b1Bd";} if(r4===32){r4="b1Be";} if(r4===33){r4="b1Bf";}
+    if(r4===34){r4="b1Cd";} if(r4===35){r4="b1Ce";} if(r4===36){r4="b1Cf";}
+
+    if(r4===37){r4="b2Ad";} if(r4===38){r4="b2Ae";} if(r4===39){r4="b2Af";}
+    if(r4===40){r4="b2Bd";} if(r4===41){r4="b2Be";} if(r4===42){r4="b2Bf";}
+    if(r4===43){r4="b2Cd";} if(r4===44){r4="b2Ce";} if(r4===45){r4="b2Cf";}
+
+    if(r4===46){r4="b3Ad";} if(r4===47){r4="b3Ae";} if(r4===48){r4="b3Af";}
+    if(r4===49){r4="b3Bd";} if(r4===50){r4="b3Be";} if(r4===51){r4="b3Bf";}
+    if(r4===52){r4="b3Cd";} if(r4===53){r4="b3Ce";} if(r4===54){r4="b3Cf";}
+
+
+    if(r4===55){r4="c1Ad";} if(r4===56){r4="c1Ae";} if(r4===57){r4="c1Af";}
+    if(r4===58){r4="c1Bd";} if(r4===59){r4="c1Be";} if(r4===60){r4="c1Bf";}
+    if(r4===61){r4="c1Cd";} if(r4===62){r4="c1Ce";} if(r4===63){r4="c1Cf";}
+
+    if(r4===64){r4="c2Ad";} if(r4===65){r4="c2Ae";} if(r4===66){r4="c2Af";}
+    if(r4===67){r4="c2Bd";} if(r4===68){r4="c2Be";} if(r4===69){r4="c2Bf";}
+    if(r4===70){r4="c2Cd";} if(r4===71){r4="c2Ce";} if(r4===72){r4="c2Cf";}
+
+    if(r4===73){r4="c3Ad";} if(r4===74){r4="c3Ae";} if(r4===75){r4="c3Af";}
+    if(r4===76){r4="c3Bd";} if(r4===77){r4="c3Be";} if(r4===78){r4="c3Bf";}
+    if(r4===79){r4="c3Cd";} if(r4===80){r4="c3Ce";} if(r4===81){r4="c3Cf";}
+}
+
+function rand5(){
+    r5 = Math.floor((Math.random() * 81) + 1);
+    if(r5===1){r5="a1Ad";} if(r5===2){r5="a1Ae";} if(r5===3){r5="a1Af";}
+    if(r5===4){r5="a1Bd";} if(r5===5){r5="a1Be";} if(r5===6){r5="a1Bf";}
+    if(r5===7){r5="a1Cd";} if(r5===8){r5="a1Ce";} if(r5===9){r5="a1Cf";}
+
+    if(r5===10){r5="a2Ad";} if(r5===11){r5="a2Ae";} if(r5===12){r5="a2Af";}
+    if(r5===13){r5="a2Bd";} if(r5===14){r5="a2Be";} if(r5===15){r5="a2Bf";}
+    if(r5===16){r5="a2Cd";} if(r5===17){r5="a2Ce";} if(r5===18){r5="a2Cf";}
+
+    if(r5===19){r5="a3Ad";} if(r5===20){r5="a3Ae";} if(r5===21){r5="a3Af";}
+    if(r5===22){r5="a3Bd";} if(r5===23){r5="a3Be";} if(r5===24){r5="a3Bf";}
+    if(r5===25){r5="a3Cd";} if(r5===26){r5="a3Ce";} if(r5===27){r5="a3Cf";}
+
+
+    if(r5===28){r5="b1Ad";} if(r5===29){r5="b1Ae";} if(r5===30){r5="b1Af";}
+    if(r5===31){r5="b1Bd";} if(r5===32){r5="b1Be";} if(r5===33){r5="b1Bf";}
+    if(r5===34){r5="b1Cd";} if(r5===35){r5="b1Ce";} if(r5===36){r5="b1Cf";}
+
+    if(r5===37){r5="b2Ad";} if(r5===38){r5="b2Ae";} if(r5===39){r5="b2Af";}
+    if(r5===40){r5="b2Bd";} if(r5===41){r5="b2Be";} if(r5===42){r5="b2Bf";}
+    if(r5===43){r5="b2Cd";} if(r5===44){r5="b2Ce";} if(r5===45){r5="b2Cf";}
+
+    if(r5===46){r5="b3Ad";} if(r5===47){r5="b3Ae";} if(r5===48){r5="b3Af";}
+    if(r5===49){r5="b3Bd";} if(r5===50){r5="b3Be";} if(r5===51){r5="b3Bf";}
+    if(r5===52){r5="b3Cd";} if(r5===53){r5="b3Ce";} if(r5===54){r5="b3Cf";}
+
+
+    if(r5===55){r5="c1Ad";} if(r5===56){r5="c1Ae";} if(r5===57){r5="c1Af";}
+    if(r5===58){r5="c1Bd";} if(r5===59){r5="c1Be";} if(r5===60){r5="c1Bf";}
+    if(r5===61){r5="c1Cd";} if(r5===62){r5="c1Ce";} if(r5===63){r5="c1Cf";}
+
+    if(r5===64){r5="c2Ad";} if(r5===65){r5="c2Ae";} if(r5===66){r5="c2Af";}
+    if(r5===67){r5="c2Bd";} if(r5===68){r5="c2Be";} if(r5===69){r5="c2Bf";}
+    if(r5===70){r5="c2Cd";} if(r5===71){r5="c2Ce";} if(r5===72){r5="c2Cf";}
+
+    if(r5===73){r5="c3Ad";} if(r5===74){r5="c3Ae";} if(r5===75){r5="c3Af";}
+    if(r5===76){r5="c3Bd";} if(r5===77){r5="c3Be";} if(r5===78){r5="c3Bf";}
+    if(r5===79){r5="c3Cd";} if(r5===80){r5="c3Ce";} if(r5===81){r5="c3Cf";} 
+}
+
+function rand6(){
+    r6 = Math.floor((Math.random() * 81) + 1);
+    if(r6===1){r6="a1Ad";} if(r6===2){r6="a1Ae";} if(r6===3){r6="a1Af";}
+    if(r6===4){r6="a1Bd";} if(r6===5){r6="a1Be";} if(r6===6){r6="a1Bf";}
+    if(r6===7){r6="a1Cd";} if(r6===8){r6="a1Ce";} if(r6===9){r6="a1Cf";}
+
+    if(r6===10){r6="a2Ad";} if(r6===11){r6="a2Ae";} if(r6===12){r6="a2Af";}
+    if(r6===13){r6="a2Bd";} if(r6===14){r6="a2Be";} if(r6===15){r6="a2Bf";}
+    if(r6===16){r6="a2Cd";} if(r6===17){r6="a2Ce";} if(r6===18){r6="a2Cf";}
+
+    if(r6===19){r6="a3Ad";} if(r6===20){r6="a3Ae";} if(r6===21){r6="a3Af";}
+    if(r6===22){r6="a3Bd";} if(r6===23){r6="a3Be";} if(r6===24){r6="a3Bf";}
+    if(r6===25){r6="a3Cd";} if(r6===26){r6="a3Ce";} if(r6===27){r6="a3Cf";}
+
+
+    if(r6===28){r6="b1Ad";} if(r6===29){r6="b1Ae";} if(r6===30){r6="b1Af";}
+    if(r6===31){r6="b1Bd";} if(r6===32){r6="b1Be";} if(r6===33){r6="b1Bf";}
+    if(r6===34){r6="b1Cd";} if(r6===35){r6="b1Ce";} if(r6===36){r6="b1Cf";}
+
+    if(r6===37){r6="b2Ad";} if(r6===38){r6="b2Ae";} if(r6===39){r6="b2Af";}
+    if(r6===40){r6="b2Bd";} if(r6===41){r6="b2Be";} if(r6===42){r6="b2Bf";}
+    if(r6===43){r6="b2Cd";} if(r6===44){r6="b2Ce";} if(r6===45){r6="b2Cf";}
+
+    if(r6===46){r6="b3Ad";} if(r6===47){r6="b3Ae";} if(r6===48){r6="b3Af";}
+    if(r6===49){r6="b3Bd";} if(r6===50){r6="b3Be";} if(r6===51){r6="b3Bf";}
+    if(r6===52){r6="b3Cd";} if(r6===53){r6="b3Ce";} if(r6===54){r6="b3Cf";}
+
+
+    if(r6===55){r6="c1Ad";} if(r6===56){r6="c1Ae";} if(r6===57){r6="c1Af";}
+    if(r6===58){r6="c1Bd";} if(r6===59){r6="c1Be";} if(r6===60){r6="c1Bf";}
+    if(r6===61){r6="c1Cd";} if(r6===62){r6="c1Ce";} if(r6===63){r6="c1Cf";}
+
+    if(r6===64){r6="c2Ad";} if(r6===65){r6="c2Ae";} if(r6===66){r6="c2Af";}
+    if(r6===67){r6="c2Bd";} if(r6===68){r6="c2Be";} if(r6===69){r6="c2Bf";}
+    if(r6===70){r6="c2Cd";} if(r6===71){r6="c2Ce";} if(r6===72){r6="c2Cf";}
+
+    if(r6===73){r6="c3Ad";} if(r6===74){r6="c3Ae";} if(r6===75){r6="c3Af";}
+    if(r6===76){r6="c3Bd";} if(r6===77){r6="c3Be";} if(r6===78){r6="c3Bf";}
+    if(r6===79){r6="c3Cd";} if(r6===80){r6="c3Ce";} if(r6===81){r6="c3Cf";}
+}
+
+
+function rand7(){
+    r7 = Math.floor((Math.random() * 81) + 1);
+    if(r7===1){r7="a1Ad";} if(r7===2){r7="a1Ae";} if(r7===3){r7="a1Af";}
+    if(r7===4){r7="a1Bd";} if(r7===5){r7="a1Be";} if(r7===6){r7="a1Bf";}
+    if(r7===7){r7="a1Cd";} if(r7===8){r7="a1Ce";} if(r7===9){r7="a1Cf";}
+
+    if(r7===10){r7="a2Ad";} if(r7===11){r7="a2Ae";} if(r7===12){r7="a2Af";}
+    if(r7===13){r7="a2Bd";} if(r7===14){r7="a2Be";} if(r7===15){r7="a2Bf";}
+    if(r7===16){r7="a2Cd";} if(r7===17){r7="a2Ce";} if(r7===18){r7="a2Cf";}
+
+    if(r7===19){r7="a3Ad";} if(r7===20){r7="a3Ae";} if(r7===21){r7="a3Af";}
+    if(r7===22){r7="a3Bd";} if(r7===23){r7="a3Be";} if(r7===24){r7="a3Bf";}
+    if(r7===25){r7="a3Cd";} if(r7===26){r7="a3Ce";} if(r7===27){r7="a3Cf";}
+
+
+    if(r7===28){r7="b1Ad";} if(r7===29){r7="b1Ae";} if(r7===30){r7="b1Af";}
+    if(r7===31){r7="b1Bd";} if(r7===32){r7="b1Be";} if(r7===33){r7="b1Bf";}
+    if(r7===34){r7="b1Cd";} if(r7===35){r7="b1Ce";} if(r7===36){r7="b1Cf";}
+
+    if(r7===37){r7="b2Ad";} if(r7===38){r7="b2Ae";} if(r7===39){r7="b2Af";}
+    if(r7===40){r7="b2Bd";} if(r7===41){r7="b2Be";} if(r7===42){r7="b2Bf";}
+    if(r7===43){r7="b2Cd";} if(r7===44){r7="b2Ce";} if(r7===45){r7="b2Cf";}
+
+    if(r7===46){r7="b3Ad";} if(r7===47){r7="b3Ae";} if(r7===48){r7="b3Af";}
+    if(r7===49){r7="b3Bd";} if(r7===50){r7="b3Be";} if(r7===51){r7="b3Bf";}
+    if(r7===52){r7="b3Cd";} if(r7===53){r7="b3Ce";} if(r7===54){r7="b3Cf";}
+
+
+    if(r7===55){r7="c1Ad";} if(r7===56){r7="c1Ae";} if(r7===57){r7="c1Af";}
+    if(r7===58){r7="c1Bd";} if(r7===59){r7="c1Be";} if(r7===60){r7="c1Bf";}
+    if(r7===61){r7="c1Cd";} if(r7===62){r7="c1Ce";} if(r7===63){r7="c1Cf";}
+
+    if(r7===64){r7="c2Ad";} if(r7===65){r7="c2Ae";} if(r7===66){r7="c2Af";}
+    if(r7===67){r7="c2Bd";} if(r7===68){r7="c2Be";} if(r7===69){r7="c2Bf";}
+    if(r7===70){r7="c2Cd";} if(r7===71){r7="c2Ce";} if(r7===72){r7="c2Cf";}
+
+    if(r7===73){r7="c3Ad";} if(r7===74){r7="c3Ae";} if(r7===75){r7="c3Af";}
+    if(r7===76){r7="c3Bd";} if(r7===77){r7="c3Be";} if(r7===78){r7="c3Bf";}
+    if(r7===79){r7="c3Cd";} if(r7===80){r7="c3Ce";} if(r7===81){r7="c3Cf";} 
+}
+
+function rand8(){
+    r8 = Math.floor((Math.random() * 81) + 1);
+    if(r8===1){r8="a1Ad";} if(r8===2){r8="a1Ae";} if(r8===3){r8="a1Af";}
+    if(r8===4){r8="a1Bd";} if(r8===5){r8="a1Be";} if(r8===6){r8="a1Bf";}
+    if(r8===7){r8="a1Cd";} if(r8===8){r8="a1Ce";} if(r8===9){r8="a1Cf";}
+
+    if(r8===10){r8="a2Ad";} if(r8===11){r8="a2Ae";} if(r8===12){r8="a2Af";}
+    if(r8===13){r8="a2Bd";} if(r8===14){r8="a2Be";} if(r8===15){r8="a2Bf";}
+    if(r8===16){r8="a2Cd";} if(r8===17){r8="a2Ce";} if(r8===18){r8="a2Cf";}
+
+    if(r8===19){r8="a3Ad";} if(r8===20){r8="a3Ae";} if(r8===21){r8="a3Af";}
+    if(r8===22){r8="a3Bd";} if(r8===23){r8="a3Be";} if(r8===24){r8="a3Bf";}
+    if(r8===25){r8="a3Cd";} if(r8===26){r8="a3Ce";} if(r8===27){r8="a3Cf";}
+
+
+    if(r8===28){r8="b1Ad";} if(r8===29){r8="b1Ae";} if(r8===30){r8="b1Af";}
+    if(r8===31){r8="b1Bd";} if(r8===32){r8="b1Be";} if(r8===33){r8="b1Bf";}
+    if(r8===34){r8="b1Cd";} if(r8===35){r8="b1Ce";} if(r8===36){r8="b1Cf";}
+
+    if(r8===37){r8="b2Ad";} if(r8===38){r8="b2Ae";} if(r8===39){r8="b2Af";}
+    if(r8===40){r8="b2Bd";} if(r8===41){r8="b2Be";} if(r8===42){r8="b2Bf";}
+    if(r8===43){r8="b2Cd";} if(r8===44){r8="b2Ce";} if(r8===45){r8="b2Cf";}
+
+    if(r8===46){r8="b3Ad";} if(r8===47){r8="b3Ae";} if(r8===48){r8="b3Af";}
+    if(r8===49){r8="b3Bd";} if(r8===50){r8="b3Be";} if(r8===51){r8="b3Bf";}
+    if(r8===52){r8="b3Cd";} if(r8===53){r8="b3Ce";} if(r8===54){r8="b3Cf";}
+
+
+    if(r8===55){r8="c1Ad";} if(r8===56){r8="c1Ae";} if(r8===57){r8="c1Af";}
+    if(r8===58){r8="c1Bd";} if(r8===59){r8="c1Be";} if(r8===60){r8="c1Bf";}
+    if(r8===61){r8="c1Cd";} if(r8===62){r8="c1Ce";} if(r8===63){r8="c1Cf";}
+
+    if(r8===64){r8="c2Ad";} if(r8===65){r8="c2Ae";} if(r8===66){r8="c2Af";}
+    if(r8===67){r8="c2Bd";} if(r8===68){r8="c2Be";} if(r8===69){r8="c2Bf";}
+    if(r8===70){r8="c2Cd";} if(r8===71){r8="c2Ce";} if(r8===72){r8="c2Cf";}
+
+    if(r8===73){r8="c3Ad";} if(r8===74){r8="c3Ae";} if(r8===75){r8="c3Af";}
+    if(r8===76){r8="c3Bd";} if(r8===77){r8="c3Be";} if(r8===78){r8="c3Bf";}
+    if(r8===79){r8="c3Cd";} if(r8===80){r8="c3Ce";} if(r8===81){r8="c3Cf";}
+}
+
+function rand9(){
+    r9 = Math.floor((Math.random() * 81) + 1);
+    if(r9===1){r9="a1Ad";} if(r9===2){r9="a1Ae";} if(r9===3){r9="a1Af";}
+    if(r9===4){r9="a1Bd";} if(r9===5){r9="a1Be";} if(r9===6){r9="a1Bf";}
+    if(r9===7){r9="a1Cd";} if(r9===8){r9="a1Ce";} if(r9===9){r9="a1Cf";}
+
+    if(r9===10){r9="a2Ad";} if(r9===11){r9="a2Ae";} if(r9===12){r9="a2Af";}
+    if(r9===13){r9="a2Bd";} if(r9===14){r9="a2Be";} if(r9===15){r9="a2Bf";}
+    if(r9===16){r9="a2Cd";} if(r9===17){r9="a2Ce";} if(r9===18){r9="a2Cf";}
+
+    if(r9===19){r9="a3Ad";} if(r9===20){r9="a3Ae";} if(r9===21){r9="a3Af";}
+    if(r9===22){r9="a3Bd";} if(r9===23){r9="a3Be";} if(r9===24){r9="a3Bf";}
+    if(r9===25){r9="a3Cd";} if(r9===26){r9="a3Ce";} if(r9===27){r9="a3Cf";}
+
+
+    if(r9===28){r9="b1Ad";} if(r9===29){r9="b1Ae";} if(r9===30){r9="b1Af";}
+    if(r9===31){r9="b1Bd";} if(r9===32){r9="b1Be";} if(r9===33){r9="b1Bf";}
+    if(r9===34){r9="b1Cd";} if(r9===35){r9="b1Ce";} if(r9===36){r9="b1Cf";}
+
+    if(r9===37){r9="b2Ad";} if(r9===38){r9="b2Ae";} if(r9===39){r9="b2Af";}
+    if(r9===40){r9="b2Bd";} if(r9===41){r9="b2Be";} if(r9===42){r9="b2Bf";}
+    if(r9===43){r9="b2Cd";} if(r9===44){r9="b2Ce";} if(r9===45){r9="b2Cf";}
+
+    if(r9===46){r9="b3Ad";} if(r9===47){r9="b3Ae";} if(r9===48){r9="b3Af";}
+    if(r9===49){r9="b3Bd";} if(r9===50){r9="b3Be";} if(r9===51){r9="b3Bf";}
+    if(r9===52){r9="b3Cd";} if(r9===53){r9="b3Ce";} if(r9===54){r9="b3Cf";}
+
+
+    if(r9===55){r9="c1Ad";} if(r9===56){r9="c1Ae";} if(r9===57){r9="c1Af";}
+    if(r9===58){r9="c1Bd";} if(r9===59){r9="c1Be";} if(r9===60){r9="c1Bf";}
+    if(r9===61){r9="c1Cd";} if(r9===62){r9="c1Ce";} if(r9===63){r9="c1Cf";}
+
+    if(r9===64){r9="c2Ad";} if(r9===65){r9="c2Ae";} if(r9===66){r9="c2Af";}
+    if(r9===67){r9="c2Bd";} if(r9===68){r9="c2Be";} if(r9===69){r9="c2Bf";}
+    if(r9===70){r9="c2Cd";} if(r9===71){r9="c2Ce";} if(r9===72){r9="c2Cf";}
+
+    if(r9===73){r9="c3Ad";} if(r9===74){r9="c3Ae";} if(r9===75){r9="c3Af";}
+    if(r9===76){r9="c3Bd";} if(r9===77){r9="c3Be";} if(r9===78){r9="c3Bf";}
+    if(r9===79){r9="c3Cd";} if(r9===80){r9="c3Ce";} if(r9===81){r9="c3Cf";} 
+}
+
+function rand10(){
+    r10 = Math.floor((Math.random() * 81) + 1);
+    if(r10===1){r10="a1Ad";} if(r10===2){r10="a1Ae";} if(r10===3){r10="a1Af";}
+    if(r10===4){r10="a1Bd";} if(r10===5){r10="a1Be";} if(r10===6){r10="a1Bf";}
+    if(r10===7){r10="a1Cd";} if(r10===8){r10="a1Ce";} if(r10===9){r10="a1Cf";}
+
+    if(r10===10){r10="a2Ad";} if(r10===11){r10="a2Ae";} if(r10===12){r10="a2Af";}
+    if(r10===13){r10="a2Bd";} if(r10===14){r10="a2Be";} if(r10===15){r10="a2Bf";}
+    if(r10===16){r10="a2Cd";} if(r10===17){r10="a2Ce";} if(r10===18){r10="a2Cf";}
+
+    if(r10===19){r10="a3Ad";} if(r10===20){r10="a3Ae";} if(r10===21){r10="a3Af";}
+    if(r10===22){r10="a3Bd";} if(r10===23){r10="a3Be";} if(r10===24){r10="a3Bf";}
+    if(r10===25){r10="a3Cd";} if(r10===26){r10="a3Ce";} if(r10===27){r10="a3Cf";}
+
+
+    if(r10===28){r10="b1Ad";} if(r10===29){r10="b1Ae";} if(r10===30){r10="b1Af";}
+    if(r10===31){r10="b1Bd";} if(r10===32){r10="b1Be";} if(r10===33){r10="b1Bf";}
+    if(r10===34){r10="b1Cd";} if(r10===35){r10="b1Ce";} if(r10===36){r10="b1Cf";}
+
+    if(r10===37){r10="b2Ad";} if(r10===38){r10="b2Ae";} if(r10===39){r10="b2Af";}
+    if(r10===40){r10="b2Bd";} if(r10===41){r10="b2Be";} if(r10===42){r10="b2Bf";}
+    if(r10===43){r10="b2Cd";} if(r10===44){r10="b2Ce";} if(r10===45){r10="b2Cf";}
+
+    if(r10===46){r10="b3Ad";} if(r10===47){r10="b3Ae";} if(r10===48){r10="b3Af";}
+    if(r10===49){r10="b3Bd";} if(r10===50){r10="b3Be";} if(r10===51){r10="b3Bf";}
+    if(r10===52){r10="b3Cd";} if(r10===53){r10="b3Ce";} if(r10===54){r10="b3Cf";}
+
+
+    if(r10===55){r10="c1Ad";} if(r10===56){r10="c1Ae";} if(r10===57){r10="c1Af";}
+    if(r10===58){r10="c1Bd";} if(r10===59){r10="c1Be";} if(r10===60){r10="c1Bf";}
+    if(r10===61){r10="c1Cd";} if(r10===62){r10="c1Ce";} if(r10===63){r10="c1Cf";}
+
+    if(r10===64){r10="c2Ad";} if(r10===65){r10="c2Ae";} if(r10===66){r10="c2Af";}
+    if(r10===67){r10="c2Bd";} if(r10===68){r10="c2Be";} if(r10===69){r10="c2Bf";}
+    if(r10===70){r10="c2Cd";} if(r10===71){r10="c2Ce";} if(r10===72){r10="c2Cf";}
+
+    if(r10===73){r10="c3Ad";} if(r10===74){r10="c3Ae";} if(r10===75){r10="c3Af";}
+    if(r10===76){r10="c3Bd";} if(r10===77){r10="c3Be";} if(r10===78){r10="c3Bf";}
+    if(r10===79){r10="c3Cd";} if(r10===80){r10="c3Ce";} if(r10===81){r10="c3Cf";}
+}
+
+
+function rand11(){
+    r11 = Math.floor((Math.random() * 81) + 1);
+    if(r11===1){r11="a1Ad";} if(r11===2){r11="a1Ae";} if(r11===3){r11="a1Af";}
+    if(r11===4){r11="a1Bd";} if(r11===5){r11="a1Be";} if(r11===6){r11="a1Bf";}
+    if(r11===7){r11="a1Cd";} if(r11===8){r11="a1Ce";} if(r11===9){r11="a1Cf";}
+
+    if(r11===10){r11="a2Ad";} if(r11===11){r11="a2Ae";} if(r11===12){r11="a2Af";}
+    if(r11===13){r11="a2Bd";} if(r11===14){r11="a2Be";} if(r11===15){r11="a2Bf";}
+    if(r11===16){r11="a2Cd";} if(r11===17){r11="a2Ce";} if(r11===18){r11="a2Cf";}
+
+    if(r11===19){r11="a3Ad";} if(r11===20){r11="a3Ae";} if(r11===21){r11="a3Af";}
+    if(r11===22){r11="a3Bd";} if(r11===23){r11="a3Be";} if(r11===24){r11="a3Bf";}
+    if(r11===25){r11="a3Cd";} if(r11===26){r11="a3Ce";} if(r11===27){r11="a3Cf";}
+
+
+    if(r11===28){r11="b1Ad";} if(r11===29){r11="b1Ae";} if(r11===30){r11="b1Af";}
+    if(r11===31){r11="b1Bd";} if(r11===32){r11="b1Be";} if(r11===33){r11="b1Bf";}
+    if(r11===34){r11="b1Cd";} if(r11===35){r11="b1Ce";} if(r11===36){r11="b1Cf";}
+
+    if(r11===37){r11="b2Ad";} if(r11===38){r11="b2Ae";} if(r11===39){r11="b2Af";}
+    if(r11===40){r11="b2Bd";} if(r11===41){r11="b2Be";} if(r11===42){r11="b2Bf";}
+    if(r11===43){r11="b2Cd";} if(r11===44){r11="b2Ce";} if(r11===45){r11="b2Cf";}
+
+    if(r11===46){r11="b3Ad";} if(r11===47){r11="b3Ae";} if(r11===48){r11="b3Af";}
+    if(r11===49){r11="b3Bd";} if(r11===50){r11="b3Be";} if(r11===51){r11="b3Bf";}
+    if(r11===52){r11="b3Cd";} if(r11===53){r11="b3Ce";} if(r11===54){r11="b3Cf";}
+
+
+    if(r11===55){r11="c1Ad";} if(r11===56){r11="c1Ae";} if(r11===57){r11="c1Af";}
+    if(r11===58){r11="c1Bd";} if(r11===59){r11="c1Be";} if(r11===60){r11="c1Bf";}
+    if(r11===61){r11="c1Cd";} if(r11===62){r11="c1Ce";} if(r11===63){r11="c1Cf";}
+
+    if(r11===64){r11="c2Ad";} if(r11===65){r11="c2Ae";} if(r11===66){r11="c2Af";}
+    if(r11===67){r11="c2Bd";} if(r11===68){r11="c2Be";} if(r11===69){r11="c2Bf";}
+    if(r11===70){r11="c2Cd";} if(r11===71){r11="c2Ce";} if(r11===72){r11="c2Cf";}
+
+    if(r11===73){r11="c3Ad";} if(r11===74){r11="c3Ae";} if(r11===75){r11="c3Af";}
+    if(r11===76){r11="c3Bd";} if(r11===77){r11="c3Be";} if(r11===78){r11="c3Bf";}
+    if(r11===79){r11="c3Cd";} if(r11===80){r11="c3Ce";} if(r11===81){r11="c3Cf";} 
+}
+
+function rand12(){
+    r12 = Math.floor((Math.random() * 81) + 1);
+    if(r12===1){r12="a1Ad";} if(r12===2){r12="a1Ae";} if(r12===3){r12="a1Af";}
+    if(r12===4){r12="a1Bd";} if(r12===5){r12="a1Be";} if(r12===6){r12="a1Bf";}
+    if(r12===7){r12="a1Cd";} if(r12===8){r12="a1Ce";} if(r12===9){r12="a1Cf";}
+
+    if(r12===10){r12="a2Ad";} if(r12===11){r12="a2Ae";} if(r12===12){r12="a2Af";}
+    if(r12===13){r12="a2Bd";} if(r12===14){r12="a2Be";} if(r12===15){r12="a2Bf";}
+    if(r12===16){r12="a2Cd";} if(r12===17){r12="a2Ce";} if(r12===18){r12="a2Cf";}
+
+    if(r12===19){r12="a3Ad";} if(r12===20){r12="a3Ae";} if(r12===21){r12="a3Af";}
+    if(r12===22){r12="a3Bd";} if(r12===23){r12="a3Be";} if(r12===24){r12="a3Bf";}
+    if(r12===25){r12="a3Cd";} if(r12===26){r12="a3Ce";} if(r12===27){r12="a3Cf";}
+
+
+    if(r12===28){r12="b1Ad";} if(r12===29){r12="b1Ae";} if(r12===30){r12="b1Af";}
+    if(r12===31){r12="b1Bd";} if(r12===32){r12="b1Be";} if(r12===33){r12="b1Bf";}
+    if(r12===34){r12="b1Cd";} if(r12===35){r12="b1Ce";} if(r12===36){r12="b1Cf";}
+
+    if(r12===37){r12="b2Ad";} if(r12===38){r12="b2Ae";} if(r12===39){r12="b2Af";}
+    if(r12===40){r12="b2Bd";} if(r12===41){r12="b2Be";} if(r12===42){r12="b2Bf";}
+    if(r12===43){r12="b2Cd";} if(r12===44){r12="b2Ce";} if(r12===45){r12="b2Cf";}
+
+    if(r12===46){r12="b3Ad";} if(r12===47){r12="b3Ae";} if(r12===48){r12="b3Af";}
+    if(r12===49){r12="b3Bd";} if(r12===50){r12="b3Be";} if(r12===51){r12="b3Bf";}
+    if(r12===52){r12="b3Cd";} if(r12===53){r12="b3Ce";} if(r12===54){r12="b3Cf";}
+
+
+    if(r12===55){r12="c1Ad";} if(r12===56){r12="c1Ae";} if(r12===57){r12="c1Af";}
+    if(r12===58){r12="c1Bd";} if(r12===59){r12="c1Be";} if(r12===60){r12="c1Bf";}
+    if(r12===61){r12="c1Cd";} if(r12===62){r12="c1Ce";} if(r12===63){r12="c1Cf";}
+
+    if(r12===64){r12="c2Ad";} if(r12===65){r12="c2Ae";} if(r12===66){r12="c2Af";}
+    if(r12===67){r12="c2Bd";} if(r12===68){r12="c2Be";} if(r12===69){r12="c2Bf";}
+    if(r12===70){r12="c2Cd";} if(r12===71){r12="c2Ce";} if(r12===72){r12="c2Cf";}
+
+    if(r12===73){r12="c3Ad";} if(r12===74){r12="c3Ae";} if(r12===75){r12="c3Af";}
+    if(r12===76){r12="c3Bd";} if(r12===77){r12="c3Be";} if(r12===78){r12="c3Bf";}
+    if(r12===79){r12="c3Cd";} if(r12===80){r12="c3Ce";} if(r12===81){r12="c3Cf";}
 }
 
 function hide(idd){
@@ -139,24 +606,57 @@ function clear() {
     hide("c3Bd"); hide("c3Be"); hide("c3Bf");
     hide("c3Cd"); hide("c3Ce"); hide("c3Cf");
 }
-
 function display() {
-    rand();
-    open(r);
+        rand1();
+        rand2();
+        rand3();
+        rand4();
+        rand5();
+        rand6();
+        rand7();
+        rand8();
+        rand9();
+        rand10();
+        rand11();
+        rand12();
+    while(r1=== r2 || r1=== r3 || r1=== r4 || r1=== r5 || r1=== r6 || r1=== r7 || r1=== r8 || r1=== r9 || r1=== r10 || r1=== r11 || r1=== r12 ||
+          r2=== r3 || r2=== r4 || r2=== r5 || r2=== r6 || r2=== r7 || r2=== r8 || r2=== r9 || r2=== r10 || r2=== r11 || r2=== r12 ||
+          r3=== r4 || r3=== r5 || r3=== r6 || r3=== r7 || r3=== r8 || r3=== r9 || r3=== r10 || r3=== r11 || r3=== r12 ||
+          r4=== r5 || r4=== r6 || r4=== r7 || r4=== r8 || r4=== r9 || r4=== r10 || r4=== r11 || r4=== r12 ||
+          r5=== r6 || r5=== r7 || r5=== r8 || r5=== r9 || r5=== r10 || r5=== r11 || r5=== r12 ||
+          r6=== r7 || r6=== r8 || r6=== r9 || r6=== r10 || r6=== r11 || r6=== r12 ||
+          r7=== r8 || r7=== r9 || r7=== r10 || r7=== r11 || r7=== r12 ||
+          r8=== r9 || r8=== r10 || r8=== r11 || r8=== r12 ||
+          r9=== r10 || r9=== r11 || r9=== r12 ||
+          r10=== r11 || r10=== r12 ||
+          r11=== r12){
+        rand1();
+        rand2();
+        rand3();
+        rand4();
+        rand5();
+        rand6();
+        rand7();
+        rand8();
+        rand9();
+        rand10();
+        rand11();
+        rand12();
+    }
+    open(r1);
+    open(r2);
+    open(r3);
+    open(r4);
+    open(r5);
+    open(r6);
+    open(r7);
+    open(r8);
+    open(r9);
+    open(r10);
+    open(r11);
+    open(r12);
 }
-
 clear();
-display();
-display();
-display();
-display();
-display();
-display();
-display();
-display();
-display();
-display();
-display();
 display();
 
 function size(idd) {
@@ -178,6 +678,8 @@ function zero() {
     f = 0;
 
     x = 0;
+
+    i=0;
 
     a1Ad = 0; a1Ae = 0; a1Af = 0;
     a1Bd = 0; a1Be = 0; a1Bf = 0;
@@ -282,10 +784,12 @@ function color() {
 function score(varr) {                      
     document.getElementById(varr).style.transform = "scale(0.9,0.9)";
     if (x === 3) {
-        if (((a===3||b===3||c===3)||((a===b)&&(b===c)))&&
-            ((n1===3||n2===3||n3===3)||((n1===n2)&&(n2===n3)))&&
-            ((A===3||B===3||C===3)||((A===B)&&(B===C)))&&
-            ((d===3||e===3||f===3)||((d===e)&&(e===f)))) {
+        if (
+            ((a === 3 || b === 3 || c === 3) || ((a === b) && (b === c )))&&
+            ((n1=== 3 || n2=== 3 || n3=== 3) || ((n1=== n2)&& (n2=== n3)))&&
+            ((A === 3 || B === 3 || C === 3) || ((A === B) && (B === C )))&&
+            ((d === 3 || e === 3 || f === 3) || ((d === e) && (e === f )))
+        ){
             yay();
         } else {
             oof();
@@ -303,17 +807,6 @@ document.getElementById("reset").onclick = function reset() {
     color();
     document.getElementById("z").innerHTML = z + " points";
     clear();
-    display();
-    display();
-    display();
-    display();
-    display();
-    display();
-    display();
-    display();
-    display();
-    display();
-    display();
     display();
 }
 
