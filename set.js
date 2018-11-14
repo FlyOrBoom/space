@@ -17,6 +17,8 @@ var z = 0;
 
 var i = 0;
 
+var on = [];
+
 var r1 = 0;
 var r2 = 0;
 var r3 = 0;
@@ -104,7 +106,7 @@ function rand1(){
 
     if(r1===73){r1="c3Ad";} if(r1===74){r1="c3Ae";} if(r1===75){r1="c3Af";}
     if(r1===76){r1="c3Bd";} if(r1===77){r1="c3Be";} if(r1===78){r1="c3Bf";}
-    if(r1===79){r1="c3Cd";} if(r1===80){r1="c3Ce";} if(r1===81){r1="c3Cf";} 
+    if(r1===79){r1="c3Cd";} if(r1===80){r1="c3Ce";} if(r1===81){r1="c3Cf";}
 }
 
 function rand2(){
@@ -187,7 +189,7 @@ function rand3(){
 
     if(r3===73){r3="c3Ad";} if(r3===74){r3="c3Ae";} if(r3===75){r3="c3Af";}
     if(r3===76){r3="c3Bd";} if(r3===77){r3="c3Be";} if(r3===78){r3="c3Bf";}
-    if(r3===79){r3="c3Cd";} if(r3===80){r3="c3Ce";} if(r3===81){r3="c3Cf";} 
+    if(r3===79){r3="c3Cd";} if(r3===80){r3="c3Ce";} if(r3===81){r3="c3Cf";}
 }
 
 function rand4(){
@@ -269,7 +271,7 @@ function rand5(){
 
     if(r5===73){r5="c3Ad";} if(r5===74){r5="c3Ae";} if(r5===75){r5="c3Af";}
     if(r5===76){r5="c3Bd";} if(r5===77){r5="c3Be";} if(r5===78){r5="c3Bf";}
-    if(r5===79){r5="c3Cd";} if(r5===80){r5="c3Ce";} if(r5===81){r5="c3Cf";} 
+    if(r5===79){r5="c3Cd";} if(r5===80){r5="c3Ce";} if(r5===81){r5="c3Cf";}
 }
 
 function rand6(){
@@ -352,7 +354,7 @@ function rand7(){
 
     if(r7===73){r7="c3Ad";} if(r7===74){r7="c3Ae";} if(r7===75){r7="c3Af";}
     if(r7===76){r7="c3Bd";} if(r7===77){r7="c3Be";} if(r7===78){r7="c3Bf";}
-    if(r7===79){r7="c3Cd";} if(r7===80){r7="c3Ce";} if(r7===81){r7="c3Cf";} 
+    if(r7===79){r7="c3Cd";} if(r7===80){r7="c3Ce";} if(r7===81){r7="c3Cf";}
 }
 
 function rand8(){
@@ -434,7 +436,7 @@ function rand9(){
 
     if(r9===73){r9="c3Ad";} if(r9===74){r9="c3Ae";} if(r9===75){r9="c3Af";}
     if(r9===76){r9="c3Bd";} if(r9===77){r9="c3Be";} if(r9===78){r9="c3Bf";}
-    if(r9===79){r9="c3Cd";} if(r9===80){r9="c3Ce";} if(r9===81){r9="c3Cf";} 
+    if(r9===79){r9="c3Cd";} if(r9===80){r9="c3Ce";} if(r9===81){r9="c3Cf";}
 }
 
 function rand10(){
@@ -517,7 +519,7 @@ function rand11(){
 
     if(r11===73){r11="c3Ad";} if(r11===74){r11="c3Ae";} if(r11===75){r11="c3Af";}
     if(r11===76){r11="c3Bd";} if(r11===77){r11="c3Be";} if(r11===78){r11="c3Bf";}
-    if(r11===79){r11="c3Cd";} if(r11===80){r11="c3Ce";} if(r11===81){r11="c3Cf";} 
+    if(r11===79){r11="c3Cd";} if(r11===80){r11="c3Ce";} if(r11===81){r11="c3Cf";}
 }
 
 function rand12(){
@@ -607,18 +609,18 @@ function clear() {
     hide("c3Cd"); hide("c3Ce"); hide("c3Cf");
 }
 function display() {
-        rand1();
-        rand2();
-        rand3();
-        rand4();
-        rand5();
-        rand6();
-        rand7();
-        rand8();
-        rand9();
-        rand10();
-        rand11();
-        rand12();
+    rand1();
+    rand2();
+    rand3();
+    rand4();
+    rand5();
+    rand6();
+    rand7();
+    rand8();
+    rand9();
+    rand10();
+    rand11();
+    rand12();
     while(r1=== r2 || r1=== r3 || r1=== r4 || r1=== r5 || r1=== r6 || r1=== r7 || r1=== r8 || r1=== r9 || r1=== r10 || r1=== r11 || r1=== r12 ||
           r2=== r3 || r2=== r4 || r2=== r5 || r2=== r6 || r2=== r7 || r2=== r8 || r2=== r9 || r2=== r10 || r2=== r11 || r2=== r12 ||
           r3=== r4 || r3=== r5 || r3=== r6 || r3=== r7 || r3=== r8 || r3=== r9 || r3=== r10 || r3=== r11 || r3=== r12 ||
@@ -656,8 +658,30 @@ function display() {
     open(r11);
     open(r12);
 }
-clear();
-display();
+
+function display3() {
+    rand1();
+    rand2();
+    rand3();
+    while(r1=== r2 || r1=== r3 || r1=== r4 || r1=== r5 || r1=== r6 || r1=== r7 || r1=== r8 || r1=== r9 || r1=== r10 || r1=== r11 || r1=== r12 ||
+          r2=== r3 || r2=== r4 || r2=== r5 || r2=== r6 || r2=== r7 || r2=== r8 || r2=== r9 || r2=== r10 || r2=== r11 || r2=== r12 ||
+          r3=== r4 || r3=== r5 || r3=== r6 || r3=== r7 || r3=== r8 || r3=== r9 || r3=== r10 || r3=== r11 || r3=== r12 ||
+          r4=== r5 || r4=== r6 || r4=== r7 || r4=== r8 || r4=== r9 || r4=== r10 || r4=== r11 || r4=== r12 ||
+          r5=== r6 || r5=== r7 || r5=== r8 || r5=== r9 || r5=== r10 || r5=== r11 || r5=== r12 ||
+          r6=== r7 || r6=== r8 || r6=== r9 || r6=== r10 || r6=== r11 || r6=== r12 ||
+          r7=== r8 || r7=== r9 || r7=== r10 || r7=== r11 || r7=== r12 ||
+          r8=== r9 || r8=== r10 || r8=== r11 || r8=== r12 ||
+          r9=== r10 || r9=== r11 || r9=== r12 ||
+          r10=== r11 || r10=== r12 ||
+          r11=== r12){
+        rand1();
+        rand2();
+        rand3();
+    }
+    open(r1);
+    open(r2);
+    open(r3);
+}
 
 function size(idd) {
     document.getElementById(idd).style.transform = "scale(1,1)";
@@ -769,19 +793,19 @@ function oof() {
     } else {
         document.getElementById("z").innerHTML = z + " points";
     }
-}      
+}
 function color() {
     if (z < 0) {
-        document.getElementById("z").style.color="#d44"; 
+        document.getElementById("z").style.color="#d44";
     }
     else if (z > 0) {
-        document.getElementById("z").style.color="#4b4"; 
+        document.getElementById("z").style.color="#4b4";
     }
     else {
-        document.getElementById("z").style.color="#44c"; 
+        document.getElementById("z").style.color="#44c";
     }
 }
-function score(varr) {                      
+function score(varr) {
     document.getElementById(varr).style.transform = "scale(0.9,0.9)";
     if (x === 3) {
         if (
@@ -795,11 +819,17 @@ function score(varr) {
             oof();
         }
         zero();
+        hide(on[0]);
+        hide(on[1]);
+        hide(on[2]);
     }
     color();
+    on.push(varr);
 }
 
 color();
+clear();
+display();
 
 document.getElementById("reset").onclick = function reset() {
     z = 0;
@@ -813,7 +843,7 @@ document.getElementById("reset").onclick = function reset() {
 /*Red megagroup*/
 //1A//
 document.getElementById("a1Ad").onclick = function() {
-    if (a1Ad === 0) {
+    if (a1Ae === 0) {
         a++;
         n1++;
         A++;
