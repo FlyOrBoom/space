@@ -734,7 +734,7 @@ function clear() {
     hide("c3Bd"); hide("c3Be"); hide("c3Bf");
     hide("c3Cd"); hide("c3Ce"); hide("c3Cf");
 }
-function display() {
+function rand() {
     rand1();
     rand2();
     rand3();
@@ -780,6 +780,9 @@ function display() {
         rand14();
         rand15();
     }
+}
+function display() {
+  rand();
     open(r1);
     open(r2);
     open(r3);
@@ -887,6 +890,8 @@ function zero() {
     size("c3Ad"); size("c3Ae"); size("c3Af");
     size("c3Bd"); size("c3Be"); size("c3Bf");
     size("c3Cd"); size("c3Ce"); size("c3Cf");
+    
+    on.length = 0;
 }
 
 function yay() {
@@ -931,6 +936,7 @@ function score(varr) {
         } else {
             oof();
         }
+        rand();
         hide(on[0]);
         hide(on[1]);
         hide(on[2]);
