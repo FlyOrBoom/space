@@ -55,6 +55,7 @@ var vis = ["a1Ad", "a1Ae", "a1Af",
            "c3Bd", "c3Be", "c3Bf",
            "c3Cd", "c3Ce", "c3Cf"];
 
+var r0 = 0;
 var r1 = 0;
 var r2 = 0;
 var r3 = 0;
@@ -66,7 +67,6 @@ var r8 = 0;
 var r9 = 0;
 var rA = 0;
 var rB = 0;
-var rC = 0;
 
 var a1Ad = 0; var a1Ae = 0; var a1Af = 0;
 var a1Bd = 0; var a1Be = 0; var a1Bf = 0;
@@ -152,6 +152,7 @@ function clear() {
 
 function r() {
     r0 = Math.floor(Math.random() * 81);
+    r1 = Math.floor(Math.random() * 81);
     r2 = Math.floor(Math.random() * 81);
     r3 = Math.floor(Math.random() * 81);
     r4 = Math.floor(Math.random() * 81);
@@ -194,6 +195,8 @@ function display() {
     open(vis[r9]);
     open(vis[rA]);
     open(vis[rB]);
+    
+    // alert(r0+" "+r1+" "+r2+" "+r3+" "+r4+" "+r5+" "+r6+" "+r7+" "+r8+" "+r9+" "+rA+" "+rB);
 }
 
 function size(idd) {
@@ -335,14 +338,12 @@ function score(varr) {
             oof();
         }
         color();
-        rand();
         hide(on[0]);
         hide(on[1]);
         hide(on[2]);
         open(vis[r0]);
         open(vis[r1]);
         open(vis[r2]);
-        open(vis[r3]);
         zero();
     }
 }
@@ -357,7 +358,6 @@ document.getElementById("reset").onclick = function reset() {
     color();
     document.getElementById("z").innerHTML = z + " points";
     clear();
-    rand();
     display();
 }
 
