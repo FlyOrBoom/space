@@ -70,6 +70,9 @@ var rB = 0;
 var rC = 0;
 var rD = 0;
 var rE = 0;
+var rF = 0;
+var rG = 0;
+var rH = 0;
 
 var a1Ad = 0; var a1Ae = 0; var a1Af = 0;
 var a1Bd = 0; var a1Be = 0; var a1Bf = 0;
@@ -189,10 +192,17 @@ function rep() {
           rB=== rC || rB=== rD || rB=== rE ||
           rC=== rD || rC=== rE ||
           rD=== rE){
+        rC = Math.floor(Math.random() * 81);
+        rD = Math.floor(Math.random() * 81);
+        rE = Math.floor(Math.random() * 81);
+    }
+        rF = rC;
+        rG = rD;
+        rH = rE;
     rC = Math.floor(Math.random() * 81);
     rD = Math.floor(Math.random() * 81);
     rE = Math.floor(Math.random() * 81);
-    }
+
 }
 
 function rand() {
@@ -375,9 +385,9 @@ function score(varr) {
         hide(on[1]);
         hide(on[2]);
         rep();
-        open(vis[rC]);
-        open(vis[rD]);
-        open(vis[rE]);
+        open(vis[rF]);
+        open(vis[rG]);
+        open(vis[rH]);
         zero();
     }
 }
