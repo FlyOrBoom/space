@@ -1,7 +1,7 @@
 html, body {
-    max-width: 100%;
     overflow-x: hidden;
-}.x {
+}
+#z {
     position:absolute;
     display: block;
     top:5px;
@@ -63,6 +63,6 @@ button:focus {
 .a {fill:#f44; stroke:#f44; stroke-width:5px}
 .b {fill:#4e4; stroke:#4e4; stroke-width:5px}
 .c {fill:#44e; stroke:#44e; stroke-width:5px}
-.d {fill-opacity:1}
-.e {fill-opacity:0.5}
-.f {fill-opacity:0}
+.g {fill-opacity:1}
+.h {fill-opacity:0.5}
+.i {fill-opacity:0}

@@ -4,56 +4,54 @@ var c = 0;
 var n1 = 0;
 var n2 = 0;
 var n3 = 0;
-var A = 0;
-var B = 0;
-var C = 0;
 var d = 0;
 var e = 0;
 var f = 0;
+var g = 0;
+var h = 0;
+var i = 0;
 
 var x = 0;
 
 var z = 0;
 
-var i = 0;
-
 var on = [];
 
-var vis = ["a1Ad", "a1Ae", "a1Af",
-           "a1Bd", "a1Be", "a1Bf",
-           "a1Cd", "a1Ce", "a1Cf",
+var vis = ["a1dg", "a1dh", "a1di",
+           "a1eg", "a1eh", "a1ei",
+           "a1fg", "a1fh", "a1fi",
            
-           "a2Ad", "a2Ae", "a2Af",
-           "a2Bd", "a2Be", "a2Bf",
-           "a2Cd", "a2Ce", "a2Cf",
+           "a2dg", "a2dh", "a2di",
+           "a2eg", "a2eh", "a2ei",
+           "a2fg", "a2fh", "a2fi",
            
-           "a3Ad", "a3Ae", "a3Af",
-           "a3Bd", "a3Be", "a3Bf",
-           "a3Cd", "a3Ce", "a3Cf",
+           "a3dg", "a3dh", "a3di",
+           "a3eg", "a3eh", "a3ei",
+           "a3fg", "a3fh", "a3fi",
            
-           "b1Ad", "b1Ae", "b1Af",
-           "b1Bd", "b1Be", "b1Bf",
-           "b1Cd", "b1Ce", "b1Cf",
+           "b1dg", "b1dh", "b1di",
+           "b1eg", "b1eh", "b1ei",
+           "b1fg", "b1fh", "b1fi",
            
-           "b2Ad", "b2Ae", "b2Af",
-           "b2Bd", "b2Be", "b2Bf",
-           "b2Cd", "b2Ce", "b2Cf",
+           "b2dg", "b2dh", "b2di",
+           "b2eg", "b2eh", "b2ei",
+           "b2fg", "b2fh", "b2fi",
            
-           "b3Ad", "b3Ae", "b3Af",
-           "b3Bd", "b3Be", "b3Bf",
-           "b3Cd", "b3Ce", "b3Cf",
+           "b3dg", "b3dh", "b3di",
+           "b3eg", "b3eh", "b3ei",
+           "b3fg", "b3fh", "b3fi",
            
-           "c1Ad", "c1Ae", "c1Af",
-           "c1Bd", "c1Be", "c1Bf",
-           "c1Cd", "c1Ce", "c1Cf",
+           "c1dg", "c1dh", "c1di",
+           "c1eg", "c1eh", "c1ei",
+           "c1fg", "c1fh", "c1fi",
            
-           "c2Ad", "c2Ae", "c2Af",
-           "c2Bd", "c2Be", "c2Bf",
-           "c2Cd", "c2Ce", "c2Cf",
+           "c2dg", "c2dh", "c2di",
+           "c2eg", "c2eh", "c2ei",
+           "c2fg", "c2fh", "c2fi",
            
-           "c3Ad", "c3Ae", "c3Af",
-           "c3Bd", "c3Be", "c3Bf",
-           "c3Cd", "c3Ce", "c3Cf"];
+           "c3dg", "c3dh", "c3di",
+           "c3eg", "c3eh", "c3ei",
+           "c3fg", "c3fh", "c3fi"];
 
 var r0 = 0;
 var r1 = 0;
@@ -69,46 +67,46 @@ var rA = 0;
 var rB = 0;
 var rC = 0;
 var rD = 0;
-var rE = 0;
+var rB = 0;
 var rF = 0;
 var rG = 0;
 var rH = 0;
 
-var a1Ad = 0; var a1Ae = 0; var a1Af = 0;
-var a1Bd = 0; var a1Be = 0; var a1Bf = 0;
-var a1Cd = 0; var a1Ce = 0; var a1Cf = 0;
+var a1dg = 0; var a1dh = 0; var a1di = 0;
+var a1eg = 0; var a1eh = 0; var a1ei = 0;
+var a1fg = 0; var a1fh = 0; var a1fi = 0;
 
-var a2Ad = 0; var a2Ae = 0; var a2Af = 0;
-var a2Bd = 0; var a2Be = 0; var a2Bf = 0;
-var a2Cd = 0; var a2Ce = 0; var a2Cf = 0;
+var a2dg = 0; var a2dh = 0; var a2di = 0;
+var a2eg = 0; var a2eh = 0; var a2ei = 0;
+var a2fg = 0; var a2fh = 0; var a2fi = 0;
 
-var a3Ad = 0; var a3Ae = 0; var a3Af = 0;
-var a3Bd = 0; var a3Be = 0; var a3Bf = 0;
-var a3Cd = 0; var a3Ce = 0; var a3Cf = 0;
+var a3dg = 0; var a3dh = 0; var a3di = 0;
+var a3eg = 0; var a3eh = 0; var a3ei = 0;
+var a3fg = 0; var a3fh = 0; var a3fi = 0;
 
-var b1Ad = 0; var b1Ae = 0; var b1Af = 0;
-var b1Bd = 0; var b1Be = 0; var b1Bf = 0;
-var b1Cd = 0; var b1Ce = 0; var b1Cf = 0;
+var b1dg = 0; var b1dh = 0; var b1di = 0;
+var b1eg = 0; var b1eh = 0; var b1ei = 0;
+var b1fg = 0; var b1fh = 0; var b1fi = 0;
 
-var b2Ad = 0; var b2Ae = 0; var b2Af = 0;
-var b2Bd = 0; var b2Be = 0; var b2Bf = 0;
-var b2Cd = 0; var b2Ce = 0; var b2Cf = 0;
+var b2dg = 0; var b2dh = 0; var b2di = 0;
+var b2eg = 0; var b2eh = 0; var b2ei = 0;
+var b2fg = 0; var b2fh = 0; var b2fi = 0;
 
-var b3Ad = 0; var b3Ae = 0; var b3Af = 0;
-var b3Bd = 0; var b3Be = 0; var b3Bf = 0;
-var b3Cd = 0; var b3Ce = 0; var b3Cf = 0;
+var b3dg = 0; var b3dh = 0; var b3di = 0;
+var b3eg = 0; var b3eh = 0; var b3ei = 0;
+var b3fg = 0; var b3fh = 0; var b3fi = 0;
 
-var c1Ad = 0; var c1Ae = 0; var c1Af = 0;
-var c1Bd = 0; var c1Be = 0; var c1Bf = 0;
-var c1Cd = 0; var c1Ce = 0; var c1Cf = 0;
+var c1dg = 0; var c1dh = 0; var c1di = 0;
+var c1eg = 0; var c1eh = 0; var c1ei = 0;
+var c1fg = 0; var c1fh = 0; var c1fi = 0;
 
-var c2Ad = 0; var c2Ae = 0; var c2Af = 0;
-var c2Bd = 0; var c2Be = 0; var c2Bf = 0;
-var c2Cd = 0; var c2Ce = 0; var c2Cf = 0;
+var c2dg = 0; var c2dh = 0; var c2di = 0;
+var c2eg = 0; var c2eh = 0; var c2ei = 0;
+var c2fg = 0; var c2fh = 0; var c2fi = 0;
 
-var c3Ad = 0; var c3Ae = 0; var c3Af = 0;
-var c3Bd = 0; var c3Be = 0; var c3Bf = 0;
-var c3Cd = 0; var c3Ce = 0; var c3Cf = 0;
+var c3dg = 0; var c3dh = 0; var c3di = 0;
+var c3eg = 0; var c3eh = 0; var c3ei = 0;
+var c3fg = 0; var c3fh = 0; var c3fi = 0;
 
 function hide(idd){
     document.getElementById(idd).style.display = "none";
@@ -119,41 +117,41 @@ function open(idd){
 
 function clear() {
 
-    hide("a1Ad"); hide("a1Ae"); hide("a1Af");
-    hide("a1Bd"); hide("a1Be"); hide("a1Bf");
-    hide("a1Cd"); hide("a1Ce"); hide("a1Cf");
+    hide("a1dg"); hide("a1dh"); hide("a1di");
+    hide("a1eg"); hide("a1eh"); hide("a1ei");
+    hide("a1fg"); hide("a1fh"); hide("a1fi");
 
-    hide("a2Ad"); hide("a2Ae"); hide("a2Af");
-    hide("a2Bd"); hide("a2Be"); hide("a2Bf");
-    hide("a2Cd"); hide("a2Ce"); hide("a2Cf");
+    hide("a2dg"); hide("a2dh"); hide("a2di");
+    hide("a2eg"); hide("a2eh"); hide("a2ei");
+    hide("a2fg"); hide("a2fh"); hide("a2fi");
 
-    hide("a3Ad"); hide("a3Ae"); hide("a3Af");
-    hide("a3Bd"); hide("a3Be"); hide("a3Bf");
-    hide("a3Cd"); hide("a3Ce"); hide("a3Cf");
+    hide("a3dg"); hide("a3dh"); hide("a3di");
+    hide("a3eg"); hide("a3eh"); hide("a3ei");
+    hide("a3fg"); hide("a3fh"); hide("a3fi");
 
-    hide("b1Ad"); hide("b1Ae"); hide("b1Af");
-    hide("b1Bd"); hide("b1Be"); hide("b1Bf");
-    hide("b1Cd"); hide("b1Ce"); hide("b1Cf");
+    hide("b1dg"); hide("b1dh"); hide("b1di");
+    hide("b1eg"); hide("b1eh"); hide("b1ei");
+    hide("b1fg"); hide("b1fh"); hide("b1fi");
 
-    hide("b2Ad"); hide("b2Ae"); hide("b2Af");
-    hide("b2Bd"); hide("b2Be"); hide("b2Bf");
-    hide("b2Cd"); hide("b2Ce"); hide("b2Cf");
+    hide("b2dg"); hide("b2dh"); hide("b2di");
+    hide("b2eg"); hide("b2eh"); hide("b2ei");
+    hide("b2fg"); hide("b2fh"); hide("b2fi");
 
-    hide("b3Ad"); hide("b3Ae"); hide("b3Af");
-    hide("b3Bd"); hide("b3Be"); hide("b3Bf");
-    hide("b3Cd"); hide("b3Ce"); hide("b3Cf");
+    hide("b3dg"); hide("b3dh"); hide("b3di");
+    hide("b3eg"); hide("b3eh"); hide("b3ei");
+    hide("b3fg"); hide("b3fh"); hide("b3fi");
 
-    hide("c1Ad"); hide("c1Ae"); hide("c1Af");
-    hide("c1Bd"); hide("c1Be"); hide("c1Bf");
-    hide("c1Cd"); hide("c1Ce"); hide("c1Cf");
+    hide("c1dg"); hide("c1dh"); hide("c1di");
+    hide("c1eg"); hide("c1eh"); hide("c1ei");
+    hide("c1fg"); hide("c1fh"); hide("c1fi");
 
-    hide("c2Ad"); hide("c2Ae"); hide("c2Af");
-    hide("c2Bd"); hide("c2Be"); hide("c2Bf");
-    hide("c2Cd"); hide("c2Ce"); hide("c2Cf");
+    hide("c2dg"); hide("c2dh"); hide("c2di");
+    hide("c2eg"); hide("c2eh"); hide("c2ei");
+    hide("c2fg"); hide("c2fh"); hide("c2fi");
 
-    hide("c3Ad"); hide("c3Ae"); hide("c3Af");
-    hide("c3Bd"); hide("c3Be"); hide("c3Bf");
-    hide("c3Cd"); hide("c3Ce"); hide("c3Cf");
+    hide("c3dg"); hide("c3dh"); hide("c3di");
+    hide("c3eg"); hide("c3eh"); hide("c3ei");
+    hide("c3fg"); hide("c3fh"); hide("c3fi");
 }
 
 function r() {
@@ -172,58 +170,68 @@ function r() {
     rC = Math.floor(Math.random() * 81);
     rD = Math.floor(Math.random() * 81);
     rE = Math.floor(Math.random() * 81);
+    rF = Math.floor(Math.random() * 81);
+    rG = Math.floor(Math.random() * 81);
+    rH = Math.floor(Math.random() * 81);
+}
+
+function rand() {
+  r();
+    while(r0=== r1 || r0=== r2 || r0=== r3 || r0=== r4 || r0=== r5 || r0=== r6 || r0=== r7 || r0=== r8 || r0=== r9 || r0=== rA || r0=== rB || r0=== rC ||       r0=== rD || r0=== rE || r0=== rF || r0=== rG || r0=== rH ||
+          r1=== r2 || r1=== r3 || r1=== r4 || r1=== r5 || r1=== r6 || r1=== r7 || r1=== r8 || r1=== r9 || r1=== rA || r1=== rB || r1=== rC || r1=== rD || r1=== rE || r1=== rF || r1=== rG || r1=== rH ||
+          r2=== r3 || r2=== r4 || r2=== r5 || r2=== r6 || r2=== r7 || r2=== r8 || r2=== r9 || r2=== rA || r2=== rB || r2=== rC || r2=== rD || r2=== rE || r2=== rF || r2=== rG || r2=== rH ||
+          r3=== r4 || r3=== r5 || r3=== r6 || r3=== r7 || r3=== r8 || r3=== r9 || r3=== rA || r3=== rB || r3=== rC || r3=== rD || r3=== rE || r3=== rF || r3=== rG || r3=== rH ||
+          r4=== r5 || r4=== r6 || r4=== r7 || r4=== r8 || r4=== r9 || r4=== rA || r4=== rB || r4=== rC || r4=== rD || r4=== rE || r4=== rF || r4=== rG || r4=== rH ||
+          r5=== r6 || r5=== r7 || r5=== r8 || r5=== r9 || r5=== rA || r5=== rB || r5=== rC || r5=== rD || r5=== rE || r5=== rF || r5=== rG || r5=== rH ||
+          r6=== r7 || r6=== r8 || r6=== r9 || r6=== rA || r6=== rB || r6=== rC || r6=== rD || r6=== rE || r6=== rF || r6=== rG || r6=== rH ||
+          r7=== r8 || r7=== r9 || r7=== rA || r7=== rB || r7=== rC || r7=== rD || r7=== rE || r7=== rF || r7=== rG || r7=== rH ||
+          r8=== r9 || r8=== rA || r8=== rB || r8=== rC || r8=== rD || r8=== rE || r8=== rF || r8=== rG || r8=== rH ||
+          r9=== rA || r9=== rB || r9=== rC || r9=== rD || r9=== rE || r9=== rF || r9=== rG || r9=== rH ||
+          rA=== rB || rA=== rC || rA=== rD || rA=== rE || rA=== rF || rA=== rG || rA=== rH ||
+          rB=== rC || rB=== rD || rB=== rE || rB=== rF || rB=== rG || rB=== rH ||
+          rC=== rD || rC=== rE || rC=== rF || rC=== rG || rC=== rH ||
+          rD=== rE || rD=== rF || rD=== rG || rD=== rH ||
+          rE=== rF || rE=== rG || rE=== rH ||
+          rF=== rG || rF=== rH ||
+          rG=== rH){
+        r();
+    }
 }
 
 function rep() {
     rC = Math.floor(Math.random() * 81);
     rD = Math.floor(Math.random() * 81);
     rE = Math.floor(Math.random() * 81);
-        while(r0=== r1 || r0=== r2 || r0=== r3 || r0=== r4 || r0=== r5 || r0=== r6 || r0=== r7 || r0=== r8 || r0=== r9 || r0=== rA || r0=== rB || r0=== rC || r0=== rD || r0=== rE ||
-          r1=== r2 || r1=== r3 || r1=== r4 || r1=== r5 || r1=== r6 || r1=== r7 || r1=== r8 || r1=== r9 || r1=== rA || r1=== rB || r1=== rC || r1=== rD || r1=== rE ||
-          r2=== r3 || r2=== r4 || r2=== r5 || r2=== r6 || r2=== r7 || r2=== r8 || r2=== r9 || r2=== rA || r2=== rB || r2=== rC || r2=== rD || r2=== rE ||
-          r3=== r4 || r3=== r5 || r3=== r6 || r3=== r7 || r3=== r8 || r3=== r9 || r3=== rA || r3=== rB || r3=== rC || r3=== rD || r3=== rE ||
-          r4=== r5 || r4=== r6 || r4=== r7 || r4=== r8 || r4=== r9 || r4=== rA || r4=== rB || r4=== rC || r4=== rD || r4=== rE ||
-          r5=== r6 || r5=== r7 || r5=== r8 || r5=== r9 || r5=== rA || r5=== rB || r5=== rC || r5=== rD || r5=== rE ||
-          r6=== r7 || r6=== r8 || r6=== r9 || r6=== rA || r6=== rB || r6=== rC || r6=== rD || r6=== rE ||
-          r7=== r8 || r7=== r9 || r7=== rA || r7=== rB || r7=== rC || r7=== rD || r7=== rE ||
-          r8=== r9 || r8=== rA || r8=== rB || r8=== rC || r8=== rD || r8=== rE ||
-          r9=== rA || r9=== rB || rA=== rC || r9=== rD || r9=== rE ||
-          rA=== rB || rA=== rC || rA=== rD || rA=== rE ||
-          rB=== rC || rB=== rD || rB=== rE ||
-          rC=== rD || rC=== rE ||
-          rD=== rE){
+        while(r0=== r1 || r0=== r2 || r0=== r3 || r0=== r4 || r0=== r5 || r0=== r6 || r0=== r7 || r0=== r8 || r0=== r9 || r0=== rC || r0=== rB || r0=== rC || r0=== rD || r0=== rE || r0=== rF || r0=== rG || r0=== rH ||
+          r1=== r2 || r1=== r3 || r1=== r4 || r1=== r5 || r1=== r6 || r1=== r7 || r1=== r8 || r1=== r9 || r1=== rA || r1=== rB || r1=== rC || r1=== rD || r1=== rE || r1=== rF || r1=== rG || r1=== rH ||
+          r2=== r3 || r2=== r4 || r2=== r5 || r2=== r6 || r2=== r7 || r2=== r8 || r2=== r9 || r2=== rA || r2=== rB || r2=== rC || r2=== rD || r2=== rE || r2=== rF || r2=== rG || r2=== rH ||
+          r3=== r4 || r3=== r5 || r3=== r6 || r3=== r7 || r3=== r8 || r3=== r9 || r3=== rA || r3=== rB || r3=== rC || r3=== rD || r3=== rE || r3=== rF || r3=== rG || r3=== rH ||
+          r4=== r5 || r4=== r6 || r4=== r7 || r4=== r8 || r4=== r9 || r4=== rA || r4=== rB || r4=== rC || r4=== rD || r4=== rE || r4=== rF || r4=== rG || r4=== rH ||
+          r5=== r6 || r5=== r7 || r5=== r8 || r5=== r9 || r5=== rA || r5=== rB || r5=== rC || r5=== rD || r5=== rE || r5=== rF || r5=== rG || r5=== rH ||
+          r6=== r7 || r6=== r8 || r6=== r9 || r6=== rA || r6=== rB || r6=== rC || r6=== rD || r6=== rE || r6=== rF || r6=== rG || r6=== rH ||
+          r7=== r8 || r7=== r9 || r7=== rA || r7=== rB || r7=== rC || r7=== rD || r7=== rE || r7=== rF || r7=== rG || r7=== rH ||
+          r8=== r9 || r8=== rA || r8=== rB || r8=== rC || r8=== rD || r8=== rE || r8=== rF || r8=== rG || r8=== rH ||
+          r9=== rA || r9=== rB || rA=== rC || r9=== rD || r9=== rE || r9=== rF || r9=== rG || r9=== rH ||
+          rA=== rB || rA=== rC || rA=== rD || rA=== rE || rA=== rF || rA=== rG || rA=== rH ||
+          rB=== rC || rB=== rD || rB=== rE || rC=== rF || rB=== rG || rB=== rH ||
+          rC=== rD || rC=== rE || rC=== rF || rD=== rG || rC=== rH ||
+          rD=== rE || rD=== rF || rD=== rG || rB=== rH ||
+          rB=== rF || rB=== rG || rB=== rH ||
+          rF=== rG || rF=== rH ||
+          rG=== rH){
         rC = Math.floor(Math.random() * 81);
         rD = Math.floor(Math.random() * 81);
         rE = Math.floor(Math.random() * 81);
     }
         rF = rC;
         rG = rD;
-        rH = rE;
+        rH = rB;
     rC = Math.floor(Math.random() * 81);
     rD = Math.floor(Math.random() * 81);
     rE = Math.floor(Math.random() * 81);
 
 }
 
-function rand() {
-  r();
-    while(r0=== r1 || r0=== r2 || r0=== r3 || r0=== r4 || r0=== r5 || r0=== r6 || r0=== r7 || r0=== r8 || r0=== r9 || r0=== rA || r0=== rB || r0=== rC || r0=== rD || r0=== rE ||
-          r1=== r2 || r1=== r3 || r1=== r4 || r1=== r5 || r1=== r6 || r1=== r7 || r1=== r8 || r1=== r9 || r1=== rA || r1=== rB || r1=== rC || r1=== rD || r1=== rE ||
-          r2=== r3 || r2=== r4 || r2=== r5 || r2=== r6 || r2=== r7 || r2=== r8 || r2=== r9 || r2=== rA || r2=== rB || r2=== rC || r2=== rD || r2=== rE ||
-          r3=== r4 || r3=== r5 || r3=== r6 || r3=== r7 || r3=== r8 || r3=== r9 || r3=== rA || r3=== rB || r3=== rC || r3=== rD || r3=== rE ||
-          r4=== r5 || r4=== r6 || r4=== r7 || r4=== r8 || r4=== r9 || r4=== rA || r4=== rB || r4=== rC || r4=== rD || r4=== rE ||
-          r5=== r6 || r5=== r7 || r5=== r8 || r5=== r9 || r5=== rA || r5=== rB || r5=== rC || r5=== rD || r5=== rE ||
-          r6=== r7 || r6=== r8 || r6=== r9 || r6=== rA || r6=== rB || r6=== rC || r6=== rD || r6=== rE ||
-          r7=== r8 || r7=== r9 || r7=== rA || r7=== rB || r7=== rC || r7=== rD || r7=== rE ||
-          r8=== r9 || r8=== rA || r8=== rB || r8=== rC || r8=== rD || r8=== rE ||
-          r9=== rA || r9=== rB || rA=== rC || r9=== rD || r9=== rE ||
-          rA=== rB || rA=== rC || rA=== rD || rA=== rE ||
-          rB=== rC || rB=== rD || rB=== rE ||
-          rC=== rD || rC=== rE ||
-          rD=== rE){
-        r();
-    }
-}
 function display() {
   rand();
     open(vis[r0]);
@@ -253,88 +261,86 @@ function zero() {
     n1 = 0;
     n2 = 0;
     n3 = 0;
-    A = 0;
-    B = 0;
-    C = 0;
     d = 0;
     e = 0;
     f = 0;
+    g = 0;
+    h = 0;
+    i = 0;
 
     x = 0;
 
-    i=0;
+    a1dg = 0; a1dh = 0; a1di = 0;
+    a1eg = 0; a1eh = 0; a1ei = 0;
+    a1fg = 0; a1fh = 0; a1fi = 0;
 
-    a1Ad = 0; a1Ae = 0; a1Af = 0;
-    a1Bd = 0; a1Be = 0; a1Bf = 0;
-    a1Cd = 0; a1Ce = 0; a1Cf = 0;
+    a2dg = 0; a2dh = 0; a2di = 0;
+    a2eg = 0; a2eh = 0; a2ei = 0;
+    a2fg = 0; a2fh = 0; a2fi = 0;
 
-    a2Ad = 0; a2Ae = 0; a2Af = 0;
-    a2Bd = 0; a2Be = 0; a2Bf = 0;
-    a2Cd = 0; a2Ce = 0; a2Cf = 0;
+    a3dg = 0; a3dh = 0; a3di = 0;
+    a3eg = 0; a3eh = 0; a3ei = 0;
+    a3fg = 0; a3fh = 0; a3fi = 0;
 
-    a3Ad = 0; a3Ae = 0; a3Af = 0;
-    a3Bd = 0; a3Be = 0; a3Bf = 0;
-    a3Cd = 0; a3Ce = 0; a3Cf = 0;
+    b1dg = 0; b1dh = 0; b1di = 0;
+    b1eg = 0; b1eh = 0; b1ei = 0;
+    b1fg = 0; b1fh = 0; b1fi = 0;
 
-    b1Ad = 0; b1Ae = 0; b1Af = 0;
-    b1Bd = 0; b1Be = 0; b1Bf = 0;
-    b1Cd = 0; b1Ce = 0; b1Cf = 0;
+    b2dg = 0; b2dh = 0; b2di = 0;
+    b2eg = 0; b2eh = 0; b2ei = 0;
+    b2fg = 0; b2fh = 0; b2fi = 0;
 
-    b2Ad = 0; b2Ae = 0; b2Af = 0;
-    b2Bd = 0; b2Be = 0; b2Bf = 0;
-    b2Cd = 0; b2Ce = 0; b2Cf = 0;
+    b3dg = 0; b3dh = 0; b3di = 0;
+    b3eg = 0; b3eh = 0; b3ei = 0;
+    b3fg = 0; b3fh = 0; b3fi = 0;
 
-    b3Ad = 0; b3Ae = 0; b3Af = 0;
-    b3Bd = 0; b3Be = 0; b3Bf = 0;
-    b3Cd = 0; b3Ce = 0; b3Cf = 0;
+    c1dg = 0; c1dh = 0; c1di = 0;
+    c1eg = 0; c1eh = 0; c1ei = 0;
+    c1fg = 0; c1fh = 0; c1fi = 0;
 
-    c1Ad = 0; c1Ae = 0; c1Af = 0;
-    c1Bd = 0; c1Be = 0; c1Bf = 0;
-    c1Cd = 0; c1Ce = 0; c1Cf = 0;
+    c2dg = 0; c2dh = 0; c2di = 0;
+    c2eg = 0; c2eh = 0; c2ei = 0;
+    c2fg = 0; c2fh = 0; c2fi = 0;
 
-    c2Ad = 0; c2Ae = 0; c2Af = 0;
-    c2Bd = 0; c2Be = 0; c2Bf = 0;
-    c2Cd = 0; c2Ce = 0; c2Cf = 0;
+    c3dg = 0; c3dh = 0; c3di = 0;
+    c3eg = 0; c3eh = 0; c3ei = 0;
+    c3fg = 0; c3fh = 0; c3fi = 0;
 
-    c3Ad = 0; c3Ae = 0; c3Af = 0;
-    c3Bd = 0; c3Be = 0; c3Bf = 0;
-    c3Cd = 0; c3Ce = 0; c3Cf = 0;
+    size("a1dg"); size("a1dh"); size("a1di");
+    size("a1eg"); size("a1eh"); size("a1ei");
+    size("a1fg"); size("a1fh"); size("a1fi");
 
-    size("a1Ad"); size("a1Ae"); size("a1Af");
-    size("a1Bd"); size("a1Be"); size("a1Bf");
-    size("a1Cd"); size("a1Ce"); size("a1Cf");
+    size("a2dg"); size("a2dh"); size("a2di");
+    size("a2eg"); size("a2eh"); size("a2ei");
+    size("a2fg"); size("a2fh"); size("a2fi");
 
-    size("a2Ad"); size("a2Ae"); size("a2Af");
-    size("a2Bd"); size("a2Be"); size("a2Bf");
-    size("a2Cd"); size("a2Ce"); size("a2Cf");
+    size("a3dg"); size("a3dh"); size("a3di");
+    size("a3eg"); size("a3eh"); size("a3ei");
+    size("a3fg"); size("a3fh"); size("a3fi");
 
-    size("a3Ad"); size("a3Ae"); size("a3Af");
-    size("a3Bd"); size("a3Be"); size("a3Bf");
-    size("a3Cd"); size("a3Ce"); size("a3Cf");
+    size("b1dg"); size("b1dh"); size("b1di");
+    size("b1eg"); size("b1eh"); size("b1ei");
+    size("b1fg"); size("b1fh"); size("b1fi");
 
-    size("b1Ad"); size("b1Ae"); size("b1Af");
-    size("b1Bd"); size("b1Be"); size("b1Bf");
-    size("b1Cd"); size("b1Ce"); size("b1Cf");
+    size("b2dg"); size("b2dh"); size("b2di");
+    size("b2eg"); size("b2eh"); size("b2ei");
+    size("b2fg"); size("b2fh"); size("b2fi");
 
-    size("b2Ad"); size("b2Ae"); size("b2Af");
-    size("b2Bd"); size("b2Be"); size("b2Bf");
-    size("b2Cd"); size("b2Ce"); size("b2Cf");
+    size("b3dg"); size("b3dh"); size("b3di");
+    size("b3eg"); size("b3eh"); size("b3ei");
+    size("b3fg"); size("b3fh"); size("b3fi");
 
-    size("b3Ad"); size("b3Ae"); size("b3Af");
-    size("b3Bd"); size("b3Be"); size("b3Bf");
-    size("b3Cd"); size("b3Ce"); size("b3Cf");
+    size("c1dg"); size("c1dh"); size("c1di");
+    size("c1eg"); size("c1eh"); size("c1ei");
+    size("c1fg"); size("c1fh"); size("c1fi");
 
-    size("c1Ad"); size("c1Ae"); size("c1Af");
-    size("c1Bd"); size("c1Be"); size("c1Bf");
-    size("c1Cd"); size("c1Ce"); size("c1Cf");
+    size("c2dg"); size("c2dh"); size("c2di");
+    size("c2eg"); size("c2eh"); size("c2ei");
+    size("c2fg"); size("c2fh"); size("c2fi");
 
-    size("c2Ad"); size("c2Ae"); size("c2Af");
-    size("c2Bd"); size("c2Be"); size("c2Bf");
-    size("c2Cd"); size("c2Ce"); size("c2Cf");
-
-    size("c3Ad"); size("c3Ae"); size("c3Af");
-    size("c3Bd"); size("c3Be"); size("c3Bf");
-    size("c3Cd"); size("c3Ce"); size("c3Cf");
+    size("c3dg"); size("c3dh"); size("c3di");
+    size("c3eg"); size("c3eh"); size("c3ei");
+    size("c3fg"); size("c3fh"); size("c3fi");
     
     on=[];
 }
@@ -346,6 +352,13 @@ function yay() {
     } else {
         document.getElementById("z").innerHTML = z + " points";
     }
+    hide(on[0]);
+    hide(on[1]);
+    hide(on[2]);
+    open(vis[rF]);
+    open(vis[rG]);
+    open(vis[rH]);
+    rep();
 }
 function oof() {
     z--;
@@ -357,40 +370,35 @@ function oof() {
 }
 function color() {
     if (z < 0) {
-        document.getElementById("z").style.color="#d44";
+        document.getElementById("z").style.color="#e44";
     }
     else if (z > 0) {
-        document.getElementById("z").style.color="#4b4";
+        document.getElementById("z").style.color="#4d4";
     }
     else {
-        document.getElementById("z").style.color="#44c";
+        document.getElementById("z").style.color="#44d";
     }
 }
 function score(varr) {
     document.getElementById(varr).style.transform = "scale(0.9,0.9)";
     on.push(varr);
+    // alert(a+" "+b+" "+c+" "+n1+" "+n2+" "+n3+" "+d+" "+e+" "+f+" "+g+" "+h+" "+i);
     if (x === 3) {
         if (
-            ((a === 3 || b === 3 || c === 3) || ((a === b) && (b === c )))&&
-            ((n1=== 3 || n2=== 3 || n3=== 3) || ((n1=== n2)&& (n2=== n3)))&&
-            ((A === 3 || B === 3 || C === 3) || ((A === B) && (B === C )))&&
-            ((d === 3 || e === 3 || f === 3) || ((d === e) && (e === f )))
+            ((a === 3 || b === 3 || c === 3) || (a === b && b === c))&&
+            ((n1=== 3 || n2=== 3 || n3=== 3) || (n1===n2 && n2===n3))&&
+            ((d === 3 || e === 3 || f === 3) || (d === e && e === f))&&
+            ((g === 3 || h === 3 || i === 3) || (g === h && h === i))
         ){
             yay();
         } else {
             oof();
         }
         color();
-        hide(on[0]);
-        hide(on[1]);
-        hide(on[2]);
-        rep();
-        open(vis[rF]);
-        open(vis[rG]);
-        open(vis[rH]);
         zero();
-    }
+        }
 }
+
 
 color();
 clear();
@@ -405,924 +413,924 @@ document.getElementById("reset").onclick = function reset() {
     display();
 }
 
-/*Red megagroup*/
-//1A//
-document.getElementById("a1Ad").onclick = function() {
-    if (a1Ad === 0) {
+/*Rhg megagroup*/
+//1d//
+document.getElementById("a1dg").onclick = function() {
+    if (a1dg === 0) {
         a++;
         n1++;
-        A++;
         d++;
-        a1Ad++;
+        g++;
+        a1dg++;
         x++;
-        score("a1Ad");
+        score("a1dg");
     }
 }
-document.getElementById("a1Ae").onclick = function() {
-    if (a1Ae === 0) {
+document.getElementById("a1dh").onclick = function() {
+    if (a1dh === 0) {
         a++;
         n1++;
-        A++;
-        e++;
-        a1Ae++;
+        d++;
+        h++;
+        a1dh++;
         x++;
-        score("a1Ae");
+        score("a1dh");
     }
 }
-document.getElementById("a1Af").onclick = function() {
-    if (a1Af === 0) {
+document.getElementById("a1di").onclick = function() {
+    if (a1di === 0) {
         a++;
         n1++;
-        A++;
-        f++;
-        a1Af++;
+        d++;
+        i++;
+        a1di++;
         x++;
-        score("a1Af");
+        score("a1di");
     }
 }
-//1B//
-document.getElementById("a1Bd").onclick = function() {
-    if (a1Bd === 0) {
+//1e//
+document.getElementById("a1eg").onclick = function() {
+    if (a1eg === 0) {
         a++;
         n1++;
-        B++;
-        d++;
-        a1Bd++;
+        e++;
+        g++;
+        a1eg++;
         x++;
-        score("a1Bd");
+        score("a1eg");
     }
 }
-document.getElementById("a1Be").onclick = function() {
-    if (a1Be === 0) {
+document.getElementById("a1eh").onclick = function() {
+    if (a1eh === 0) {
         a++;
         n1++;
-        B++;
         e++;
-        a1Be++;
+        h++;
+        a1eh++;
         x++;
-        score("a1Be");
+        score("a1eh");
     }
 }
-document.getElementById("a1Bf").onclick = function() {
-    if (a1Bf === 0) {
+document.getElementById("a1ei").onclick = function() {
+    if (a1ei === 0) {
         a++;
         n1++;
-        B++;
-        f++;
-        a1Bf++;
+        e++;
+        i++;
+        a1ei++;
         x++;
-        score("a1Bf");
+        score("a1ei");
     }
 }
-//1C//
-document.getElementById("a1Cd").onclick = function() {
-    if (a1Cd === 0) {
+//1f//
+document.getElementById("a1fg").onclick = function() {
+    if (a1fg === 0) {
         a++;
         n1++;
-        C++;
-        d++;
-        a1Cd++;
+        f++;
+        g++;
+        a1fg++;
         x++;
-        score("a1Cd");
+        score("a1fg");
     }
 }
-document.getElementById("a1Ce").onclick = function() {
-    if (a1Ce === 0) {
+document.getElementById("a1fh").onclick = function() {
+    if (a1fh === 0) {
         a++;
         n1++;
-        C++;
-        e++;
-        a1Ce++;
+        f++;
+        h++;
+        a1fh++;
         x++;
-        score("a1Ce");
+        score("a1fh");
     }
 }
-document.getElementById("a1Cf").onclick = function() {
-    if (a1Cf === 0) {
+document.getElementById("a1fi").onclick = function() {
+    if (a1fi === 0) {
         a++;
         n1++;
-        C++;
         f++;
-        a1Cf++;
+        i++;
+        a1fi++;
         x++;
-        score("a1Cf");
+        score("a1fi");
     }
 }
-//2A//
-document.getElementById("a2Ad").onclick = function() {
-    if (a2Ad === 0) {
+//2d//
+document.getElementById("a2dg").onclick = function() {
+    if (a2dg === 0) {
         a++;
         n2++;
-        A++;
         d++;
-        a2Ad++;
+        g++;
+        a2dg++;
         x++;
-        score("a2Ad");
+        score("a2dg");
     }
 }
-document.getElementById("a2Ae").onclick = function() {
-    if (a2Ae === 0) {
+document.getElementById("a2dh").onclick = function() {
+    if (a2dh === 0) {
         a++;
         n2++;
-        A++;
-        e++;
-        a2Ae++;
-        x++;
-        score("a2Ae");
-    }
-}
-document.getElementById("a2Af").onclick = function() {
-    if (a2Af === 0) {
-        a++;
-        n2++;
-        A++;
-        f++;
-        a2Af++;
-        x++;
-        score("a2Af");
-    }
-}
-//2B//
-document.getElementById("a2Bd").onclick = function() {
-    if (a2Bd === 0) {
-        a++;
-        n2++;
-        B++;
         d++;
-        a2Bd++;
+        h++;
+        a2dh++;
         x++;
-        score("a2Bd");
+        score("a2dh");
     }
 }
-document.getElementById("a2Be").onclick = function() {
-    if (a2Be === 0) {
+document.getElementById("a2di").onclick = function() {
+    if (a2di === 0) {
         a++;
         n2++;
-        B++;
-        e++;
-        a2Be++;
-        x++;
-        score("a2Be");
-    }
-}
-document.getElementById("a2Bf").onclick = function() {
-    if (a2Bf === 0) {
-        a++;
-        n2++;
-        B++;
-        f++;
-        a2Bf++;
-        x++;
-        score("a2Bf");
-    }
-}
-//2C//
-document.getElementById("a2Cd").onclick = function() {
-    if (a2Cd === 0) {
-        a++;
-        n2++;
-        C++;
         d++;
-        a2Cd++;
+        i++;
+        a2di++;
         x++;
-        score("a2Cd");
+        score("a2di");
     }
 }
-document.getElementById("a2Ce").onclick = function() {
-    if (a2Ce === 0) {
+//2e//
+document.getElementById("a2eg").onclick = function() {
+    if (a2eg === 0) {
         a++;
         n2++;
-        C++;
         e++;
-        a2Ce++;
+        g++;
+        a2eg++;
         x++;
-        score("a2Ce");
+        score("a2eg");
     }
 }
-document.getElementById("a2Cf").onclick = function() {
-    if (a2Cf === 0) {
+document.getElementById("a2eh").onclick = function() {
+    if (a2eh === 0) {
         a++;
         n2++;
-        C++;
-        f++;
-        a2Cf++;
-        x++;
-        score("a2Cf");
-    }
-}
-//3A//
-document.getElementById("a3Ad").onclick = function() {
-    if (a3Ad === 0) {
-        a++;
-        n3++;
-        A++;
-        d++;
-        a3Ad++;
-        x++;
-        score("a3Ad");
-    }
-}
-document.getElementById("a3Ae").onclick = function() {
-    if (a3Ae === 0) {
-        a++;
-        n3++;
-        A++;
         e++;
-        a3Ae++;
+        h++;
+        a2eh++;
         x++;
-        score("a3Ae");
+        score("a2eh");
     }
 }
-document.getElementById("a3Af").onclick = function() {
-    if (a3Af === 0) {
+document.getElementById("a2ei").onclick = function() {
+    if (a2ei === 0) {
         a++;
-        n3++;
-        A++;
-        f++;
-        a3Af++;
-        x++;
-        score("a3Af");
-    }
-}
-//3B//
-document.getElementById("a3Bd").onclick = function() {
-    if (a3Bd === 0) {
-        a++;
-        n3++;
-        B++;
-        d++;
-        a3Bd++;
-        x++;
-        score("a3Bd");
-    }
-}
-document.getElementById("a3Be").onclick = function() {
-    if (a3Be === 0) {
-        a++;
-        n3++;
-        B++;
+        n2++;
         e++;
-        a3Be++;
+        i++;
+        a2ei++;
         x++;
-        score("a3Be");
+        score("a2ei");
     }
 }
-document.getElementById("a3Bf").onclick = function() {
-    if (a3Bf === 0) {
+//2f//
+document.getElementById("a2fg").onclick = function() {
+    if (a2fg === 0) {
         a++;
-        n3++;
-        B++;
+        n2++;
         f++;
-        a3Bf++;
+        g++;
+        a2fg++;
         x++;
-        score("a3Bf");
+        score("a2fg");
     }
 }
-//3C//
-document.getElementById("a3Cd").onclick = function() {
-    if (a3Cd === 0) {
+document.getElementById("a2fh").onclick = function() {
+    if (a2fh === 0) {
+        a++;
+        n2++;
+        f++;
+        h++;
+        a2fh++;
+        x++;
+        score("a2fh");
+    }
+}
+document.getElementById("a2fi").onclick = function() {
+    if (a2fi === 0) {
+        a++;
+        n2++;
+        f++;
+        i++;
+        a2fi++;
+        x++;
+        score("a2fi");
+    }
+}
+//3d//
+document.getElementById("a3dg").onclick = function() {
+    if (a3dg === 0) {
         a++;
         n3++;
-        C++;
         d++;
-        a3Cd++;
+        g++;
+        a3dg++;
         x++;
-        score("a3Cd");
+        score("a3dg");
     }
 }
-document.getElementById("a3Ce").onclick = function() {
-    if (a3Ce === 0) {
+document.getElementById("a3dh").onclick = function() {
+    if (a3dh === 0) {
         a++;
         n3++;
-        C++;
+        d++;
+        h++;
+        a3dh++;
+        x++;
+        score("a3dh");
+    }
+}
+document.getElementById("a3di").onclick = function() {
+    if (a3di === 0) {
+        a++;
+        n3++;
+        d++;
+        i++;
+        a3di++;
+        x++;
+        score("a3di");
+    }
+}
+//3e//
+document.getElementById("a3eg").onclick = function() {
+    if (a3eg === 0) {
+        a++;
+        n3++;
         e++;
-        a3Ce++;
+        g++;
+        a3eg++;
         x++;
-        score("a3Ce");
+        score("a3eg");
     }
 }
-document.getElementById("a3Cf").onclick = function() {
-    if (a3Cf === 0) {
+document.getElementById("a3eh").onclick = function() {
+    if (a3eh === 0) {
         a++;
         n3++;
-        C++;
-        f++;
-        a3Cf++;
+        e++;
+        h++;
+        a3eh++;
         x++;
-        score("a3Cf");
+        score("a3eh");
+    }
+}
+document.getElementById("a3ei").onclick = function() {
+    if (a3ei === 0) {
+        a++;
+        n3++;
+        e++;
+        i++;
+        a3ei++;
+        x++;
+        score("a3ei");
+    }
+}
+//3f//
+document.getElementById("a3fg").onclick = function() {
+    if (a3fg === 0) {
+        a++;
+        n3++;
+        f++;
+        g++;
+        a3fg++;
+        x++;
+        score("a3fg");
+    }
+}
+document.getElementById("a3fh").onclick = function() {
+    if (a3fh === 0) {
+        a++;
+        n3++;
+        f++;
+        h++;
+        a3fh++;
+        x++;
+        score("a3fh");
+    }
+}
+document.getElementById("a3fi").onclick = function() {
+    if (a3fi === 0) {
+        a++;
+        n3++;
+        f++;
+        i++;
+        a3fi++;
+        x++;
+        score("a3fi");
     }
 }
 /*Green megagroup*/
-//1A//
-document.getElementById("b1Ad").onclick = function() {
-    if (b1Ad === 0) {
+//1d//
+document.getElementById("b1dg").onclick = function() {
+    if (b1dg === 0) {
         b++;
         n1++;
-        A++;
         d++;
-        b1Ad++;
+        g++;
+        b1dg++;
         x++;
-        score("b1Ad");
+        score("b1dg");
     }
 }
-document.getElementById("b1Ae").onclick = function() {
-    if (b1Ae === 0) {
+document.getElementById("b1dh").onclick = function() {
+    if (b1dh === 0) {
         b++;
         n1++;
-        A++;
-        e++;
-        b1Ae++;
+        d++;
+        h++;
+        b1dh++;
         x++;
-        score("b1Ae");
+        score("b1dh");
     }
 }
-document.getElementById("b1Af").onclick = function() {
-    if (b1Af === 0) {
+document.getElementById("b1di").onclick = function() {
+    if (b1di === 0) {
         b++;
         n1++;
-        A++;
-        f++;
-        b1Af++;
+        d++;
+        i++;
+        b1di++;
         x++;
-        score("b1Af");
+        score("b1di");
     }
 }
-//1B//
-document.getElementById("b1Bd").onclick = function() {
-    if (b1Bd === 0) {
+//1e//
+document.getElementById("b1eg").onclick = function() {
+    if (b1eg === 0) {
         b++;
         n1++;
-        B++;
-        d++;
-        b1Bd++;
+        e++;
+        g++;
+        b1eg++;
         x++;
-        score("b1Bd");
+        score("b1eg");
     }
 }
-document.getElementById("b1Be").onclick = function() {
-    if (b1Be === 0) {
+document.getElementById("b1eh").onclick = function() {
+    if (b1eh === 0) {
         b++;
         n1++;
-        B++;
         e++;
-        b1Be++;
+        h++;
+        b1eh++;
         x++;
-        score("b1Be");
+        score("b1eh");
     }
 }
-document.getElementById("b1Bf").onclick = function() {
-    if (b1Bf === 0) {
+document.getElementById("b1ei").onclick = function() {
+    if (b1ei === 0) {
         b++;
         n1++;
-        B++;
-        f++;
-        b1Bf++;
+        e++;
+        i++;
+        b1ei++;
         x++;
-        score("b1Bf");
+        score("b1ei");
     }
 }
-//1C//
-document.getElementById("b1Cd").onclick = function() {
-    if (b1Cd === 0) {
+//1f//
+document.getElementById("b1fg").onclick = function() {
+    if (b1fg === 0) {
         b++;
         n1++;
-        C++;
-        d++;
-        b1Cd++;
+        f++;
+        g++;
+        b1fg++;
         x++;
-        score("b1Cd");
+        score("b1fg");
     }
 }
-document.getElementById("b1Ce").onclick = function() {
-    if (b1Ce === 0) {
+document.getElementById("b1fh").onclick = function() {
+    if (b1fh === 0) {
         b++;
         n1++;
-        C++;
-        e++;
-        b1Ce++;
+        f++;
+        h++;
+        b1fh++;
         x++;
-        score("b1Ce");
+        score("b1fh");
     }
 }
-document.getElementById("b1Cf").onclick = function() {
-    if (b1Cf === 0) {
+document.getElementById("b1fi").onclick = function() {
+    if (b1fi === 0) {
         b++;
         n1++;
-        C++;
         f++;
-        b1Cf++;
+        i++;
+        b1fi++;
         x++;
-        score("b1Cf");
+        score("b1fi");
     }
 }
-//2A//
-document.getElementById("b2Ad").onclick = function() {
-    if (b2Ad === 0) {
+//2d//
+document.getElementById("b2dg").onclick = function() {
+    if (b2dg === 0) {
         b++;
         n2++;
-        A++;
         d++;
-        b2Ad++;
+        g++;
+        b2dg++;
         x++;
-        score("b2Ad");
+        score("b2dg");
     }
 }
-document.getElementById("b2Ae").onclick = function() {
-    if (b2Ae === 0) {
+document.getElementById("b2dh").onclick = function() {
+    if (b2dh === 0) {
         b++;
         n2++;
-        A++;
-        e++;
-        b2Ae++;
-        x++;
-        score("b2Ae");
-    }
-}
-document.getElementById("b2Af").onclick = function() {
-    if (b2Af === 0) {
-        b++;
-        n2++;
-        A++;
-        f++;
-        b2Af++;
-        x++;
-        score("b2Af");
-    }
-}
-//2B//
-document.getElementById("b2Bd").onclick = function() {
-    if (b2Bd === 0) {
-        b++;
-        n2++;
-        B++;
         d++;
-        b2Bd++;
+        h++;
+        b2dh++;
         x++;
-        score("b2Bd");
+        score("b2dh");
     }
 }
-document.getElementById("b2Be").onclick = function() {
-    if (b2Be === 0) {
+document.getElementById("b2di").onclick = function() {
+    if (b2di === 0) {
         b++;
         n2++;
-        B++;
-        e++;
-        b2Be++;
-        x++;
-        score("b2Be");
-    }
-}
-document.getElementById("b2Bf").onclick = function() {
-    if (b2Bf === 0) {
-        b++;
-        n2++;
-        B++;
-        f++;
-        b2Bf++;
-        x++;
-        score("b2Bf");
-    }
-}
-//2C//
-document.getElementById("b2Cd").onclick = function() {
-    if (b2Cd === 0) {
-        b++;
-        n2++;
-        C++;
         d++;
-        b2Cd++;
+        i++;
+        b2di++;
         x++;
-        score("b2Cd");
+        score("b2di");
     }
 }
-document.getElementById("b2Ce").onclick = function() {
-    if (b2Ce === 0) {
+//2e//
+document.getElementById("b2eg").onclick = function() {
+    if (b2eg === 0) {
         b++;
         n2++;
-        C++;
         e++;
-        b2Ce++;
+        g++;
+        b2eg++;
         x++;
-        score("b2Ce");
+        score("b2eg");
     }
 }
-document.getElementById("b2Cf").onclick = function() {
-    if (b2Cf === 0) {
+document.getElementById("b2eh").onclick = function() {
+    if (b2eh === 0) {
         b++;
         n2++;
-        C++;
-        f++;
-        b2Cf++;
-        x++;
-        score("b2Cf");
-    }
-}
-//3A//
-document.getElementById("b3Ad").onclick = function() {
-    if (b3Ad === 0) {
-        b++;
-        n3++;
-        A++;
-        d++;
-        b3Ad++;
-        x++;
-        score("b3Ad");
-    }
-}
-document.getElementById("b3Ae").onclick = function() {
-    if (b3Ae === 0) {
-        b++;
-        n3++;
-        A++;
         e++;
-        b3Ae++;
+        h++;
+        b2eh++;
         x++;
-        score("b3Ae");
+        score("b2eh");
     }
 }
-document.getElementById("b3Af").onclick = function() {
-    if (b3Af === 0) {
+document.getElementById("b2ei").onclick = function() {
+    if (b2ei === 0) {
         b++;
-        n3++;
-        A++;
-        f++;
-        b3Af++;
-        x++;
-        score("b3Af");
-    }
-}
-//3B//
-document.getElementById("b3Bd").onclick = function() {
-    if (b3Bd === 0) {
-        b++;
-        n3++;
-        B++;
-        d++;
-        b3Bd++;
-        x++;
-        score("b3Bd");
-    }
-}
-document.getElementById("b3Be").onclick = function() {
-    if (b3Be === 0) {
-        b++;
-        n3++;
-        B++;
+        n2++;
         e++;
-        b3Be++;
+        i++;
+        b2ei++;
         x++;
-        score("b3Be");
+        score("b2ei");
     }
 }
-document.getElementById("b3Bf").onclick = function() {
-    if (b3Bf === 0) {
+//2f//
+document.getElementById("b2fg").onclick = function() {
+    if (b2fg === 0) {
         b++;
-        n3++;
-        B++;
+        n2++;
         f++;
-        b3Bf++;
+        g++;
+        b2fg++;
         x++;
-        score("b3Bf");
+        score("b2fg");
     }
 }
-//3C//
-document.getElementById("b3Cd").onclick = function() {
-    if (b3Cd === 0) {
+document.getElementById("b2fh").onclick = function() {
+    if (b2fh === 0) {
+        b++;
+        n2++;
+        f++;
+        h++;
+        b2fh++;
+        x++;
+        score("b2fh");
+    }
+}
+document.getElementById("b2fi").onclick = function() {
+    if (b2fi === 0) {
+        b++;
+        n2++;
+        f++;
+        i++;
+        b2fi++;
+        x++;
+        score("b2fi");
+    }
+}
+//3d//
+document.getElementById("b3dg").onclick = function() {
+    if (b3dg === 0) {
         b++;
         n3++;
-        C++;
         d++;
-        b3Cd++;
+        g++;
+        b3dg++;
         x++;
-        score("b3Cd");
+        score("b3dg");
     }
 }
-document.getElementById("b3Ce").onclick = function() {
-    if (b3Ce === 0) {
+document.getElementById("b3dh").onclick = function() {
+    if (b3dh === 0) {
         b++;
         n3++;
-        C++;
+        d++;
+        h++;
+        b3dh++;
+        x++;
+        score("b3dh");
+    }
+}
+document.getElementById("b3di").onclick = function() {
+    if (b3di === 0) {
+        b++;
+        n3++;
+        d++;
+        i++;
+        b3di++;
+        x++;
+        score("b3di");
+    }
+}
+//3e//
+document.getElementById("b3eg").onclick = function() {
+    if (b3eg === 0) {
+        b++;
+        n3++;
         e++;
-        b3Ce++;
+        g++;
+        b3eg++;
         x++;
-        score("b3Ce");
+        score("b3eg");
     }
 }
-document.getElementById("b3Cf").onclick = function() {
-    if (b3Cf === 0) {
+document.getElementById("b3eh").onclick = function() {
+    if (b3eh === 0) {
         b++;
         n3++;
-        C++;
-        f++;
-        b3Cf++;
+        e++;
+        h++;
+        b3eh++;
         x++;
-        score("b3Cf");
+        score("b3eh");
     }
 }
-/*Blue megagroup*/
-//1A//
-document.getElementById("c1Ad").onclick = function() {
-    if (c1Ad === 0) {
+document.getElementById("b3ei").onclick = function() {
+    if (b3ei === 0) {
+        b++;
+        n3++;
+        e++;
+        i++;
+        b3ei++;
+        x++;
+        score("b3ei");
+    }
+}
+//3f//
+document.getElementById("b3fg").onclick = function() {
+    if (b3fg === 0) {
+        b++;
+        n3++;
+        f++;
+        g++;
+        b3fg++;
+        x++;
+        score("b3fg");
+    }
+}
+document.getElementById("b3fh").onclick = function() {
+    if (b3fh === 0) {
+        b++;
+        n3++;
+        f++;
+        h++;
+        b3fh++;
+        x++;
+        score("b3fh");
+    }
+}
+document.getElementById("b3fi").onclick = function() {
+    if (b3fi === 0) {
+        b++;
+        n3++;
+        f++;
+        i++;
+        b3fi++;
+        x++;
+        score("b3fi");
+    }
+}
+/*eluh megagroup*/
+//1d//
+document.getElementById("c1dg").onclick = function() {
+    if (c1dg === 0) {
         c++;
         n1++;
-        A++;
         d++;
-        c1Ad++;
+        g++;
+        c1dg++;
         x++;
-        score("c1Ad");
+        score("c1dg");
     }
 }
-document.getElementById("c1Ae").onclick = function() {
-    if (c1Ae === 0) {
+document.getElementById("c1dh").onclick = function() {
+    if (c1dh === 0) {
         c++;
         n1++;
-        A++;
-        e++;
-        c1Ae++;
-        x++;
-        score("c1Ae");
-    }
-}
-document.getElementById("c1Af").onclick = function() {
-    if (c1Af === 0) {
-        c++;
-        n1++;
-        A++;
-        f++;
-        c1Af++;
-        x++;
-        score("c1Af");
-    }
-}
-//1B//
-document.getElementById("c1Bd").onclick = function() {
-    if (c1Bd === 0) {
-        c++;
-        n1++;
-        c++;
         d++;
-        c1Bd++;
+        h++;
+        c1dh++;
         x++;
-        score("c1Bd");
+        score("c1dh");
     }
 }
-document.getElementById("c1Be").onclick = function() {
-    if (c1Be === 0) {
+document.getElementById("c1di").onclick = function() {
+    if (c1di === 0) {
+        c++;
+        n1++;
+        d++;
+        i++;
+        c1di++;
+        x++;
+        score("c1di");
+    }
+}
+//1e//
+document.getElementById("c1eg").onclick = function() {
+    if (c1eg === 0) {
         c++;
         n1++;
         c++;
-        e++;
-        c1Be++;
+        g++;
+        c1eg++;
         x++;
-        score("c1Be");
+        score("c1eg");
     }
 }
-document.getElementById("c1Bf").onclick = function() {
-    if (c1Bf === 0) {
+document.getElementById("c1eh").onclick = function() {
+    if (c1eh === 0) {
         c++;
         n1++;
         c++;
-        f++;
-        c1Bf++;
+        h++;
+        c1eh++;
         x++;
-        score("c1Bf");
+        score("c1eh");
     }
 }
-//1C//
-document.getElementById("c1Cd").onclick = function() {
-    if (c1Cd === 0) {
+document.getElementById("c1ei").onclick = function() {
+    if (c1ei === 0) {
         c++;
         n1++;
-        C++;
-        d++;
-        c1Cd++;
+        c++;
+        i++;
+        c1ei++;
         x++;
-        score("c1Cd");
+        score("c1ei");
     }
 }
-document.getElementById("c1Ce").onclick = function() {
-    if (c1Ce === 0) {
+//1f//
+document.getElementById("c1fg").onclick = function() {
+    if (c1fg === 0) {
         c++;
         n1++;
-        C++;
-        e++;
-        c1Ce++;
+        f++;
+        g++;
+        c1fg++;
         x++;
-        score("c1Ce");
+        score("c1fg");
     }
 }
-document.getElementById("c1Cf").onclick = function() {
-    if (c1Cf === 0) {
+document.getElementById("c1fh").onclick = function() {
+    if (c1fh === 0) {
         c++;
         n1++;
-        C++;
         f++;
-        c1Cf++;
+        h++;
+        c1fh++;
         x++;
-        score("c1Cf");
+        score("c1fh");
     }
 }
-//2A//
-document.getElementById("c2Ad").onclick = function() {
-    if (c2Ad === 0) {
+document.getElementById("c1fi").onclick = function() {
+    if (c1fi === 0) {
+        c++;
+        n1++;
+        f++;
+        i++;
+        c1fi++;
+        x++;
+        score("c1fi");
+    }
+}
+//2d//
+document.getElementById("c2dg").onclick = function() {
+    if (c2dg === 0) {
         c++;
         n2++;
-        A++;
         d++;
-        c2Ad++;
+        g++;
+        c2dg++;
         x++;
-        score("c2Ad");
+        score("c2dg");
     }
 }
-document.getElementById("c2Ae").onclick = function() {
-    if (c2Ae === 0) {
+document.getElementById("c2dh").onclick = function() {
+    if (c2dh === 0) {
         c++;
         n2++;
-        A++;
-        e++;
-        c2Ae++;
-        x++;
-        score("c2Ae");
-    }
-}
-document.getElementById("c2Af").onclick = function() {
-    if (c2Af === 0) {
-        c++;
-        n2++;
-        A++;
-        f++;
-        c2Af++;
-        x++;
-        score("c2Af");
-    }
-}
-//2B//
-document.getElementById("c2Bd").onclick = function() {
-    if (c2Bd === 0) {
-        c++;
-        n2++;
-        c++;
         d++;
-        c2Bd++;
+        h++;
+        c2dh++;
         x++;
-        score("c2Bd");
+        score("c2dh");
     }
 }
-document.getElementById("c2Be").onclick = function() {
-    if (c2Be === 0) {
+document.getElementById("c2di").onclick = function() {
+    if (c2di === 0) {
         c++;
         n2++;
-        c++;
-        e++;
-        c2Be++;
-        x++;
-        score("c2Be");
-    }
-}
-document.getElementById("c2Bf").onclick = function() {
-    if (c2Bf === 0) {
-        c++;
-        n2++;
-        c++;
-        f++;
-        c2Bf++;
-        x++;
-        score("c2Bf");
-    }
-}
-//2C//
-document.getElementById("c2Cd").onclick = function() {
-    if (c2Cd === 0) {
-        c++;
-        n2++;
-        C++;
         d++;
-        c2Cd++;
+        i++;
+        c2di++;
         x++;
-        score("c2Cd");
+        score("c2di");
     }
 }
-document.getElementById("c2Ce").onclick = function() {
-    if (c2Ce === 0) {
+//2e//
+document.getElementById("c2eg").onclick = function() {
+    if (c2eg === 0) {
         c++;
         n2++;
-        C++;
-        e++;
-        c2Ce++;
+        c++;
+        g++;
+        c2eg++;
         x++;
-        score("c2Ce");
+        score("c2eg");
     }
 }
-document.getElementById("c2Cf").onclick = function() {
-    if (c2Cf === 0) {
+document.getElementById("c2eh").onclick = function() {
+    if (c2eh === 0) {
         c++;
         n2++;
-        C++;
-        f++;
-        c2Cf++;
+        c++;
+        h++;
+        c2eh++;
         x++;
-        score("c2Cf");
+        score("c2eh");
     }
 }
-//3A//
-document.getElementById("c3Ad").onclick = function() {
-    if (c3Ad === 0) {
+document.getElementById("c2ei").onclick = function() {
+    if (c2ei === 0) {
+        c++;
+        n2++;
+        c++;
+        i++;
+        c2ei++;
+        x++;
+        score("c2ei");
+    }
+}
+//2f//
+document.getElementById("c2fg").onclick = function() {
+    if (c2fg === 0) {
+        c++;
+        n2++;
+        f++;
+        g++;
+        c2fg++;
+        x++;
+        score("c2fg");
+    }
+}
+document.getElementById("c2fh").onclick = function() {
+    if (c2fh === 0) {
+        c++;
+        n2++;
+        f++;
+        h++;
+        c2fh++;
+        x++;
+        score("c2fh");
+    }
+}
+document.getElementById("c2fi").onclick = function() {
+    if (c2fi === 0) {
+        c++;
+        n2++;
+        f++;
+        i++;
+        c2fi++;
+        x++;
+        score("c2fi");
+    }
+}
+//3d//
+document.getElementById("c3dg").onclick = function() {
+    if (c3dg === 0) {
         c++;
         n3++;
-        A++;
         d++;
-        c3Ad++;
+        g++;
+        c3dg++;
         x++;
-        score("c3Ad");
+        score("c3dg");
     }
 }
-document.getElementById("c3Ae").onclick = function() {
-    if (c3Ae === 0) {
+document.getElementById("c3dh").onclick = function() {
+    if (c3dh === 0) {
         c++;
         n3++;
-        A++;
-        e++;
-        c3Ae++;
-        x++;
-        score("c3Ae");
-    }
-}
-document.getElementById("c3Af").onclick = function() {
-    if (c3Af === 0) {
-        c++;
-        n3++;
-        A++;
-        f++;
-        c3Af++;
-        x++;
-        score("c3Af");
-    }
-}
-//3B//
-document.getElementById("c3Bd").onclick = function() {
-    if (c3Bd === 0) {
-        c++;
-        n3++;
-        c++;
         d++;
-        c3Bd++;
+        h++;
+        c3dh++;
         x++;
-        score("c3Bd");
+        score("c3dh");
     }
 }
-document.getElementById("c3Be").onclick = function() {
-    if (c3Be === 0) {
+document.getElementById("c3di").onclick = function() {
+    if (c3di === 0) {
         c++;
         n3++;
-        c++;
-        e++;
-        c3Be++;
-        x++;
-        score("c3Be");
-    }
-}
-document.getElementById("c3Bf").onclick = function() {
-    if (c3Bf === 0) {
-        c++;
-        n3++;
-        c++;
-        f++;
-        c3Bf++;
-        x++;
-        score("c3Bf");
-    }
-}
-//3C//
-document.getElementById("c3Cd").onclick = function() {
-    if (c3Cd === 0) {
-        c++;
-        n3++;
-        C++;
         d++;
-        c3Cd++;
+        i++;
+        c3di++;
         x++;
-        score("c3Cd");
+        score("c3di");
     }
 }
-document.getElementById("c3Ce").onclick = function() {
-    if (c3Ce === 0) {
+//3e//
+document.getElementById("c3eg").onclick = function() {
+    if (c3eg === 0) {
         c++;
         n3++;
-        C++;
-        e++;
-        c3Ce++;
+        c++;
+        g++;
+        c3eg++;
         x++;
-        score("c3Ce");
+        score("c3eg");
     }
 }
-document.getElementById("c3Cf").onclick = function() {
-    if (c3Cf === 0) {
+document.getElementById("c3eh").onclick = function() {
+    if (c3eh === 0) {
         c++;
         n3++;
-        C++;
+        c++;
+        h++;
+        c3eh++;
+        x++;
+        score("c3eh");
+    }
+}
+document.getElementById("c3ei").onclick = function() {
+    if (c3ei === 0) {
+        c++;
+        n3++;
+        c++;
+        i++;
+        c3ei++;
+        x++;
+        score("c3ei");
+    }
+}
+//3f//
+document.getElementById("c3fg").onclick = function() {
+    if (c3fg === 0) {
+        c++;
+        n3++;
         f++;
-        c3Cf++;
+        g++;
+        c3fg++;
         x++;
-        score("c3Cf");
+        score("c3fg");
+    }
+}
+document.getElementById("c3fh").onclick = function() {
+    if (c3fh === 0) {
+        c++;
+        n3++;
+        f++;
+        h++;
+        c3fh++;
+        x++;
+        score("c3fh");
+    }
+}
+document.getElementById("c3fi").onclick = function() {
+    if (c3fi === 0) {
+        c++;
+        n3++;
+        f++;
+        i++;
+        c3fi++;
+        x++;
+        score("c3fi");
     }
 }
