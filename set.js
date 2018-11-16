@@ -67,6 +67,9 @@ var r8 = 0;
 var r9 = 0;
 var rA = 0;
 var rB = 0;
+var rC = 0;
+var rD = 0;
+var rE = 0;
 
 var a1Ad = 0; var a1Ae = 0; var a1Af = 0;
 var a1Bd = 0; var a1Be = 0; var a1Bf = 0;
@@ -163,21 +166,51 @@ function r() {
     r9 = Math.floor(Math.random() * 81);
     rA = Math.floor(Math.random() * 81);
     rB = Math.floor(Math.random() * 81);
+    rC = Math.floor(Math.random() * 81);
+    rD = Math.floor(Math.random() * 81);
+    rE = Math.floor(Math.random() * 81);
+}
+
+function rep() {
+    rC = Math.floor(Math.random() * 81);
+    rD = Math.floor(Math.random() * 81);
+    rE = Math.floor(Math.random() * 81);
+        while(r0=== r1 || r0=== r2 || r0=== r3 || r0=== r4 || r0=== r5 || r0=== r6 || r0=== r7 || r0=== r8 || r0=== r9 || r0=== rA || r0=== rB || r0=== rC || r0=== rD || r0=== rE ||
+          r1=== r2 || r1=== r3 || r1=== r4 || r1=== r5 || r1=== r6 || r1=== r7 || r1=== r8 || r1=== r9 || r1=== rA || r1=== rB || r1=== rC || r1=== rD || r1=== rE ||
+          r2=== r3 || r2=== r4 || r2=== r5 || r2=== r6 || r2=== r7 || r2=== r8 || r2=== r9 || r2=== rA || r2=== rB || r2=== rC || r2=== rD || r2=== rE ||
+          r3=== r4 || r3=== r5 || r3=== r6 || r3=== r7 || r3=== r8 || r3=== r9 || r3=== rA || r3=== rB || r3=== rC || r3=== rD || r3=== rE ||
+          r4=== r5 || r4=== r6 || r4=== r7 || r4=== r8 || r4=== r9 || r4=== rA || r4=== rB || r4=== rC || r4=== rD || r4=== rE ||
+          r5=== r6 || r5=== r7 || r5=== r8 || r5=== r9 || r5=== rA || r5=== rB || r5=== rC || r5=== rD || r5=== rE ||
+          r6=== r7 || r6=== r8 || r6=== r9 || r6=== rA || r6=== rB || r6=== rC || r6=== rD || r6=== rE ||
+          r7=== r8 || r7=== r9 || r7=== rA || r7=== rB || r7=== rC || r7=== rD || r7=== rE ||
+          r8=== r9 || r8=== rA || r8=== rB || r8=== rC || r8=== rD || r8=== rE ||
+          r9=== rA || r9=== rB || rA=== rC || r9=== rD || r9=== rE ||
+          rA=== rB || rA=== rC || rA=== rD || rA=== rE ||
+          rB=== rC || rB=== rD || rB=== rE ||
+          rC=== rD || rC=== rE ||
+          rD=== rE){
+    rC = Math.floor(Math.random() * 81);
+    rD = Math.floor(Math.random() * 81);
+    rE = Math.floor(Math.random() * 81);
+    }
 }
 
 function rand() {
   r();
-    while(r0=== r1 || r0=== r2 || r0=== r3 || r0=== r4 || r0=== r5 || r0=== r6 || r0=== r7 || r0=== r8 || r0=== r9 || r0=== rA || r0=== rB ||
-          r1=== r2 || r1=== r3 || r1=== r4 || r1=== r5 || r1=== r6 || r1=== r7 || r1=== r8 || r1=== r9 || r1=== rA || r1=== rB ||
-          r2=== r3 || r2=== r4 || r2=== r5 || r2=== r6 || r2=== r7 || r2=== r8 || r2=== r9 || r2=== rA || r2=== rB ||
-          r3=== r4 || r3=== r5 || r3=== r6 || r3=== r7 || r3=== r8 || r3=== r9 || r3=== rA || r3=== rB ||
-          r4=== r5 || r4=== r6 || r4=== r7 || r4=== r8 || r4=== r9 || r4=== rA || r4=== rB ||
-          r5=== r6 || r5=== r7 || r5=== r8 || r5=== r9 || r5=== rA || r5=== rB ||
-          r6=== r7 || r6=== r8 || r6=== r9 || r6=== rA || r6=== rB ||
-          r7=== r8 || r7=== r9 || r7=== rA || r7=== rB ||
-          r8=== r9 || r8=== rA || r8=== rB ||
-          r9=== rA || r9=== rB ||
-          rA=== rB){
+    while(r0=== r1 || r0=== r2 || r0=== r3 || r0=== r4 || r0=== r5 || r0=== r6 || r0=== r7 || r0=== r8 || r0=== r9 || r0=== rA || r0=== rB || r0=== rC || r0=== rD || r0=== rE ||
+          r1=== r2 || r1=== r3 || r1=== r4 || r1=== r5 || r1=== r6 || r1=== r7 || r1=== r8 || r1=== r9 || r1=== rA || r1=== rB || r1=== rC || r1=== rD || r1=== rE ||
+          r2=== r3 || r2=== r4 || r2=== r5 || r2=== r6 || r2=== r7 || r2=== r8 || r2=== r9 || r2=== rA || r2=== rB || r2=== rC || r2=== rD || r2=== rE ||
+          r3=== r4 || r3=== r5 || r3=== r6 || r3=== r7 || r3=== r8 || r3=== r9 || r3=== rA || r3=== rB || r3=== rC || r3=== rD || r3=== rE ||
+          r4=== r5 || r4=== r6 || r4=== r7 || r4=== r8 || r4=== r9 || r4=== rA || r4=== rB || r4=== rC || r4=== rD || r4=== rE ||
+          r5=== r6 || r5=== r7 || r5=== r8 || r5=== r9 || r5=== rA || r5=== rB || r5=== rC || r5=== rD || r5=== rE ||
+          r6=== r7 || r6=== r8 || r6=== r9 || r6=== rA || r6=== rB || r6=== rC || r6=== rD || r6=== rE ||
+          r7=== r8 || r7=== r9 || r7=== rA || r7=== rB || r7=== rC || r7=== rD || r7=== rE ||
+          r8=== r9 || r8=== rA || r8=== rB || r8=== rC || r8=== rD || r8=== rE ||
+          r9=== rA || r9=== rB || rA=== rC || r9=== rD || r9=== rE ||
+          rA=== rB || rA=== rC || rA=== rD || rA=== rE ||
+          rB=== rC || rB=== rD || rB=== rE ||
+          rC=== rD || rC=== rE ||
+          rD=== rE){
         r();
     }
 }
@@ -341,9 +374,10 @@ function score(varr) {
         hide(on[0]);
         hide(on[1]);
         hide(on[2]);
-        open(vis[r0]);
-        open(vis[r1]);
-        open(vis[r2]);
+        rep();
+        open(vis[rC]);
+        open(vis[rD]);
+        open(vis[rE]);
         zero();
     }
 }
