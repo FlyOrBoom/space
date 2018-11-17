@@ -370,13 +370,13 @@ function oof() {
 }
 function color() {
     if (z < 0) {
-        document.getElementById("z").style.color="#e44";
+        document.getElementById("z").style.color="#d44";
     }
     else if (z > 0) {
-        document.getElementById("z").style.color="#4d4";
+        document.getElementById("z").style.color="#4c4";
     }
     else {
-        document.getElementById("z").style.color="#44d";
+        document.getElementById("z").style.color="#44c";
     }
 }
 function score(varr) {
@@ -385,10 +385,10 @@ function score(varr) {
     // alert(a+" "+b+" "+c+" "+n1+" "+n2+" "+n3+" "+d+" "+e+" "+f+" "+g+" "+h+" "+i);
     if (x === 3) {
         if (
-            ((a === 3 || b === 3 || c === 3) || (a === b && b === c))&&
-            ((n1=== 3 || n2=== 3 || n3=== 3) || (n1===n2 && n2===n3))&&
-            ((d === 3 || e === 3 || f === 3) || (d === e && e === f))&&
-            ((g === 3 || h === 3 || i === 3) || (g === h && h === i))
+            (a === 3 || b === 3 || c === 3 || a === 1)&&
+            (n1=== 3 || n2=== 3 || n3=== 3 || n1=== 1)&&
+            (d === 3 || e === 3 || f === 3 || d === 1)&&
+            (g === 3 || h === 3 || i === 3 || g === 1)
         ){
             yay();
         } else {
@@ -1067,7 +1067,7 @@ document.getElementById("c1eg").onclick = function() {
     if (c1eg === 0) {
         c++;
         n1++;
-        c++;
+        e++;
         g++;
         c1eg++;
         x++;
@@ -1078,7 +1078,7 @@ document.getElementById("c1eh").onclick = function() {
     if (c1eh === 0) {
         c++;
         n1++;
-        c++;
+        e++;
         h++;
         c1eh++;
         x++;
@@ -1089,7 +1089,7 @@ document.getElementById("c1ei").onclick = function() {
     if (c1ei === 0) {
         c++;
         n1++;
-        c++;
+        e++;
         i++;
         c1ei++;
         x++;
@@ -1169,7 +1169,7 @@ document.getElementById("c2eg").onclick = function() {
     if (c2eg === 0) {
         c++;
         n2++;
-        c++;
+        e++;
         g++;
         c2eg++;
         x++;
@@ -1180,7 +1180,7 @@ document.getElementById("c2eh").onclick = function() {
     if (c2eh === 0) {
         c++;
         n2++;
-        c++;
+        e++;
         h++;
         c2eh++;
         x++;
@@ -1191,7 +1191,7 @@ document.getElementById("c2ei").onclick = function() {
     if (c2ei === 0) {
         c++;
         n2++;
-        c++;
+        e++;
         i++;
         c2ei++;
         x++;
@@ -1271,7 +1271,7 @@ document.getElementById("c3eg").onclick = function() {
     if (c3eg === 0) {
         c++;
         n3++;
-        c++;
+        e++;
         g++;
         c3eg++;
         x++;
@@ -1282,7 +1282,7 @@ document.getElementById("c3eh").onclick = function() {
     if (c3eh === 0) {
         c++;
         n3++;
-        c++;
+        e++;
         h++;
         c3eh++;
         x++;
@@ -1293,7 +1293,7 @@ document.getElementById("c3ei").onclick = function() {
     if (c3ei === 0) {
         c++;
         n3++;
-        c++;
+        e++;
         i++;
         c3ei++;
         x++;
