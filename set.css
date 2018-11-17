@@ -23,14 +23,14 @@ html, body {
     right:10px;
     bottom:10px;
     background-color:#fff;
-    border:2px solid #44f;
+    border:2px solid #44e;
     border-radius:10px;
     padding:5px 5px;
     cursor:pointer;
-    fill:#44f;
+    fill:#44e;
 }
 #reset:hover {
-    background-color:#44f;
+    background-color:#44e;
     fill:#fff;
     transition: 0.2s;
 }
@@ -40,7 +40,34 @@ html, body {
 }
 #reset:after {
     background-color:#fff;
-    fill:#44f;
+    fill:#44e;
+    transition:1s;
+}
+
+#add {
+    position:fixed;
+    display:block;
+    right:10px;
+    bottom:60px;
+    background-color:#fff;
+    border:2px solid #4d4;
+    border-radius:10px;
+    padding:5px 5px;
+    cursor:pointer;
+    fill:#4d4;
+}
+#add:hover {
+    background-color:#4d4;
+    fill:#fff;
+    transition: 0.2s;
+}
+#add:active {
+    background-color:#282;
+    fill:#fff;
+}
+#add:after {
+    background-color:#fff;
+    fill:#4d4;
     transition:1s;
 }
 .card {
@@ -60,9 +87,9 @@ button:focus {
     outline:0;
 }
 
-.a {fill:#f44; stroke:#f44; stroke-width:5px}
-.b {fill:#4e4; stroke:#4e4; stroke-width:5px}
-.c {fill:#44e; stroke:#44e; stroke-width:5px}
+.a {fill:#f44; stroke:#f44; stroke-width:5px; width: 155px}
+.b {fill:#4e4; stroke:#4e4; stroke-width:5px; width: 155px}
+.c {fill:#44e; stroke:#44e; stroke-width:5px; width: 155px}
 .g {fill-opacity:1}
 .h {fill-opacity:0.5}
 .i {fill-opacity:0}

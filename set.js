@@ -370,13 +370,13 @@ function oof() {
 }
 function color() {
     if (z < 0) {
-        document.getElementById("z").style.color="#d44";
+        document.getElementById("z").style.color="#c44";
     }
     else if (z > 0) {
-        document.getElementById("z").style.color="#4c4";
+        document.getElementById("z").style.color="#4b4";
     }
     else {
-        document.getElementById("z").style.color="#44c";
+        document.getElementById("z").style.color="#44d";
     }
 }
 function score(varr) {
