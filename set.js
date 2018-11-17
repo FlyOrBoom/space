@@ -11,6 +11,7 @@ var g = 0;
 var h = 0;
 var i = 0;
 
+var w = 0;
 var x = 0;
 
 var z = 0;
@@ -223,9 +224,9 @@ function rep() {
         rD = Math.floor(Math.random() * 81);
         rE = Math.floor(Math.random() * 81);
     }
-        rF = rC;
-        rG = rD;
-        rH = rB;
+    rF = rC;
+    rG = rD;
+    rH = rE;
     rC = Math.floor(Math.random() * 81);
     rD = Math.floor(Math.random() * 81);
     rE = Math.floor(Math.random() * 81);
@@ -382,7 +383,7 @@ function color() {
 function score(varr) {
     document.getElementById(varr).style.transform = "scale(0.9,0.9)";
     on.push(varr);
-    // alert(a+" "+b+" "+c+" "+n1+" "+n2+" "+n3+" "+d+" "+e+" "+f+" "+g+" "+h+" "+i);
+    // alert(a+" "+b+" "+c+"\n"+n1+" "+n2+" "+n3+"\n"+d+" "+e+" "+f+"\n"+g+" "+h+" "+i+"\n"+x);
     if (x === 3) {
         if (
             (a === 3 || b === 3 || c === 3 || a === 1)&&
@@ -405,6 +406,15 @@ clear();
 display();
 
 document.getElementById("reset").onclick = function reset() {
+    z = 0;
+    zero();
+    color();
+    document.getElementById("z").innerHTML = z + " points";
+    clear();
+    display();
+}
+
+document.getElementById("add").onclick = function reset() {
     z = 0;
     zero();
     color();
