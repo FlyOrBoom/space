@@ -28,20 +28,15 @@ html, body {
     padding:5px 5px;
     cursor:pointer;
     fill:#44e;
+    transition-duration:0.15s;
 }
 #reset:hover {
     background-color:#44e;
     fill:#fff;
-    transition: 0.2s;
 }
 #reset:active {
     background-color:#228;
     fill:#fff;
-}
-#reset:after {
-    background-color:#fff;
-    fill:#44e;
-    transition:1s;
 }
 
 #add {
@@ -55,20 +50,15 @@ html, body {
     padding:5px 5px;
     cursor:pointer;
     fill:#4d4;
+    transition-duration:0.15s;
 }
 #add:hover {
     background-color:#4d4;
     fill:#fff;
-    transition: 0.2s;
 }
 #add:active {
     background-color:#282;
     fill:#fff;
-}
-#add:after {
-    background-color:#fff;
-    fill:#4d4;
-    transition:1s;
 }
 .card {
     position:static;
@@ -78,14 +68,12 @@ html, body {
     background-color:#fff;
     border:4px solid #eee;
     border-radius:25px;
-    transition-duration:0.1s;
+    transition-duration:0.15s;
 }
 .card:hover {
     background-color:#f8f8f8;
 }
-button:focus {
-    outline:0;
-}
+button:focus {outline:0;}
 
 .a {fill:#f44; stroke:#f44; stroke-width:5px; width: 155px}
 .b {fill:#4e4; stroke:#4e4; stroke-width:5px; width: 155px}
