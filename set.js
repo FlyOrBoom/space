@@ -11,6 +11,8 @@ var g = 0;
 var h = 0;
 var i = 0;
 
+var num = 0;
+
 var w = 0;
 var x = 0;
 
@@ -117,42 +119,9 @@ function open(idd){
 }
 
 function clear() {
-
-    hide("a1dg"); hide("a1dh"); hide("a1di");
-    hide("a1eg"); hide("a1eh"); hide("a1ei");
-    hide("a1fg"); hide("a1fh"); hide("a1fi");
-
-    hide("a2dg"); hide("a2dh"); hide("a2di");
-    hide("a2eg"); hide("a2eh"); hide("a2ei");
-    hide("a2fg"); hide("a2fh"); hide("a2fi");
-
-    hide("a3dg"); hide("a3dh"); hide("a3di");
-    hide("a3eg"); hide("a3eh"); hide("a3ei");
-    hide("a3fg"); hide("a3fh"); hide("a3fi");
-
-    hide("b1dg"); hide("b1dh"); hide("b1di");
-    hide("b1eg"); hide("b1eh"); hide("b1ei");
-    hide("b1fg"); hide("b1fh"); hide("b1fi");
-
-    hide("b2dg"); hide("b2dh"); hide("b2di");
-    hide("b2eg"); hide("b2eh"); hide("b2ei");
-    hide("b2fg"); hide("b2fh"); hide("b2fi");
-
-    hide("b3dg"); hide("b3dh"); hide("b3di");
-    hide("b3eg"); hide("b3eh"); hide("b3ei");
-    hide("b3fg"); hide("b3fh"); hide("b3fi");
-
-    hide("c1dg"); hide("c1dh"); hide("c1di");
-    hide("c1eg"); hide("c1eh"); hide("c1ei");
-    hide("c1fg"); hide("c1fh"); hide("c1fi");
-
-    hide("c2dg"); hide("c2dh"); hide("c2di");
-    hide("c2eg"); hide("c2eh"); hide("c2ei");
-    hide("c2fg"); hide("c2fh"); hide("c2fi");
-
-    hide("c3dg"); hide("c3dh"); hide("c3di");
-    hide("c3eg"); hide("c3eh"); hide("c3ei");
-    hide("c3fg"); hide("c3fh"); hide("c3fi");
+  for (num=0; num<81; num++) {
+    document.getElementById(vis[num]).style.display = "none";
+  }
 }
 
 function r() {
@@ -251,10 +220,6 @@ function display() {
     // alert(r0+" "+r1+" "+r2+" "+r3+" "+r4+" "+r5+" "+r6+" "+r7+" "+r8+" "+r9+" "+rA+" "+rB);
 }
 
-function size(idd) {
-    document.getElementById(idd).style.transform = "scale(1,1)";
-}
-
 function zero() {
     a = 0;
     b = 0;
@@ -307,43 +272,13 @@ function zero() {
     c3eg = 0; c3eh = 0; c3ei = 0;
     c3fg = 0; c3fh = 0; c3fi = 0;
 
-    size("a1dg"); size("a1dh"); size("a1di");
-    size("a1eg"); size("a1eh"); size("a1ei");
-    size("a1fg"); size("a1fh"); size("a1fi");
-
-    size("a2dg"); size("a2dh"); size("a2di");
-    size("a2eg"); size("a2eh"); size("a2ei");
-    size("a2fg"); size("a2fh"); size("a2fi");
-
-    size("a3dg"); size("a3dh"); size("a3di");
-    size("a3eg"); size("a3eh"); size("a3ei");
-    size("a3fg"); size("a3fh"); size("a3fi");
-
-    size("b1dg"); size("b1dh"); size("b1di");
-    size("b1eg"); size("b1eh"); size("b1ei");
-    size("b1fg"); size("b1fh"); size("b1fi");
-
-    size("b2dg"); size("b2dh"); size("b2di");
-    size("b2eg"); size("b2eh"); size("b2ei");
-    size("b2fg"); size("b2fh"); size("b2fi");
-
-    size("b3dg"); size("b3dh"); size("b3di");
-    size("b3eg"); size("b3eh"); size("b3ei");
-    size("b3fg"); size("b3fh"); size("b3fi");
-
-    size("c1dg"); size("c1dh"); size("c1di");
-    size("c1eg"); size("c1eh"); size("c1ei");
-    size("c1fg"); size("c1fh"); size("c1fi");
-
-    size("c2dg"); size("c2dh"); size("c2di");
-    size("c2eg"); size("c2eh"); size("c2ei");
-    size("c2fg"); size("c2fh"); size("c2fi");
-
-    size("c3dg"); size("c3dh"); size("c3di");
-    size("c3eg"); size("c3eh"); size("c3ei");
-    size("c3fg"); size("c3fh"); size("c3fi");
+  for (num=0; num<81; num++) {
+    document.getElementById(vis[num]).style.transform = "scale(1,1)";
+  }
+  
+  num = 0;
     
-    on=[];
+  on=[];
 }
 
 function yay() {
