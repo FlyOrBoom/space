@@ -12,6 +12,7 @@ var h = 0;
 var i = 0;
 
 var num = 0;
+var nom = 0;
 
 var w = 0;
 var x = 0;
@@ -20,7 +21,9 @@ var z = 0;
 
 var on = [];
 
-var vis = ["a1dg", "a1dh", "a1di",
+var rando = [];
+
+var card = ["a1dg", "a1dh", "a1di",
            "a1eg", "a1eh", "a1ei",
            "a1fg", "a1fh", "a1fi",
            
@@ -120,7 +123,7 @@ function open(idd){
 
 function clear() {
   for (num=0; num<81; num++) {
-    document.getElementById(vis[num]).style.display = "none";
+    document.getElementById(card[num]).style.display = "none";
   }
 }
 
@@ -147,23 +150,23 @@ function r() {
 
 function rand() {
   r();
-    while(r0=== r1 || r0=== r2 || r0=== r3 || r0=== r4 || r0=== r5 || r0=== r6 || r0=== r7 || r0=== r8 || r0=== r9 || r0=== rA || r0=== rB || r0=== rC ||       r0=== rD || r0=== rE || r0=== rF || r0=== rG || r0=== rH ||
-          r1=== r2 || r1=== r3 || r1=== r4 || r1=== r5 || r1=== r6 || r1=== r7 || r1=== r8 || r1=== r9 || r1=== rA || r1=== rB || r1=== rC || r1=== rD || r1=== rE || r1=== rF || r1=== rG || r1=== rH ||
-          r2=== r3 || r2=== r4 || r2=== r5 || r2=== r6 || r2=== r7 || r2=== r8 || r2=== r9 || r2=== rA || r2=== rB || r2=== rC || r2=== rD || r2=== rE || r2=== rF || r2=== rG || r2=== rH ||
-          r3=== r4 || r3=== r5 || r3=== r6 || r3=== r7 || r3=== r8 || r3=== r9 || r3=== rA || r3=== rB || r3=== rC || r3=== rD || r3=== rE || r3=== rF || r3=== rG || r3=== rH ||
-          r4=== r5 || r4=== r6 || r4=== r7 || r4=== r8 || r4=== r9 || r4=== rA || r4=== rB || r4=== rC || r4=== rD || r4=== rE || r4=== rF || r4=== rG || r4=== rH ||
-          r5=== r6 || r5=== r7 || r5=== r8 || r5=== r9 || r5=== rA || r5=== rB || r5=== rC || r5=== rD || r5=== rE || r5=== rF || r5=== rG || r5=== rH ||
-          r6=== r7 || r6=== r8 || r6=== r9 || r6=== rA || r6=== rB || r6=== rC || r6=== rD || r6=== rE || r6=== rF || r6=== rG || r6=== rH ||
-          r7=== r8 || r7=== r9 || r7=== rA || r7=== rB || r7=== rC || r7=== rD || r7=== rE || r7=== rF || r7=== rG || r7=== rH ||
-          r8=== r9 || r8=== rA || r8=== rB || r8=== rC || r8=== rD || r8=== rE || r8=== rF || r8=== rG || r8=== rH ||
-          r9=== rA || r9=== rB || r9=== rC || r9=== rD || r9=== rE || r9=== rF || r9=== rG || r9=== rH ||
-          rA=== rB || rA=== rC || rA=== rD || rA=== rE || rA=== rF || rA=== rG || rA=== rH ||
-          rB=== rC || rB=== rD || rB=== rE || rB=== rF || rB=== rG || rB=== rH ||
-          rC=== rD || rC=== rE || rC=== rF || rC=== rG || rC=== rH ||
-          rD=== rE || rD=== rF || rD=== rG || rD=== rH ||
-          rE=== rF || rE=== rG || rE=== rH ||
-          rF=== rG || rF=== rH ||
-          rG=== rH){
+    while(r0===r1 || r0===r2 || r0===r3 || r0===r4 || r0===r5 || r0===r6 || r0===r7 || r0===r8 || r0===r9 || r0===rA || r0===rB || r0===rC ||       r0===rD || r0===rE || r0===rF || r0===rG || r0===rH ||
+          r1===r2 || r1===r3 || r1===r4 || r1===r5 || r1===r6 || r1===r7 || r1===r8 || r1===r9 || r1===rA || r1===rB || r1===rC || r1===rD || r1===rE || r1===rF || r1===rG || r1===rH ||
+          r2===r3 || r2===r4 || r2===r5 || r2===r6 || r2===r7 || r2===r8 || r2===r9 || r2===rA || r2===rB || r2===rC || r2===rD || r2===rE || r2===rF || r2===rG || r2===rH ||
+          r3===r4 || r3===r5 || r3===r6 || r3===r7 || r3===r8 || r3===r9 || r3===rA || r3===rB || r3===rC || r3===rD || r3===rE || r3===rF || r3===rG || r3===rH ||
+          r4===r5 || r4===r6 || r4===r7 || r4===r8 || r4===r9 || r4===rA || r4===rB || r4===rC || r4===rD || r4===rE || r4===rF || r4===rG || r4===rH ||
+          r5===r6 || r5===r7 || r5===r8 || r5===r9 || r5===rA || r5===rB || r5===rC || r5===rD || r5===rE || r5===rF || r5===rG || r5===rH ||
+          r6===r7 || r6===r8 || r6===r9 || r6===rA || r6===rB || r6===rC || r6===rD || r6===rE || r6===rF || r6===rG || r6===rH ||
+          r7===r8 || r7===r9 || r7===rA || r7===rB || r7===rC || r7===rD || r7===rE || r7===rF || r7===rG || r7===rH ||
+          r8===r9 || r8===rA || r8===rB || r8===rC || r8===rD || r8===rE || r8===rF || r8===rG || r8===rH ||
+          r9===rA || r9===rB || r9===rC || r9===rD || r9===rE || r9===rF || r9===rG || r9===rH ||
+          rA===rB || rA===rC || rA===rD || rA===rE || rA===rF || rA===rG || rA===rH ||
+          rB===rC || rB===rD || rB===rE || rB===rF || rB===rG || rB===rH ||
+          rC===rD || rC===rE || rC===rF || rC===rG || rC===rH ||
+          rD===rE || rD===rF || rD===rG || rD===rH ||
+          rE===rF || rE===rG || rE===rH ||
+          rF===rG || rF===rH ||
+          rG===rH){
         r();
     }
 }
@@ -172,50 +175,70 @@ function rep() {
     rC = Math.floor(Math.random() * 81);
     rD = Math.floor(Math.random() * 81);
     rE = Math.floor(Math.random() * 81);
-        while(r0=== r1 || r0=== r2 || r0=== r3 || r0=== r4 || r0=== r5 || r0=== r6 || r0=== r7 || r0=== r8 || r0=== r9 || r0=== rC || r0=== rB || r0=== rC || r0=== rD || r0=== rE || r0=== rF || r0=== rG || r0=== rH ||
-          r1=== r2 || r1=== r3 || r1=== r4 || r1=== r5 || r1=== r6 || r1=== r7 || r1=== r8 || r1=== r9 || r1=== rA || r1=== rB || r1=== rC || r1=== rD || r1=== rE || r1=== rF || r1=== rG || r1=== rH ||
-          r2=== r3 || r2=== r4 || r2=== r5 || r2=== r6 || r2=== r7 || r2=== r8 || r2=== r9 || r2=== rA || r2=== rB || r2=== rC || r2=== rD || r2=== rE || r2=== rF || r2=== rG || r2=== rH ||
-          r3=== r4 || r3=== r5 || r3=== r6 || r3=== r7 || r3=== r8 || r3=== r9 || r3=== rA || r3=== rB || r3=== rC || r3=== rD || r3=== rE || r3=== rF || r3=== rG || r3=== rH ||
-          r4=== r5 || r4=== r6 || r4=== r7 || r4=== r8 || r4=== r9 || r4=== rA || r4=== rB || r4=== rC || r4=== rD || r4=== rE || r4=== rF || r4=== rG || r4=== rH ||
-          r5=== r6 || r5=== r7 || r5=== r8 || r5=== r9 || r5=== rA || r5=== rB || r5=== rC || r5=== rD || r5=== rE || r5=== rF || r5=== rG || r5=== rH ||
-          r6=== r7 || r6=== r8 || r6=== r9 || r6=== rA || r6=== rB || r6=== rC || r6=== rD || r6=== rE || r6=== rF || r6=== rG || r6=== rH ||
-          r7=== r8 || r7=== r9 || r7=== rA || r7=== rB || r7=== rC || r7=== rD || r7=== rE || r7=== rF || r7=== rG || r7=== rH ||
-          r8=== r9 || r8=== rA || r8=== rB || r8=== rC || r8=== rD || r8=== rE || r8=== rF || r8=== rG || r8=== rH ||
-          r9=== rA || r9=== rB || rA=== rC || r9=== rD || r9=== rE || r9=== rF || r9=== rG || r9=== rH ||
-          rA=== rB || rA=== rC || rA=== rD || rA=== rE || rA=== rF || rA=== rG || rA=== rH ||
-          rB=== rC || rB=== rD || rB=== rE || rC=== rF || rB=== rG || rB=== rH ||
-          rC=== rD || rC=== rE || rC=== rF || rD=== rG || rC=== rH ||
-          rD=== rE || rD=== rF || rD=== rG || rB=== rH ||
-          rB=== rF || rB=== rG || rB=== rH ||
-          rF=== rG || rF=== rH ||
-          rG=== rH){
+        while(r0===r1 || r0===r2 || r0===r3 || r0===r4 || r0===r5 || r0===r6 || r0===r7 || r0===r8 || r0===r9 || r0===rC || r0===rB || r0===rC || r0===rD || r0===rE || r0===rF || r0===rG || r0===rH ||
+          r1===r2 || r1===r3 || r1===r4 || r1===r5 || r1===r6 || r1===r7 || r1===r8 || r1===r9 || r1===rA || r1===rB || r1===rC || r1===rD || r1===rE || r1===rF || r1===rG || r1===rH ||
+          r2===r3 || r2===r4 || r2===r5 || r2===r6 || r2===r7 || r2===r8 || r2===r9 || r2===rA || r2===rB || r2===rC || r2===rD || r2===rE || r2===rF || r2===rG || r2===rH ||
+          r3===r4 || r3===r5 || r3===r6 || r3===r7 || r3===r8 || r3===r9 || r3===rA || r3===rB || r3===rC || r3===rD || r3===rE || r3===rF || r3===rG || r3===rH ||
+          r4===r5 || r4===r6 || r4===r7 || r4===r8 || r4===r9 || r4===rA || r4===rB || r4===rC || r4===rD || r4===rE || r4===rF || r4===rG || r4===rH ||
+          r5===r6 || r5===r7 || r5===r8 || r5===r9 || r5===rA || r5===rB || r5===rC || r5===rD || r5===rE || r5===rF || r5===rG || r5===rH ||
+          r6===r7 || r6===r8 || r6===r9 || r6===rA || r6===rB || r6===rC || r6===rD || r6===rE || r6===rF || r6===rG || r6===rH ||
+          r7===r8 || r7===r9 || r7===rA || r7===rB || r7===rC || r7===rD || r7===rE || r7===rF || r7===rG || r7===rH ||
+          r8===r9 || r8===rA || r8===rB || r8===rC || r8===rD || r8===rE || r8===rF || r8===rG || r8===rH ||
+          r9===rA || r9===rB || rA===rC || r9===rD || r9===rE || r9===rF || r9===rG || r9===rH ||
+          rA===rB || rA===rC || rA===rD || rA===rE || rA===rF || rA===rG || rA===rH ||
+          rB===rC || rB===rD || rB===rE || rC===rF || rB===rG || rB===rH ||
+          rC===rD || rC===rE || rC===rF || rD===rG || rC===rH ||
+          rD===rE || rD===rF || rD===rG || rB===rH ||
+          rB===rF || rB===rG || rB===rH ||
+          rF===rG || rF===rH ||
+          rG===rH){
         rC = Math.floor(Math.random() * 81);
         rD = Math.floor(Math.random() * 81);
         rE = Math.floor(Math.random() * 81);
     }
-    rF = rC;
-    rG = rD;
-    rH = rE;
-    rC = Math.floor(Math.random() * 81);
-    rD = Math.floor(Math.random() * 81);
-    rE = Math.floor(Math.random() * 81);
+}
 
+function rad() {
+    rF = Math.floor(Math.random() * 81);
+    rG = Math.floor(Math.random() * 81);
+    rH = Math.floor(Math.random() * 81);
+        while(r0===r1 || r0===r2 || r0===r3 || r0===r4 || r0===r5 || r0===r6 || r0===r7 || r0===r8 || r0===r9 || r0===rC || r0===rB || r0===rC || r0===rD || r0===rE || r0===rF || r0===rG || r0===rH ||
+          r1===r2 || r1===r3 || r1===r4 || r1===r5 || r1===r6 || r1===r7 || r1===r8 || r1===r9 || r1===rA || r1===rB || r1===rC || r1===rD || r1===rE || r1===rF || r1===rG || r1===rH ||
+          r2===r3 || r2===r4 || r2===r5 || r2===r6 || r2===r7 || r2===r8 || r2===r9 || r2===rA || r2===rB || r2===rC || r2===rD || r2===rE || r2===rF || r2===rG || r2===rH ||
+          r3===r4 || r3===r5 || r3===r6 || r3===r7 || r3===r8 || r3===r9 || r3===rA || r3===rB || r3===rC || r3===rD || r3===rE || r3===rF || r3===rG || r3===rH ||
+          r4===r5 || r4===r6 || r4===r7 || r4===r8 || r4===r9 || r4===rA || r4===rB || r4===rC || r4===rD || r4===rE || r4===rF || r4===rG || r4===rH ||
+          r5===r6 || r5===r7 || r5===r8 || r5===r9 || r5===rA || r5===rB || r5===rC || r5===rD || r5===rE || r5===rF || r5===rG || r5===rH ||
+          r6===r7 || r6===r8 || r6===r9 || r6===rA || r6===rB || r6===rC || r6===rD || r6===rE || r6===rF || r6===rG || r6===rH ||
+          r7===r8 || r7===r9 || r7===rA || r7===rB || r7===rC || r7===rD || r7===rE || r7===rF || r7===rG || r7===rH ||
+          r8===r9 || r8===rA || r8===rB || r8===rC || r8===rD || r8===rE || r8===rF || r8===rG || r8===rH ||
+          r9===rA || r9===rB || rA===rC || r9===rD || r9===rE || r9===rF || r9===rG || r9===rH ||
+          rA===rB || rA===rC || rA===rD || rA===rE || rA===rF || rA===rG || rA===rH ||
+          rB===rC || rB===rD || rB===rE || rC===rF || rB===rG || rB===rH ||
+          rC===rD || rC===rE || rC===rF || rD===rG || rC===rH ||
+          rD===rE || rD===rF || rD===rG || rB===rH ||
+          rB===rF || rB===rG || rB===rH ||
+          rF===rG || rF===rH ||
+          rG===rH){
+        rF = Math.floor(Math.random() * 81);
+        rG = Math.floor(Math.random() * 81);
+        rH = Math.floor(Math.random() * 81);
+    }
 }
 
 function display() {
-  rand();
-    open(vis[r0]);
-    open(vis[r1]);
-    open(vis[r2]);
-    open(vis[r3]);
-    open(vis[r4]);
-    open(vis[r5]);
-    open(vis[r6]);
-    open(vis[r7]);
-    open(vis[r8]);
-    open(vis[r9]);
-    open(vis[rA]);
-    open(vis[rB]);
+    rand();
+    open(card[r0]);
+    open(card[r1]);
+    open(card[r2]);
+    open(card[r3]);
+    open(card[r4]);
+    open(card[r5]);
+    open(card[r6]);
+    open(card[r7]);
+    open(card[r8]);
+    open(card[r9]);
+    open(card[rA]);
+    open(card[rB]);
     
     // alert(r0+" "+r1+" "+r2+" "+r3+" "+r4+" "+r5+" "+r6+" "+r7+" "+r8+" "+r9+" "+rA+" "+rB);
 }
@@ -273,7 +296,7 @@ function zero() {
     c3fg = 0; c3fh = 0; c3fi = 0;
 
   for (num=0; num<81; num++) {
-    document.getElementById(vis[num]).style.transform = "scale(1,1)";
+    document.getElementById(card[num]).style.transform = "scale(1,1)";
   }
   
   num = 0;
@@ -281,29 +304,6 @@ function zero() {
   on=[];
 }
 
-function yay() {
-    z++;
-    if (z === 1||z === -1) {
-        document.getElementById("z").innerHTML = z + " point";
-    } else {
-        document.getElementById("z").innerHTML = z + " points";
-    }
-    hide(on[0]);
-    hide(on[1]);
-    hide(on[2]);
-    open(vis[rF]);
-    open(vis[rG]);
-    open(vis[rH]);
-    rep();
-}
-function oof() {
-    z--;
-    if (z === 1||z === -1) {
-        document.getElementById("z").innerHTML = z + " point";
-    } else {
-        document.getElementById("z").innerHTML = z + " points";
-    }
-}
 function color() {
     if (z < 0) {
         document.getElementById("z").style.color="#c44";
@@ -316,23 +316,45 @@ function color() {
     }
 }
 function score(varr) {
-    document.getElementById(varr).style.transform = "scale(0.9,0.9)";
-    on.push(varr);
-    // alert(a+" "+b+" "+c+"\n"+n1+" "+n2+" "+n3+"\n"+d+" "+e+" "+f+"\n"+g+" "+h+" "+i+"\n"+x);
-    if (x === 3) {
-        if (
-            (a === 3 || b === 3 || c === 3 || a === b)&&
-            (n1=== 3 || n2=== 3 || n3=== 3 || n1=== n2)&&
-            (d === 3 || e === 3 || f === 3 || d === e)&&
-            (g === 3 || h === 3 || i === 3 || g === h)
-        ){
-            yay();
-        } else {
-            oof();
-        }
-        color();
-        zero();
-        }
+  x++
+  document.getElementById(varr).style.transform = "scale(0.9,0.9)";
+  on.push(varr);
+  // alert(a+" "+b+" "+c+"\n"+n1+" "+n2+" "+n3+"\n"+d+" "+e+" "+f+"\n"+g+" "+h+" "+i+"\n"+x);
+  if (x === 3) {
+    if (
+        (a === 3 || b === 3 || c === 3 || a === b)&&
+        (n1=== 3 || n2=== 3 || n3=== 3 || n1=== n2)&&
+        (d === 3 || e === 3 || f === 3 || d === e)&&
+        (g === 3 || h === 3 || i === 3 || g === h)
+    ){
+      z++;
+      if (z === 1||z === -1) {
+          document.getElementById("z").innerHTML = z + " point";
+      } else {
+          document.getElementById("z").innerHTML = z + " points";
+      }
+      hide(on[0]);
+      hide(on[1]);
+      hide(on[2]);
+      if (nom === 0) {
+        open(card[rC]);
+        open(card[rD]);
+        open(card[rE]);
+      } else {
+        nom--;
+      }
+      rep();
+    } else {
+      z--;
+      if (z === 1||z === -1) {
+          document.getElementById("z").innerHTML = z + " point";
+      } else {
+          document.getElementById("z").innerHTML = z + " points";
+      }
+    }
+    color();
+    zero();
+  }
 }
 
 
@@ -349,16 +371,17 @@ document.getElementById("reset").onclick = function reset() {
     display();
 }
 
-document.getElementById("add").onclick = function reset() {
-    z = 0;
-    zero();
-    color();
-    document.getElementById("z").innerHTML = z + " points";
-    clear();
-    display();
+document.getElementById("add").onclick = function add() {
+  if (nom < 1) {
+    rad();
+    open(card[rF]);
+    open(card[rG]);
+    open(card[rH]);
+    nom++;
+  }
 }
 
-/*Rhg megagroup*/
+/*Red megagroup*/
 //1d//
 document.getElementById("a1dg").onclick = function() {
     if (a1dg === 0) {
@@ -367,7 +390,6 @@ document.getElementById("a1dg").onclick = function() {
         d++;
         g++;
         a1dg++;
-        x++;
         score("a1dg");
     }
 }
@@ -378,7 +400,6 @@ document.getElementById("a1dh").onclick = function() {
         d++;
         h++;
         a1dh++;
-        x++;
         score("a1dh");
     }
 }
@@ -389,7 +410,6 @@ document.getElementById("a1di").onclick = function() {
         d++;
         i++;
         a1di++;
-        x++;
         score("a1di");
     }
 }
@@ -401,7 +421,6 @@ document.getElementById("a1eg").onclick = function() {
         e++;
         g++;
         a1eg++;
-        x++;
         score("a1eg");
     }
 }
@@ -412,7 +431,6 @@ document.getElementById("a1eh").onclick = function() {
         e++;
         h++;
         a1eh++;
-        x++;
         score("a1eh");
     }
 }
@@ -423,7 +441,6 @@ document.getElementById("a1ei").onclick = function() {
         e++;
         i++;
         a1ei++;
-        x++;
         score("a1ei");
     }
 }
@@ -435,7 +452,6 @@ document.getElementById("a1fg").onclick = function() {
         f++;
         g++;
         a1fg++;
-        x++;
         score("a1fg");
     }
 }
@@ -446,7 +462,6 @@ document.getElementById("a1fh").onclick = function() {
         f++;
         h++;
         a1fh++;
-        x++;
         score("a1fh");
     }
 }
@@ -457,7 +472,6 @@ document.getElementById("a1fi").onclick = function() {
         f++;
         i++;
         a1fi++;
-        x++;
         score("a1fi");
     }
 }
@@ -469,7 +483,6 @@ document.getElementById("a2dg").onclick = function() {
         d++;
         g++;
         a2dg++;
-        x++;
         score("a2dg");
     }
 }
@@ -480,7 +493,6 @@ document.getElementById("a2dh").onclick = function() {
         d++;
         h++;
         a2dh++;
-        x++;
         score("a2dh");
     }
 }
@@ -491,7 +503,6 @@ document.getElementById("a2di").onclick = function() {
         d++;
         i++;
         a2di++;
-        x++;
         score("a2di");
     }
 }
@@ -503,7 +514,6 @@ document.getElementById("a2eg").onclick = function() {
         e++;
         g++;
         a2eg++;
-        x++;
         score("a2eg");
     }
 }
@@ -514,7 +524,6 @@ document.getElementById("a2eh").onclick = function() {
         e++;
         h++;
         a2eh++;
-        x++;
         score("a2eh");
     }
 }
@@ -525,7 +534,6 @@ document.getElementById("a2ei").onclick = function() {
         e++;
         i++;
         a2ei++;
-        x++;
         score("a2ei");
     }
 }
@@ -537,7 +545,6 @@ document.getElementById("a2fg").onclick = function() {
         f++;
         g++;
         a2fg++;
-        x++;
         score("a2fg");
     }
 }
@@ -548,7 +555,7 @@ document.getElementById("a2fh").onclick = function() {
         f++;
         h++;
         a2fh++;
-        x++;
+        
         score("a2fh");
     }
 }
@@ -559,7 +566,6 @@ document.getElementById("a2fi").onclick = function() {
         f++;
         i++;
         a2fi++;
-        x++;
         score("a2fi");
     }
 }
@@ -571,7 +577,6 @@ document.getElementById("a3dg").onclick = function() {
         d++;
         g++;
         a3dg++;
-        x++;
         score("a3dg");
     }
 }
@@ -582,7 +587,6 @@ document.getElementById("a3dh").onclick = function() {
         d++;
         h++;
         a3dh++;
-        x++;
         score("a3dh");
     }
 }
@@ -593,7 +597,6 @@ document.getElementById("a3di").onclick = function() {
         d++;
         i++;
         a3di++;
-        x++;
         score("a3di");
     }
 }
@@ -605,7 +608,6 @@ document.getElementById("a3eg").onclick = function() {
         e++;
         g++;
         a3eg++;
-        x++;
         score("a3eg");
     }
 }
@@ -616,7 +618,6 @@ document.getElementById("a3eh").onclick = function() {
         e++;
         h++;
         a3eh++;
-        x++;
         score("a3eh");
     }
 }
@@ -627,7 +628,6 @@ document.getElementById("a3ei").onclick = function() {
         e++;
         i++;
         a3ei++;
-        x++;
         score("a3ei");
     }
 }
@@ -639,7 +639,6 @@ document.getElementById("a3fg").onclick = function() {
         f++;
         g++;
         a3fg++;
-        x++;
         score("a3fg");
     }
 }
@@ -650,7 +649,6 @@ document.getElementById("a3fh").onclick = function() {
         f++;
         h++;
         a3fh++;
-        x++;
         score("a3fh");
     }
 }
@@ -661,7 +659,6 @@ document.getElementById("a3fi").onclick = function() {
         f++;
         i++;
         a3fi++;
-        x++;
         score("a3fi");
     }
 }
@@ -674,7 +671,6 @@ document.getElementById("b1dg").onclick = function() {
         d++;
         g++;
         b1dg++;
-        x++;
         score("b1dg");
     }
 }
@@ -685,7 +681,6 @@ document.getElementById("b1dh").onclick = function() {
         d++;
         h++;
         b1dh++;
-        x++;
         score("b1dh");
     }
 }
@@ -696,7 +691,6 @@ document.getElementById("b1di").onclick = function() {
         d++;
         i++;
         b1di++;
-        x++;
         score("b1di");
     }
 }
@@ -708,7 +702,7 @@ document.getElementById("b1eg").onclick = function() {
         e++;
         g++;
         b1eg++;
-        x++;
+        
         score("b1eg");
     }
 }
@@ -719,7 +713,6 @@ document.getElementById("b1eh").onclick = function() {
         e++;
         h++;
         b1eh++;
-        x++;
         score("b1eh");
     }
 }
@@ -730,7 +723,6 @@ document.getElementById("b1ei").onclick = function() {
         e++;
         i++;
         b1ei++;
-        x++;
         score("b1ei");
     }
 }
@@ -742,7 +734,6 @@ document.getElementById("b1fg").onclick = function() {
         f++;
         g++;
         b1fg++;
-        x++;
         score("b1fg");
     }
 }
@@ -753,7 +744,6 @@ document.getElementById("b1fh").onclick = function() {
         f++;
         h++;
         b1fh++;
-        x++;
         score("b1fh");
     }
 }
@@ -764,7 +754,6 @@ document.getElementById("b1fi").onclick = function() {
         f++;
         i++;
         b1fi++;
-        x++;
         score("b1fi");
     }
 }
@@ -776,7 +765,7 @@ document.getElementById("b2dg").onclick = function() {
         d++;
         g++;
         b2dg++;
-        x++;
+        
         score("b2dg");
     }
 }
@@ -787,7 +776,6 @@ document.getElementById("b2dh").onclick = function() {
         d++;
         h++;
         b2dh++;
-        x++;
         score("b2dh");
     }
 }
@@ -798,7 +786,6 @@ document.getElementById("b2di").onclick = function() {
         d++;
         i++;
         b2di++;
-        x++;
         score("b2di");
     }
 }
@@ -810,7 +797,6 @@ document.getElementById("b2eg").onclick = function() {
         e++;
         g++;
         b2eg++;
-        x++;
         score("b2eg");
     }
 }
@@ -821,7 +807,6 @@ document.getElementById("b2eh").onclick = function() {
         e++;
         h++;
         b2eh++;
-        x++;
         score("b2eh");
     }
 }
@@ -832,7 +817,6 @@ document.getElementById("b2ei").onclick = function() {
         e++;
         i++;
         b2ei++;
-        x++;
         score("b2ei");
     }
 }
@@ -844,7 +828,6 @@ document.getElementById("b2fg").onclick = function() {
         f++;
         g++;
         b2fg++;
-        x++;
         score("b2fg");
     }
 }
@@ -855,7 +838,6 @@ document.getElementById("b2fh").onclick = function() {
         f++;
         h++;
         b2fh++;
-        x++;
         score("b2fh");
     }
 }
@@ -866,7 +848,6 @@ document.getElementById("b2fi").onclick = function() {
         f++;
         i++;
         b2fi++;
-        x++;
         score("b2fi");
     }
 }
@@ -878,7 +859,7 @@ document.getElementById("b3dg").onclick = function() {
         d++;
         g++;
         b3dg++;
-        x++;
+        
         score("b3dg");
     }
 }
@@ -889,7 +870,6 @@ document.getElementById("b3dh").onclick = function() {
         d++;
         h++;
         b3dh++;
-        x++;
         score("b3dh");
     }
 }
@@ -900,7 +880,6 @@ document.getElementById("b3di").onclick = function() {
         d++;
         i++;
         b3di++;
-        x++;
         score("b3di");
     }
 }
@@ -912,7 +891,6 @@ document.getElementById("b3eg").onclick = function() {
         e++;
         g++;
         b3eg++;
-        x++;
         score("b3eg");
     }
 }
@@ -923,7 +901,6 @@ document.getElementById("b3eh").onclick = function() {
         e++;
         h++;
         b3eh++;
-        x++;
         score("b3eh");
     }
 }
@@ -934,7 +911,6 @@ document.getElementById("b3ei").onclick = function() {
         e++;
         i++;
         b3ei++;
-        x++;
         score("b3ei");
     }
 }
@@ -946,7 +922,6 @@ document.getElementById("b3fg").onclick = function() {
         f++;
         g++;
         b3fg++;
-        x++;
         score("b3fg");
     }
 }
@@ -957,7 +932,6 @@ document.getElementById("b3fh").onclick = function() {
         f++;
         h++;
         b3fh++;
-        x++;
         score("b3fh");
     }
 }
@@ -968,11 +942,10 @@ document.getElementById("b3fi").onclick = function() {
         f++;
         i++;
         b3fi++;
-        x++;
         score("b3fi");
     }
 }
-/*eluh megagroup*/
+/*Blue megagroup*/
 //1d//
 document.getElementById("c1dg").onclick = function() {
     if (c1dg === 0) {
@@ -981,7 +954,6 @@ document.getElementById("c1dg").onclick = function() {
         d++;
         g++;
         c1dg++;
-        x++;
         score("c1dg");
     }
 }
@@ -992,7 +964,6 @@ document.getElementById("c1dh").onclick = function() {
         d++;
         h++;
         c1dh++;
-        x++;
         score("c1dh");
     }
 }
@@ -1003,7 +974,6 @@ document.getElementById("c1di").onclick = function() {
         d++;
         i++;
         c1di++;
-        x++;
         score("c1di");
     }
 }
@@ -1015,7 +985,6 @@ document.getElementById("c1eg").onclick = function() {
         e++;
         g++;
         c1eg++;
-        x++;
         score("c1eg");
     }
 }
@@ -1026,7 +995,6 @@ document.getElementById("c1eh").onclick = function() {
         e++;
         h++;
         c1eh++;
-        x++;
         score("c1eh");
     }
 }
@@ -1037,7 +1005,6 @@ document.getElementById("c1ei").onclick = function() {
         e++;
         i++;
         c1ei++;
-        x++;
         score("c1ei");
     }
 }
@@ -1049,7 +1016,6 @@ document.getElementById("c1fg").onclick = function() {
         f++;
         g++;
         c1fg++;
-        x++;
         score("c1fg");
     }
 }
@@ -1060,7 +1026,6 @@ document.getElementById("c1fh").onclick = function() {
         f++;
         h++;
         c1fh++;
-        x++;
         score("c1fh");
     }
 }
@@ -1071,7 +1036,6 @@ document.getElementById("c1fi").onclick = function() {
         f++;
         i++;
         c1fi++;
-        x++;
         score("c1fi");
     }
 }
@@ -1083,7 +1047,6 @@ document.getElementById("c2dg").onclick = function() {
         d++;
         g++;
         c2dg++;
-        x++;
         score("c2dg");
     }
 }
@@ -1094,7 +1057,6 @@ document.getElementById("c2dh").onclick = function() {
         d++;
         h++;
         c2dh++;
-        x++;
         score("c2dh");
     }
 }
@@ -1105,7 +1067,6 @@ document.getElementById("c2di").onclick = function() {
         d++;
         i++;
         c2di++;
-        x++;
         score("c2di");
     }
 }
@@ -1117,7 +1078,6 @@ document.getElementById("c2eg").onclick = function() {
         e++;
         g++;
         c2eg++;
-        x++;
         score("c2eg");
     }
 }
@@ -1128,7 +1088,6 @@ document.getElementById("c2eh").onclick = function() {
         e++;
         h++;
         c2eh++;
-        x++;
         score("c2eh");
     }
 }
@@ -1139,7 +1098,7 @@ document.getElementById("c2ei").onclick = function() {
         e++;
         i++;
         c2ei++;
-        x++;
+        
         score("c2ei");
     }
 }
@@ -1151,7 +1110,6 @@ document.getElementById("c2fg").onclick = function() {
         f++;
         g++;
         c2fg++;
-        x++;
         score("c2fg");
     }
 }
@@ -1162,7 +1120,6 @@ document.getElementById("c2fh").onclick = function() {
         f++;
         h++;
         c2fh++;
-        x++;
         score("c2fh");
     }
 }
@@ -1173,7 +1130,6 @@ document.getElementById("c2fi").onclick = function() {
         f++;
         i++;
         c2fi++;
-        x++;
         score("c2fi");
     }
 }
@@ -1185,7 +1141,6 @@ document.getElementById("c3dg").onclick = function() {
         d++;
         g++;
         c3dg++;
-        x++;
         score("c3dg");
     }
 }
@@ -1196,7 +1151,6 @@ document.getElementById("c3dh").onclick = function() {
         d++;
         h++;
         c3dh++;
-        x++;
         score("c3dh");
     }
 }
@@ -1207,7 +1161,6 @@ document.getElementById("c3di").onclick = function() {
         d++;
         i++;
         c3di++;
-        x++;
         score("c3di");
     }
 }
@@ -1219,7 +1172,6 @@ document.getElementById("c3eg").onclick = function() {
         e++;
         g++;
         c3eg++;
-        x++;
         score("c3eg");
     }
 }
@@ -1230,7 +1182,6 @@ document.getElementById("c3eh").onclick = function() {
         e++;
         h++;
         c3eh++;
-        x++;
         score("c3eh");
     }
 }
@@ -1241,7 +1192,6 @@ document.getElementById("c3ei").onclick = function() {
         e++;
         i++;
         c3ei++;
-        x++;
         score("c3ei");
     }
 }
@@ -1253,7 +1203,6 @@ document.getElementById("c3fg").onclick = function() {
         f++;
         g++;
         c3fg++;
-        x++;
         score("c3fg");
     }
 }
@@ -1264,7 +1213,6 @@ document.getElementById("c3fh").onclick = function() {
         f++;
         h++;
         c3fh++;
-        x++;
         score("c3fh");
     }
 }
@@ -1275,7 +1223,6 @@ document.getElementById("c3fi").onclick = function() {
         f++;
         i++;
         c3fi++;
-        x++;
         score("c3fi");
     }
 }
