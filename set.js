@@ -24,40 +24,40 @@ var on = [];
 var rando = [];
 
 var card = ["a1dg", "a1dh", "a1di",
-           "a1eg", "a1eh", "a1ei",
-           "a1fg", "a1fh", "a1fi",
-           
-           "a2dg", "a2dh", "a2di",
-           "a2eg", "a2eh", "a2ei",
-           "a2fg", "a2fh", "a2fi",
-           
-           "a3dg", "a3dh", "a3di",
-           "a3eg", "a3eh", "a3ei",
-           "a3fg", "a3fh", "a3fi",
-           
-           "b1dg", "b1dh", "b1di",
-           "b1eg", "b1eh", "b1ei",
-           "b1fg", "b1fh", "b1fi",
-           
-           "b2dg", "b2dh", "b2di",
-           "b2eg", "b2eh", "b2ei",
-           "b2fg", "b2fh", "b2fi",
-           
-           "b3dg", "b3dh", "b3di",
-           "b3eg", "b3eh", "b3ei",
-           "b3fg", "b3fh", "b3fi",
-           
-           "c1dg", "c1dh", "c1di",
-           "c1eg", "c1eh", "c1ei",
-           "c1fg", "c1fh", "c1fi",
-           
-           "c2dg", "c2dh", "c2di",
-           "c2eg", "c2eh", "c2ei",
-           "c2fg", "c2fh", "c2fi",
-           
-           "c3dg", "c3dh", "c3di",
-           "c3eg", "c3eh", "c3ei",
-           "c3fg", "c3fh", "c3fi"];
+            "a1eg", "a1eh", "a1ei",
+            "a1fg", "a1fh", "a1fi",
+
+            "a2dg", "a2dh", "a2di",
+            "a2eg", "a2eh", "a2ei",
+            "a2fg", "a2fh", "a2fi",
+
+            "a3dg", "a3dh", "a3di",
+            "a3eg", "a3eh", "a3ei",
+            "a3fg", "a3fh", "a3fi",
+
+            "b1dg", "b1dh", "b1di",
+            "b1eg", "b1eh", "b1ei",
+            "b1fg", "b1fh", "b1fi",
+
+            "b2dg", "b2dh", "b2di",
+            "b2eg", "b2eh", "b2ei",
+            "b2fg", "b2fh", "b2fi",
+
+            "b3dg", "b3dh", "b3di",
+            "b3eg", "b3eh", "b3ei",
+            "b3fg", "b3fh", "b3fi",
+
+            "c1dg", "c1dh", "c1di",
+            "c1eg", "c1eh", "c1ei",
+            "c1fg", "c1fh", "c1fi",
+
+            "c2dg", "c2dh", "c2di",
+            "c2eg", "c2eh", "c2ei",
+            "c2fg", "c2fh", "c2fi",
+
+            "c3dg", "c3dh", "c3di",
+            "c3eg", "c3eh", "c3ei",
+            "c3fg", "c3fh", "c3fi"];
 
 var r0 = 0;
 var r1 = 0;
@@ -122,9 +122,9 @@ function open(idd){
 }
 
 function clear() {
-  for (num=0; num<81; num++) {
-    document.getElementById(card[num]).style.display = "none";
-  }
+    for (num=0; num<81; num++) {
+        document.getElementById(card[num]).style.display = "none";
+    }
 }
 
 function r() {
@@ -149,7 +149,7 @@ function r() {
 }
 
 function rand() {
-  r();
+    r();
     while(r0===r1 || r0===r2 || r0===r3 || r0===r4 || r0===r5 || r0===r6 || r0===r7 || r0===r8 || r0===r9 || r0===rA || r0===rB || r0===rC ||       r0===rD || r0===rE || r0===rF || r0===rG || r0===rH ||
           r1===r2 || r1===r3 || r1===r4 || r1===r5 || r1===r6 || r1===r7 || r1===r8 || r1===r9 || r1===rA || r1===rB || r1===rC || r1===rD || r1===rE || r1===rF || r1===rG || r1===rH ||
           r2===r3 || r2===r4 || r2===r5 || r2===r6 || r2===r7 || r2===r8 || r2===r9 || r2===rA || r2===rB || r2===rC || r2===rD || r2===rE || r2===rF || r2===rG || r2===rH ||
@@ -175,7 +175,7 @@ function rep() {
     rC = Math.floor(Math.random() * 81);
     rD = Math.floor(Math.random() * 81);
     rE = Math.floor(Math.random() * 81);
-        while(r0===r1 || r0===r2 || r0===r3 || r0===r4 || r0===r5 || r0===r6 || r0===r7 || r0===r8 || r0===r9 || r0===rC || r0===rB || r0===rC || r0===rD || r0===rE || r0===rF || r0===rG || r0===rH ||
+    while(r0===r1 || r0===r2 || r0===r3 || r0===r4 || r0===r5 || r0===r6 || r0===r7 || r0===r8 || r0===r9 || r0===rC || r0===rB || r0===rC || r0===rD || r0===rE || r0===rF || r0===rG || r0===rH ||
           r1===r2 || r1===r3 || r1===r4 || r1===r5 || r1===r6 || r1===r7 || r1===r8 || r1===r9 || r1===rA || r1===rB || r1===rC || r1===rD || r1===rE || r1===rF || r1===rG || r1===rH ||
           r2===r3 || r2===r4 || r2===r5 || r2===r6 || r2===r7 || r2===r8 || r2===r9 || r2===rA || r2===rB || r2===rC || r2===rD || r2===rE || r2===rF || r2===rG || r2===rH ||
           r3===r4 || r3===r5 || r3===r6 || r3===r7 || r3===r8 || r3===r9 || r3===rA || r3===rB || r3===rC || r3===rD || r3===rE || r3===rF || r3===rG || r3===rH ||
@@ -202,7 +202,7 @@ function rad() {
     rF = Math.floor(Math.random() * 81);
     rG = Math.floor(Math.random() * 81);
     rH = Math.floor(Math.random() * 81);
-        while(r0===r1 || r0===r2 || r0===r3 || r0===r4 || r0===r5 || r0===r6 || r0===r7 || r0===r8 || r0===r9 || r0===rC || r0===rB || r0===rC || r0===rD || r0===rE || r0===rF || r0===rG || r0===rH ||
+    while(r0===r1 || r0===r2 || r0===r3 || r0===r4 || r0===r5 || r0===r6 || r0===r7 || r0===r8 || r0===r9 || r0===rC || r0===rB || r0===rC || r0===rD || r0===rE || r0===rF || r0===rG || r0===rH ||
           r1===r2 || r1===r3 || r1===r4 || r1===r5 || r1===r6 || r1===r7 || r1===r8 || r1===r9 || r1===rA || r1===rB || r1===rC || r1===rD || r1===rE || r1===rF || r1===rG || r1===rH ||
           r2===r3 || r2===r4 || r2===r5 || r2===r6 || r2===r7 || r2===r8 || r2===r9 || r2===rA || r2===rB || r2===rC || r2===rD || r2===rE || r2===rF || r2===rG || r2===rH ||
           r3===r4 || r3===r5 || r3===r6 || r3===r7 || r3===r8 || r3===r9 || r3===rA || r3===rB || r3===rC || r3===rD || r3===rE || r3===rF || r3===rG || r3===rH ||
@@ -239,7 +239,7 @@ function display() {
     open(card[r9]);
     open(card[rA]);
     open(card[rB]);
-    
+
     // alert(r0+" "+r1+" "+r2+" "+r3+" "+r4+" "+r5+" "+r6+" "+r7+" "+r8+" "+r9+" "+rA+" "+rB);
 }
 
@@ -256,6 +256,9 @@ function zero() {
     g = 0;
     h = 0;
     i = 0;
+
+    num = 0;
+    nom = 0;
 
     x = 0;
 
@@ -295,13 +298,13 @@ function zero() {
     c3eg = 0; c3eh = 0; c3ei = 0;
     c3fg = 0; c3fh = 0; c3fi = 0;
 
-  for (num=0; num<81; num++) {
-    document.getElementById(card[num]).style.transform = "scale(1,1)";
-  }
-  
-  num = 0;
-    
-  on=[];
+    for (num=0; num<81; num++) {
+        document.getElementById(card[num]).style.transform = "scale(1,1)";
+    }
+
+    num = 0;
+
+    on=[];
 }
 
 function color() {
@@ -316,45 +319,45 @@ function color() {
     }
 }
 function score(varr) {
-  x++
-  document.getElementById(varr).style.transform = "scale(0.9,0.9)";
-  on.push(varr);
-  // alert(a+" "+b+" "+c+"\n"+n1+" "+n2+" "+n3+"\n"+d+" "+e+" "+f+"\n"+g+" "+h+" "+i+"\n"+x);
-  if (x === 3) {
-    if (
-        (a === 3 || b === 3 || c === 3 || a === b)&&
-        (n1=== 3 || n2=== 3 || n3=== 3 || n1=== n2)&&
-        (d === 3 || e === 3 || f === 3 || d === e)&&
-        (g === 3 || h === 3 || i === 3 || g === h)
-    ){
-      z++;
-      if (z === 1||z === -1) {
-          document.getElementById("z").innerHTML = z + " point";
-      } else {
-          document.getElementById("z").innerHTML = z + " points";
-      }
-      hide(on[0]);
-      hide(on[1]);
-      hide(on[2]);
-      if (nom === 0) {
-        open(card[rC]);
-        open(card[rD]);
-        open(card[rE]);
-      } else {
-        nom--;
-      }
-      rep();
-    } else {
-      z--;
-      if (z === 1||z === -1) {
-          document.getElementById("z").innerHTML = z + " point";
-      } else {
-          document.getElementById("z").innerHTML = z + " points";
-      }
+    x++
+    document.getElementById(varr).style.transform = "scale(0.9,0.9)";
+    on.push(varr);
+    // alert(a+" "+b+" "+c+"\n"+n1+" "+n2+" "+n3+"\n"+d+" "+e+" "+f+"\n"+g+" "+h+" "+i+"\n"+x);
+    if (x === 3) {
+        if (
+            (a === 3 || b === 3 || c === 3 || a === b)&&
+            (n1=== 3 || n2=== 3 || n3=== 3 || n1=== n2)&&
+            (d === 3 || e === 3 || f === 3 || d === e)&&
+            (g === 3 || h === 3 || i === 3 || g === h)
+        ){
+            z++;
+            if (z === 1||z === -1) {
+                document.getElementById("z").innerHTML = z + " point";
+            } else {
+                document.getElementById("z").innerHTML = z + " points";
+            }
+            hide(on[0]);
+            hide(on[1]);
+            hide(on[2]);
+            rep();
+            if (nom === 0) {
+                open(card[rC]);
+                open(card[rD]);
+                open(card[rE]);
+            } else {
+                nom--;
+            }
+        } else {
+            z--;
+            if (z === 1||z === -1) {
+                document.getElementById("z").innerHTML = z + " point";
+            } else {
+                document.getElementById("z").innerHTML = z + " points";
+            }
+        }
+        color();
+        zero();
     }
-    color();
-    zero();
-  }
 }
 
 
@@ -372,13 +375,13 @@ document.getElementById("reset").onclick = function reset() {
 }
 
 document.getElementById("add").onclick = function add() {
-  if (nom < 1) {
-    rad();
-    open(card[rF]);
-    open(card[rG]);
-    open(card[rH]);
-    nom++;
-  }
+    if (nom < 1) {
+        rad();
+        open(card[rF]);
+        open(card[rG]);
+        open(card[rH]);
+        nom++;
+    }
 }
 
 /*Red megagroup*/
@@ -555,7 +558,7 @@ document.getElementById("a2fh").onclick = function() {
         f++;
         h++;
         a2fh++;
-        
+
         score("a2fh");
     }
 }
@@ -702,7 +705,7 @@ document.getElementById("b1eg").onclick = function() {
         e++;
         g++;
         b1eg++;
-        
+
         score("b1eg");
     }
 }
@@ -765,7 +768,7 @@ document.getElementById("b2dg").onclick = function() {
         d++;
         g++;
         b2dg++;
-        
+
         score("b2dg");
     }
 }
@@ -859,7 +862,7 @@ document.getElementById("b3dg").onclick = function() {
         d++;
         g++;
         b3dg++;
-        
+
         score("b3dg");
     }
 }
@@ -1098,7 +1101,7 @@ document.getElementById("c2ei").onclick = function() {
         e++;
         i++;
         c2ei++;
-        
+
         score("c2ei");
     }
 }
