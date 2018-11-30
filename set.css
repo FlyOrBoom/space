@@ -14,64 +14,46 @@
     fill:#eee;
     cursor:pointer;
 }
-#add {
+.m{
     position:fixed;
     display:block;
-    right:10px;
-    bottom:110px;
-    background-color:#fff;
-    border:2px solid #4d4;
-    border-radius:10px;
-    padding:5px;
+    right:15px;
     cursor:pointer;
+    border:none;
+    border-radius:50px;
+    box-shadow:0 1.5px 10px #ccc;
+    cursor:pointer;
+    text-align:center;
+}
+#add {
+    bottom:135px;
+    background-color:#efe;
+    padding:10px 8px 8px 10px;
     fill:#4d4;
 }
 #add:hover {
     background-color:#4d4;
     fill:#fff;
-}
-#add:active {
-    background-color:#282;
-    fill:#fff;
-}
-#faq {
-    position:fixed;
-    display:block;
-    right:10px;
-    bottom:10px;
-    background-color:#fff;
-    border:2px solid #444;
-    border-radius:10px;
-    padding:5px;
-    cursor:pointer;
-    fill:#444;
-}
-#faq:hover {
-    background-color:#444;
-    fill:#fff;
-}
-#faq:active {
-    background-color:#222;
-    fill:#fff;
+    box-shadow:none;
 }
 #reset {
-    position:fixed;
-    display:block;
-    right:10px;
-    bottom:60px;
-    background-color:#fff;
-    border:2px solid #44e;
-    border-radius:10px;
-    padding:5px 5px;
-    cursor:pointer;
+    bottom:75px;
+    background-color:#eef;
+    padding:10px 8px 8px 10px;
     fill:#44e;
 }
 #reset:hover {
     background-color:#44e;
     fill:#fff;
 }
-#reset:active {
-    background-color:#228;
+#faq {
+    bottom:15px;
+    background-color:#eee;
+    padding:10px 8px 8px 10px;
+    fill:#444;
+}
+#faq:hover {
+    background-color:#444;
     fill:#fff;
 }
 .card {
