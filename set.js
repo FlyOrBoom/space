@@ -428,7 +428,6 @@ color();
 clear();
 rand();
 display();
-document.getElementById("about").style = "display:none";
 
 document.getElementById("reset").onclick = function reset() {
     z = 0;
