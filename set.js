@@ -342,6 +342,7 @@ function zero() {
 
     for (num=0; num<81; num++) {
         document.getElementById(card[num]).style.transform = "scale(1,1)";
+        document.getElementById(card[num]).style.backgroundColor = "#fff";
     }
 
     num = 0;
@@ -375,6 +376,7 @@ Array.prototype.remove = function() {
 function score(varr) {
     x++;
     document.getElementById(varr).style.transform = "scale(0.9,0.9)";
+    document.getElementById(varr).style.backgroundColor = "#fafafa";
     on.push(varr);
     // alert(a+" "+b+" "+c+"\n"+n1+" "+n2+" "+n3+"\n"+d+" "+e+" "+f+"\n"+g+" "+h+" "+i+"\n"+x);
     if (x === 3) {
@@ -417,6 +419,7 @@ function score(varr) {
 function undo(varr) {
     x--;
     document.getElementById(varr).style.transform = "scale(1,1)";
+    document.getElementById(varr).style.backgroundColor = "#fff";
     on.remove(varr);
     // alert(a+" "+b+" "+c+"\n"+n1+" "+n2+" "+n3+"\n"+d+" "+e+" "+f+"\n"+g+" "+h+" "+i+"\n"+x);
 }
@@ -425,6 +428,7 @@ color();
 clear();
 rand();
 display();
+document.getElementById("about").style = "display:none";
 
 document.getElementById("reset").onclick = function reset() {
     z = 0;
@@ -443,6 +447,13 @@ document.getElementById("add").onclick = function add() {
         open(card[rH]);
         nom++;
     }
+}
+
+document.getElementById("faq").onclick = function() {
+  document.getElementById("about").style = "display:fixed";
+}
+document.getElementById("okay").onclick = function() {
+  document.getElementById("about").style = "display:none";
 }
 
 /*Red megagroup*/
