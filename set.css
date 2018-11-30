@@ -1,5 +1,4 @@
 #z {
-    position:absolute;
     display: block;
     top:5px;
     font-family:Monospace, Monospace;
@@ -8,11 +7,14 @@
     left:25px;
 }
 #XYZt {
-    position:absolute;
     top:0;
     right:0;
     fill:#eee;
     cursor:pointer;
+}
+.x{
+    position:fixed;
+    top:0;
 }
 .m{
     position:fixed;
@@ -45,6 +47,7 @@
 #reset:hover {
     background-color:#44e;
     fill:#fff;
+    box-shadow:none;
 }
 #faq {
     bottom:15px;
@@ -55,6 +58,7 @@
 #faq:hover {
     background-color:#444;
     fill:#fff;
+    box-shadow:none;
 }
 .card {
     position:static;
