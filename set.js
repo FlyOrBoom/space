@@ -13,16 +13,15 @@ var i = 0;
 
 var num = 0;
 var nom = 0;
+var nam = 0;
 
-var w = 0;
 var x = 0;
 
 var z = 0;
 
 var on = [];
 
-var rando = [];
-
+var visi = [];
 var card = ["a1dg", "a1dh", "a1di",
             "a1eg", "a1eh", "a1ei",
             "a1fg", "a1fh", "a1fi",
@@ -59,24 +58,7 @@ var card = ["a1dg", "a1dh", "a1di",
             "c3eg", "c3eh", "c3ei",
             "c3fg", "c3fh", "c3fi"];
 
-var r0 = 0;
-var r1 = 0;
-var r2 = 0;
-var r3 = 0;
-var r4 = 0;
-var r5 = 0;
-var r6 = 0;
-var r7 = 0;
-var r8 = 0;
-var r9 = 0;
-var rA = 0;
-var rB = 0;
-var rC = 0;
-var rD = 0;
-var rB = 0;
-var rF = 0;
-var rG = 0;
-var rH = 0;
+var r = 0;
 
 var a1dg = 0; var a1dh = 0; var a1di = 0;
 var a1eg = 0; var a1eh = 0; var a1ei = 0;
@@ -127,106 +109,60 @@ function clear() {
     }
 }
 
-function r() {
-    r0 = Math.floor(Math.random() * 81);
-    r1 = Math.floor(Math.random() * 81);
-    r2 = Math.floor(Math.random() * 81);
-    r3 = Math.floor(Math.random() * 81);
-    r4 = Math.floor(Math.random() * 81);
-    r5 = Math.floor(Math.random() * 81);
-    r6 = Math.floor(Math.random() * 81);
-    r7 = Math.floor(Math.random() * 81);
-    r8 = Math.floor(Math.random() * 81);
-    r9 = Math.floor(Math.random() * 81);
-    rA = Math.floor(Math.random() * 81);
-    rB = Math.floor(Math.random() * 81);
-    rC = Math.floor(Math.random() * 81);
-    rD = Math.floor(Math.random() * 81);
-    rE = Math.floor(Math.random() * 81);
-    rF = Math.floor(Math.random() * 81);
-    rG = Math.floor(Math.random() * 81);
-    rH = Math.floor(Math.random() * 81);
+function random() {
+    r = Math.floor(Math.random() * 81);
 }
 
 function rand() {
-    r();
-    while(r0===r1 || r0===r2 || r0===r3 || r0===r4 || r0===r5 || r0===r6 || r0===r7 || r0===r8 || r0===r9 || r0===rA || r0===rB || r0===rC ||       r0===rD || r0===rE || r0===rF || r0===rG || r0===rH ||
-          r1===r2 || r1===r3 || r1===r4 || r1===r5 || r1===r6 || r1===r7 || r1===r8 || r1===r9 || r1===rA || r1===rB || r1===rC || r1===rD || r1===rE || r1===rF || r1===rG || r1===rH ||
-          r2===r3 || r2===r4 || r2===r5 || r2===r6 || r2===r7 || r2===r8 || r2===r9 || r2===rA || r2===rB || r2===rC || r2===rD || r2===rE || r2===rF || r2===rG || r2===rH ||
-          r3===r4 || r3===r5 || r3===r6 || r3===r7 || r3===r8 || r3===r9 || r3===rA || r3===rB || r3===rC || r3===rD || r3===rE || r3===rF || r3===rG || r3===rH ||
-          r4===r5 || r4===r6 || r4===r7 || r4===r8 || r4===r9 || r4===rA || r4===rB || r4===rC || r4===rD || r4===rE || r4===rF || r4===rG || r4===rH ||
-          r5===r6 || r5===r7 || r5===r8 || r5===r9 || r5===rA || r5===rB || r5===rC || r5===rD || r5===rE || r5===rF || r5===rG || r5===rH ||
-          r6===r7 || r6===r8 || r6===r9 || r6===rA || r6===rB || r6===rC || r6===rD || r6===rE || r6===rF || r6===rG || r6===rH ||
-          r7===r8 || r7===r9 || r7===rA || r7===rB || r7===rC || r7===rD || r7===rE || r7===rF || r7===rG || r7===rH ||
-          r8===r9 || r8===rA || r8===rB || r8===rC || r8===rD || r8===rE || r8===rF || r8===rG || r8===rH ||
-          r9===rA || r9===rB || r9===rC || r9===rD || r9===rE || r9===rF || r9===rG || r9===rH ||
-          rA===rB || rA===rC || rA===rD || rA===rE || rA===rF || rA===rG || rA===rH ||
-          rB===rC || rB===rD || rB===rE || rB===rF || rB===rG || rB===rH ||
-          rC===rD || rC===rE || rC===rF || rC===rG || rC===rH ||
-          rD===rE || rD===rF || rD===rG || rD===rH ||
-          rE===rF || rE===rG || rE===rH ||
-          rF===rG || rF===rH ||
-          rG===rH){
-        r();
+  nam=0;
+    while(nam<12){
+      random();
+      if(r!=visi[0]&&r!=visi[1]&&r!=visi[2]&&r!=visi[3]&&r!=visi[4]&&r!=visi[5]&&r!=visi[6]&&r!=visi[7]&&r!=visi[8]&&r!=visi[9]&&r!=visi[10]&&r!=visi[11]&&r!=visi[12]&&r!=visi[13]&&r!=visi[14]&&r!=visi[15]&&r!=visi[16]&&r!=visi[17]){
+        visi[nam]=r;
+        open(card[r]);
+        nam++;
+      }
+      else{
+        random();
+      }
     }
+    nam=0;
 }
 
-function rep() {
-    rC = Math.floor(Math.random() * 81);
-    rD = Math.floor(Math.random() * 81);
-    rE = Math.floor(Math.random() * 81);
-    while(r0===r1 || r0===r2 || r0===r3 || r0===r4 || r0===r5 || r0===r6 || r0===r7 || r0===r8 || r0===r9 || r0===rC || r0===rB || r0===rC || r0===rD || r0===rE || r0===rF || r0===rG || r0===rH ||
-          r1===r2 || r1===r3 || r1===r4 || r1===r5 || r1===r6 || r1===r7 || r1===r8 || r1===r9 || r1===rA || r1===rB || r1===rC || r1===rD || r1===rE || r1===rF || r1===rG || r1===rH ||
-          r2===r3 || r2===r4 || r2===r5 || r2===r6 || r2===r7 || r2===r8 || r2===r9 || r2===rA || r2===rB || r2===rC || r2===rD || r2===rE || r2===rF || r2===rG || r2===rH ||
-          r3===r4 || r3===r5 || r3===r6 || r3===r7 || r3===r8 || r3===r9 || r3===rA || r3===rB || r3===rC || r3===rD || r3===rE || r3===rF || r3===rG || r3===rH ||
-          r4===r5 || r4===r6 || r4===r7 || r4===r8 || r4===r9 || r4===rA || r4===rB || r4===rC || r4===rD || r4===rE || r4===rF || r4===rG || r4===rH ||
-          r5===r6 || r5===r7 || r5===r8 || r5===r9 || r5===rA || r5===rB || r5===rC || r5===rD || r5===rE || r5===rF || r5===rG || r5===rH ||
-          r6===r7 || r6===r8 || r6===r9 || r6===rA || r6===rB || r6===rC || r6===rD || r6===rE || r6===rF || r6===rG || r6===rH ||
-          r7===r8 || r7===r9 || r7===rA || r7===rB || r7===rC || r7===rD || r7===rE || r7===rF || r7===rG || r7===rH ||
-          r8===r9 || r8===rA || r8===rB || r8===rC || r8===rD || r8===rE || r8===rF || r8===rG || r8===rH ||
-          r9===rA || r9===rB || rA===rC || r9===rD || r9===rE || r9===rF || r9===rG || r9===rH ||
-          rA===rB || rA===rC || rA===rD || rA===rE || rA===rF || rA===rG || rA===rH ||
-          rB===rC || rB===rD || rB===rE || rC===rF || rB===rG || rB===rH ||
-          rC===rD || rC===rE || rC===rF || rD===rG || rC===rH ||
-          rD===rE || rD===rF || rD===rG || rB===rH ||
-          rB===rF || rB===rG || rB===rH ||
-          rF===rG || rF===rH ||
-          rG===rH){
-        rC = Math.floor(Math.random() * 81);
-        rD = Math.floor(Math.random() * 81);
-        rE = Math.floor(Math.random() * 81);
+function repl() {
+  nam=12;
+    while(nam<15){
+      random();
+      if(r!=visi[0]&&r!=visi[1]&&r!=visi[2]&&r!=visi[3]&&r!=visi[4]&&r!=visi[5]&&r!=visi[6]&&r!=visi[7]&&r!=visi[8]&&r!=visi[9]&&r!=visi[10]&&r!=visi[11]&&r!=visi[12]&&r!=visi[13]&&r!=visi[14]&&r!=visi[15]&&r!=visi[16]&&r!=visi[17]){
+        visi[nam]=r;
+        open(card[r]);
+        nam++;
+      }
+      else{
+        random();
+      }
     }
+    nam=0;
 }
 
-function rad() {
-    rF = Math.floor(Math.random() * 81);
-    rG = Math.floor(Math.random() * 81);
-    rH = Math.floor(Math.random() * 81);
-    while(r0===r1 || r0===r2 || r0===r3 || r0===r4 || r0===r5 || r0===r6 || r0===r7 || r0===r8 || r0===r9 || r0===rC || r0===rB || r0===rC || r0===rD || r0===rE || r0===rF || r0===rG || r0===rH ||
-          r1===r2 || r1===r3 || r1===r4 || r1===r5 || r1===r6 || r1===r7 || r1===r8 || r1===r9 || r1===rA || r1===rB || r1===rC || r1===rD || r1===rE || r1===rF || r1===rG || r1===rH ||
-          r2===r3 || r2===r4 || r2===r5 || r2===r6 || r2===r7 || r2===r8 || r2===r9 || r2===rA || r2===rB || r2===rC || r2===rD || r2===rE || r2===rF || r2===rG || r2===rH ||
-          r3===r4 || r3===r5 || r3===r6 || r3===r7 || r3===r8 || r3===r9 || r3===rA || r3===rB || r3===rC || r3===rD || r3===rE || r3===rF || r3===rG || r3===rH ||
-          r4===r5 || r4===r6 || r4===r7 || r4===r8 || r4===r9 || r4===rA || r4===rB || r4===rC || r4===rD || r4===rE || r4===rF || r4===rG || r4===rH ||
-          r5===r6 || r5===r7 || r5===r8 || r5===r9 || r5===rA || r5===rB || r5===rC || r5===rD || r5===rE || r5===rF || r5===rG || r5===rH ||
-          r6===r7 || r6===r8 || r6===r9 || r6===rA || r6===rB || r6===rC || r6===rD || r6===rE || r6===rF || r6===rG || r6===rH ||
-          r7===r8 || r7===r9 || r7===rA || r7===rB || r7===rC || r7===rD || r7===rE || r7===rF || r7===rG || r7===rH ||
-          r8===r9 || r8===rA || r8===rB || r8===rC || r8===rD || r8===rE || r8===rF || r8===rG || r8===rH ||
-          r9===rA || r9===rB || rA===rC || r9===rD || r9===rE || r9===rF || r9===rG || r9===rH ||
-          rA===rB || rA===rC || rA===rD || rA===rE || rA===rF || rA===rG || rA===rH ||
-          rB===rC || rB===rD || rB===rE || rC===rF || rB===rG || rB===rH ||
-          rC===rD || rC===rE || rC===rF || rD===rG || rC===rH ||
-          rD===rE || rD===rF || rD===rG || rB===rH ||
-          rB===rF || rB===rG || rB===rH ||
-          rF===rG || rF===rH ||
-          rG===rH){
-        rF = Math.floor(Math.random() * 81);
-        rG = Math.floor(Math.random() * 81);
-        rH = Math.floor(Math.random() * 81);
+function radd() {
+  nam=15;
+    while(nam<18){
+      random();
+      if(r!=visi[0]&&r!=visi[1]&&r!=visi[2]&&r!=visi[3]&&r!=visi[4]&&r!=visi[5]&&r!=visi[6]&&r!=visi[7]&&r!=visi[8]&&r!=visi[9]&&r!=visi[10]&&r!=visi[11]&&r!=visi[12]&&r!=visi[13]&&r!=visi[14]&&r!=visi[15]&&r!=visi[16]&&r!=visi[17]){
+        visi[nam]=r;
+        open(card[r]);
+        nam++;
+      }
+      else{
+        random();
+      }
     }
+    nam=0;
 }
 
 function score(varr) {
-    x++
+    x++;
     document.getElementById(varr).style.transform = "scale(0.9,0.9)";
     on.push(varr);
     // alert(a+" "+b+" "+c+"\n"+n1+" "+n2+" "+n3+"\n"+d+" "+e+" "+f+"\n"+g+" "+h+" "+i+"\n"+x);
@@ -246,11 +182,8 @@ function score(varr) {
             hide(on[0]);
             hide(on[1]);
             hide(on[2]);
-            rep();
             if (nom === 0) {
-                open(card[rC]);
-                open(card[rD]);
-                open(card[rE]);
+              radd();
             } else {
                 nom--;
             }
@@ -265,24 +198,6 @@ function score(varr) {
         color();
         zero();
     }
-}
-
-function display() {
-    rand();
-    open(card[r0]);
-    open(card[r1]);
-    open(card[r2]);
-    open(card[r3]);
-    open(card[r4]);
-    open(card[r5]);
-    open(card[r6]);
-    open(card[r7]);
-    open(card[r8]);
-    open(card[r9]);
-    open(card[rA]);
-    open(card[rB]);
-
-    // alert(r0+" "+r1+" "+r2+" "+r3+" "+r4+" "+r5+" "+r6+" "+r7+" "+r8+" "+r9+" "+rA+" "+rB);
 }
 
 function zero() {
@@ -395,11 +310,8 @@ function score(varr) {
             hide(on[0]);
             hide(on[1]);
             hide(on[2]);
-            rep();
             if (nom === 0) {
-                open(card[rC]);
-                open(card[rD]);
-                open(card[rE]);
+                repl();
             } else {
                 nom--;
             }
@@ -427,7 +339,6 @@ function undo(varr) {
 color();
 clear();
 rand();
-display();
 
 document.getElementById("reset").onclick = function reset() {
     z = 0;
@@ -435,25 +346,22 @@ document.getElementById("reset").onclick = function reset() {
     color();
     document.getElementById("z").innerHTML = z + " points";
     clear();
-    display();
-}
+    rand();
+};
 
 document.getElementById("add").onclick = function add() {
     if (nom < 1) {
-        rad();
-        open(card[rF]);
-        open(card[rG]);
-        open(card[rH]);
+        radd();
         nom++;
     }
-}
+};
 
 document.getElementById("faq").onclick = function() {
   document.getElementById("about").style = "display:fixed";
-}
+};
 document.getElementById("okay").onclick = function() {
   document.getElementById("about").style = "display:none";
-}
+};
 
 /*Red megagroup*/
 //1d//
@@ -473,7 +381,7 @@ document.getElementById("a1dg").onclick = function() {
         a1dg--;
         undo("a1dg");
     }
-}
+};
 document.getElementById("a1dh").onclick = function() {
     if (a1dh === 0) {
         a++;
@@ -490,7 +398,7 @@ document.getElementById("a1dh").onclick = function() {
         a1dh--;
         undo("a1dh");
     }
-}
+};
 document.getElementById("a1di").onclick = function() {
     if (a1di === 0) {
         a++;
@@ -507,7 +415,7 @@ document.getElementById("a1di").onclick = function() {
         a1di--;
         undo("a1di");
     }
-}
+};
 //1e//
 document.getElementById("a1eg").onclick = function() {
     if (a1eg === 0) {
@@ -525,7 +433,7 @@ document.getElementById("a1eg").onclick = function() {
         a1eg--;
         undo("a1eg");
     }
-}
+};
 document.getElementById("a1eh").onclick = function() {
     if (a1eh === 0) {
         a++;
@@ -542,7 +450,7 @@ document.getElementById("a1eh").onclick = function() {
         a1eh--;
         undo("a1eh");
     }
-}
+};
 document.getElementById("a1ei").onclick = function() {
     if (a1ei === 0) {
         a++;
@@ -559,7 +467,7 @@ document.getElementById("a1ei").onclick = function() {
         a1ei--;
         undo("a1ei");
     }
-}
+};
 //1f//
 document.getElementById("a1fg").onclick = function() {
     if (a1fg === 0) {
@@ -577,7 +485,7 @@ document.getElementById("a1fg").onclick = function() {
         a1fg--;
         undo("a1fg");
     }
-}
+};
 document.getElementById("a1fh").onclick = function() {
     if (a1fh === 0) {
         a++;
@@ -594,7 +502,7 @@ document.getElementById("a1fh").onclick = function() {
         a1fh--;
         undo("a1fh");
     }
-}
+};
 document.getElementById("a1fi").onclick = function() {
     if (a1fi === 0) {
         a++;
@@ -611,7 +519,7 @@ document.getElementById("a1fi").onclick = function() {
         a1fi--;
         undo("a1fi");
     }
-}
+};
 //2d//
 document.getElementById("a2dg").onclick = function() {
     if (a2dg === 0) {
@@ -629,7 +537,7 @@ document.getElementById("a2dg").onclick = function() {
         a2dg--;
         undo("a2dg");
     }
-}
+};
 document.getElementById("a2dh").onclick = function() {
     if (a2dh === 0) {
         a++;
@@ -646,7 +554,7 @@ document.getElementById("a2dh").onclick = function() {
         a2dh--;
         undo("a2dh");
     }
-}
+};
 document.getElementById("a2di").onclick = function() {
     if (a2di === 0) {
         a++;
@@ -663,7 +571,7 @@ document.getElementById("a2di").onclick = function() {
         a2di--;
         undo("a2di");
     }
-}
+};
 //2e//
 document.getElementById("a2eg").onclick = function() {
     if (a2eg === 0) {
@@ -681,7 +589,7 @@ document.getElementById("a2eg").onclick = function() {
         a2eg--;
         undo("a2eg");
     }
-}
+};
 document.getElementById("a2eh").onclick = function() {
     if (a2eh === 0) {
         a++;
@@ -698,7 +606,7 @@ document.getElementById("a2eh").onclick = function() {
         a2eh--;
         undo("a2eh");
     }
-}
+};
 document.getElementById("a2ei").onclick = function() {
     if (a2ei === 0) {
         a++;
@@ -715,7 +623,7 @@ document.getElementById("a2ei").onclick = function() {
         a2ei--;
         undo("a2ei");
     }
-}
+};
 //2f//
 document.getElementById("a2fg").onclick = function() {
     if (a2fg === 0) {
@@ -733,7 +641,7 @@ document.getElementById("a2fg").onclick = function() {
         a2fg--;
         undo("a2fg");
     }
-}
+};
 document.getElementById("a2fh").onclick = function() {
     if (a2fh === 0) {
         a++;
@@ -750,7 +658,7 @@ document.getElementById("a2fh").onclick = function() {
         a2fh--;
         undo("a2fh");
     }
-}
+};
 document.getElementById("a2fi").onclick = function() {
     if (a2fi === 0) {
         a++;
@@ -767,7 +675,7 @@ document.getElementById("a2fi").onclick = function() {
         a2fi--;
         undo("a2fi");
     }
-}
+};
 //3d//
 document.getElementById("a3dg").onclick = function() {
     if (a3dg === 0) {
@@ -785,7 +693,7 @@ document.getElementById("a3dg").onclick = function() {
         a3dg--;
         undo("a3dg");
     }
-}
+};
 document.getElementById("a3dh").onclick = function() {
     if (a3dh === 0) {
         a++;
@@ -802,7 +710,7 @@ document.getElementById("a3dh").onclick = function() {
         a3dh--;
         undo("a3dh");
     }
-}
+};
 document.getElementById("a3di").onclick = function() {
     if (a3di === 0) {
         a++;
@@ -819,7 +727,7 @@ document.getElementById("a3di").onclick = function() {
         a3di--;
         undo("a3di");
     }
-}
+};
 //3e//
 document.getElementById("a3eg").onclick = function() {
     if (a3eg === 0) {
@@ -837,7 +745,7 @@ document.getElementById("a3eg").onclick = function() {
         a3eg--;
         undo("a3eg");
     }
-}
+};
 document.getElementById("a3eh").onclick = function() {
     if (a3eh === 0) {
         a++;
@@ -854,7 +762,7 @@ document.getElementById("a3eh").onclick = function() {
         a3eh--;
         undo("a3eh");
     }
-}
+};
 document.getElementById("a3ei").onclick = function() {
     if (a3ei === 0) {
         a++;
@@ -871,7 +779,7 @@ document.getElementById("a3ei").onclick = function() {
         a3ei--;
         undo("a3ei");
     }
-}
+};
 //3f//
 document.getElementById("a3fg").onclick = function() {
     if (a3fg === 0) {
@@ -889,7 +797,7 @@ document.getElementById("a3fg").onclick = function() {
         a3fg--;
         undo("a3fg");
     }
-}
+};
 document.getElementById("a3fh").onclick = function() {
     if (a3fh === 0) {
         a++;
@@ -906,7 +814,7 @@ document.getElementById("a3fh").onclick = function() {
         a3fh--;
         undo("a3fh");
     }
-}
+};
 document.getElementById("a3fi").onclick = function() {
     if (a3fi === 0) {
         a++;
@@ -923,7 +831,7 @@ document.getElementById("a3fi").onclick = function() {
         a3fi--;
         undo("a3fi");
     }
-}
+};
 /*Green megagroup*/
 //1d//
 document.getElementById("b1dg").onclick = function() {
@@ -942,7 +850,7 @@ document.getElementById("b1dg").onclick = function() {
         b1dg--;
         undo("b1dg");
     }
-}
+};
 document.getElementById("b1dh").onclick = function() {
     if (b1dh === 0) {
         b++;
@@ -959,7 +867,7 @@ document.getElementById("b1dh").onclick = function() {
         b1dh--;
         undo("b1dh");
     }
-}
+};
 document.getElementById("b1di").onclick = function() {
     if (b1di === 0) {
         b++;
@@ -976,7 +884,7 @@ document.getElementById("b1di").onclick = function() {
         b1di--;
         undo("b1di");
     }
-}
+};
 //1e//
 document.getElementById("b1eg").onclick = function() {
     if (b1eg === 0) {
@@ -994,7 +902,7 @@ document.getElementById("b1eg").onclick = function() {
         b1eg--;
         undo("b1eg");
     }
-}
+};
 document.getElementById("b1eh").onclick = function() {
     if (b1eh === 0) {
         b++;
@@ -1011,7 +919,7 @@ document.getElementById("b1eh").onclick = function() {
         b1eh--;
         undo("b1eh");
     }
-}
+};
 document.getElementById("b1ei").onclick = function() {
     if (b1ei === 0) {
         b++;
@@ -1028,7 +936,7 @@ document.getElementById("b1ei").onclick = function() {
         b1ei--;
         undo("b1ei");
     }
-}
+};
 //1f//
 document.getElementById("b1fg").onclick = function() {
     if (b1fg === 0) {
@@ -1046,7 +954,7 @@ document.getElementById("b1fg").onclick = function() {
         b1fg--;
         undo("b1fg");
     }
-}
+};
 document.getElementById("b1fh").onclick = function() {
     if (b1fh === 0) {
         b++;
@@ -1063,7 +971,7 @@ document.getElementById("b1fh").onclick = function() {
         b1fh--;
         undo("b1fh");
     }
-}
+};
 document.getElementById("b1fi").onclick = function() {
     if (b1fi === 0) {
         b++;
@@ -1080,7 +988,7 @@ document.getElementById("b1fi").onclick = function() {
         b1fi--;
         undo("b1fi");
     }
-}
+};
 //2d//
 document.getElementById("b2dg").onclick = function() {
     if (b2dg === 0) {
@@ -1098,7 +1006,7 @@ document.getElementById("b2dg").onclick = function() {
         b2dg--;
         undo("b2dg");
     }
-}
+};
 document.getElementById("b2dh").onclick = function() {
     if (b2dh === 0) {
         b++;
@@ -1115,7 +1023,7 @@ document.getElementById("b2dh").onclick = function() {
         b2dh--;
         undo("b2dh");
     }
-}
+};
 document.getElementById("b2di").onclick = function() {
     if (b2di === 0) {
         b++;
@@ -1132,7 +1040,7 @@ document.getElementById("b2di").onclick = function() {
         b2di--;
         undo("b2di");
     }
-}
+};
 //2e//
 document.getElementById("b2eg").onclick = function() {
     if (b2eg === 0) {
@@ -1150,7 +1058,7 @@ document.getElementById("b2eg").onclick = function() {
         b2eg--;
         undo("b2eg");
     }
-}
+};
 document.getElementById("b2eh").onclick = function() {
     if (b2eh === 0) {
         b++;
@@ -1167,7 +1075,7 @@ document.getElementById("b2eh").onclick = function() {
         b2eh--;
         undo("b2eh");
     }
-}
+};
 document.getElementById("b2ei").onclick = function() {
     if (b2ei === 0) {
         b++;
@@ -1184,7 +1092,7 @@ document.getElementById("b2ei").onclick = function() {
         b2ei--;
         undo("b2ei");
     }
-}
+};
 //2f//
 document.getElementById("b2fg").onclick = function() {
     if (b2fg === 0) {
@@ -1202,7 +1110,7 @@ document.getElementById("b2fg").onclick = function() {
         b2fg--;
         undo("b2fg");
     }
-}
+};
 document.getElementById("b2fh").onclick = function() {
     if (b2fh === 0) {
         b++;
@@ -1219,7 +1127,7 @@ document.getElementById("b2fh").onclick = function() {
         b2fh--;
         undo("b2fh");
     }
-}
+};
 document.getElementById("b2fi").onclick = function() {
     if (b2fi === 0) {
         b++;
@@ -1236,7 +1144,7 @@ document.getElementById("b2fi").onclick = function() {
         b2fi--;
         undo("b2fi");
     }
-}
+};
 //3d//
 document.getElementById("b3dg").onclick = function() {
     if (b3dg === 0) {
@@ -1254,7 +1162,7 @@ document.getElementById("b3dg").onclick = function() {
         b3dg--;
         undo("b3dg");
     }
-}
+};
 document.getElementById("b3dh").onclick = function() {
     if (b3dh === 0) {
         b++;
@@ -1271,7 +1179,7 @@ document.getElementById("b3dh").onclick = function() {
         b3dh--;
         undo("b3dh");
     }
-}
+};
 document.getElementById("b3di").onclick = function() {
     if (b3di === 0) {
         b++;
@@ -1288,7 +1196,7 @@ document.getElementById("b3di").onclick = function() {
         b3di--;
         undo("b3di");
     }
-}
+};
 //3e//
 document.getElementById("b3eg").onclick = function() {
     if (b3eg === 0) {
@@ -1306,7 +1214,7 @@ document.getElementById("b3eg").onclick = function() {
         b3eg--;
         undo("b3eg");
     }
-}
+};
 document.getElementById("b3eh").onclick = function() {
     if (b3eh === 0) {
         b++;
@@ -1323,7 +1231,7 @@ document.getElementById("b3eh").onclick = function() {
         b3eh--;
         undo("b3eh");
     }
-}
+};
 document.getElementById("b3ei").onclick = function() {
     if (b3ei === 0) {
         b++;
@@ -1340,7 +1248,7 @@ document.getElementById("b3ei").onclick = function() {
         b3ei--;
         undo("b3ei");
     }
-}
+};
 //3f//
 document.getElementById("b3fg").onclick = function() {
     if (b3fg === 0) {
@@ -1358,7 +1266,7 @@ document.getElementById("b3fg").onclick = function() {
         b3fg--;
         undo("b3fg");
     }
-}
+};
 document.getElementById("b3fh").onclick = function() {
     if (b3fh === 0) {
         b++;
@@ -1375,7 +1283,7 @@ document.getElementById("b3fh").onclick = function() {
         b3fh--;
         undo("b3fh");
     }
-}
+};
 document.getElementById("b3fi").onclick = function() {
     if (b3fi === 0) {
         b++;
@@ -1392,7 +1300,7 @@ document.getElementById("b3fi").onclick = function() {
         b3fi--;
         undo("b3fi");
     }
-}
+};
 /*Blue megagroup*/
 //1d//
 document.getElementById("c1dg").onclick = function() {
@@ -1411,7 +1319,7 @@ document.getElementById("c1dg").onclick = function() {
         c1dg--;
         undo("c1dg");
     }
-}
+};
 document.getElementById("c1dh").onclick = function() {
     if (c1dh === 0) {
         c++;
@@ -1428,7 +1336,7 @@ document.getElementById("c1dh").onclick = function() {
         c1dh--;
         undo("c1dh");
     }
-}
+};
 document.getElementById("c1di").onclick = function() {
     if (c1di === 0) {
         c++;
@@ -1445,7 +1353,7 @@ document.getElementById("c1di").onclick = function() {
         c1di--;
         undo("c1di");
     }
-}
+};
 //1e//
 document.getElementById("c1eg").onclick = function() {
     if (c1eg === 0) {
@@ -1463,7 +1371,7 @@ document.getElementById("c1eg").onclick = function() {
         c1eg--;
         undo("c1eg");
     }
-}
+};
 document.getElementById("c1eh").onclick = function() {
     if (c1eh === 0) {
         c++;
@@ -1480,7 +1388,7 @@ document.getElementById("c1eh").onclick = function() {
         c1eh--;
         undo("c1eh");
     }
-}
+};
 document.getElementById("c1ei").onclick = function() {
     if (c1ei === 0) {
         c++;
@@ -1497,7 +1405,7 @@ document.getElementById("c1ei").onclick = function() {
         c1ei--;
         undo("c1ei");
     }
-}
+};
 //1f//
 document.getElementById("c1fg").onclick = function() {
     if (c1fg === 0) {
@@ -1515,7 +1423,7 @@ document.getElementById("c1fg").onclick = function() {
         c1fg--;
         undo("c1fg");
     }
-}
+};
 document.getElementById("c1fh").onclick = function() {
     if (c1fh === 0) {
         c++;
@@ -1532,7 +1440,7 @@ document.getElementById("c1fh").onclick = function() {
         c1fh--;
         undo("c1fh");
     }
-}
+};
 document.getElementById("c1fi").onclick = function() {
     if (c1fi === 0) {
         c++;
@@ -1549,7 +1457,7 @@ document.getElementById("c1fi").onclick = function() {
         c1fi--;
         undo("c1fi");
     }
-}
+};
 //2d//
 document.getElementById("c2dg").onclick = function() {
     if (c2dg === 0) {
@@ -1567,7 +1475,7 @@ document.getElementById("c2dg").onclick = function() {
         c2dg--;
         undo("c2dg");
     }
-}
+};
 document.getElementById("c2dh").onclick = function() {
     if (c2dh === 0) {
         c++;
@@ -1584,7 +1492,7 @@ document.getElementById("c2dh").onclick = function() {
         c2dh--;
         undo("c2dh");
     }
-}
+};
 document.getElementById("c2di").onclick = function() {
     if (c2di === 0) {
         c++;
@@ -1601,7 +1509,7 @@ document.getElementById("c2di").onclick = function() {
         c2di--;
         undo("c2di");
     }
-}
+};
 //2e//
 document.getElementById("c2eg").onclick = function() {
     if (c2eg === 0) {
@@ -1619,7 +1527,7 @@ document.getElementById("c2eg").onclick = function() {
         c2eg--;
         undo("c2eg");
     }
-}
+};
 document.getElementById("c2eh").onclick = function() {
     if (c2eh === 0) {
         c++;
@@ -1636,7 +1544,7 @@ document.getElementById("c2eh").onclick = function() {
         c2eh--;
         undo("c2eh");
     }
-}
+};
 document.getElementById("c2ei").onclick = function() {
     if (c2ei === 0) {
         c++;
@@ -1653,7 +1561,7 @@ document.getElementById("c2ei").onclick = function() {
         c2ei--;
         undo("c2ei");
     }
-}
+};
 //2f//
 document.getElementById("c2fg").onclick = function() {
     if (c2fg === 0) {
@@ -1671,7 +1579,7 @@ document.getElementById("c2fg").onclick = function() {
         c2fg--;
         undo("c2fg");
     }
-}
+};
 document.getElementById("c2fh").onclick = function() {
     if (c2fh === 0) {
         c++;
@@ -1688,7 +1596,7 @@ document.getElementById("c2fh").onclick = function() {
         c2fh--;
         undo("c2fh");
     }
-}
+};
 document.getElementById("c2fi").onclick = function() {
     if (c2fi === 0) {
         c++;
@@ -1705,7 +1613,7 @@ document.getElementById("c2fi").onclick = function() {
         c2fi--;
         undo("c2fi");
     }
-}
+};
 //3d//
 document.getElementById("c3dg").onclick = function() {
     if (c3dg === 0) {
@@ -1723,7 +1631,7 @@ document.getElementById("c3dg").onclick = function() {
         c3dg--;
         undo("c3dg");
     }
-}
+};
 document.getElementById("c3dh").onclick = function() {
     if (c3dh === 0) {
         c++;
@@ -1740,7 +1648,7 @@ document.getElementById("c3dh").onclick = function() {
         c3dh--;
         undo("c3dh");
     }
-}
+};
 document.getElementById("c3di").onclick = function() {
     if (c3di === 0) {
         c++;
@@ -1757,7 +1665,7 @@ document.getElementById("c3di").onclick = function() {
         c3di--;
         undo("c3di");
     }
-}
+};
 //3e//
 document.getElementById("c3eg").onclick = function() {
     if (c3eg === 0) {
@@ -1775,7 +1683,7 @@ document.getElementById("c3eg").onclick = function() {
         c3eg--;
         undo("c3eg");
     }
-}
+};
 document.getElementById("c3eh").onclick = function() {
     if (c3eh === 0) {
         c++;
@@ -1792,7 +1700,7 @@ document.getElementById("c3eh").onclick = function() {
         c3eh--;
         undo("c3eh");
     }
-}
+};
 document.getElementById("c3ei").onclick = function() {
     if (c3ei === 0) {
         c++;
@@ -1809,7 +1717,7 @@ document.getElementById("c3ei").onclick = function() {
         c3ei--;
         undo("c3ei");
     }
-}
+};
 //3f//
 document.getElementById("c3fg").onclick = function() {
     if (c3fg === 0) {
@@ -1827,7 +1735,7 @@ document.getElementById("c3fg").onclick = function() {
         c3fg--;
         undo("c3fg");
     }
-}
+};
 document.getElementById("c3fh").onclick = function() {
     if (c3fh === 0) {
         c++;
@@ -1844,7 +1752,7 @@ document.getElementById("c3fh").onclick = function() {
         c3fh--;
         undo("c3fh");
     }
-}
+};
 document.getElementById("c3fi").onclick = function() {
     if (c3fi === 0) {
         c++;
@@ -1861,4 +1769,4 @@ document.getElementById("c3fi").onclick = function() {
         c3fi--;
         undo("c3fi");
     }
-}
+};
