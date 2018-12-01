@@ -22,6 +22,7 @@ var z = 0;
 var on = [];
 
 var visi = [];
+var visc = [];
 var card = ["a1dg", "a1dh", "a1di",
             "a1eg", "a1eh", "a1ei",
             "a1fg", "a1fh", "a1fi",
@@ -117,8 +118,9 @@ function rand() {
   nam=0;
     while(nam<12){
       random();
-      if(r!=visi[0]&&r!=visi[1]&&r!=visi[2]&&r!=visi[3]&&r!=visi[4]&&r!=visi[5]&&r!=visi[6]&&r!=visi[7]&&r!=visi[8]&&r!=visi[9]&&r!=visi[10]&&r!=visi[11]&&r!=visi[12]&&r!=visi[13]&&r!=visi[14]&&r!=visi[15]&&r!=visi[16]&&r!=visi[17]){
+      if(r!=visi[0]&&r!=visi[1]&&r!=visi[2]&&r!=visi[3]&&r!=visi[4]&&r!=visi[5]&&r!=visi[6]&&r!=visi[7]&&r!=visi[8]&&r!=visi[9]&&r!=visi[10]&&r!=visi[11]&&r!=visi[12]&&r!=visi[13]&&r!=visi[14]){
         visi[nam]=r;
+        visc[nam]=card[r];
         open(card[r]);
         nam++;
       }
@@ -126,15 +128,15 @@ function rand() {
         random();
       }
     }
-    nam=0;
 }
 
 function repl() {
-  nam=12;
-    while(nam<15){
+  nam=0;
+    while(nam<3){
       random();
-      if(r!=visi[0]&&r!=visi[1]&&r!=visi[2]&&r!=visi[3]&&r!=visi[4]&&r!=visi[5]&&r!=visi[6]&&r!=visi[7]&&r!=visi[8]&&r!=visi[9]&&r!=visi[10]&&r!=visi[11]&&r!=visi[12]&&r!=visi[13]&&r!=visi[14]&&r!=visi[15]&&r!=visi[16]&&r!=visi[17]){
-        visi[nam]=r;
+      if(r!=visi[0]&&r!=visi[1]&&r!=visi[2]&&r!=visi[3]&&r!=visi[4]&&r!=visi[5]&&r!=visi[6]&&r!=visi[7]&&r!=visi[8]&&r!=visi[9]&&r!=visi[10]&&r!=visi[11]&&r!=visi[12]&&r!=visi[13]&&r!=visi[14]){
+        visi[visc.indexOf(on[nam])]=r;
+        visc[visc.indexOf(on[nam])]=card[r];
         open(card[r]);
         nam++;
       }
@@ -142,14 +144,13 @@ function repl() {
         random();
       }
     }
-    nam=0;
 }
 
 function radd() {
-  nam=15;
-    while(nam<18){
+  nam=12;
+    while(nam<15){
       random();
-      if(r!=visi[0]&&r!=visi[1]&&r!=visi[2]&&r!=visi[3]&&r!=visi[4]&&r!=visi[5]&&r!=visi[6]&&r!=visi[7]&&r!=visi[8]&&r!=visi[9]&&r!=visi[10]&&r!=visi[11]&&r!=visi[12]&&r!=visi[13]&&r!=visi[14]&&r!=visi[15]&&r!=visi[16]&&r!=visi[17]){
+      if(r!=visi[0]&&r!=visi[1]&&r!=visi[2]&&r!=visi[3]&&r!=visi[4]&&r!=visi[5]&&r!=visi[6]&&r!=visi[7]&&r!=visi[8]&&r!=visi[9]&&r!=visi[10]&&r!=visi[11]&&r!=visi[12]&&r!=visi[13]&&r!=visi[14]){
         visi[nam]=r;
         open(card[r]);
         nam++;
@@ -158,7 +159,6 @@ function radd() {
         random();
       }
     }
-    nam=0;
 }
 
 function score(varr) {

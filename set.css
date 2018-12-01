@@ -9,7 +9,7 @@
 #XYZt {
     top:0;
     right:0;
-    fill:#e8e8e8;
+    fill:#ddd;
     cursor:pointer;
 }
 .x{
@@ -51,7 +51,7 @@
 }
 #faq {
     bottom:15px;
-    background-color:#e8e8e8;
+    background-color:#ddd;
     padding:10px 8px 8px 10px;
     fill:#444;
 }
