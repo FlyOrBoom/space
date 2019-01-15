@@ -1,0 +1,31 @@
+html,body{
+  margin:0;
+  width:100%;
+  height:100%;
+  background:#000;
+}
+.sky{
+  position:fixed;
+  width:100%;
+  height:100%;
+}
+#sky0{
+  background:linear-gradient(#008,#00a);
+}
+#sky1{
+  background:linear-gradient(#8ad,#adf);
+}
+#sky2{
+  background:linear-gradient(#8ad,#adf);
+}
+#rocket{
+  margin-left:50%;
+  transform:translate(-37.5px,50px);
+}
+.capsule{
+  position:absolute;
+}
+.booster{
+  position:absolute;
+  top:35px;
+}
