@@ -29,13 +29,22 @@ function draw() {
     }
   }else{
     f[s] = 0;
-    v = v-g*8/125;
+    t[s] = 0;
+    if(y<0){
+      v=0;
+    }else{
+      v = v-(g*8/125);
+    }
   }
   
   
 //screen
+
   screenHeight = window.innerHeight;
-//altitude
+
+//ground
+  document.getElementById('pad').style = 'transform:translate(0,'+y+'px)';
+  
   
 //opa
   opa = ((100000-y)/100000);
@@ -126,6 +135,7 @@ function draw() {
   }else{
     y = y + v;
   }
+
 //overlay
   document.getElementById('tContainer').style.left = 0.02*screenHeight+'px';
   document.getElementById('tContainer').style.width = 0.02*screenHeight+'px';
