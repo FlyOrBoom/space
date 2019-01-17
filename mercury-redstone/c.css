@@ -55,3 +55,21 @@ html,body{
 #tBar:hover{
   background-color:rgba(255,255,255,0.8);
 }
+#yContainer{
+  color:#fff;
+  position:absolute;
+  left:10px;
+  top:10px;
+}
+#vContainer{
+  color:#fff;
+  position:absolute;
+  left:10px;
+  top:30px;
+}
+#fContainer{
+  color:#fff;
+  position:absolute;
+  left:10px;
+  top:50px;
+}
