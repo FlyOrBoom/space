@@ -48,12 +48,12 @@ html,body{
 #tBar{
   position:fixed;
   bottom:3%;
-  background-color:rgba(255,255,255,0.4);
+  background-color:rgba(255,255,255,0.6);
   border-radius:100px;
   transition:0.3s;
 }
 #tBar:hover{
-  background-color:rgba(255,255,255,0.8);
+  background-color:rgba(255,255,255,0.9);
 }
 #yContainer{
   color:#fff;
