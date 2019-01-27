@@ -6,7 +6,7 @@ var quart = 0; //quarter of thing
 var screenHeight = window.innerHeight;
 var tick = 0; //counter
 
-var t = [350000,1000]; //thrust of [stage]
+var t = [370000,1000]; //thrust of [stage]
 var f = [23800,800]; //fuel of [stage]
 var m = [(f[0]+5500),(f[1]+1000)]; //mass of [stage]
 
@@ -18,6 +18,8 @@ var v = 0; //velocity
 
 var s = 0; //stage
 
+var met = 0;
+
 function draw() {
   
   if(f[s]>0){
@@ -25,7 +27,7 @@ function draw() {
     if(y<0){
       v=0;
     }else{
-      v = v + (((throttle*t[s])/mTotal) - g)*0.064;
+      v = v + (((throttle*t[s])/mTotal) - g)*0.004096;
     }
   }else{
     f[s] = 0;
@@ -33,7 +35,7 @@ function draw() {
     if(y<0){
       v=0;
     }else{
-      v = v-(g*8/125);
+      v = v-(g*0.004096);
     }
   }
   
@@ -43,7 +45,9 @@ function draw() {
   screenHeight = window.innerHeight;
 
 //ground
-  document.getElementById('pad').style = 'transform:translate(0,'+y+'px)';
+  if(y>=0){
+    document.getElementById('pad').style = 'transform:translate(0,'+y+'px)';
+  }
   
   
 //opa
@@ -154,10 +158,12 @@ function draw() {
     document.getElementById('vContainer').innerHTML = 'velocity: 0 m/s';
   }
   document.getElementById('fContainer').innerHTML = 'fuel: '+Math.round(f[s]/238)+'%';
+  met=met+0.064;
+  document.getElementById('metContainer').innerHTML = 'mission elapsed time: '+Math.round(met)+'s';
 }
 
 function aoeu(){
-  alert(y+','+v);
+  alert(mouseDown);
 }
 window.setInterval(draw, 64);
 // window.setInterval(aoeu, 3000);

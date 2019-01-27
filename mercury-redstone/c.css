@@ -61,23 +61,22 @@ html,body{
   transition:0.3s;
 }
 #tBar:hover{
-  background-color:rgba(255,255,255,0.9);
+  background-color:rgba(255,255,255,1);
 }
-#yContainer{
+.overlayText{
   color:#fff;
   position:absolute;
   left:10px;
+}
+#yContainer{
   top:10px;
 }
 #vContainer{
-  color:#fff;
-  position:absolute;
-  left:10px;
   top:30px;
 }
 #fContainer{
-  color:#fff;
-  position:absolute;
-  left:10px;
   top:50px;
+}
+#metContainer{
+  top:70px;
 }
