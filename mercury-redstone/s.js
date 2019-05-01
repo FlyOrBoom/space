@@ -10,11 +10,18 @@ var t = [370000,1000]; //thrust of [stage]
 var f = [23800,800]; //fuel of [stage]
 var m = [(f[0]+5500),(f[1]+1000)]; //mass of [stage]
 
+var angle = 0;
+
 var mTotal = m[0]+m[1]; //total mass
+
+var cd = 0.47;
+var rho = 1.22;
 
 var g = 9.8; //gravity
 
-var v = 0; //velocity
+var v = 0;
+var vx = 0;
+var vy = 0;
 
 var s = 0; //stage
 
@@ -24,18 +31,21 @@ function draw() {
   
   if(f[s]>0){
     f[s] = f[s]-(throttle*10.88);
+    m = [(f[0]+5500),(f[1]+1000)];
+    mTotal = m[0]+m[1];
     if(y<0){
-      v=0;
+      vy = 0;
     }else{
-      v = v + (((throttle*t[s])/mTotal) - g)*0.004096;
+      vx = vx + (((throttle*t[s])/mTotal) - g)*0.06;
+      vy = vy + (((throttle*t[s])/mTotal) - g)*0.06;
     }
   }else{
     f[s] = 0;
     t[s] = 0;
     if(y<0){
-      v=0;
+      vy=0;
     }else{
-      v = v-(g*0.004096);
+      vy = vy-(g*0.06);
     }
   }
   
@@ -137,7 +147,7 @@ function draw() {
   if(y<0){
     y = 0;
   }else{
-    y = y + v;
+    y = y + 0.2*vy;
   }
 
 //overlay
@@ -148,12 +158,12 @@ function draw() {
   document.getElementById('tBar').style.width = 0.04*screenHeight+'px';
   document.getElementById('tBar').style.height = 0.04*screenHeight+throttle*0.2275*screenHeight+'px';
   if(y>0){
-    document.getElementById('yContainer').innerHTML = 'altitude: '+Math.round(y)+' m';
+    document.getElementById('yContainer').innerHTML = 'altitude: '+Math.round(0.2*y)+' m';
   }else{
     document.getElementById('yContainer').innerHTML = 'altitude: 0 m';
   }
-  if(v>0||v<-1){
-    document.getElementById('vContainer').innerHTML = 'velocity: '+Math.round(v*125/8)+' m/s';
+  if(vy>0||vy<-1){
+    document.getElementById('vContainer').innerHTML = 'velocity: '+Math.round(vy)+' m/s';
   }else{
     document.getElementById('vContainer').innerHTML = 'velocity: 0 m/s';
   }
@@ -165,5 +175,5 @@ function draw() {
 function aoeu(){
   alert(mouseDown);
 }
-window.setInterval(draw, 64);
+window.setInterval(draw,50/3);
 // window.setInterval(aoeu, 3000);
