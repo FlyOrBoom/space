@@ -1,4 +1,4 @@
-var fr = 0.03; //framerate
+var frameRate = 0.03; //frameRateamerate
 
 var x = 0; //extranneous
 var y = 0; //height
@@ -34,14 +34,14 @@ var met = 0;
 function draw() {
   
   if(f[s]>0){
-    f[s] = f[s]-(throttle*110*fr);
+    f[s] = f[s]-(throttle*110*frameRate);
     m = [(f[0]+5500),(f[1]+1000)];
     mTotal = m[0]+m[1];
     if(y<0){
       vy = 0;
     }else{
-      vx = vx + (((throttle*t[s])/mTotal) - g)*fr;
-      vy = vy + (((throttle*t[s])/mTotal) - g)*fr;
+      vx = vx + Math.sin(r)*(((throttle*t[s])/mTotal) - g)*frameRate;
+      vy = vy + Math.cos(r)*(((throttle*t[s])/mTotal) - g)*frameRate;
     }
   }else{
     f[s] = 0;
@@ -49,7 +49,7 @@ function draw() {
     if(y<0){
       vy=0;
     }else{
-      vy = vy-(g*fr);
+      vy = vy-(g*frameRate);
     }
   }
   
@@ -57,7 +57,7 @@ function draw() {
   if(y<0){
     y = 0;
   }else{
-    y = y + vy*fr;
+    y = y + vy*frameRate;
   }
   
 //screen
@@ -160,22 +160,22 @@ function draw() {
     function(e){
       if(tock===0){
         if(e.key=='ArrowLeft'){
-          r=r+0.2;
+          r=r+0.01;
           tock++;
         }else if(e.key=='ArrowRight'){
-          r=r-0.2;
+          r=r-0.01;
           tock++;
         }
       }
     }, false
   );
-  document.getElementById('rocket').style='transform:translate(-37.5px,'+(screenHeight-605)+'px) rotate('+r+'deg)';
+  document.getElementById('rocket').style='transform:translate(-37.5px,'+(screenHeight-605)+'px) rotate('+r+'rad)';
   
 //overlay
   document.getElementById('tContainer').style.left = 0.02*screenHeight+'px';
   document.getElementById('tContainer').style.width = 0.02*screenHeight+'px';
   document.getElementById('tContainer').style.padding = 0.02*screenHeight+'px';
-  document.getElementById('tBar').style.left = fr*screenHeight+'px';
+  document.getElementById('tBar').style.left = frameRate*screenHeight+'px';
   document.getElementById('tBar').style.width = 0.04*screenHeight+'px';
   document.getElementById('tBar').style.height = 0.04*screenHeight+throttle*0.2275*screenHeight+'px';
   if(y>0){
@@ -189,7 +189,7 @@ function draw() {
     document.getElementById('vContainer').innerHTML = 'velocity: 0 m/s';
   }
   document.getElementById('fContainer').innerHTML = 'fuel: '+Math.round(f[s]/238)+'%';
-  met=met+fr;
+  met=met+frameRate;
   document.getElementById('metContainer').innerHTML = 'mission elapsed time: '+Math.round(met)+'s';
 }
 
