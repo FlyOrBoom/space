@@ -2,7 +2,7 @@ var frameRate = 0.03; //frameRateamerate
 
 var x = 0; //extranneous
 var y = 0; //height
-var r = 0; //rotate
+var rotation = 0; //rotate
 var throttle = 0; //self-explanatory
 var opa = ((100000-y)/100000); //opacity
 var quart = 0; //quarter of thing
@@ -31,6 +31,8 @@ var s = 0; //stage
 
 var met = 0;
 
+var start = false;
+
 function draw() {
   
   if(f[s]>0){
@@ -40,8 +42,8 @@ function draw() {
     if(y<0){
       vy = 0;
     }else{
-      vx = vx + Math.sin(r)*(((throttle*t[s])/mTotal) - g)*frameRate;
-      vy = vy + Math.cos(r)*(((throttle*t[s])/mTotal) - g)*frameRate;
+      vx = vx + Math.sin(rotation)*((throttle*t[s])/mTotal)*frameRate;
+      vy = vy + (Math.cos(rotation)*((throttle*t[s])/mTotal)-g)*frameRate;
     }
   }else{
     f[s] = 0;
@@ -154,22 +156,17 @@ function draw() {
   document.getElementById('boosterFlame0').style.opacity=throttle;
   
 //rotate
-  tock=0;
   document.addEventListener(
     'keydown',
     function(e){
-      if(tock===0){
-        if(e.key=='ArrowLeft'){
-          r=r+0.01;
-          tock++;
-        }else if(e.key=='ArrowRight'){
-          r=r-0.01;
-          tock++;
-        }
+      if(e.key=='ArrowLeft'){
+        rotation-=throttle*0.0001+0.00005;
+      }else if(e.key=='ArrowRight'){
+        rotation+=throttle*0.0001-0.00005;
       }
     }, false
   );
-  document.getElementById('rocket').style='transform:translate(-37.5px,'+(screenHeight-605)+'px) rotate('+r+'rad)';
+  document.getElementById('rocket').style='transform:translate(-37.5px,'+(screenHeight-605)+'px) rotate('+rotation+'rad)';
   
 //overlay
   document.getElementById('tContainer').style.left = 0.02*screenHeight+'px';
@@ -189,7 +186,14 @@ function draw() {
     document.getElementById('vContainer').innerHTML = 'velocity: 0 m/s';
   }
   document.getElementById('fContainer').innerHTML = 'fuel: '+Math.round(f[s]/238)+'%';
-  met=met+frameRate;
+  
+  if(throttle>0){
+    start = true;
+  }
+  if(start===true){
+    met=met+frameRate;
+  }
+  
   document.getElementById('metContainer').innerHTML = 'mission elapsed time: '+Math.round(met)+'s';
 }
 
