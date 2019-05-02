@@ -36,7 +36,7 @@ var start = false;
 function draw() {
   
   if(f[s]>0){
-    f[s] = f[s]-(throttle*110*frameRate);
+    f[s] = f[s]-(throttle*160*frameRate);
     m = [(f[0]+5500),(f[1]+1000)];
     mTotal = m[0]+m[1];
     if(y<0){
@@ -187,9 +187,9 @@ document.addEventListener(
   'keydown',
   function(e){
     if(e.key=='ArrowLeft'){
-      rotation-=throttle*0.001+0.0005;
+      rotation-=throttle*0.005+0.001;
     }else if(e.key=='ArrowRight'){
-      rotation+=throttle*0.001+0.0005;
+      rotation+=throttle*0.005+0.001;
     }
   }, false
 );
