@@ -20,14 +20,14 @@ html,body{
   background:linear-gradient(#8ad,#adf);
 }
 #rocket{
+  width:75px;
   margin-left:50%;
-  transform:translate(-37.5px,50px);
 }
 #pad{
   position:absolute;
-  top:455px;
+  bottom:0;
   width:100%;
-  height:100%;
+  height:200px;
   background-color:#678;
 }
 .capsule{

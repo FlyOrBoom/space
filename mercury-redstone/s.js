@@ -1,12 +1,16 @@
+var fr = 0.03; //framerate
+
 var x = 0; //extranneous
 var y = 0; //height
+var r = 0; //rotate
 var throttle = 0; //self-explanatory
 var opa = ((100000-y)/100000); //opacity
 var quart = 0; //quarter of thing
 var screenHeight = window.innerHeight;
 var tick = 0; //counter
+var tock = 0;
 
-var t = [370000,1000]; //thrust of [stage]
+var t = [350000,1000]; //thrust of [stage]
 var f = [23800,800]; //fuel of [stage]
 var m = [(f[0]+5500),(f[1]+1000)]; //mass of [stage]
 
@@ -30,14 +34,14 @@ var met = 0;
 function draw() {
   
   if(f[s]>0){
-    f[s] = f[s]-(throttle*10.88);
+    f[s] = f[s]-(throttle*110*fr);
     m = [(f[0]+5500),(f[1]+1000)];
     mTotal = m[0]+m[1];
     if(y<0){
       vy = 0;
     }else{
-      vx = vx + (((throttle*t[s])/mTotal) - g)*0.06;
-      vy = vy + (((throttle*t[s])/mTotal) - g)*0.06;
+      vx = vx + (((throttle*t[s])/mTotal) - g)*fr;
+      vy = vy + (((throttle*t[s])/mTotal) - g)*fr;
     }
   }else{
     f[s] = 0;
@@ -45,10 +49,16 @@ function draw() {
     if(y<0){
       vy=0;
     }else{
-      vy = vy-(g*0.06);
+      vy = vy-(g*fr);
     }
   }
   
+//altitude
+  if(y<0){
+    y = 0;
+  }else{
+    y = y + vy*fr;
+  }
   
 //screen
 
@@ -56,7 +66,7 @@ function draw() {
 
 //ground
   if(y>=0){
-    document.getElementById('pad').style = 'transform:translate(0,'+y+'px)';
+    document.getElementById('pad').style = 'transform:translate(0,'+5*y+'px)';
   }
   
   
@@ -119,11 +129,11 @@ function draw() {
     "keydown",
     function(e){
       if(tick===0){
-        if(e.key==='ArrowUp' && throttle<1){
+        if(e.key=='ArrowUp' && throttle<1){
           throttle=throttle+0.1;
           tick++;
         }
-        if(e.key==='ArrowDown' && throttle>0){
+        if(e.key=='ArrowDown' && throttle>0){
           throttle=throttle-0.1;
           tick++;
         }
@@ -143,22 +153,33 @@ function draw() {
   }
   document.getElementById('boosterFlame0').style.opacity=throttle;
   
-//altitude
-  if(y<0){
-    y = 0;
-  }else{
-    y = y + 0.2*vy;
-  }
-
+//rotate
+  tock=0;
+  document.addEventListener(
+    'keydown',
+    function(e){
+      if(tock===0){
+        if(e.key=='ArrowLeft'){
+          r=r+0.2;
+          tock++;
+        }else if(e.key=='ArrowRight'){
+          r=r-0.2;
+          tock++;
+        }
+      }
+    }, false
+  );
+  document.getElementById('rocket').style='transform:translate(-37.5px,'+(screenHeight-605)+'px) rotate('+r+'deg)';
+  
 //overlay
   document.getElementById('tContainer').style.left = 0.02*screenHeight+'px';
   document.getElementById('tContainer').style.width = 0.02*screenHeight+'px';
   document.getElementById('tContainer').style.padding = 0.02*screenHeight+'px';
-  document.getElementById('tBar').style.left = 0.03*screenHeight+'px';
+  document.getElementById('tBar').style.left = fr*screenHeight+'px';
   document.getElementById('tBar').style.width = 0.04*screenHeight+'px';
   document.getElementById('tBar').style.height = 0.04*screenHeight+throttle*0.2275*screenHeight+'px';
   if(y>0){
-    document.getElementById('yContainer').innerHTML = 'altitude: '+Math.round(0.2*y)+' m';
+    document.getElementById('yContainer').innerHTML = 'altitude: '+Math.round(y)+' m';
   }else{
     document.getElementById('yContainer').innerHTML = 'altitude: 0 m';
   }
@@ -168,12 +189,12 @@ function draw() {
     document.getElementById('vContainer').innerHTML = 'velocity: 0 m/s';
   }
   document.getElementById('fContainer').innerHTML = 'fuel: '+Math.round(f[s]/238)+'%';
-  met=met+0.064;
+  met=met+fr;
   document.getElementById('metContainer').innerHTML = 'mission elapsed time: '+Math.round(met)+'s';
 }
 
 function aoeu(){
   alert(mouseDown);
 }
-window.setInterval(draw,50/3);
+window.setInterval(draw,100/3);
 // window.setInterval(aoeu, 3000);
