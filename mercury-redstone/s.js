@@ -162,7 +162,7 @@ function draw() {
       if(e.key=='ArrowLeft'){
         rotation-=throttle*0.0001+0.00005;
       }else if(e.key=='ArrowRight'){
-        rotation+=throttle*0.0001-0.00005;
+        rotation+=throttle*0.0001+0.00005;
       }
     }, false
   );
