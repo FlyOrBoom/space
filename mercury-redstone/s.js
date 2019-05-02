@@ -126,22 +126,6 @@ function draw() {
   }
 
 //throttle
-  tick=0;
-  document.addEventListener(
-    "keydown",
-    function(e){
-      if(tick===0){
-        if(e.key=='ArrowUp' && throttle<1){
-          throttle=throttle+0.1;
-          tick++;
-        }
-        if(e.key=='ArrowDown' && throttle>0){
-          throttle=throttle-0.1;
-          tick++;
-        }
-      }
-    }, false
-  );
   if(throttle>1){
     throttle=1;
   }
@@ -156,16 +140,6 @@ function draw() {
   document.getElementById('boosterFlame0').style.opacity=throttle;
   
 //rotate
-  document.addEventListener(
-    'keydown',
-    function(e){
-      if(e.key=='ArrowLeft'){
-        rotation-=throttle*0.0001+0.00005;
-      }else if(e.key=='ArrowRight'){
-        rotation+=throttle*0.0001+0.00005;
-      }
-    }, false
-  );
   document.getElementById('rocket').style='transform:translate(-37.5px,'+(screenHeight-605)+'px) rotate('+rotation+'rad)';
   
 //overlay
@@ -196,6 +170,29 @@ function draw() {
   
   document.getElementById('metContainer').innerHTML = 'mission elapsed time: '+Math.round(met)+'s';
 }
+
+document.addEventListener(
+  'keydown',
+  function(e){
+    if(e.key=='ArrowUp' && throttle<1){
+      throttle+=0.1;
+    }
+    if(e.key=='ArrowDown' && throttle>0){
+      throttle-=0.1;
+    }
+  }, false
+);
+
+document.addEventListener(
+  'keydown',
+  function(e){
+    if(e.key=='ArrowLeft'){
+      rotation-=throttle*0.001+0.0005;
+    }else if(e.key=='ArrowRight'){
+      rotation+=throttle*0.001+0.0005;
+    }
+  }, false
+);
 
 function aoeu(){
   alert(mouseDown);
