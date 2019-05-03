@@ -56,8 +56,13 @@ function draw() {
   }
   
 //altitude
-  if(y<0){
+  if(y<0&&vy>-10){
     y = 0;
+  }else if(y<=(-0.5*vy)&&vy<=-5){
+      document.getElementById('dead').style.display='block';
+      y = 0;
+      vy = 0;
+      frameRate = 0;
   }else{
     y = y + vy*frameRate;
   }
@@ -140,7 +145,7 @@ function draw() {
   document.getElementById('boosterFlame0').style.opacity=throttle;
   
 //rotate
-  document.getElementById('rocket').style='transform:translate(-37.5px,'+(screenHeight-605)+'px) rotate('+rotation+'rad)';
+  document.getElementById('rocket').style='transform:translate('+(-37.5+200*Math.cos(rotation+1.5*Math.PI))+'px,'+(screenHeight-404+200*Math.sin(rotation+1.5*Math.PI))+'px) rotate('+rotation+'rad)';
   
 //overlay
   document.getElementById('tContainer').style.left = 0.02*screenHeight+'px';
@@ -159,7 +164,7 @@ function draw() {
   }else{
     document.getElementById('vContainer').innerHTML = 'velocity: 0 m/s';
   }
-  document.getElementById('fContainer').innerHTML = 'fuel: '+Math.round(f[s]/238)+'%';
+  document.getElementById('fContainer').innerHTML = 'fuel: '+Math.ceil(f[s]/238)+'%';
   
   if(throttle>0){
     start = true;
@@ -168,8 +173,11 @@ function draw() {
     met=met+frameRate;
   }
   
+  
   document.getElementById('metContainer').innerHTML = 'mission elapsed time: '+Math.round(met)+'s';
 }
+
+document.getElementById('dead').style.display='none';
 
 document.addEventListener(
   'keydown',
@@ -187,15 +195,14 @@ document.addEventListener(
   'keydown',
   function(e){
     if(e.key=='ArrowLeft'){
-      rotation-=throttle*0.005+0.001;
+      rotation-=throttle*0.0025+0.001*((100000-y)/100000);
+      rotation-=throttle*0.0025+0.001*((100000-y)/100000);
     }else if(e.key=='ArrowRight'){
-      rotation+=throttle*0.005+0.001;
+      rotation+=throttle*0.0025+0.001*((100000-y)/100000);
+      rotation+=throttle*0.0025+0.001*((100000-y)/100000);
     }
   }, false
 );
 
-function aoeu(){
-  alert(mouseDown);
-}
 window.setInterval(draw,100/3);
 // window.setInterval(aoeu, 3000);

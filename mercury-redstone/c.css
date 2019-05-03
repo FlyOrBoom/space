@@ -80,3 +80,16 @@ html,body{
 #metContainer{
   top:70px;
 }
+#dead{
+  position:fixed;
+  background-color:#f00;
+  opacity:0.5;
+  color:#fff;
+  font-family:Sans,Sans;
+  width:100%;
+  height:100%;
+}
+#deadtext{
+  margin-top:50%;
+  margin-left:50%;
+}
