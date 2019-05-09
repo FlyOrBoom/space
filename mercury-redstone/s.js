@@ -7,6 +7,7 @@ var throttle = 0; //self-explanatory
 var opa = ((100000-y)/100000); //opacity
 var quart = 0; //quarter of thing
 var screenHeight = window.innerHeight;
+var screenWidth = window.innerWidth;
 var tick = 0; //counter
 var tock = 0;
 
@@ -145,9 +146,10 @@ function draw() {
   document.getElementById('boosterFlame0').style.opacity=throttle;
   
 //rotate
-  document.getElementById('rocket').style='transform:translate('+(-37.5+200*Math.cos(rotation+1.5*Math.PI))+'px,'+(screenHeight-404+200*Math.sin(rotation+1.5*Math.PI))+'px) rotate('+rotation+'rad)';
+  document.getElementById('rocket').style='transform:translate('+(-37.5+200*Math.cos(rotation+1.5*Math.PI))+'px,'+(screenHeight-354+200*Math.sin(rotation+1.5*Math.PI))+'px) rotate('+rotation+'rad)';
   
 //overlay
+  document.getElementById('aBar').style.height = Math.sqrt(y/100000)*screenHeight+0.009*screenWidth+'px';
   document.getElementById('tContainer').style.left = 0.02*screenHeight+'px';
   document.getElementById('tContainer').style.width = 0.02*screenHeight+'px';
   document.getElementById('tContainer').style.padding = 0.02*screenHeight+'px';
