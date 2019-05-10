@@ -141,6 +141,12 @@ html,body{
   height:100%;
   animation:loading 3s ease-in-out;
 }
+#lCapsule{
+  transform:translate(-20%,0);
+}
+#lLogo{
+  transform:translate(10px,0);
+}
 @keyframes fade{
   0% {opacity:1;left:0}
   75% {opacity:1;left:0}
