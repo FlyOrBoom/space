@@ -1,6 +1,6 @@
 var frameRate = 0.03; //frameRateamerate
 
-var x = 0; //extranneous
+var x = 0;
 var y = 0; //height
 var rotation = 0; //rotate
 var throttle = 0; //self-explanatory
@@ -19,7 +19,7 @@ var angle = 0;
 
 var mTotal = m[0]+m[1]; //total mass
 
-var cd = 0.47;
+var cd = 1.5;
 var rho = 1.22;
 
 var g = 9.8; //gravity
@@ -31,6 +31,9 @@ var vy = 0;
 var s = 0; //stage
 
 var met = 0;
+var min;
+var sec;
+var finalTime = 0;
 
 var start = false;
 
@@ -56,7 +59,7 @@ function draw() {
     }
   }
   
-//altitude
+//position
   if(y<0&&vy>-10){
     y = 0;
   }else if(y<=(-0.5*vy)&&vy<=-5){
@@ -67,10 +70,17 @@ function draw() {
   }else{
     y = y + vy*frameRate;
   }
+  x = x+vx*frameRate;
+  if(x<-250){
+    x=700;
+  }else if(x>700){
+    x=-250;
+  }
   
 //screen
 
   screenHeight = window.innerHeight;
+  screenWidth = window.innerWidth;
 
 //ground
   if(y>=0){
@@ -149,17 +159,20 @@ function draw() {
   document.getElementById('rocket').style='transform:translate('+(-37.5+200*Math.cos(rotation+1.5*Math.PI))+'px,'+(screenHeight-354+200*Math.sin(rotation+1.5*Math.PI))+'px) rotate('+rotation+'rad)';
   
 //overlay
-  document.getElementById('aBar').style.height = Math.sqrt(y/100000)*screenHeight+0.009*screenWidth+'px';
-  document.getElementById('tContainer').style.left = 0.02*screenHeight+'px';
+  document.getElementById('aDot').style.bottom = (Math.sqrt(y/100000)-0.01)*screenHeight+'px';
+  document.getElementById('aDot').style.left = ((x/10000)+0.02)*screenWidth+'px';
+  document.getElementById('tContainer').style.right = 0.02*screenHeight+'px';
   document.getElementById('tContainer').style.width = 0.02*screenHeight+'px';
   document.getElementById('tContainer').style.padding = 0.02*screenHeight+'px';
-  document.getElementById('tBar').style.left = frameRate*screenHeight+'px';
+  document.getElementById('tBar').style.right = frameRate*screenHeight+'px';
   document.getElementById('tBar').style.width = 0.04*screenHeight+'px';
   document.getElementById('tBar').style.height = 0.04*screenHeight+throttle*0.2275*screenHeight+'px';
-  if(y>0){
-    document.getElementById('yContainer').innerHTML = 'altitude: '+Math.round(y)+' m';
+  if(y>999.5){
+    document.getElementById('yContainer').innerHTML = Number.parseFloat(y/1000).toPrecision(2)+'&MediumSpace;km';
+  }else if(y>0){
+    document.getElementById('yContainer').innerHTML = Math.round(y)+'&MediumSpace;m';
   }else{
-    document.getElementById('yContainer').innerHTML = 'altitude: 0 m';
+    document.getElementById('yContainer').innerHTML = '0&MediumSpace;m';
   }
   if(vy>0||vy<-1){
     document.getElementById('vContainer').innerHTML = 'velocity: '+Math.round(vy)+' m/s';
@@ -168,6 +181,14 @@ function draw() {
   }
   document.getElementById('fContainer').innerHTML = 'fuel: '+Math.ceil(f[s]/238)+'%';
   
+  if(Math.sqrt(y/100000)<(14/screenHeight)){
+    document.getElementById('yContainer').style.bottom = '0';
+  }else if(y<99000){
+    document.getElementById('yContainer').style.bottom = Math.sqrt(y/100000)*screenHeight-14+'px';
+  }else{
+    document.getElementById('yContainer').style.top = '0';
+  }
+  
   if(throttle>0){
     start = true;
   }
@@ -175,8 +196,16 @@ function draw() {
     met=met+frameRate;
   }
   
+  min = Math.floor(Math.floor(met)/60);
+  sec = Math.floor(met)-min*60;
   
-  document.getElementById('metContainer').innerHTML = 'mission elapsed time: '+Math.round(met)+'s';
+  function str_pad_left(string,pad,length) {
+    return (new Array(length+1).join(pad)+string).slice(-length);
+  }
+  
+  finalTime = str_pad_left(min,'0',2)+':'+str_pad_left(sec,'0',2);
+  
+  document.getElementById('metContainer').innerHTML = finalTime;
 }
 
 document.getElementById('dead').style.display='none';
