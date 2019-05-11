@@ -167,7 +167,9 @@ function draw() {
   document.getElementById('tBar').style.right = frameRate*screenHeight+'px';
   document.getElementById('tBar').style.width = 0.04*screenHeight+'px';
   document.getElementById('tBar').style.height = 0.04*screenHeight+throttle*0.2275*screenHeight+'px';
-  if(y>999.5){
+  if(y>999500){
+    document.getElementById('yContainer').innerHTML = Number.parseFloat(y/1000).toPrecision(3)+'&MediumSpace;km';
+  }else if(y>999.5){
     document.getElementById('yContainer').innerHTML = Number.parseFloat(y/1000).toPrecision(2)+'&MediumSpace;km';
   }else if(y>0){
     document.getElementById('yContainer').innerHTML = Math.round(y)+'&MediumSpace;m';
