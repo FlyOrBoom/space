@@ -71,6 +71,11 @@ function draw() {
     y = y + vy*frameRate;
   }
   x = x+vx*frameRate;
+  if(x<-250){
+    x=700;
+  }else if(x>700){
+    x=-250;
+  }
   
 //screen
 
@@ -155,7 +160,7 @@ function draw() {
   
 //overlay
   document.getElementById('aDot').style.bottom = Math.sqrt(y/100000)*screenHeight+'px';
-  document.getElementById('aDot').style.left = ((x/10000)+0.01)*screenWidth+'px';
+  document.getElementById('aDot').style.left = ((x/10000)+0.020)*screenWidth+'px';
   document.getElementById('tContainer').style.left = 0.02*screenHeight+'px';
   document.getElementById('tContainer').style.width = 0.02*screenHeight+'px';
   document.getElementById('tContainer').style.padding = 0.02*screenHeight+'px';

@@ -66,17 +66,8 @@ html,body{
 .overlayText{
   color:#fff;
   position:absolute;
-  font-family:Monospace,Monospace;
+  font-family:RobotoMonoMed,Monospace;
   font-size:20pt;
-}
-#yContainer{
-  top:10px;
-}
-#vContainer{
-  top:30px;
-}
-#fContainer{
-  top:50px;
 }
 #aContainer{
   position:absolute;
@@ -84,8 +75,9 @@ html,body{
   height:100%;
   left:0;
   top:0;
-  background-color:#000;
-  opacity:0.1;
+  background-color:#080808;
+  opacity:0.2;
+  transition:0.3s ease;
 }
 #aDot{
   position:absolute;
@@ -94,8 +86,24 @@ html,body{
   left:4.25%;
 }
 #aContainer:hover{
-  opacity:0.2;
+  opacity:0.3;
 }
+.tick{
+  position:absolute;
+  width:100%;
+  height:5px;
+  background-color:#fff;
+  opacity:0.5;
+}
+#tick1{bottom:31.62%;}
+#tick2{bottom:44.72%;}
+#tick3{bottom:54.77%;}
+#tick4{bottom:63.25%;}
+#tick5{bottom:70.71%;}
+#tick6{bottom:77.46%;}
+#tick7{bottom:83.67%;}
+#tick8{bottom:89.44%;}
+#tick9{bottom:94.87%;}
 #overlay{
   position:absolute;
   padding:10%;
@@ -103,12 +111,25 @@ html,body{
   right:0;
   bottom:-3%;
   background-color:rgba(0,0,0,0.1);
+  transition:0.3s ease;
 }
 #overlay:hover{
   background-color:rgba(0,0,0,0.2);
 }
 #metContainer{
-  margin:-30%;
+  margin:-40%;
+}
+#yContainer{
+  margin:-40%;
+  transform:translate(0,30pt);
+}
+#vContainer{
+  margin:-40%;
+  transform:translate(0,60pt);
+}
+#fContainer{
+  margin:-40%;
+  transform:translate(0,90pt);
 }
 #dead{
   position:fixed;
@@ -153,6 +174,14 @@ html,body{
 }
 #lLogo{
   transform:translate(10px,0);
+}
+@font-face {
+  font-family:RobotoMonoMed;
+  src:url(roboto-mono/RobotoMono-Medium.ttf);
+}
+@font-face {
+  font-family:RobotoMonoBold;
+  src:url(roboto-mono/RobotoMono-Bold.ttf);
 }
 @keyframes fade{
   0% {opacity:1;left:0}
