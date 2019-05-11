@@ -159,18 +159,20 @@ function draw() {
   document.getElementById('rocket').style='transform:translate('+(-37.5+200*Math.cos(rotation+1.5*Math.PI))+'px,'+(screenHeight-354+200*Math.sin(rotation+1.5*Math.PI))+'px) rotate('+rotation+'rad)';
   
 //overlay
-  document.getElementById('aDot').style.bottom = Math.sqrt(y/100000)*screenHeight+'px';
-  document.getElementById('aDot').style.left = ((x/10000)+0.020)*screenWidth+'px';
-  document.getElementById('tContainer').style.left = 0.02*screenHeight+'px';
+  document.getElementById('aDot').style.bottom = (Math.sqrt(y/100000)-0.01)*screenHeight+'px';
+  document.getElementById('aDot').style.left = ((x/10000)+0.02)*screenWidth+'px';
+  document.getElementById('tContainer').style.right = 0.02*screenHeight+'px';
   document.getElementById('tContainer').style.width = 0.02*screenHeight+'px';
   document.getElementById('tContainer').style.padding = 0.02*screenHeight+'px';
-  document.getElementById('tBar').style.left = frameRate*screenHeight+'px';
+  document.getElementById('tBar').style.right = frameRate*screenHeight+'px';
   document.getElementById('tBar').style.width = 0.04*screenHeight+'px';
   document.getElementById('tBar').style.height = 0.04*screenHeight+throttle*0.2275*screenHeight+'px';
-  if(y>0){
-    document.getElementById('yContainer').innerHTML = 'altitude: '+Math.round(y)+' m';
+  if(y>999.5){
+    document.getElementById('yContainer').innerHTML = Number.parseFloat(y/1000).toPrecision(2)+'&MediumSpace;km';
+  }else if(y>0){
+    document.getElementById('yContainer').innerHTML = Math.round(y)+'&MediumSpace;m';
   }else{
-    document.getElementById('yContainer').innerHTML = 'altitude: 0 m';
+    document.getElementById('yContainer').innerHTML = '0&MediumSpace;m';
   }
   if(vy>0||vy<-1){
     document.getElementById('vContainer').innerHTML = 'velocity: '+Math.round(vy)+' m/s';
@@ -178,6 +180,14 @@ function draw() {
     document.getElementById('vContainer').innerHTML = 'velocity: 0 m/s';
   }
   document.getElementById('fContainer').innerHTML = 'fuel: '+Math.ceil(f[s]/238)+'%';
+  
+  if(Math.sqrt(y/100000)<(14/screenHeight)){
+    document.getElementById('yContainer').style.bottom = '0';
+  }else if(y<99000){
+    document.getElementById('yContainer').style.bottom = Math.sqrt(y/100000)*screenHeight-14+'px';
+  }else{
+    document.getElementById('yContainer').style.top = '0';
+  }
   
   if(throttle>0){
     start = true;

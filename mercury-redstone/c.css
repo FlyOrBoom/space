@@ -67,7 +67,6 @@ html,body{
   color:#fff;
   position:absolute;
   font-family:RobotoMonoMed,Monospace;
-  font-size:20pt;
 }
 #aContainer{
   position:absolute;
@@ -83,7 +82,14 @@ html,body{
   position:absolute;
   width:0.9%;
   margin:0.1%;
-  left:4.25%;
+  left:2%;
+}
+#yContainer{
+  background-color:rgba(0,0,0,0.2);
+  font-size:15pt;
+  left:10%;
+  padding:3pt 6pt 3pt 6pt;
+  transform:translate(6px,0);
 }
 #aContainer:hover{
   opacity:0.3;
@@ -91,9 +97,10 @@ html,body{
 .tick{
   position:absolute;
   width:100%;
-  height:5px;
+  height:6px;
   background-color:#fff;
   opacity:0.5;
+  transform:translate(0,3px);
 }
 #tick1{bottom:31.62%;}
 #tick2{bottom:44.72%;}
@@ -118,10 +125,6 @@ html,body{
 }
 #metContainer{
   margin:-40%;
-}
-#yContainer{
-  margin:-40%;
-  transform:translate(0,30pt);
 }
 #vContainer{
   margin:-40%;
