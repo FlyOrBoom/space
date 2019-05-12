@@ -72,34 +72,33 @@ html,body{
   position:absolute;
   width:10%;
   height:100%;
-  left:0;
   top:0;
-  background-color:#111;
-  opacity:0.2;
+  background-color:rgba(20,20,20,0.2);
   transition:0.3s ease;
 }
 #aDot{
   position:absolute;
-  width:0.9%;
-  margin:0.1%;
+  width:9%;
+  margin:1%;
   left:2%;
 }
 #yContainer{
   background-color:rgba(0,0,0,0.2);
+  border-radius:3pt;
   font-size:15pt;
   left:10%;
   padding:3pt 6pt 3pt 6pt;
   transform:translate(6px,0);
 }
 #aContainer:hover{
-  opacity:0.3;
+  background-color:rgba(20,20,20,0.3);
 }
 .tick{
   position:absolute;
   width:100%;
   height:6px;
-  background-color:#fff;
-  opacity:0.5;
+  background-color:#000;
+  opacity:0.075;
   transform:translate(0,3px);
 }
 #tick1{bottom:31.62%;}
@@ -178,6 +177,14 @@ html,body{
 #lLogo{
   transform:translate(10px,0);
 }
+
+.mapOn{
+  animation:mapOn 0.5s ease;
+}
+.mapOff{
+  animation:mapOff 0.5s ease;
+}
+
 @font-face {
   font-family:RobotoMonoMed;
   src:url(roboto-mono/RobotoMono-Medium.ttf);
@@ -191,7 +198,16 @@ html,body{
   75% {opacity:1;left:0}
   99% {opacity:0;left:0}
   100% {opacity:0;left:-10000px}
-}@keyframes loading{
+}
+@keyframes loading{
   0% {width:0;}
   100% {width:100%;}
+}
+@keyframes mapOn{
+  0% {left:-10%}
+  100% {left:0;}
+}
+@keyframes mapOff{
+  0% {left:0}
+  100% {left:-10%;}
 }

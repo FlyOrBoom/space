@@ -167,7 +167,7 @@ function draw() {
   document.getElementById('tBar').style.right = frameRate*screenHeight+'px';
   document.getElementById('tBar').style.width = 0.04*screenHeight+'px';
   document.getElementById('tBar').style.height = 0.04*screenHeight+throttle*0.2275*screenHeight+'px';
-  if(y>999500){
+  if(y>95000){
     document.getElementById('yContainer').innerHTML = Number.parseFloat(y/1000).toPrecision(3)+'&MediumSpace;km';
   }else if(y>999.5){
     document.getElementById('yContainer').innerHTML = Number.parseFloat(y/1000).toPrecision(2)+'&MediumSpace;km';
@@ -185,7 +185,7 @@ function draw() {
   
   if(Math.sqrt(y/100000)<(14/screenHeight)){
     document.getElementById('yContainer').style.bottom = '0';
-  }else if(y<99000){
+  }else if(y<95000){
     document.getElementById('yContainer').style.bottom = Math.sqrt(y/100000)*screenHeight-14+'px';
   }else{
     document.getElementById('yContainer').style.top = '0';
@@ -233,6 +233,25 @@ document.addEventListener(
     }else if(e.key=='ArrowRight'){
       rotation+=throttle*0.0025+0.001*((100000-y)/100000);
       rotation+=throttle*0.0025+0.001*((100000-y)/100000);
+    }
+  }, false
+);
+
+document.addEventListener(
+  'keydown',
+  function(e){
+    if(e.key==='m'){
+      if(tock===0){
+        document.getElementById('aContainer').classList.remove('mapOn');
+        document.getElementById('aContainer').classList.add('mapOff');
+        document.getElementById('aContainer').style.left='-1000px';
+        tock++;
+      }else{
+        document.getElementById('aContainer').classList.remove('mapOff');
+        document.getElementById('aContainer').classList.add('mapOn');
+        document.getElementById('aContainer').style.left='0';
+        tock--;
+      }
     }
   }, false
 );

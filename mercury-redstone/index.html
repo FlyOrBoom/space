@@ -6,7 +6,7 @@
     </title>
     <meta name=author content=XYZt>
     <link rel="stylesheet" href="c.css" />
-    <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
+    <link rel="shortcut icon" type="image/png" href="favicon.png"/>
   </head>
   <body>
     <div class='sky' id='sky0'></div>
@@ -472,7 +472,7 @@
       <div class='overlayText' id='vContainer'></div>
       <div class='overlayText' id='fContainer'></div>
     </div>
-    <div id='aContainer'>
+    <div class='mapOn' id='aContainer'>
       <div class='tick' id='tick1'></div>
       <div class='tick' id='tick2'></div>
       <div class='tick' id='tick3'></div>
@@ -482,13 +482,13 @@
       <div class='tick' id='tick7'></div>
       <div class='tick' id='tick8'></div>
       <div class='tick' id='tick9'></div>
+      <svg id='aDot' width='100%' preserveAspectRatio='xMidYMid meet' viewbox='0 0 20 20'>
+        <circle cx='10' cy='10' r='10' fill='#fff'/>
+      </svg>
     </div>
     <div class='overlayText' id='yContainer'></div>
-    <svg id='aDot' width='10%' preserveAspectRatio='xMidYMid meet' viewbox='0 0 20 20'>
-      <circle cx='10' cy='10' r='10' fill='#fff'/>
-    </svg>
     <div id='dead'>
-        YOU ARE PROBABLY DEAD
+        I DIAGNOSE YOU WITH THE DEAD
     </div>
     <div id='loading'>
       <svg id='title' height='100%' viewbox='0 0 200 500' fill='#283838'>
