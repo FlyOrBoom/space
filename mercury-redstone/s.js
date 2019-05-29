@@ -71,10 +71,10 @@ function draw() {
     y = y + vy*frameRate;
   }
   x = x+vx*frameRate;
-  if(x<-1250){
-    x=3550;
-  }else if(x>3550){
-    x=-1250;
+  if(x>4250){
+    document.getElementById('aDot').style.display='none';
+  }else{
+    document.getElementById('aDot').style.display='block';
   }
   
 //screen
@@ -159,8 +159,8 @@ function draw() {
   document.getElementById('rocket').style='transform:translate('+(-37.5+200*Math.cos(rotation+1.5*Math.PI))+'px,'+(screenHeight-354+200*Math.sin(rotation+1.5*Math.PI))+'px) rotate('+rotation+'rad)';
   
 //overlay
-  document.getElementById('aDot').style.bottom = (Math.sqrt(y/100000)-0.01)*screenHeight+'px';
-  document.getElementById('aDot').style.left = ((x/50000)+0.02)*screenWidth+'px';
+  document.getElementById('aDot').style.bottom = (Math.sqrt(y/100000))*screenHeight+'px';
+  document.getElementById('aDot').style.left = (x/50000)*screenWidth+'px';
   document.getElementById('tContainer').style.right = 0.02*screenHeight+'px';
   document.getElementById('tContainer').style.width = 0.02*screenHeight+'px';
   document.getElementById('tContainer').style.padding = 0.02*screenHeight+'px';
@@ -190,6 +190,10 @@ function draw() {
   }else{
     document.getElementById('yContainer').style.top = '0';
   }
+  
+  document.getElementById('xContainer').innerHTML=Math.round(x)+'m';
+  
+  document.getElementById('xTicks').style='transform:translate('+0.4*(x-(Math.floor(x/1000)*1000))+'px,0)'
   
   if(throttle>0){
     start = true;

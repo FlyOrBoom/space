@@ -80,13 +80,20 @@ html,body{
   position:absolute;
   width:9%;
   margin:1%;
-  left:2%;
+}
+#xContainer{
+  background-color:rgba(0,0,0,0.2);
+  border-radius:3pt;
+  font-size:15pt;
+  top:10%;
+  left:35%;
+  padding:3pt 6pt 3pt 6pt;
 }
 #yContainer{
   background-color:rgba(0,0,0,0.2);
   border-radius:3pt;
   font-size:15pt;
-  left:10%;
+  left:5%;
   padding:3pt 6pt 3pt 6pt;
   transform:translate(6px,0);
 }
@@ -177,7 +184,11 @@ html,body{
 #lLogo{
   transform:translate(10px,0);
 }
-
+#xScroll{
+  position:fixed;
+  left:30%;
+  top:0;
+}
 .mapOn{
   animation:mapOn 0.5s ease;
 }
