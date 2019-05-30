@@ -472,7 +472,7 @@
       <div class='overlayText' id='vContainer'></div>
       <div class='overlayText' id='fContainer'></div>
     </div>
-    <div class='mapOn' id='aContainer'>
+    <div class='mapOff' id='aContainer'>
       <div class='tick' id='tick1'></div>
       <div class='tick' id='tick2'></div>
       <div class='tick' id='tick3'></div>
@@ -495,10 +495,10 @@
           <stop offset='1' stop-color='#000'/>
         </linearGradient>
       </defs>
-      <mask id='m'>
+      <mask id='m0'>
         <rect width='1600' height='50' fill='url(#maskX)'/>
       </mask>
-      <symbol id='xTickSymbol' fill='#444' opacity='0.5'>
+      <symbol id='xTickSymbol' fill='rgba(20,25,30,0.2)'>
         <rect x='0' width='10' height='30'/>
           <rect x='40' width='10' height='15'/>
           <rect x='80' width='10' height='15'/>
@@ -510,7 +510,7 @@
           <rect x='320' width='10' height='15'/>
           <rect x='360' width='10' height='15'/>
       </symbol>
-      <g mask='url(#m)'>
+      <g mask='url(#m0)'>
         <g id='xTicks'>
           <use xlink:href='#xTickSymbol' x='-405'/>
           <use xlink:href='#xTickSymbol' x='-5'/>
@@ -521,7 +521,44 @@
         </g>
       </g>
     </svg>
-    <div class='overlayText' id='xContainer'></div>
+    <svg id='yScroll' preserveAspectRatio='none' viewbox='0 0 30 1600' stroke-linecap='round'>
+      <defs>
+        <linearGradient id='maskY' x2='0' y2='1'>
+          <stop offset='0' stop-color='#000'/>
+          <stop offset='0.1' stop-color='#fff'/>
+          <stop offset='0.9' stop-color='#fff'/>
+          <stop offset='1' stop-color='#000'/>
+        </linearGradient>
+      </defs>
+      <mask id='m1'>
+        <rect width='50' height='1600' fill='url(#maskY)'/>
+      </mask>
+      <symbol id='yTickSymbol' fill='rgba(20,25,30,0.2)'>
+        <rect y='0' width='30' height='10'/>
+          <rect y='40' width='15' height='10'/>
+          <rect y='80' width='15' height='10'/>
+          <rect y='120' width='15' height='10'/>
+          <rect y='160' width='15' height='10'/>
+        <rect y='200' width='20' height='10'/>
+          <rect y='240' width='15' height='10'/>
+          <rect y='280' width='15' height='10'/>
+          <rect y='320' width='15' height='10'/>
+          <rect y='360' width='15' height='10'/>
+      </symbol>
+      <g mask='url(#m1)'>
+        <g id='yTicks'>
+          <use xlink:href='#yTickSymbol' y='-405'/>
+          <use xlink:href='#yTickSymbol' y='-5'/>
+          <use xlink:href='#yTickSymbol' y='395'/>
+          <use xlink:href='#yTickSymbol' y='795'/>
+          <use xlink:href='#yTickSymbol' y='1195'/>
+          <use xlink:href='#yTickSymbol' y='1595'/>
+        </g>
+      </g>
+    </svg>
+    <div class='center'>
+      <span id='xContainer'></span>
+    </div>
     <div class='overlayText' id='yContainer'></div>
     <div id='dead'>
       I DIAGNOSE YOU WITH THE DEAD

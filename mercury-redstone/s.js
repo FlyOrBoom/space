@@ -183,15 +183,19 @@ function draw() {
   }
   document.getElementById('fContainer').innerHTML = 'fuel: '+Math.ceil(f[s]/238)+'%';
   
-  if(Math.sqrt(y/100000)<(14/screenHeight)){
-    document.getElementById('yContainer').style.bottom = '0';
-  }else if(y<95000){
-    document.getElementById('yContainer').style.bottom = Math.sqrt(y/100000)*screenHeight-14+'px';
-  }else{
-    document.getElementById('yContainer').style.top = '0';
-  }
+  document.getElementById('yContainer').style.left = 0.06*screenHeight+'px';
   
-  document.getElementById('xContainer').innerHTML=Math.round(x)+'m';
+  if(x>95000||x<-95000){
+    document.getElementById('xContainer').innerHTML = Number.parseFloat(x/1000).toPrecision(3)+'&MediumSpace;km';
+  }else if(x>999.5||x<-999.5){
+    document.getElementById('xContainer').innerHTML = Number.parseFloat(x/1000).toPrecision(2)+'&MediumSpace;km';
+  }else{
+    document.getElementById('xContainer').innerHTML = Math.round(x)+'&MediumSpace;m';
+  }
+
+  document.getElementById('yScroll').style.width=0.05*screenHeight+'px';
+  document.getElementById('yScroll').style.height=0.4*screenWidth+'px';
+  document.getElementById('yScroll').style.top=(screenHeight-0.4*screenWidth)/2+'px';
   
   document.getElementById('xTicks').style='transform:translate('+0.4*(x-(Math.floor(x/1000)*1000))+'px,0)'
   
@@ -248,15 +252,27 @@ document.addEventListener(
       if(tock===0){
         document.getElementById('aContainer').classList.remove('mapOn');
         document.getElementById('aContainer').classList.add('mapOff');
-        document.getElementById('aContainer').style.left='-1000px';
+        document.getElementById('yScroll').classList.remove('mapOnScroll');
+        document.getElementById('yScroll').classList.add('mapOffScroll');
         tock++;
       }else{
         document.getElementById('aContainer').classList.remove('mapOff');
         document.getElementById('aContainer').classList.add('mapOn');
-        document.getElementById('aContainer').style.left='0';
+        document.getElementById('yScroll').classList.remove('mapOffScroll');
+        document.getElementById('yScroll').classList.add('mapOnScroll');
         tock--;
       }
     }
+  }, false
+);
+document.getElementById('aContainer').addEventListener(
+  'click',
+  function(){
+    document.getElementById('aContainer').classList.remove('mapOn');
+    document.getElementById('aContainer').classList.add('mapOff');
+    document.getElementById('yScroll').classList.remove('mapOnScroll');
+    document.getElementById('yScroll').classList.add('mapOffScroll');
+    tock++;
   }, false
 );
 
