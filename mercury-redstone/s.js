@@ -11,6 +11,17 @@ var screenWidth = window.innerWidth;
 var tick = 0; //counter
 var tock = 0;
 
+/*abbreviations
+t: thrust
+v: velocity
+f: fuel
+m: mass
+y: y coordinate
+x: x coordinate
+a: altitude (map)
+met: time
+*/
+
 var t = [350000,1000]; //thrust of [stage]
 var f = [23800,800]; //fuel of [stage]
 var m = [(f[0]+5500),(f[1]+1000)]; //mass of [stage]
@@ -59,7 +70,13 @@ function draw() {
     }
   }
   
+//throttle
+  
+  throttle = (document.getElementById('tBar').value)/100;
+  
+  
 //position
+
   if(y<0&&vy>-10){
     y = 0;
   }else if(y<=(-0.5*vy)&&vy<=-5){
@@ -149,9 +166,9 @@ function draw() {
     throttle=0;
   }
   if(throttle===0){
-    document.getElementById('tBar').style.opacity=0.5;
+    document.getElementById('tContainer').style.opacity=0.5;
   }else{
-    document.getElementById('tBar').style.opacity=1;
+    document.getElementById('tContainer').style.opacity=1;
   }
   document.getElementById('boosterFlame0').style.opacity=throttle;
   
@@ -161,12 +178,14 @@ function draw() {
 //overlay
   document.getElementById('aDot').style.bottom = (Math.sqrt(y/100000))*screenHeight+'px';
   document.getElementById('aDot').style.left = (x/50000)*screenWidth+'px';
-  document.getElementById('tContainer').style.right = 0.02*screenHeight+'px';
-  document.getElementById('tContainer').style.width = 0.02*screenHeight+'px';
-  document.getElementById('tContainer').style.padding = 0.02*screenHeight+'px';
-  document.getElementById('tBar').style.right = frameRate*screenHeight+'px';
-  document.getElementById('tBar').style.width = 0.04*screenHeight+'px';
-  document.getElementById('tBar').style.height = 0.04*screenHeight+throttle*0.2275*screenHeight+'px';
+  document.getElementById('tContainer').style.height = 0.15*screenWidth+'px';
+  document.getElementById('tContainer').style.bottom = 0.015*screenWidth+'px';
+  if(throttle<0.05){
+    document.getElementById('tActualBar').style.height = 0.014*screenWidth+'px';
+  }else{
+    document.getElementById('tActualBar').style.height = throttle*0.1425*screenWidth+'px';
+  }
+  document.getElementById('tActualBar').style.bottom = 0.003*screenWidth+'px';
   if(y>99950){
     document.getElementById('yContainer').innerHTML = Number.parseFloat(y/1000).toPrecision(3)+'&MediumSpace;km';
   }else if(y>999.5){
@@ -193,7 +212,7 @@ function draw() {
     document.getElementById('xContainer').innerHTML = Math.round(x)+'&MediumSpace;m';
   }
   
-  if(y>50000){
+  if(y>75000){
     for(i=1;i<9;i++){
       document.getElementById('tick'+i).classList.remove('bgIndicator');
       document.getElementById('tick'+i).classList.add('bgSpace');
@@ -202,12 +221,12 @@ function draw() {
     document.getElementById('xContainer').classList.add('colorSpace','bgNone');
     document.getElementById('yContainer').classList.remove('colorAir','bgAir');
     document.getElementById('yContainer').classList.add('colorSpace','bgNone');
-    document.getElementById('overlay').classList.remove('colorAir','bgStable');
+    document.getElementById('overlay').classList.remove('colorAir','bgAir');
     document.getElementById('overlay').classList.add('colorSpace','bgNone');
-    document.getElementById('xTickSymbol').classList.add('fillAir');
-    document.getElementById('xTickSymbol').classList.remove('fillSpace');
-    document.getElementById('yTickSymbol').classList.add('fillAir');
-    document.getElementById('yTickSymbol').classList.remove('fillSpace');
+    document.getElementById('xTickSymbol').classList.remove('fillAir');
+    document.getElementById('xTickSymbol').classList.add('fillSpace');
+    document.getElementById('yTickSymbol').classList.remove('fillAir');
+    document.getElementById('yTickSymbol').classList.add('fillSpace');
   }else{
     for(i=1;i<9;i++){
       document.getElementById('tick'+i).classList.add('bgIndicator');
@@ -217,7 +236,7 @@ function draw() {
     document.getElementById('xContainer').classList.remove('colorSpace','bgNone');
     document.getElementById('yContainer').classList.add('colorAir','bgAir');
     document.getElementById('yContainer').classList.remove('colorSpace','bgNone');
-    document.getElementById('overlay').classList.add('colorAir','bgStable');
+    document.getElementById('overlay').classList.add('colorAir','bgAir');
     document.getElementById('overlay').classList.remove('colorSpace','bgNone');
     document.getElementById('xTickSymbol').classList.add('fillAir');
     document.getElementById('xTickSymbol').classList.remove('fillSpace');
@@ -258,10 +277,12 @@ document.addEventListener(
   'keydown',
   function(e){
     if(e.key=='ArrowUp' && throttle<1){
-      throttle+=0.1;
+      document.getElementById('tBar').value++;
+      document.getElementById('tBar').value++;
     }
     if(e.key=='ArrowDown' && throttle>0){
-      throttle-=0.1;
+      document.getElementById('tBar').value--;
+      document.getElementById('tBar').value--;
     }
   }, false
 );

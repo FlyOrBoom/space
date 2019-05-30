@@ -5,44 +5,45 @@ html,body{
   background:#000;
   overflow:hidden;
 }
-.bgStable{
-  background-color:rgba(0,0,0,0.2);
-  transition:0.3s ease;
-}
-.bgStable:hover{
-  background-color:rgba(0,0,0,0.3);
-  transition:0.3s ease;
+input{
 }
 .bgNone{
   background-color:none;
-  transition:10s ease;
+  transition:background-color 10s ease;
 }
 .bgAir{
   background-color:rgba(0,0,0,0.2);
-  transition:10s ease;
+  transition:background-color 10s ease;
+}
+.bgWhite{
+  background-color:rgba(255,255,255,0.8);
+  transition:background-color 10s ease;
 }
 .bgSpace{
   background-color:rgba(50,255,100,0.3);
   box-shadow:0 0 5pt rgba(50,255,100,0.5);
-  transition:10s ease;
+  transition:background-color 10s ease;
 }
 .bgIndicator{
   background-color:rgba(0,0,0,0.1);
+  transition:background-color 10s ease;
 }
 .colorAir{
   color:#fff;
+  transition:color 10s ease;
 }
 .colorSpace{
   color:rgba(50,255,100,0.5);
   text-shadow:0 0 5pt rgba(50,255,100,0.6);
-  transition:5s ease;
+  transition:color 10s ease;
 }
 .fillAir{
   fill:rgba(0,0,0,0.2);
+  transition:fill 10s ease;
 }
 .fillSpace{
   fill:rgba(50,255,100,0.5);
-  transition:5s ease;
+  transition:fill 10s ease;
 }
 .sky{
   position:fixed;
@@ -87,26 +88,25 @@ html,body{
   top:395px;
 }
 #tContainer{
-  position:fixed;
-  bottom:2%;
-  height:25%;
-  background-color:rgba(255,255,255,0.2);
-  border-radius:100px;
-  box-shadow:0 0 20px rgba(0,0,0,0.1);
-  transition:0.3s;
-}
-#tContainer:hover{
-  background-color:rgba(255,255,255,0.4);
+  position:absolute;
+  width:2%;
+  right:1.5%;
+  padding:none;
+  border-radius:1000px;
 }
 #tBar{
-  position:fixed;
-  bottom:3%;
-  background-color:rgba(255,255,255,0.6);
-  border-radius:100px;
-  transition:0.3s;
+  width:100%;
+  height:97%;
+  -webkit-appearance:slider-vertical;
+  -moz-appearance:slider-vertical;
+  cursor:pointer;
+  opacity:0;
 }
-#tBar:hover{
-  background-color:rgba(255,255,255,1);
+#tActualBar{
+  position:absolute;
+  right:15%;
+  width:70%;
+  border-radius:1000px;
 }
 .overlayText{
   position:absolute;
@@ -189,7 +189,7 @@ html,body{
   position:absolute;
   width:100%;
   height:100%;
-  animation:fade 10s ease;
+  animation:fade 4s ease;
   left:-10000px;
 }
 #title{
@@ -207,7 +207,7 @@ html,body{
 #lBar{
   background-color:#657878;
   height:100%;
-  animation:loading 9s ease-in-out;
+  animation:loading 3s ease-in-out;
 }
 #lCapsule{
   transform:translate(-15%,0);
@@ -250,7 +250,7 @@ html,body{
 }
 @keyframes fade{
   0% {opacity:1;left:0}
-  90% {opacity:1;left:0}
+  75% {opacity:1;left:0}
   99% {opacity:0;left:0}
   100% {opacity:0;left:-10000px}
 }
