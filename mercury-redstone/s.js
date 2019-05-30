@@ -183,7 +183,7 @@ function draw() {
   }
   document.getElementById('fContainer').innerHTML = 'fuel: '+Math.ceil(f[s]/238)+'%';
   
-  document.getElementById('yContainer').style.left = 0.06*screenHeight+'px';
+  document.getElementById('yContainer').style.marginLeft = 0.06*screenHeight+'px';
   
   if(x>95000||x<-95000){
     document.getElementById('xContainer').innerHTML = Number.parseFloat(x/1000).toPrecision(3)+'&MediumSpace;km';
@@ -197,7 +197,8 @@ function draw() {
   document.getElementById('yScroll').style.height=0.4*screenWidth+'px';
   document.getElementById('yScroll').style.top=(screenHeight-0.4*screenWidth)/2+'px';
   
-  document.getElementById('xTicks').style='transform:translate('+0.4*(x-(Math.floor(x/1000)*1000))+'px,0)'
+  document.getElementById('xTicks').style='transform:translate('+(-0.4*(x-(Math.floor(x/1000)*1000)))+'px,0)'
+  document.getElementById('yTicks').style='transform:translate(0,'+0.4*(y-(Math.floor(y/1000)*1000))+'px)'
   
   if(throttle>0){
     start = true;
@@ -250,17 +251,21 @@ document.addEventListener(
   function(e){
     if(e.key==='m'){
       if(tock===0){
-        document.getElementById('aContainer').classList.remove('mapOn');
-        document.getElementById('aContainer').classList.add('mapOff');
-        document.getElementById('yScroll').classList.remove('mapOnScroll');
-        document.getElementById('yScroll').classList.add('mapOffScroll');
-        tock++;
-      }else{
         document.getElementById('aContainer').classList.remove('mapOff');
         document.getElementById('aContainer').classList.add('mapOn');
         document.getElementById('yScroll').classList.remove('mapOffScroll');
         document.getElementById('yScroll').classList.add('mapOnScroll');
+        document.getElementById('yContainer').classList.remove('mapOffScroll');
+        document.getElementById('yContainer').classList.add('mapOnScroll');
         tock--;
+      }else{
+        document.getElementById('aContainer').classList.remove('mapOn');
+        document.getElementById('aContainer').classList.add('mapOff');
+        document.getElementById('yScroll').classList.remove('mapOnScroll');
+        document.getElementById('yScroll').classList.add('mapOffScroll');
+        document.getElementById('yContainer').classList.remove('mapOnScroll');
+        document.getElementById('yContainer').classList.add('mapOffScroll');
+        tock++;
       }
     }
   }, false
@@ -272,6 +277,8 @@ document.getElementById('aContainer').addEventListener(
     document.getElementById('aContainer').classList.add('mapOff');
     document.getElementById('yScroll').classList.remove('mapOnScroll');
     document.getElementById('yScroll').classList.add('mapOffScroll');
+    document.getElementById('yContainer').classList.remove('mapOnScroll');
+    document.getElementById('yContainer').classList.add('mapOffScroll');
     tock++;
   }, false
 );
