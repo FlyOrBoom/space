@@ -167,7 +167,7 @@ function draw() {
   document.getElementById('tBar').style.right = frameRate*screenHeight+'px';
   document.getElementById('tBar').style.width = 0.04*screenHeight+'px';
   document.getElementById('tBar').style.height = 0.04*screenHeight+throttle*0.2275*screenHeight+'px';
-  if(y>95000){
+  if(y>99950){
     document.getElementById('yContainer').innerHTML = Number.parseFloat(y/1000).toPrecision(3)+'&MediumSpace;km';
   }else if(y>999.5){
     document.getElementById('yContainer').innerHTML = Number.parseFloat(y/1000).toPrecision(2)+'&MediumSpace;km';
@@ -191,6 +191,39 @@ function draw() {
     document.getElementById('xContainer').innerHTML = Number.parseFloat(x/1000).toPrecision(2)+'&MediumSpace;km';
   }else{
     document.getElementById('xContainer').innerHTML = Math.round(x)+'&MediumSpace;m';
+  }
+  
+  if(y>50000){
+    for(i=1;i<9;i++){
+      document.getElementById('tick'+i).classList.remove('bgIndicator');
+      document.getElementById('tick'+i).classList.add('bgSpace');
+    }
+    document.getElementById('xContainer').classList.remove('colorAir','bgAir');
+    document.getElementById('xContainer').classList.add('colorSpace','bgNone');
+    document.getElementById('yContainer').classList.remove('colorAir','bgAir');
+    document.getElementById('yContainer').classList.add('colorSpace','bgNone');
+    document.getElementById('overlay').classList.remove('colorAir','bgStable');
+    document.getElementById('overlay').classList.add('colorSpace','bgNone');
+    document.getElementById('xTickSymbol').classList.add('fillAir');
+    document.getElementById('xTickSymbol').classList.remove('fillSpace');
+    document.getElementById('yTickSymbol').classList.add('fillAir');
+    document.getElementById('yTickSymbol').classList.remove('fillSpace');
+  }else{
+    for(i=1;i<9;i++){
+      document.getElementById('tick'+i).classList.add('bgIndicator');
+      document.getElementById('tick'+i).classList.remove('bgSpace');
+    }
+    document.getElementById('xContainer').classList.add('colorAir','bgAir');
+    document.getElementById('xContainer').classList.remove('colorSpace','bgNone');
+    document.getElementById('yContainer').classList.add('colorAir','bgAir');
+    document.getElementById('yContainer').classList.remove('colorSpace','bgNone');
+    document.getElementById('overlay').classList.add('colorAir','bgStable');
+    document.getElementById('overlay').classList.remove('colorSpace','bgNone');
+    document.getElementById('xTickSymbol').classList.add('fillAir');
+    document.getElementById('xTickSymbol').classList.remove('fillSpace');
+    document.getElementById('yTickSymbol').classList.add('fillAir');
+    document.getElementById('yTickSymbol').classList.remove('fSpace');
+    
   }
 
   document.getElementById('yScroll').style.width=0.05*screenHeight+'px';
