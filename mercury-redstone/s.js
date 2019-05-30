@@ -180,14 +180,10 @@ function draw() {
   document.getElementById('aDot').style.left = (x/50000)*screenWidth+'px';
   document.getElementById('tContainer').style.height = 0.15*screenWidth+'px';
   document.getElementById('tContainer').style.bottom = 0.015*screenWidth+'px';
-  if(throttle<0.05){
-    document.getElementById('tActualBar').style.height = 0.014*screenWidth+'px';
-  }else{
-    document.getElementById('tActualBar').style.height = throttle*0.1425*screenWidth+'px';
-  }
+  document.getElementById('tActualBar').style.height = (throttle*0.1285+0.014)*screenWidth+'px';
   document.getElementById('tActualBar').style.bottom = 0.003*screenWidth+'px';
-  if(y>99950){
-    document.getElementById('yContainer').innerHTML = Number.parseFloat(y/1000).toPrecision(3)+'&MediumSpace;km';
+  if(y>9950){
+    document.getElementById('yContainer').innerHTML = Math.floor(y/1000)+'&MediumSpace;km';
   }else if(y>999.5){
     document.getElementById('yContainer').innerHTML = Number.parseFloat(y/1000).toPrecision(2)+'&MediumSpace;km';
   }else if(y>0){
@@ -212,8 +208,8 @@ function draw() {
     document.getElementById('xContainer').innerHTML = Math.round(x)+'&MediumSpace;m';
   }
   
-  if(y>75000){
-    for(i=1;i<9;i++){
+  if(y>70000){
+    for(i=1;i<10;i++){
       document.getElementById('tick'+i).classList.remove('bgIndicator');
       document.getElementById('tick'+i).classList.add('bgSpace');
     }
@@ -227,22 +223,29 @@ function draw() {
     document.getElementById('xTickSymbol').classList.add('fillSpace');
     document.getElementById('yTickSymbol').classList.remove('fillAir');
     document.getElementById('yTickSymbol').classList.add('fillSpace');
+    document.getElementById('tActualBar').classList.remove('bgWhite');
+    document.getElementById('tActualBar').classList.add('bgSpace');
+    document.getElementById('tContainer').classList.remove('bgIndicator');
+    document.getElementById('tContainer').classList.add('bgNone');
   }else{
-    for(i=1;i<9;i++){
-      document.getElementById('tick'+i).classList.add('bgIndicator');
+    for(i=1;i<10;i++){
       document.getElementById('tick'+i).classList.remove('bgSpace');
+      document.getElementById('tick'+i).classList.add('bgIndicator');
     }
-    document.getElementById('xContainer').classList.add('colorAir','bgAir');
     document.getElementById('xContainer').classList.remove('colorSpace','bgNone');
-    document.getElementById('yContainer').classList.add('colorAir','bgAir');
+    document.getElementById('xContainer').classList.add('colorAir','bgAir');
     document.getElementById('yContainer').classList.remove('colorSpace','bgNone');
-    document.getElementById('overlay').classList.add('colorAir','bgAir');
+    document.getElementById('yContainer').classList.add('colorAir','bgAir');
     document.getElementById('overlay').classList.remove('colorSpace','bgNone');
-    document.getElementById('xTickSymbol').classList.add('fillAir');
+    document.getElementById('overlay').classList.add('colorAir','bgAir');
     document.getElementById('xTickSymbol').classList.remove('fillSpace');
+    document.getElementById('xTickSymbol').classList.add('fillAir');
+    document.getElementById('yTickSymbol').classList.remove('fillSpace');
     document.getElementById('yTickSymbol').classList.add('fillAir');
-    document.getElementById('yTickSymbol').classList.remove('fSpace');
-    
+    document.getElementById('tActualBar').classList.remove('bgSpace');
+    document.getElementById('tActualBar').classList.add('bgWhite');
+    document.getElementById('tContainer').classList.remove('bgNone');
+    document.getElementById('tContainer').classList.add('bgIndicator');
   }
 
   document.getElementById('yScroll').style.width=0.05*screenHeight+'px';

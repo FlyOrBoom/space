@@ -7,43 +7,37 @@ html,body{
 }
 input{
 }
+.trans{
+  transition:background-color 10s ease,color 10s ease,box-shadow 10s ease,text-shadow 10s ease,fill 10s ease;
+}
 .bgNone{
   background-color:none;
-  transition:background-color 10s ease;
 }
 .bgAir{
   background-color:rgba(0,0,0,0.2);
-  transition:background-color 10s ease;
 }
 .bgWhite{
   background-color:rgba(255,255,255,0.8);
-  transition:background-color 10s ease;
 }
 .bgSpace{
-  background-color:rgba(50,255,100,0.3);
+  background-color:rgba(50,255,100,0.6);
   box-shadow:0 0 5pt rgba(50,255,100,0.5);
-  transition:background-color 10s ease;
 }
 .bgIndicator{
   background-color:rgba(0,0,0,0.1);
-  transition:background-color 10s ease;
 }
 .colorAir{
   color:#fff;
-  transition:color 10s ease;
 }
 .colorSpace{
   color:rgba(50,255,100,0.5);
   text-shadow:0 0 5pt rgba(50,255,100,0.6);
-  transition:color 10s ease;
 }
 .fillAir{
   fill:rgba(0,0,0,0.2);
-  transition:fill 10s ease;
 }
 .fillSpace{
-  fill:rgba(50,255,100,0.5);
-  transition:fill 10s ease;
+  fill:rgba(50,255,100,0.6);
 }
 .sky{
   position:fixed;

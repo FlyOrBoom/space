@@ -462,25 +462,25 @@
     </div>
     <div id='pad'></div>
     <div class='sky' id='sky2'></div>
-    <div class='bgAir colorAir' id='overlay'>
+    <div class='trans bgAir colorAir' id='overlay'>
       <div class='overlayText' id='metContainer'></div>
       <div class='overlayText' id='vContainer'></div>
       <div class='overlayText' id='fContainer'></div>
     </div>
-    <div class='bgAir' id='tContainer'>
+    <div class='trans bgIndicator' id='tContainer'>
       <div class='bgWhite' id='tActualBar'></div>
-      <input type='range' orient='vertical' min='1' max='100' value='0' class='slider' id='tBar'>
+      <input type='range' orient='vertical' min='1' max='100' value='0' class='slider' id='tBar' onkeydown='return false;'>
     </div>
-    <div class='mapOff bgAir' id='aContainer'>
-      <div class='tick bgIndicator' id='tick1'></div>
-      <div class='tick bgIndicator' id='tick2'></div>
-      <div class='tick bgIndicator' id='tick3'></div>
-      <div class='tick bgIndicator' id='tick4'></div>
-      <div class='tick bgIndicator' id='tick5'></div>
-      <div class='tick bgIndicator' id='tick6'></div>
-      <div class='tick bgIndicator' id='tick7'></div>
-      <div class='tick bgIndicator' id='tick8'></div>
-      <div class='tick bgIndicator' id='tick9'></div>
+    <div class='trans mapOff bgAir' id='aContainer'>
+      <div class='trans tick bgIndicator' id='tick1'></div>
+      <div class='trans tick bgIndicator' id='tick2'></div>
+      <div class='trans tick bgIndicator' id='tick3'></div>
+      <div class='trans tick bgIndicator' id='tick4'></div>
+      <div class='trans tick bgIndicator' id='tick5'></div>
+      <div class='trans tick bgIndicator' id='tick6'></div>
+      <div class='trans tick bgIndicator' id='tick7'></div>
+      <div class='trans tick bgIndicator' id='tick8'></div>
+      <div class='trans tick bgIndicator' id='tick9'></div>
       <svg id='aDot' width='100%' preserveAspectRatio='xMidYMid meet' viewbox='0 0 20 20'>
         <circle cx='10' cy='10' r='10' fill='#fff'/>
       </svg>
@@ -497,7 +497,7 @@
       <mask id='m0'>
         <rect width='1600' height='50' fill='url(#maskX)'/>
       </mask>
-      <symbol class='fillAir' id='xTickSymbol'>
+      <symbol class='trans fillAir' id='xTickSymbol'>
         <rect x='0' width='10' height='30'/>
           <rect x='40' width='10' height='15'/>
           <rect x='80' width='10' height='15'/>
@@ -520,7 +520,7 @@
         </g>
       </g>
     </svg>
-    <svg class='fillAir mapOffScroll' id='yScroll' preserveAspectRatio='none' viewbox='0 0 30 1600' stroke-linecap='round'>
+    <svg class='mapOffScroll' id='yScroll' preserveAspectRatio='none' viewbox='0 0 30 1600' stroke-linecap='round'>
       <defs>
         <linearGradient id='maskY' x2='0' y2='1'>
           <stop offset='0' stop-color='#000'/>
@@ -532,7 +532,7 @@
       <mask id='m1'>
         <rect width='50' height='1600' fill='url(#maskY)'/>
       </mask>
-      <symbol id='yTickSymbol'>
+      <symbol class='trans fillAir' id='yTickSymbol'>
         <rect y='0' width='30' height='10'/>
           <rect y='40' width='15' height='10'/>
           <rect y='80' width='15' height='10'/>
@@ -556,9 +556,9 @@
       </g>
     </svg>
     <div class='center'>
-      <span class='bgAir colorAir' id='xContainer'></span>
+      <span class='trans bgAir colorAir' id='xContainer'></span>
     </div>
-    <div class='bgAir colorAir overlayText' id='yContainer'></div>
+    <div class='trans bgAir colorAir overlayText' id='yContainer'></div>
     <div id='dead'>
       I DIAGNOSE YOU WITH THE DEAD
     </div>
