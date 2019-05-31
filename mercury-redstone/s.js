@@ -91,7 +91,6 @@ function draw() {
   }
   document.getElementById('tBar').value = tBar[0];
   throttle = (tBar[0])/100;
-  document.getElementById('debug').innerHTML = tBar;
 
 //position
 
@@ -359,5 +358,5 @@ document.getElementById('aContainer').addEventListener(
   }, false
 );
 
-window.setInterval(draw,100/3);
+window.setInterval(draw,1/frameRate);
 // window.setInterval(aoeu, 3000);
