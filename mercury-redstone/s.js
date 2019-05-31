@@ -1,4 +1,4 @@
-var frameRate = 0.03; //frameRateamerate
+var frameRate = 0.03; //frameRate
 
 var x = 0;
 var y = 0; //height
@@ -10,6 +10,8 @@ var screenHeight = window.innerHeight;
 var screenWidth = window.innerWidth;
 var tick = 0; //counter
 var tock = 0;
+var scale = 5; //meters per pixel
+var tBar = [0,0]; //a "memory" of the throttle a frame before to prevent instataneus throttling
 
 /*abbreviations
 t: thrust
@@ -49,7 +51,7 @@ var finalTime = 0;
 var start = false;
 
 function draw() {
-  
+
   if(f[s]>0){
     f[s] = f[s]-(throttle*160*frameRate);
     m = [(f[0]+5500),(f[1]+1000)];
@@ -71,10 +73,26 @@ function draw() {
   }
   
 //throttle
-  
-  throttle = (document.getElementById('tBar').value)/100;
-  
-  
+
+  if(tBar[1]>tBar[0]){
+    if(tBar[1]>(tBar[0]+4)){
+      tBar[0]+=2;
+    }else{
+      tBar[0]+=1;
+    }
+  }else if(tBar[1]<tBar[0]){
+    if(tBar[1]<(tBar[0]-4)){
+      tBar[0]-=2;
+    }else{
+      tBar[0]-=1;
+    }
+  }else{
+    tBar[1] = document.getElementById('tBar').value;
+  }
+  document.getElementById('tBar').value = tBar[0];
+  throttle = (tBar[0])/100;
+  document.getElementById('debug').innerHTML = tBar;
+
 //position
 
   if(y<0&&vy>-10){
@@ -101,7 +119,7 @@ function draw() {
 
 //ground
   if(y>=0){
-    document.getElementById('pad').style = 'transform:translate(0,'+5*y+'px)';
+    document.getElementById('pad').style = 'transform:translate(0,'+scale*y+'px)';
   }
   
   
@@ -255,6 +273,8 @@ function draw() {
   document.getElementById('xTicks').style='transform:translate('+(-0.4*(x-(Math.floor(x/1000)*1000)))+'px,0)'
   document.getElementById('yTicks').style='transform:translate(0,'+0.4*(y-(Math.floor(y/1000)*1000))+'px)'
   
+  tBarTarget = 0;
+  
   if(throttle>0){
     start = true;
   }
@@ -272,7 +292,8 @@ function draw() {
   finalTime = str_pad_left(min,'0',2)+':'+str_pad_left(sec,'0',2);
   
   document.getElementById('metContainer').innerHTML = finalTime;
-}
+  
+  }
 
 document.getElementById('dead').style.display='none';
 
@@ -280,12 +301,10 @@ document.addEventListener(
   'keydown',
   function(e){
     if(e.key=='ArrowUp' && throttle<1){
-      document.getElementById('tBar').value++;
-      document.getElementById('tBar').value++;
+      document.getElementById('tBar').value=tBar[0]+10;
     }
     if(e.key=='ArrowDown' && throttle>0){
-      document.getElementById('tBar').value--;
-      document.getElementById('tBar').value--;
+      document.getElementById('tBar').value=tBar[0]-10;
     }
   }, false
 );
