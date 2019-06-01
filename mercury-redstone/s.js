@@ -10,7 +10,7 @@ var screenHeight = window.innerHeight;
 var screenWidth = window.innerWidth;
 var tick = 0; //counter
 var tock = 0;
-var scale = 5; //meters per pixel
+var scale = screenHeight/120; //meters per pixel
 var tBar = [0,0]; //a "memory" of the throttle a frame before to prevent instataneus throttling
 
 /*abbreviations
@@ -51,6 +51,11 @@ var finalTime = 0;
 var start = false;
 
 function draw() {
+  //screen
+
+  screenHeight = window.innerHeight;
+  screenWidth = window.innerWidth;
+  scale = screenHeight/120;
 
   if(f[s]>0){
     f[s] = f[s]-(throttle*160*frameRate);
@@ -96,7 +101,7 @@ function draw() {
 
   if(y<0&&vy>-10){
     y = 0;
-  }else if(y<=(-0.5*vy)&&vy<=-5){
+  }else if(y<=(-0.5*vy)&&(vy<=-5||Math.abs(vx)>5)){
       document.getElementById('dead').style.display='block';
       y = 0;
       vy = 0;
@@ -111,16 +116,16 @@ function draw() {
     document.getElementById('aDot').style.display='block';
   }
   
-//screen
-
-  screenHeight = window.innerHeight;
-  screenWidth = window.innerWidth;
-
 //ground
-  if(y>=0){
-    document.getElementById('pad').style = 'transform:translate(0,'+scale*y+'px)';
-  }
+  document.getElementById('pad').style = 'transform:translate(0,'+(scale*y)+'px)';
   
+  
+//responsive sizes
+  document.getElementById('capsule0').style.height=9*scale+'px';
+  document.getElementById('capsule1').style.height=9*scale+'px';
+  document.getElementById('booster0').style.height=74*scale+'px';
+  document.getElementById('booster1').style.height=74*scale+'px';
+  document.getElementById('booster').style.top=20*scale/3+'px';
   
 //opa
   opa = ((100000-y)/100000);
@@ -128,8 +133,8 @@ function draw() {
   document.getElementById('sky0').style.opacity = opa;
   document.getElementById('sky1').style.opacity = opa;
   document.getElementById('sky2').style.opacity = 0.1*opa;
-  document.getElementById('capsule0').style.opacity = opa;
-  document.getElementById('booster0').style.opacity = opa;
+  document.getElementById('capsule0').style.opacity = 1-opa;
+  document.getElementById('booster0').style.opacity = 1-opa;
   
 //flame
   if(f[0]>0){
@@ -190,15 +195,12 @@ function draw() {
   document.getElementById('boosterFlame0').style.opacity=throttle;
   
 //rotate
-  document.getElementById('rocket').style='transform:translate('+(-37.5+200*Math.cos(rotation+1.5*Math.PI))+'px,'+(screenHeight-354+200*Math.sin(rotation+1.5*Math.PI))+'px) rotate('+rotation+'rad)';
+  document.getElementById('rocket').style.transform = 'translate('+((40*scale*Math.cos(rotation+1.5*Math.PI))-(7.5*scale))+'px,'+(40*scale*Math.sin(rotation+1.5*Math.PI))+'px) rotate('+rotation+'rad)';
   
 //overlay
   document.getElementById('aDot').style.bottom = (Math.sqrt(y/100000))*screenHeight+'px';
   document.getElementById('aDot').style.left = (x/50000)*screenWidth+'px';
-  document.getElementById('tContainer').style.height = 0.15*screenWidth+'px';
-  document.getElementById('tContainer').style.bottom = 0.015*screenWidth+'px';
-  document.getElementById('tActualBar').style.height = (throttle*0.1285+0.014)*screenWidth+'px';
-  document.getElementById('tActualBar').style.bottom = 0.003*screenWidth+'px';
+  document.getElementById('tActualBar').style.height = (throttle*0.261111+0.025)*screenHeight+'px';
   if(y>9950){
     document.getElementById('yContainer').innerHTML = Math.floor(y/1000)+'&MediumSpace;km';
   }else if(y>999.5){
@@ -214,8 +216,6 @@ function draw() {
     document.getElementById('vContainer').innerHTML = 'velocity: 0 m/s';
   }
   document.getElementById('fContainer').innerHTML = 'fuel: '+Math.ceil(f[s]/238)+'%';
-  
-  document.getElementById('yContainer').style.marginLeft = 0.06*screenHeight+'px';
   
   if(x>95000||x<-95000){
     document.getElementById('xContainer').innerHTML = Number.parseFloat(x/1000).toPrecision(3)+'&MediumSpace;km';
@@ -312,11 +312,9 @@ document.addEventListener(
   'keydown',
   function(e){
     if(e.key=='ArrowLeft'){
-      rotation-=throttle*0.0025+0.001*((100000-y)/100000);
-      rotation-=throttle*0.0025+0.001*((100000-y)/100000);
+      rotation-=((throttle*0.01)+(opa*0.01));
     }else if(e.key=='ArrowRight'){
-      rotation+=throttle*0.0025+0.001*((100000-y)/100000);
-      rotation+=throttle*0.0025+0.001*((100000-y)/100000);
+      rotation+=((throttle*0.01)+(opa*0.01));
     }
   }, false
 );

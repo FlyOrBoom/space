@@ -7,6 +7,9 @@ html,body{
 }
 input{
 }
+.abs{
+  position:absolute;
+}
 .trans{
   transition:background-color 10s ease,color 10s ease,box-shadow 10s ease,text-shadow 10s ease,fill 10s ease;
 }
@@ -60,33 +63,40 @@ input{
   background:linear-gradient(#8ad,#adf);
 }
 #rocket{
+  position:absolute;
+  top:46.6667%;
   width:75px;
   margin-left:50%;
 }
 #pad{
   position:absolute;
-  bottom:-100px;
+  top:80.5%;
   width:100%;
-  height:250px;
+  height:100%;
   background-color:#678;
 }
-.capsule{
+#capsule{
   position:absolute;
 }
-.booster{
+#booster{
   position:absolute;
-  top:35px;
 }
 .boosterFlame{
   position:absolute;
-  top:395px;
+  margin-top:345px;
 }
 #tContainer{
   position:absolute;
-  width:2%;
-  right:1.5%;
+  width:4vh;
+  height:30%;
+  right:2vh;
+  bottom:2%;
   padding:none;
   border-radius:1000px;
+}
+#tActualBar{
+  bottom:0.6667vh;
+  width:3.6667vh;
 }
 #tBar{
   width:100%;
@@ -105,12 +115,13 @@ input{
 .overlayText{
   position:absolute;
   font-family:RobotoMonoMed,Monospace;
+  font-size:3vh;
 }
 #aContainer{
   position:absolute;
   width:10%;
   height:100%;
-  top:0;
+  top:10;
   transition:0.3s ease;
 }
 #aDot{
@@ -120,17 +131,18 @@ input{
 }
 #xContainer{
   font-family:RobotoMonoMed,Monospace;
-  border-radius:3pt;
-  font-size:15pt;
-  padding:3pt 6pt 3pt 6pt;
+  color:#fff;
+  border-radius:1vh;
+  font-size:3vh;
+  padding:0.5vh 1vh 0.5vh 1vh;
   display:inline-block;
 }
 #yContainer{
-  top:50%;
-  border-radius:3pt;
-  font-size:15pt;
-  padding:3pt 6pt 3pt 6pt;
-  transform:translate(0,-12.75pt);
+  top:47.6667%;
+  border-radius:1vh;
+  font-size:3vh;
+  padding:0.5vh 1vh 0.5vh 1vh;
+  left:6vh;
 }
 .tick{
   position:absolute;
@@ -149,20 +161,21 @@ input{
 #tick9{bottom:94.87%;}
 #overlay{
   position:absolute;
-  padding:10%;
+  height:34%;
+  width:34vh;
   border-radius:9% 0 0 0;
   right:0;
-  bottom:-3%;
+  bottom:0;
 }
 #metContainer{
-  margin:-40%;
+  margin:3vh;
 }
 #vContainer{
-  margin:-40%;
+  margin:3vh;
   transform:translate(0,60pt);
 }
 #fContainer{
-  margin:-40%;
+  margin:3vh;
   transform:translate(0,90pt);
 }
 #dead{
