@@ -1,7 +1,7 @@
 var frameRate = 0.03; //frameRate
 
 var x = 0;
-var y = 0; //height
+var y = 200000; //altitude
 var rotation = 0; //rotate
 var throttle = 0; //self-explanatory
 var opa = ((100000-y)/100000); //opacity
@@ -121,11 +121,11 @@ function draw() {
   
   
 //responsive sizes
-  document.getElementById('capsule0').style.height=9*scale+'px';
-  document.getElementById('capsule1').style.height=9*scale+'px';
-  document.getElementById('booster0').style.height=74*scale+'px';
-  document.getElementById('booster1').style.height=74*scale+'px';
-  document.getElementById('booster').style.top=20*scale/3+'px';
+  document.getElementById('capsule0').style.height=12*scale+'px';
+  document.getElementById('capsule1').style.height=12*scale+'px';
+  document.getElementById('booster0').style.height=75*scale+'px';
+  document.getElementById('booster1').style.height=75*scale+'px';
+  document.getElementById('booster').style.top=10.5*scale+'px';
   
 //opa
   opa = ((100000-y)/100000);
@@ -135,7 +135,13 @@ function draw() {
   document.getElementById('sky2').style.opacity = 0.1*opa;
   document.getElementById('capsule0').style.opacity = 1-opa;
   document.getElementById('booster0').style.opacity = 1-opa;
-  
+  if(y>100000){
+    document.getElementById('capsule1').style.opacity = 0;
+    document.getElementById('booster1').style.opacity = 0;
+  }else{
+    document.getElementById('capsule1').style.opacity = 1;
+    document.getElementById('booster1').style.opacity = 1;
+  }
 //flame
   if(f[0]>0){
     if(quart===0){

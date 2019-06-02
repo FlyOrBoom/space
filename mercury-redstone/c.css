@@ -4,6 +4,7 @@ html,body{
   height:100%;
   background:#000;
   overflow:hidden;
+  color:#fff;
 }
 input{
 }
@@ -70,7 +71,7 @@ input{
 }
 #pad{
   position:absolute;
-  top:80.5%;
+  top:84.5%;
   width:100%;
   height:100%;
   background-color:#678;
@@ -131,7 +132,6 @@ input{
 }
 #xContainer{
   font-family:RobotoMonoMed,Monospace;
-  color:#fff;
   border-radius:1vh;
   font-size:3vh;
   padding:0.5vh 1vh 0.5vh 1vh;
@@ -142,7 +142,7 @@ input{
   border-radius:1vh;
   font-size:3vh;
   padding:0.5vh 1vh 0.5vh 1vh;
-  left:6vh;
+  margin-left:6vh;
 }
 .tick{
   position:absolute;
