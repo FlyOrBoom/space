@@ -1,0 +1,121 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='75' height='60' viewboy='0 0 75 60' stroke-linejoin='round'>
+  <defs>
+    <linearGradient id='y6a'>
+      <stop offset='0' stop-color='#b0b4b8'/>
+      <stop offset='0.25' stop-color='#e4e8f0'/>
+      <stop offset='0.5' stop-color='#f0f4f8'/>
+      <stop offset='0.75' stop-color='#e4e8f0'/>
+      <stop offset='1' stop-color='#b0b4b8'/>
+    </linearGradient>
+    <radialGradient id='y7a'>
+      <stop offset='0' stop-color='#af8f4f'/>
+      <stop offset='0.6' stop-color='#9f7f3f'/>
+      <stop offset='1' stop-color='#8f6f2f'/>
+     </radialGradient>
+     <radialGradient id='y7b'>
+      <stop offset='0' stop-color='#586868'/>
+      <stop offset='0.6' stop-color='#4f5f5f'/>
+      <stop offset='1' stop-color='#384848'/>
+    </radialGradient>
+    <linearGradient id='y8a'>
+      <stop offset='0' stop-color='#4f5f6f'/>
+      <stop offset='0.25' stop-color='#687888'/>
+      <stop offset='0.5' stop-color='#6f7f8f'/>
+      <stop offset='0.75' stop-color='#687888'/>
+      <stop offset='1' stop-color='#4f5f6f'/>
+    </linearGradient>
+    <linearGradient id='y8b'>
+      <stop offset='0' stop-color='#5f6f7f'/>
+      <stop offset='0.25' stop-color='#788898'/>
+      <stop offset='0.5' stop-color='#7f8f9f'/>
+      <stop offset='0.75' stop-color='#788898'/>
+      <stop offset='1' stop-color='#5f6f7f'/>
+    </linearGradient>
+    <linearGradient id='y9a'>
+      <stop offset='0' stop-color='#5f6f7f'/>
+      <stop offset='0.25' stop-color='#788898'/>
+      <stop offset='0.5' stop-color='#7f8f9f'/>
+      <stop offset='0.75' stop-color='#788898'/>
+      <stop offset='1' stop-color='#5f6f7f'/>
+    </linearGradient>
+    <linearGradient id='y9b' gradientTransform='rotate(15)'>
+      <stop offset='0.25' stop-color='#4f5f6f' stop-opacity='1'/>
+      <stop offset='0.5' stop-color='#485858' stop-opacity='0'/>
+    </linearGradient>
+    <linearGradient id='y9c' gradientTransform='rotate(-15)'>
+      <stop offset='0.48' stop-color='#4f5f6f' stop-opacity='0'/>
+      <stop offset='0.71' stop-color='#4f5f6f' stop-opacity='1'/>
+    </linearGradient>
+    <linearGradient id='y9d' x2='0' y2='1'>
+      <stop offset='0' stop-color='#081828' stop-opacity='0.5'/>
+      <stop offset='0.05' stop-color='#081828'/>
+      <stop offset='0.05' stop-color='#081828' stop-opacity='0.5'/>
+      <stop offset='0.1' stop-color='#081828'/>
+      <stop offset='0.1' stop-color='#081828' stop-opacity='0.5'/>
+      <stop offset='0.15' stop-color='#081828'/>
+      <stop offset='0.15' stop-color='#081828' stop-opacity='0.5'/>
+      <stop offset='0.2' stop-color='#081828'/>
+      <stop offset='0.2' stop-color='#081828' stop-opacity='0.5'/>
+      <stop offset='0.25' stop-color='#081828'/>
+      <stop offset='0.25' stop-color='#081828' stop-opacity='0'/>
+      <stop offset='0.3' stop-color='#081828' stop-opacity='0'/>
+      <stop offset='0.35' stop-color='#081828'/>
+      <stop offset='0.35' stop-color='#081828' stop-opacity='0.5'/>
+      <stop offset='0.4' stop-color='#081828'/>
+      <stop offset='0.4' stop-color='#081828' stop-opacity='0.5'/>
+      <stop offset='0.45' stop-color='#081828'/>
+      <stop offset='0.45' stop-color='#081828' stop-opacity='0.5'/>
+      <stop offset='0.5' stop-color='#081828'/>
+      <stop offset='0.5' stop-color='#081828' stop-opacity='0.5'/>
+      <stop offset='0.55' stop-color='#081828'/>
+      <stop offset='0.55' stop-color='#081828' stop-opacity='0.5'/>
+      <stop offset='0.6' stop-color='#081828'/>
+      <stop offset='0.6' stop-color='#081828' stop-opacity='0.5'/>
+      <stop offset='0.65' stop-color='#081828'/>
+      <stop offset='0.65' stop-color='#081828' stop-opacity='0.5'/>
+      <stop offset='0.7' stop-color='#081828'/>
+      <stop offset='0.7' stop-color='#081828' stop-opacity='0'/>
+      <stop offset='0.75' stop-color='#081828' stop-opacity='0'/>
+      <stop offset='0.8' stop-color='#081828'/>
+      <stop offset='0.8' stop-color='#081828' stop-opacity='0.5'/>
+      <stop offset='0.85' stop-color='#081828'/>
+      <stop offset='0.85' stop-color='#081828' stop-opacity='0.5'/>
+      <stop offset='0.9' stop-color='#081828'/>
+      <stop offset='0.9' stop-color='#081828' stop-opacity='0.5'/>
+      <stop offset='0.95' stop-color='#081828'/>
+      <stop offset='0.95' stop-color='#081828' stop-opacity='0.5'/>
+      <stop offset='1' stop-color='#081828'/>
+    </linearGradient>
+    <linearGradient id='y9e'>
+      <stop offset='0.25' stop-color='#5c6c7c'/>
+      <stop offset='0.5' stop-color='#5f6f7f'/>
+      <stop offset='0.75' stop-color='#5c6c7c'/>
+    </linearGradient>
+    <linearGradient id='y10a' x2='0' y2='1'>
+      <stop offset='0' stop-color='#6f7f8f'/>
+      <stop offset='1' stop-color='#647484'/>
+    </linearGradient>
+    <linearGradient id='y11' x2='0' y2='1'>
+      <stop offset='0' stop-color='#4f8fcf'/>
+      <stop offset='1' stop-color='#005f8f'/>
+    </linearGradient>
+    </defs>
+  <rect width='100%' height='100%' fill='#adf'/>
+  <path d='M33.5 4l-1 7l5 5l5 -5l-1 -7z' fill='url(#y9a)'/>
+  <path d='M33.5 4l-1 7l5 5l5 -5l-1 -7z' fill='url(#y9b)' opacity='0.15'/>
+  <path d='M33.5 4l-1 7l5 5l5 -5l-1 -7z' fill='url(#y9c)' opacity='0.15'/>
+  <path d='M32.5 11v5h10v-5z' fill='url(#y6a)'/>
+  <path d='M30 14l-1 1l8.5 5l8.5 -5l-1 -1z' fill='url(#y9a)'/>
+  <path d='M30 14l-1 1l8.5 5l8.5 -5l-1 -1z' fill='url(#y9b)' opacity='0.15'/>
+  <path d='M30 14l-1 1l8.5 5l8.5 -5l-1 -1z' fill='url(#y9c)' opacity='0.15'/>
+  <path d='M19 55c10 4 27 4 37 0c-10 -4 -27 -4 -37 0z' fill='url(#y7a)'/>
+  <path d='M29 15v20h17v-20z' fill='url(#y8a)'/>
+  <path d='M29 15v20h0.5v-20zM30.5 15v20h1v-20zM34.5 15v20h1.25v-20zM39.25 15v20h1.25v-20zM43.5 15v20h1v-20zM45.5 15v20h0.5v-20z' fill='url(#y8b)'/>
+  <path d='M29 25l-10 30h37l-10 -30z' fill='url(#y9a)'/>
+  <path d='M29 25l-10 30h37l-10 -30z' fill='url(#y9b)'/>
+  <path d='M29 25l-10 30h37l-10 -30z' fill='url(#y9c)'/>
+  <path d='M29.5 25l-9.5 30h3l7.5 -30h1l-6.5 30h5l4.5 -30h1.25l-3.25 30h10l-3.25 -30h1.25l4.5 30h5l-6.5 -30h1l7.5 30h3l-9.5 -30' fill='url(#y9d)' opacity='0.15'/>
+  <path d='M34.75 34l-1.25 12h8l-1.25 -12z' fill='url(#y9e)'/>
+  <path d='M36.25 36l-1 8.5h4.5l-1 -8.5z' fill='url(#y10a)' stroke='url(#y10a)'/>
+  <path d='M36.75 38.25l-0.6 5.5h2.6l-0.6 -5.5z' stroke='url(#y11)' fill='url(#y11)'/>
+</svg>
