@@ -16,7 +16,6 @@ html,body{
 body{
   background:#fff;
   background-size:100% 100%;
-  image-rendering:pixelated;
   font-family:monospace,monospace;
   font-size:calc(.5vw + 1.5rem);
 }
@@ -64,44 +63,43 @@ a{
   text-decoration:none;
   cursor:pointer;
 }
-#start>*{
+#start>*,#start>*>*{
   position:fixed;
   transition-duration:.2s;
+}
+#start>*{
   pointer-events:none;
 }
 #start>*>*{
-  position:absolute;
-  transition-duration:.2s;
   pointer-events:auto;
   cursor:pointer;
 }
-#art{
-  background-image:url(showcase/reentry.min.svg);
-  background-size:cover;
-  background-position:center;
+#contact{
+  background:#08f;
   width:100vw;
   height:100vh;
   clip-path:inset(50% 75% 0 0);
 }
-#art-wrapper{
+#contact-wrapper{
   width:100vw;
   height:100vh;
   clip-path:polygon(0 37.5vh,37.5vw 37.5vh,37.5vw 0,50vw 0,50vw 50vh,37.5vw 50vh,37.5vw 100vh,0 100vh);
 }
-#art-wrapper:hover>#art,#art-wrapper:focus>#art{
+#contact-wrapper:hover>#contact,#contact-wrapper:focus>#contact{
   clip-path:inset(0 0 0 0);
 }
-#art-wrapper:focus>#art{
-  background-image:url(showcase/reentry.png);
-}
-#art-wrapper:focus{
+#contact-wrapper:focus{
   clip-path:polygon(0 0,0 0,0 0,100vw 0,100vw 50vh,100vw 50vh,100vw 100vh,0 100vh);
 }
 #about{
   background-image:url(showcase/logo-red.png);
+  image-rendering:pixelated;
+
   background-size:100% 100%;
   width:100vw;
   height:100vh;
+  color:#fff;
+  font-size:4vw;
 }
 #about-wrapper{
   width:100vw;
@@ -114,20 +112,26 @@ a{
 #about-wrapper:focus{
   clip-path:inset(0 0% 0% 0);
 }
-#contact{
-  background:#08f;
+#art{
+  background-image:url(showcase/reentry.min.svg);
+  background-size:cover;
+  background-position:center;
+  
   width:100vw;
   height:100vh;
   text-align:right;
   clip-path:polygon(0 25vh,25vw 25vh,25vw 0,37.5vw 0,37.5vw 37.5vh,37.5vw 37.5vh,37.5vw 37.5vh,25vw 37.5vh,25vw 37.5vh,0 37.5vh);
 }
-#contact-wrapper{
+#art-wrapper{
   clip-path:polygon(0 12.5vh,12.5vw 12.5vh,12.5vw 0,50vw 0,50vw 50vh,37.5vw 50vh,37.5vw 100vh,25vw 100vh,25vw 50vh,0 50vh);
 }
-#contact-wrapper:hover>#contact{
+#art-wrapper:hover>#art,#art-wrapper:focus>#art{
   clip-path:polygon(0 0,0 0,0 0,100vw 0,100vw 100vh,37.5vw 100vh,37.5vw 100vh,25vw 100vh,25vw 100vh,0 100vh);
 }
-#contact-wrapper:focus{
+#art-wrapper:focus>#art{
+  background-image:url(showcase/reentry.png);
+}
+#art-wrapper:focus{
   clip-path:polygon(0 0,12.5vw 0,12.5vw 0,100vw 0,100vw 100vh,37.5vw 100vh,37.5vw 100vh,25vw 100vh,25vw 100vh,0 100vh);
 }
 #web-wrapper{
@@ -150,29 +154,34 @@ a{
   clip-path:polygon(0 0,0 0,0 0,100vw 0,100vw 37.5vh,100vw 37.5vh,100vw 100vh,25vw 100vh,25vw 100vh,0 100vh);
 }
 #git-wrapper{
-  bottom:0;
-  right:0;
-  clip-path:polygon(0 0,0 12.5vh,12.5vw 12.5vh,12.5vw 50vh,0 50vh,0 75vh,50vw 75vh,50vw 0);
-  width:37.5vw;
-  height:75vh;
+  clip-path:polygon(62.5vw 37.5vh,62.5vw 25vh,100vw 25vh,100vw 100vh,62.5vw 100vh,62.5vw 87.5vh,75vw 87.5vh,75vw 37.5vh);
+  width:100vw;
+  height:100vh;
 }
 #git{
+  background:#222;
+  color:#fff;
+  width:100vw;
+  height:100vh;
+  clip-path:inset(37.5% 0 0 87.5%);
+}
+#git-text{
+  position:fixed;
   bottom:0;
   right:0;
-  background:#222;
-  width:12.5vw;
-  height:62.5vh;
 }
-#git:hover{
-  width:37.5vw;
-  height:75vh;
+#git-wrapper:hover>#git,#git-wrapper:focus>#git{
+  clip-path:inset(0 0 0 0);
+}
+#git-wrapper:focus>#git{
+  background:#fff;
+}
+#git-wrapper:focus{
+  clip-path:polygon(0 37.5vh,0vw 0,100vw 0,100vw 100vh,0 100vh,0 87.5vh,0 87.5vh,0 37.5vh);
 }
 :focus{
   outline:none;
   z-index:999;
-}
-:hover{
-  transition-delay:.1s;
 }
 #blocker{
   width:100vw;
@@ -183,28 +192,45 @@ a{
   pointer-events:auto;
   cursor:auto;
 }
+.exit{
+  position:fixed;
+  background-image:linear-gradient(to bottom right,#fff0 47.5%,#fff 48%,#fff 52%,#fff0 52.5%),linear-gradient(to top right,#fff0 47.5%,#fff 48%,#fff 52%,#fff0 52.5%);
+  width:12.5vw;
+  height:12.5vh;
+  right:0;
+  bottom:0;
+  opacity:.6;
+}
+.exit:hover{
+  opacity:1;
+}
     </style>
   </head>
   <body>
     <div id='start'>
-      <div id='about-wrapper' tabindex='1'>
+      <div id='about-wrapper' tabindex='10'>
         <div id='about'>About</div>
-        <div class='exit'></div>
+        <div class='exit' tabindex='11'></div>
       </div>
-      <div id='contact-wrapper' tabindex='2'>
-        <div id='contact'>Contact</div>
-      </div>
-      <div id='art-wrapper' tabindex='3'>
+      <div id='art-wrapper' tabindex='30'>
         <div id='art'>Art</div>
+        <div class='exit' tabindex='31'></div>
       </div>
-      <div id='web-wrapper' tabindex='4'>
+      <div id='contact-wrapper' tabindex='20'>
+        <div id='contact'>Contact</div>
+        <div class='exit' tabindex='21'></div>
+      </div>
+      <div id='web-wrapper' tabindex='40'>
         <div id='web'>Websites</div>
+        <div class='exit' tabindex='41'></div>
       </div>
-      <div id='git-wrapper' tabindex='5'>
-        <div id='git'>GitHub</div>
+      <div id='git-wrapper' tabindex='50'>
+        <a id='git' href='https://github.com/flyorboom/'>
+          <span id='git-text'>GitHub</span>
+        </a>
       </div>
       <svg id='blocker' viewBox='0 0 16 16' preserveAspectRatio='none'>
-        <path d='M0 3h3v-3M0 7h7v-7M5 7v9M16 1h-5.5M16 5h-5.5M13 5v10h-2.5' fill='none' stroke-width='1' stroke='#0000'/>
+        <path d='M0 3h3v-3M0 7h7v-7M5 7v9M16 1h-5.5M16 5h-5.5M13 5v10h-2.5' fill='none' stroke-width='.8' stroke='#0000'/>
       </svg>
     </div>
     <div id='rest'>
