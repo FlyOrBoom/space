@@ -2,54 +2,46 @@
 <html>
   <head>
     <title>XYZt Designs</title>
-    <link rel="shortcut icon" type="image/png" href="xyzt.png" />
-    <meta charset="UTF-8">
-    <meta name="description" content="Artist, programmer, space geek.">
-    <meta name="keywords" content="art,Art,design,Design,xyzt,XYZT,XYZt,space">
-    <meta name="author" content="XYZt">
+    <link rel='shortcut icon' type='image/png' href='xyzt.png' />
+    <meta charset='UTF-8'>
+    <meta name='description' content='Artist, programmer, space geek.'>
+    <meta name='keywords' content='art,html,design,web,developer,xyzt'>
+    <meta name='author' content='XYZt'>
     <style>
 html,body{
   margin:0;
 }
 body{
+  position:relative;
   top:0;
-  height:600vw;
-  background:#000;
-  background-image:linear-gradient(#020,#242);
+  height:200vw;
+  background-image:linear-gradient(#40F,#000);
 }
-.svg{
+.abs{
   position:absolute;
 }
-.click{
-  cursor:pointer;
+#desc{
+  font-family:monospace,monospace;
+  color:#40F;
+  font-size:3rem;
+  padding:0 1rem;
+  bottom:0;
+}
+#logo-overlay{
+  opacity:.3;
 }
     </style>
   </head>
   <body>
-    <svg id="logo" class="svg" viewbox="0 0 640 3840">
-      <path d="M0 0h20v60l60 80l60 -80v-60h20v60l-67.5 90l67.5 90V3840h-20V240l-60 -80l-60 80V3840h-20V240l67.5 -90l-67.5 -90v-60M180 0h20v60l60 80l60 -80v-60h20v60l-70 93.3333V3840h-20V153.333l-70 -93.3333M360 0h20v60h140l-120 160h120V3840h-20V240h-140l120 -160h-120M580 0h20v130h40v20h-40v120l40 53.3333V3840h-20V323.333l-40 -53.3333v-120h-40v-20h40" fill="#000"/>
+    <svg id='logo' class='abs' viewbox='0 0 640 1280'>
+      <symbol id='logo-path'><path d='M0 0h20v60l60 80l60 -80v-60h20v60l-67.5 90l67.5 90V3840h-20V240l-60 -80l-60 80V3840h-20V240l67.5 -90l-67.5 -90v-60M180 0h20v60l60 80l60 -80v-60h20v60l-70 93.3333V3840h-20V153.333l-70 -93.3333M360 0h20v60h140l-120 160h120V3840h-20V240h-140l120 -160h-120M580 0h20v130h40v20h-40v120l40 53.3333V3840h-20V323.333l-40 -53.3333v-120h-40v-20h40' fill='#000'/></symbol>
+      <use href='#logo-path'></use>
     </svg>
-    <svg id="links" class="svg" viewbox="0 0 640 3840">
-      <mask id="circle1">
-        <circle cx="1000" cy="1000" r="1000" fill="#fff"/>
-      </mask>
-      <g transform="translate(400 0)">
-        <a href="cliques">
-          <path d="M 0 0 h 40 v 40 h -40" fill="#f44"/>
-          <path d="M 50 0 h 40 v 40 h -40" fill="#4e4"/>
-          <path d="M 100 0 h 40 v 40 h -40" fill="#44e"/>
-          <path d="M 150 0 h 13 v 25 h -13" fill="#444"/>
-          <path d="M 150 30 h 13 v 10 h -13" fill="#444"/>
-          <path class="click" d="M -10 0 h 200 v 60 h -200" opacity="0"/>
-        </a>
-      </g>
-      <a href="curiosity.png">
-        <image xlink:href="curiosity.jpg" transform="translate(290 260) scale(0.095 0.095)" mask="url(#circle1)"/>
-        <circle class="click" cx="385" cy="355" r="105" opacity="0"/>
-      </a>
-      <a>
-        <path class="click" d="M 170 75 l 60 80 l -60 70 l -56.25 -75" opacity="0"/>
-      </a>
+    <div id='desc' class='abs'>
+      Hello! I'm Xing. I like to experiment with all the crazy things the web can do. You can see some of these up there.
+    </div>
+    <svg id='logo-overlay' class='abs' viewbox='0 0 640 1280'>
+      <use href='#logo-path'></use>
     </svg>
   </body>
 </html>
