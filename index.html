@@ -14,7 +14,7 @@ html,body{
   height:100%;
 }
 body{
-  background:#000;
+  background:#fff;
   background-size:100% 100%;
   image-rendering:pixelated;
   font-family:monospace,monospace;
@@ -67,10 +67,13 @@ a{
 #start>*{
   position:fixed;
   transition-duration:.2s;
+  pointer-events:none;
 }
 #start>*>*{
   position:absolute;
   transition-duration:.2s;
+  pointer-events:auto;
+  cursor:pointer;
 }
 #art{
   background-image:url(showcase/reentry.min.svg);
@@ -116,12 +119,13 @@ a{
   width:100vw;
   height:100vh;
   text-align:right;
+  clip-path:polygon(0 25vh,25vw 25vh,25vw 0,37.5vw 0,37.5vw 37.5vh,37.5vw 37.5vh,37.5vw 37.5vh,25vw 37.5vh,25vw 37.5vh,0 37.5vh);
 }
 #contact-wrapper{
-  clip-path:polygon(0 25vh,25vw 25vh,25vw 0,37.5vw 0,37.5vw 50vh,37.5vw 50vh,37.5vw 37.5vh,25vw 37.5vh,25vw 37.5vh,0 37.5vh);
-}
-#contact-wrapper:hover{
   clip-path:polygon(0 12.5vh,12.5vw 12.5vh,12.5vw 0,50vw 0,50vw 50vh,37.5vw 50vh,37.5vw 100vh,25vw 100vh,25vw 50vh,0 50vh);
+}
+#contact-wrapper:hover>#contact{
+  clip-path:polygon(0 0,0 0,0 0,100vw 0,100vw 100vh,37.5vw 100vh,37.5vw 100vh,25vw 100vh,25vw 100vh,0 100vh);
 }
 #contact-wrapper:focus{
   clip-path:polygon(0 0,12.5vw 0,12.5vw 0,100vw 0,100vw 100vh,37.5vw 100vh,37.5vw 100vh,25vw 100vh,25vw 100vh,0 100vh);
@@ -170,6 +174,15 @@ a{
 :hover{
   transition-delay:.1s;
 }
+#blocker{
+  width:100vw;
+  height:100vh;
+  pointer-events:none;
+}
+#blocker>*{
+  pointer-events:auto;
+  cursor:auto;
+}
     </style>
   </head>
   <body>
@@ -190,6 +203,9 @@ a{
       <div id='git-wrapper' tabindex='5'>
         <div id='git'>GitHub</div>
       </div>
+      <svg id='blocker' viewBox='0 0 16 16' preserveAspectRatio='none'>
+        <path d='M0 3h3v-3M0 7h7v-7M5 7v9M16 1h-5.5M16 5h-5.5M13 5v10h-2.5' fill='none' stroke-width='1' stroke='#0000'/>
+      </svg>
     </div>
     <div id='rest'>
       <a href='cliques' class='light' id='cliques'>
