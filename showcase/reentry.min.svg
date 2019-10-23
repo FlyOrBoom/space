@@ -1,0 +1,83 @@
+<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='2000' height='1000'>
+  <defs>
+    <linearGradient id='logo' x2='0' y2='1'>
+      <stop offset='0'  stop-color='#000'/>
+      <stop offset='0.2' stop-color='#224'/>
+      <stop offset='1' stop-color='#224'/>
+    </linearGradient>
+    <linearGradient id='s0' x1='1' y1='1' x2='0' y2='0' gradientTransform='rotate(-60)'>
+      <stop offset='0.5'  stop-color='#ccf'/>
+      <stop offset='0.8' stop-color='#eef' stop-opacity='0.6'/>
+      <stop offset='1' stop-color='#fff' stop-opacity='0.1'/>
+    </linearGradient>
+    <linearGradient id='s1' x1='0' y1='0' x2='0' y2='1' gradientTransform='rotate(-60)'>
+      <stop offset='0.5'  stop-color='#ccf'/>
+      <stop offset='0.8' stop-color='#eef' stop-opacity='0.6'/>
+      <stop offset='1' stop-color='#fff' stop-opacity='0.1'/>
+    </linearGradient>
+    <linearGradient id='s2' x1='1' y1='0' x2='0' y2='1' gradientTransform='rotate(-20)'>
+      <stop offset='0.2'  stop-color='#ccf'/>
+      <stop offset='0.4' stop-color='#eef' stop-opacity='0.5'/>
+      <stop offset='0.6' stop-color='#fff' stop-opacity='0.1'/>
+    </linearGradient>
+    <linearGradient id='s3' x1='0' y1='0' x2='0' y2='1' gradientTransform='rotate(-60)'>
+      <stop offset='0.2'  stop-color='#ccf'/>
+      <stop offset='0.4' stop-color='#eef' stop-opacity='0.5'/>
+      <stop offset='0.6' stop-color='#fff' stop-opacity='0.1'/>
+    </linearGradient>
+    <linearGradient id='g0' x2='0' y2='1'>
+      <stop offset='0'  stop-color='#fff'/>
+      <stop offset='0.2' stop-color='#fff'/>
+      <stop offset='1' stop-color='#ffc' stop-opacity='0'/>
+    </linearGradient>
+    <mask id='m1'>
+      <path d='M0 0zM0 1200v-300l800 -300c80 -30 320 -30 400 0l800 300v300z' fill='#fff'/>
+    </mask>
+  </defs>
+  <rect width='2000' height='1000' fill='#000'/>
+  <symbol id='flame'>
+    <path d='M0 0zM2000 0zM1000 400c165.685424949 0 300 134.314575051 300 300c0 165.685424949 -134.314575051 300 -300 300c-165.685424949 0 -300 -134.314575051 -300 -300c0 -165.685424949 134.314575051 -300 300 -300z'/>
+  </symbol>
+  <mask id='str0'>
+    <path d='M360 430l215 -125c-300 -250 -350 -250 -600 -400v500c200 0 380 30 380 30' fill='#fff'/>
+  </mask>
+  <mask id='str1'>
+    <path d='M1640 430l-215 -125c300 -250 350 -250 600 -400v500c-200 0 -380 30 -380 30' fill='#fff'/>
+  </mask>
+  <mask id='str2'>
+    <path d='M360 430l115 225c-200 50 -400 120 -600 200l110 -450c200 0 380 30 380 30z' fill='#fff'/>
+  </mask>
+  <mask id='str3'>
+    <path d='M1640 430l-115 225c200 50 400 120 600 200l-110 -450c-200 0 -380 30 -380 30z' fill='#fff'/>
+  </mask>
+  <path d='M-100 1000h100l800 -340c80 -30 320 -30 400 0l800 340h100zM0 0z' fill='#cef'/>
+  <use xlink:href='#flame' fill='#cef' filter='url(#f0)'/>
+  <use xlink:href='#flame' transform='scale(2.5) translate(-625, -450)' fill='#abf' opacity='0.4'/>
+  <use xlink:href='#flame' transform='scale(2) translate(-530, -370)' fill='#abf'/>
+  <use xlink:href='#flame' transform='scale(1.75) translate(-470, -340)' fill='#cef'/>
+  <use xlink:href='#flame' transform='scale(1.625) translate(-420, -270)' fill='#fff' opacity='0.4'/>
+  <use xlink:href='#flame' transform='scale(1.5) translate(-340, -200)' fill='#fff' filter='url(#f0c)'/>
+  <path d='M360 430c90 -70 120 -85 215 -125c-300 -250 -350 -250 -600 -400v500c200 0 380 30 380 30z' fill='none' stroke-width='10' stroke='url(#s0)' mask='url(#str0)'/>
+  <path d='M1640 430c-90 -70 -120 -85 -215 -125c300 -250 350 -250 600 -400v500c-200 0 -380 30 -380 30z' fill='none' stroke-width='10' stroke='url(#s1)' mask='url(#str1)'/>
+  <path d='M360 430l115 225c-200 50 -400 120 -600 200l110 -450c200 0 380 30 380 30z' fill='none' stroke-width='10' stroke='url(#s2)' mask='url(#str2)'/>
+  <path d='M1640 430l-115 225c200 50 400 120 600 200l-110 -450c-200 0 -380 30 -380 30z' fill='none' stroke-width='10' stroke='url(#s3)' mask='url(#str3)'/>
+  <symbol id='gridfin'>
+    <path d='M850 0zM1150 200zM875 200c75 -10 175 -10 250 0v250l-50 50v50h-150v-50l-50 -50zM925 500c50 -5 100 -5 150 0v15c-50 -5 -100 -5 -150 0zM875 250 l55 -55zM875 300l105 -105zM875 350l155 -155zM875 400l205 -205zM875 450l250 -250zM900 475l225 -225zM925 500l200 -200zM1125 250 l-55 -55zM1125 300l-105 -105zM1125 350l-155 -155zM1125 400l-205 -205zM1125 450l-250 -250zM1100 475l-225 -225zM1075 500l-200 -200zM875 350l145 145zM875 400l95 95zM1125 350l-145 145zM1125 400l-95 95zM1000 500v15z' fill='none' stroke-width='8'/>
+    <path d='M925 515c50 -5 100 -5 150 0v35h-150'/>
+  </symbol>
+  <use xlink:href='#gridfin' fill='#fff' stroke='#fff' transform='translate(-500,700) rotate(-30)' opacity='0.6'/>
+  <use xlink:href='#gridfin' fill='#000' stroke='#000' transform='translate(-500,700) rotate(-30)'/>
+  <use xlink:href='#gridfin' fill='#000' stroke='#000' transform='translate(-500,700) rotate(-30)'/>
+  <use xlink:href='#gridfin' stroke='#000' transform='translate(-500,700) rotate(-30)'/>
+  <use xlink:href='#gridfin' fill='#fff' stroke='#fff' transform='translate(770,-300) rotate(30)'/>
+  <use xlink:href='#gridfin' stroke='#000' transform='translate(770,-300) rotate(30)'/>
+  <use xlink:href='#gridfin' stroke='#000' transform='translate(770,-300) rotate(30)'/>
+  <use xlink:href='#gridfin' stroke='#000' transform='translate(770,-300) rotate(30)'/>
+  <g mask='url(#m1)'>
+    <rect width='100%' height='100%' fill='#020202'/>
+    <path d='M0 500zM2000 1000zM610 400h750l-375 450z' fill='url(#g0)'/>
+    <path d='M0 500zM2000 1000zM610 400h700l-350 425z' fill='url(#g0)'/>
+    <path d='M0 500zM2000 1000zM625 400h650l-325 400z' fill='url(#g0)'/>
+  </g>
+  <path d="M0 0h20v60l60 80l60 -80v-60h20v60l-67.5 90l67.5 90v60h-20v-60l-60 -80l-60 80v60h-20v-60l67.5 -90l-67.5 -90v-60zM180 0h20v60l60 80l60 -80v-60h20v60l-70 93.3333v150h-20v-150l-70 -93.3333 zM360 0h20v60h140l-120 160h120v80h-20v-60h-140l120 -160h-120 zM580 0h20v105h40v20h-40v120l40 53.3333h-20l-40 -53.3333v-120h-40v-20h40z" transform='translate(1895,950) scale(0.1625,0.1625)' fill='url(#logo)'/>
+</svg>
