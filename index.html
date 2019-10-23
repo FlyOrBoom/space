@@ -1,47 +1,99 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>XYZt Designs</title>
-    <link rel='shortcut icon' type='image/png' href='xyzt.png' />
+    <title>LXing</title>
+    <link rel='shortcut icon' type='image/png' href='assets/favi.png' />
     <meta charset='UTF-8'>
     <meta name='description' content='Artist, programmer, space geek.'>
-    <meta name='keywords' content='art,html,design,web,developer,xyzt'>
-    <meta name='author' content='XYZt'>
+    <meta name='keywords' content='art,html,design,web,developer,lxing'>
+    <meta name='author' content='Liu Xing'>
     <style>
+:root{
+  --color:#A6F
+}
 html,body{
   margin:0;
+  width:100%;
+  height:100%;
 }
 body{
-  position:relative;
-  top:0;
-  height:200vw;
-  background-image:linear-gradient(#40F,#000);
+  background-image:linear-gradient(var(--color),#000);
+  font-family:monospace,monospace;
+  box-sizing:border-box;
+  font-size:calc(.5vw + 1.5rem);
 }
-.abs{
-  position:absolute;
+#rest{
+  position:fixed;
+  width:80vw;
+  height:100%;
+  right:0;
+  overflow:scroll;
+}
+#rest>*{
+  padding:1rem;
+}
+#logo{
+  position:fixed;
+  width:20vw;
+  height:100vh;
 }
 #desc{
-  font-family:monospace,monospace;
-  color:#40F;
-  font-size:3rem;
-  padding:0 1rem;
-  bottom:0;
+  font-size:calc(1vw + 2rem);
 }
-#logo-overlay{
-  opacity:.3;
+.dark{
+  background:#000;
+  color:var(--color);
+}
+.light{
+  background:var(--color)8;
+  color:#000;
+  border-left:.96vw solid #000;
+  padding:.96vw;
+}
+#cliques-img{
+  width:30%;
+  border:.96vw solid #000;
+  image-rendering:pixelated;
+}
+::selection{
+  background:var(--color);
+  color:#000;
+}
+a{
+  display:block;
+  color:inherit;
+  text-decoration:none;
+}
+a:hover{
+  opacity:.5;
 }
     </style>
   </head>
   <body>
-    <svg id='logo' class='abs' viewbox='0 0 640 1280'>
-      <symbol id='logo-path'><path d='M0 0h20v60l60 80l60 -80v-60h20v60l-67.5 90l67.5 90V3840h-20V240l-60 -80l-60 80V3840h-20V240l67.5 -90l-67.5 -90v-60M180 0h20v60l60 80l60 -80v-60h20v60l-70 93.3333V3840h-20V153.333l-70 -93.3333M360 0h20v60h140l-120 160h120V3840h-20V240h-140l120 -160h-120M580 0h20v130h40v20h-40v120l40 53.3333V3840h-20V323.333l-40 -53.3333v-120h-40v-20h40' fill='#000'/></symbol>
-      <use href='#logo-path'></use>
+    <svg id='logo' viewBox='0 0 16 40' preserveAspectRatio='none'>
+      <path d='
+      M0 0h4v7l12 1h-12l4 2l4 -2h4l-6 4l6 4h-4l-4 -2l-4 2h12l-6 1v6l6 1v8l-12 1v5l8 1v-3l-2 -1h6v5h-12l-4 -1v-7h12l-8 -4v4h-4v-8h4l8 4v-4h-12l6 -1v-6l-6 -1l6 -4l-6 -4z'/>
     </svg>
-    <div id='desc' class='abs'>
-      Hello! I'm Xing. I like to experiment with all the crazy things the web can do. You can see some of these up there.
+    <div id='rest'>
+      <div class='dark' id='desc'>
+        Hi, I'm Xing. These are the stuff I've worked on.
+      </div>
+      <a href='cliques' class='light' id='cliques'>
+        <img id='cliques-img' src='showcase/cliques.png'>
+        <div>A browser-based open-source version of the card game Set.</div>
+      </a>
+      <a href='kessler' class='dark' id='kessler'>
+        <h1>Kessler</h1>
+        A space shooter where bullets stay around your tiny universe forever.
+      </a>
+      <a href='rocket.lxing.dev' class='light' id='rocket'>
+        <h1>Mercury-Redstone simulator</h1>
+        Suborbital rocket 2D sim.
+      </a>
+      <a href='robotics' class='dark'>
+        <h1>FTC 15303 Space Rocks</h1>
+        Robotics team website.
+      </a>
     </div>
-    <svg id='logo-overlay' class='abs' viewbox='0 0 640 1280'>
-      <use href='#logo-path'></use>
-    </svg>
   </body>
 </html>
