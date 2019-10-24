@@ -59,21 +59,20 @@ a{
   z-index:80;
 }
 #contact{
+  width:100vw;
+  height:100vh;
+}
+#contact>.clip{
   background:#08f;
   width:100vw;
   height:100vh;
-  clip-path:inset(50% 75% 0 0);
+  clip-path:inset(0 87.5% 87.5% 0);
 }
-#contact-wrapper{
-  width:100vw;
-  height:100vh;
-  clip-path:polygon(0 37.5vh,37.5vw 37.5vh,37.5vw 0,50vw 0,50vw 50vh,37.5vw 50vh,37.5vw 100vh,0 100vh);
+#contact:hover>.clip{
+  clip-path:inset(0 75% 75% 0);
 }
-#contact-wrapper:hover>#contact,#contact-wrapper:focus>#contact{
+#contact:focus>.clip{
   clip-path:inset(0 0 0 0);
-}
-#contact-wrapper:focus{
-  clip-path:polygon(0 0,0 0,0 0,100vw 0,100vw 50vh,100vw 50vh,100vw 100vh,0 100vh);
 }
 #about{
   width:100vw;
@@ -81,30 +80,33 @@ a{
   color:#fff;
 }
   #about>.clip{
+    clip-path:polygon(0 37.5vh,37.5vw 37.5vh,37.5vw 0,50vw 0,50vw 50vh,37.5vw 50vh,37.5vw 100vh,25vw 100vh,0 100vh);
+  }
+  #about>.clip>.clip{
     background-image:url(showcase/about.png);
     background-size:100% 100%;
     image-rendering:pixelated;
-    clip-path:inset(0 87.5% 87.5% 0);
+    clip-path:inset(50% 75% 0 0);
   }
-  #about:hover>.clip{
-    clip-path:inset(0 75% 75% 0);
+  #about:hover>.clip>.clip,#about:focus>.clip>.clip{
+    clip-path:inset(0 0% 0% 0);
   }
   #about:focus>.clip{
-    clip-path:inset(0 0% 0% 0);
+    clip-path:polygon(0 0,0 0,0 0,100vw 0,100vw 50vh,100vw 50vh,100vw 100vh,25vw 100vh,0 100vh);
   }
   #about>h1{
     left:0;
-    top:0;
+    bottom:0;
     color:#fff;
   }
-  #about>.clip>p{
+  #about>.clip>.clip>p{
     left:37.5vw;
     width:37.5vw;
     top:50vh;
     text-align:center;
   }
 h1{
-  position:relative;
+  position:absolute;
   width:12.5vw;
   height:12.5vh;
   font-size:inherit;
@@ -126,16 +128,13 @@ h2{
     clip-path:polygon(0 12.5vh,12.5vw 12.5vh,12.5vw 0,50vw 0,50vw 50vh,37.5vw 50vh,37.5vw 100vh,25vw 100vh,25vw 50vh,0 50vh);
   }
   #art>.clip>.clip{
-    background-image:url(showcase/reentry.min.svg);
+    background-image:url(showcase/reentry.png);
     background-size:cover;
     background-position:center;
     clip-path:polygon(0 25vh,25vw 25vh,25vw 0,37.5vw 0,37.5vw 37.5vh,37.5vw 37.5vh,37.5vw 37.5vh,25vw 37.5vh,25vw 37.5vh,0 37.5vh);
   }
   #art:hover>.clip>.clip,#art:focus>.clip>.clip{
     clip-path:polygon(0 0,0 0,0 0,100vw 0,100vw 100vh,37.5vw 100vh,37.5vw 100vh,25vw 100vh,25vw 100vh,0 100vh);
-  }
-  #art:focus>.clip>.clip{
-    background-image:url(showcase/reentry.png);
   }
   #art:focus>.clip{
     clip-path:polygon(0 0,12.5vw 0,12.5vw 0,100vw 0,100vw 100vh,37.5vw 100vh,37.5vw 100vh,25vw 100vh,25vw 100vh,0 100vh);
@@ -190,7 +189,7 @@ h2{
     clip-path:polygon(62.5vw 37.5vh,62.5vw 25vh,100vw 25vh,100vw 100vh,62.5vw 100vh,62.5vw 87.5vh,75vw 87.5vh,75vw 37.5vh);
   }
   #git>.clip>.clip{
-    background:#222;
+    background:#333;
     clip-path:inset(37.5% 0 0 87.5%);
   }
   #git:hover>.clip>.clip,#git:focus>.clip>.clip{
@@ -247,10 +246,10 @@ h2{
   <body>
     <div id='start'>
       <div id='about' tabindex='10'>
-        <div class='clip'>
+        <div class='clip'><div class='clip'>
           <p>Hi! I'm Xing Liu, and I use code to make art, among other things.</p>
           <div class='exit' tabindex='11'></div>
-        </div>
+        </div></div>
         <h1>About</h1>
       </div>
       <div id='art' tabindex='30'>
@@ -260,9 +259,11 @@ h2{
         </div></div>
         <h1>Art</h1>
       </div>
-      <div id='contact-wrapper' tabindex='20'>
-        <div id='contact'>Contact</div>
-        <div class='exit' tabindex='21'></div>
+      <div id='contact' tabindex='20'>
+        <div class='clip'>
+          <div class='exit' tabindex='31'></div>
+        </div>
+        <h1>@</h1>
       </div>
       <div id='web' tabindex='40'>
         <div class='clip'><div class='clip'>
