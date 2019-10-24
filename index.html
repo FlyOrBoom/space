@@ -8,71 +8,55 @@
     <meta name='keywords' content='art,html,design,web,developer,lxing'>
     <meta name='author' content='Xing'>
     <style>
+@font-face{
+  font-family:'IBM Plex';
+  src:url('assets/plex/var-roman.woff2') format('woff2');
+}
 html,body{
   margin:0;
   width:100%;
   height:100%;
 }
 body{
-  background:#fff;
+  background:#111;
   background-size:100% 100%;
-  font-family:monospace,monospace;
-  font-size:calc(.5vw + 1.5rem);
+  font-family:'IBM Plex',monospace;
+  font-size:3rem;
 }
-#rest{
-  position:fixed;
-  width:90vw;
-  height:100%;
-  right:0;
-  overflow:scroll;
-  display:none;
+*{
+  transition-duration:.2s;
 }
-#rest>*{
-  padding:1rem;
-}
-#logo{
-  position:fixed;
-  width:10vw;
-  height:100vh;
-}
-#desc{
-  font-size:calc(1vw + 2rem);
-}
-.dark{
-  background:#000;
-  color:#fff;
-}
-.light{
-  color:#000;
-  border-left:.96vw solid #000;
-  padding:.96vw;
-}
-#cliques-img{
-  width:30%;
-  border:.96vw solid #000;
-  image-rendering:pixelated;
-}
-::selection{
-  background:#fff;
-  color:#000;
+p{
+  font-size:1.8rem;
+  position:absolute;
 }
 a{
-  display:block;
   color:inherit;
   background:inherit;
   text-decoration:none;
   cursor:pointer;
 }
-#start>*,#start>*>*{
-  position:fixed;
-  transition-duration:.2s;
-}
 #start>*{
-  pointer-events:none;
+  position:fixed;
+  overflow:scroll;
 }
-#start>*>*{
-  pointer-events:auto;
+#start>*:not(:focus){
+  pointer-events:none;
   cursor:pointer;
+}
+.clip{
+  pointer-events:auto;
+  position:absolute;
+  width:100%;
+  height:100vh;
+  overflow:scroll;
+}
+#start>*:focus{
+  outline:none;
+  z-index:100;
+}
+#start>*:hover{
+  z-index:80;
 }
 #contact{
   background:#08f;
@@ -92,114 +76,168 @@ a{
   clip-path:polygon(0 0,0 0,0 0,100vw 0,100vw 50vh,100vw 50vh,100vw 100vh,0 100vh);
 }
 #about{
-  background-image:url(showcase/logo-red.png);
-  image-rendering:pixelated;
-
-  background-size:100% 100%;
   width:100vw;
   height:100vh;
   color:#fff;
-  font-size:4vw;
 }
-#about-wrapper{
-  width:100vw;
-  height:100vh;
-  clip-path:inset(0 87.5% 87.5% 0);
+  #about>.clip{
+    background-image:url(showcase/about.png);
+    background-size:100% 100%;
+    image-rendering:pixelated;
+    clip-path:inset(0 87.5% 87.5% 0);
+  }
+  #about:hover>.clip{
+    clip-path:inset(0 75% 75% 0);
+  }
+  #about:focus>.clip{
+    clip-path:inset(0 0% 0% 0);
+  }
+  #about>h1{
+    left:0;
+    top:0;
+    color:#fff;
+  }
+  #about>.clip>p{
+    left:37.5vw;
+    width:37.5vw;
+    top:50vh;
+    text-align:center;
+  }
+h1{
+  position:relative;
+  width:12.5vw;
+  height:12.5vh;
+  font-size:inherit;
+  font-weight:normal;
+  margin:0;
+  pointer-events:none;
 }
-#about-wrapper:hover{
-  clip-path:inset(0 75% 75% 0);
-}
-#about-wrapper:focus{
-  clip-path:inset(0 0% 0% 0);
+h2{
+  position:relative;
+  font-size:3rem;
+  width:50vw;
 }
 #art{
-  background-image:url(showcase/reentry.min.svg);
-  background-size:cover;
-  background-position:center;
-  
   width:100vw;
-  height:100vh;
+  height:200vh;
   text-align:right;
-  clip-path:polygon(0 25vh,25vw 25vh,25vw 0,37.5vw 0,37.5vw 37.5vh,37.5vw 37.5vh,37.5vw 37.5vh,25vw 37.5vh,25vw 37.5vh,0 37.5vh);
 }
-#art-wrapper{
-  clip-path:polygon(0 12.5vh,12.5vw 12.5vh,12.5vw 0,50vw 0,50vw 50vh,37.5vw 50vh,37.5vw 100vh,25vw 100vh,25vw 50vh,0 50vh);
-}
-#art-wrapper:hover>#art,#art-wrapper:focus>#art{
-  clip-path:polygon(0 0,0 0,0 0,100vw 0,100vw 100vh,37.5vw 100vh,37.5vw 100vh,25vw 100vh,25vw 100vh,0 100vh);
-}
-#art-wrapper:focus>#art{
-  background-image:url(showcase/reentry.png);
-}
-#art-wrapper:focus{
-  clip-path:polygon(0 0,12.5vw 0,12.5vw 0,100vw 0,100vw 100vh,37.5vw 100vh,37.5vw 100vh,25vw 100vh,25vw 100vh,0 100vh);
-}
-#web-wrapper{
-  clip-path:polygon(0 37.5vh,37.5vw 37.5vh,37.5vw 0,100vw 0,100vw 37.5vh,87.5vw 37.5vh,87.5vw 100vh,25vw 100vh,25vw 50vh,0 50vh);
-  width:100vw;
-  height:100vh;
-}
+  #art>.clip{
+    clip-path:polygon(0 12.5vh,12.5vw 12.5vh,12.5vw 0,50vw 0,50vw 50vh,37.5vw 50vh,37.5vw 100vh,25vw 100vh,25vw 50vh,0 50vh);
+  }
+  #art>.clip>.clip{
+    background-image:url(showcase/reentry.min.svg);
+    background-size:cover;
+    background-position:center;
+    clip-path:polygon(0 25vh,25vw 25vh,25vw 0,37.5vw 0,37.5vw 37.5vh,37.5vw 37.5vh,37.5vw 37.5vh,25vw 37.5vh,25vw 37.5vh,0 37.5vh);
+  }
+  #art:hover>.clip>.clip,#art:focus>.clip>.clip{
+    clip-path:polygon(0 0,0 0,0 0,100vw 0,100vw 100vh,37.5vw 100vh,37.5vw 100vh,25vw 100vh,25vw 100vh,0 100vh);
+  }
+  #art:focus>.clip>.clip{
+    background-image:url(showcase/reentry.png);
+  }
+  #art:focus>.clip{
+    clip-path:polygon(0 0,12.5vw 0,12.5vw 0,100vw 0,100vw 100vh,37.5vw 100vh,37.5vw 100vh,25vw 100vh,25vw 100vh,0 100vh);
+  }
+  #art>h1{
+    width:37.5vw;
+    line-height:12.5vh;
+    left:0;
+    top:25vh;
+  }
+  #curiosity{
+    position:static;
+    margin-top:100vh;
+    height:100vh;
+    background:#fff;
+  }
 #web{
-  background-image:url(showcase/kessler.svg);
-  background-size:cover;
-  text-align:center;
-  clip-path:polygon(50vw 37.5vh,50vw 37.5vh,50vw 0,62.5vw 0,62.5vw 12.5vh,100vw 12.5vh,100vw 25vh,62.5vw 25vh,62.5vw 37.5vh,75vw 37.5vh,75vw 87.5vh,62.5vw 87.5vh,62.5vw 100vh,37.5vw 100vh,37.5vw 50vh,50vw 50vh);
   width:100vw;
   height:100vh;
 }
-#web-wrapper:hover>#web,#web-wrapper:focus>#web{
-  clip-path:polygon(0 0,0 0,0 0,62.5vw 0,62.5vw 0,100vw 0,100vw 25vh,100vw 25vh,100vw 37.5vh,100vw 37.5vh,100vw 87.5vh,100vw 87.5vh,100vw 100vh,0vw 100vh,0vw 50vh,0vw 50vh);
-}
-#web-wrapper:focus{
-  clip-path:polygon(0 0,0 0,0 0,100vw 0,100vw 37.5vh,100vw 37.5vh,100vw 100vh,25vw 100vh,25vw 100vh,0 100vh);
-}
-#git-wrapper{
-  clip-path:polygon(62.5vw 37.5vh,62.5vw 25vh,100vw 25vh,100vw 100vh,62.5vw 100vh,62.5vw 87.5vh,75vw 87.5vh,75vw 37.5vh);
-  width:100vw;
-  height:100vh;
-}
+  #web>.clip{
+    clip-path:polygon(0 37.5vh,37.5vw 37.5vh,37.5vw 0,100vw 0,100vw 37.5vh,87.5vw 37.5vh,87.5vw 100vh,25vw 100vh,25vw 50vh,0 50vh);
+  }
+  #web>.clip>.clip{
+    clip-path:polygon(50vw 37.5vh,50vw 37.5vh,50vw 0,62.5vw 0,62.5vw 12.5vh,100vw 12.5vh,100vw 25vh,62.5vw 25vh,62.5vw 37.5vh,75vw 37.5vh,75vw 87.5vh,62.5vw 87.5vh,62.5vw 100vh,37.5vw 100vh,37.5vw 50vh,50vw 50vh);
+    background-image:url(showcase/kessler.svg);
+    background-size:cover;
+  }
+  #web:hover>.clip>.clip,#web:focus>.clip>.clip{
+    clip-path:polygon(0 0,0 0,0 0,62.5vw 0,62.5vw 0,100vw 0,100vw 25vh,100vw 25vh,100vw 37.5vh,100vw 37.5vh,100vw 87.5vh,100vw 87.5vh,100vw 100vh,0vw 100vh,0vw 50vh,0vw 50vh);
+  }
+  #web:focus>.clip{
+    clip-path:polygon(0 0,0 0,0 0,100vw 0,100vw 37.5vh,100vw 37.5vh,100vw 100vh,25vw 100vh,25vw 100vh,0 100vh);
+  }
+  #web>h1{
+    text-align:right;
+    width:50vw;
+    top:12.5vh;
+    line-height:12.5vh;
+    left:50vw;
+  }
+  #web-showcase{
+    position:static;
+    background:#fff;
+    margin-top:100vh;
+  }
 #git{
-  background:#222;
-  color:#fff;
   width:100vw;
   height:100vh;
-  clip-path:inset(37.5% 0 0 87.5%);
 }
-#git-text{
-  position:fixed;
-  bottom:0;
-  right:0;
-}
-#git-wrapper:hover>#git,#git-wrapper:focus>#git{
-  clip-path:inset(0 0 0 0);
-}
-#git-wrapper:focus>#git{
-  background:#fff;
-}
-#git-wrapper:focus{
-  clip-path:polygon(0 37.5vh,0vw 0,100vw 0,100vw 100vh,0 100vh,0 87.5vh,0 87.5vh,0 37.5vh);
-}
-:focus{
-  outline:none;
-  z-index:999;
-}
+  #git>.clip{
+    clip-path:polygon(62.5vw 37.5vh,62.5vw 25vh,100vw 25vh,100vw 100vh,62.5vw 100vh,62.5vw 87.5vh,75vw 87.5vh,75vw 37.5vh);
+  }
+  #git>.clip>.clip{
+    background:#222;
+    clip-path:inset(37.5% 0 0 87.5%);
+  }
+  #git:hover>.clip>.clip,#git:focus>.clip>.clip{
+    clip-path:inset(0 0 0 0);
+  }
+  #git:focus>.clip>.clip{
+    background:#fff;
+  }
+  #git:focus>.clip{
+    clip-path:polygon(0 37.5vh,0vw 0,100vw 0,100vw 100vh,0 100vh,0 87.5vh,0 87.5vh,0 37.5vh);
+  }
+  #git>h1{
+    color:#fff;
+    position:fixed;
+    bottom:0;
+    right:0;
+  }
 #blocker{
   width:100vw;
   height:100vh;
   pointer-events:none;
+  z-index:90;
 }
-#blocker>*{
-  pointer-events:auto;
-  cursor:auto;
-}
+  #blocker>*{
+    pointer-events:auto;
+    cursor:auto;
+  }
 .exit{
   position:fixed;
-  background-image:linear-gradient(to bottom right,#fff0 47.5%,#fff 48%,#fff 52%,#fff0 52.5%),linear-gradient(to top right,#fff0 47.5%,#fff 48%,#fff 52%,#fff0 52.5%);
-  width:12.5vw;
-  height:12.5vh;
-  right:0;
+  background:#fff;
+  color:#000;
   bottom:0;
+  right:0;
   opacity:.6;
+  width:12.5vw;
+  height:0;
+  mix-blend-mode:exclusion;
+  opacity:.6;
+  cursor:pointer;
+  text-align:right;
+  line-height:12.5vh;
+}
+.exit::before{
+  content:'back';
+}
+:focus>.clip>.exit,:focus>.clip>.clip>.exit{
+  height:12.5vh;
 }
 .exit:hover{
   opacity:1;
@@ -208,48 +246,62 @@ a{
   </head>
   <body>
     <div id='start'>
-      <div id='about-wrapper' tabindex='10'>
-        <div id='about'>About</div>
-        <div class='exit' tabindex='11'></div>
+      <div id='about' tabindex='10'>
+        <div class='clip'>
+          <p>Hi! I'm Xing Liu, and I use code to make art, among other things.</p>
+          <div class='exit' tabindex='11'></div>
+        </div>
+        <h1>About</h1>
       </div>
-      <div id='art-wrapper' tabindex='30'>
-        <div id='art'>Art</div>
-        <div class='exit' tabindex='31'></div>
+      <div id='art' tabindex='30'>
+        <div class='clip'><div class='clip'>
+          <div id='curiosity'></div>
+          <div class='exit' tabindex='31'></div>
+        </div></div>
+        <h1>Art</h1>
       </div>
       <div id='contact-wrapper' tabindex='20'>
         <div id='contact'>Contact</div>
         <div class='exit' tabindex='21'></div>
       </div>
-      <div id='web-wrapper' tabindex='40'>
-        <div id='web'>Websites</div>
-        <div class='exit' tabindex='41'></div>
+      <div id='web' tabindex='40'>
+        <div class='clip'><div class='clip'>
+          <div id='web-showcase'>
+            <a href='cliques' id='cliques'><h2>Cliques</h2></a>
+              <p>A browser-based open-source version of the card game Set.</p>
+            <a href='kessler' id='kessler'><h2>Kessler</h2></a>
+              <p>A space shooter where bullets stay around your tiny universe forever.</p>
+            <a href='rocket' id='rocket'><h2>Mercury-Redstone simulator</h2></a>
+              <p>Suborbital rocket 2D sim.</p>
+            <a href='robotics' class='dark'>
+              <h1>FTC 15303 Space Rocks</h1>
+              Robotics team website.
+            </a>
+          </div>
+          <div class='exit' tabindex='41'></div>
+        </div></div>
+        <h1>Websites</h1>
       </div>
-      <div id='git-wrapper' tabindex='50'>
-        <a id='git' href='https://github.com/flyorboom/'>
-          <span id='git-text'>GitHub</span>
-        </a>
-      </div>
+      <a id='git' tabindex='50' href='https://github.com/flyorboom/'>
+        <div class='clip'><div class='clip'>
+        </div></div>
+        <h1>GitHub</h1>
+      </a>
       <svg id='blocker' viewBox='0 0 16 16' preserveAspectRatio='none'>
-        <path d='M0 3h3v-3M0 7h7v-7M5 7v9M16 1h-5.5M16 5h-5.5M13 5v10h-2.5' fill='none' stroke-width='.8' stroke='#0000'/>
+        <path d='M0 3h3v-3M0 7h7v-7M5 7v9M16 1h-5.5M16 5h-5.5M13 5v10h-2.5' fill='none' stroke-width='2' stroke='#0000'/>
       </svg>
     </div>
-    <div id='rest'>
-      <a href='cliques' class='light' id='cliques'>
-        <img id='cliques-img' src='showcase/cliques.png'>
-        <div>A browser-based open-source version of the card game Set.</div>
-      </a>
-      <a href='kessler' class='dark' id='kessler'>
-        <h1>Kessler</h1>
-        A space shooter where bullets stay around your tiny universe forever.
-      </a>
-      <a href='rocket.lxing.dev' class='light' id='rocket'>
-        <h1>Mercury-Redstone simulator</h1>
-        Suborbital rocket 2D sim.
-      </a>
-      <a href='robotics' class='dark'>
-        <h1>FTC 15303 Space Rocks</h1>
-        Robotics team website.
-      </a>
-    </div>
+    <script>
+const doc = document;
+function delay(url){
+  setTimeout(function(){window.location=url},200);
+}
+doc.onkeydown=function(e){
+  if(e.key==='Escape'){
+    doc.activeElement.blur();
+  }
+};
+doc.getElementById('git-wrapper').href=`delay(``https://github.com/flyorboom/``)`;
+    </script>
   </body>
 </html>
