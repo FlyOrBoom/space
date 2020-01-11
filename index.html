@@ -22,9 +22,15 @@ body{
   background-size:100% 100%;
   font-family:'IBM Plex',monospace;
   font-size:3rem;
+  overflow:hidden
+}
+@media(prefers-color-scheme:light){
+  body{
+    background:#fff
+  }
 }
 *{
-  transition-duration:.2s;
+  transition-duration:.3s;
 }
 p{
   font-size:1.8rem;
@@ -36,76 +42,121 @@ a{
   text-decoration:none;
   cursor:pointer;
 }
-#start>*{
+section,#blocker{
   position:fixed;
-  overflow:scroll;
+  width:100vw;
+  height:100vh;
 }
-#start>*:not(:focus){
-  pointer-events:none;
+section{
+  overflow:scroll;
+  pointer-events:auto;
+  animation-timing-function:linear;
+  animation-duration:.3s;
+  animation-play-state:paused;
   cursor:pointer;
 }
-.clip{
-  pointer-events:auto;
-  position:absolute;
-  width:100%;
-  height:100vh;
-  overflow:scroll;
-}
-#start>*:focus{
+section.highlight{
+  cursor:auto;
   outline:none;
   z-index:100;
 }
-#start>*:hover{
+section.hover,section.unhover{
+  animation-play-state:running
+}
+section.unhover{
+  animation-direction:reverse;
+}
+section.hover{
   z-index:80;
+  animation-direction:normal;
 }
 #contact{
-  width:100vw;
-  height:100vh;
   color:#fff;
-}
-#contact>.clip{
   background-image:conic-gradient(from 135deg,#000,#222,#000);
-  width:100vw;
-  height:100vh;
   clip-path:inset(0 87.5% 87.5% 0);
 }
-#contact:hover>.clip{
+#contact:hover{
   clip-path:inset(0 75% 75% 0);
 }
-#contact:focus>.clip{
+#contact:focus{
   clip-path:inset(0 0 0 0);
 }
 #about{
-  width:100vw;
-  height:100vh;
   color:#052222;
+  background-image:url(showcase/suzhou.svg);
+  background-size:120% 120%;
+  background-position:center;
+  animation-name:about;
+  animation-fill-mode:forwards
 }
-  #about>.clip{
-    clip-path:polygon(0 37.5vh,37.5vw 37.5vh,37.5vw 0,50vw 0,50vw 50vh,37.5vw 50vh,37.5vw 100vh,25vw 100vh,0 100vh);
+@keyframes about{
+  0%{
+    clip-path:polygon(
+      0       50vh,
+      25vw    50vh,
+      25vw    50vh,
+      25vw    50vh,
+      25vw    50vh,
+      25vw    50vh,
+      25vw    100vh,
+      25vw    100vh,
+      0       100vh
+    )  
   }
-  #about>.clip>.clip{
-    background-image:url(showcase/suzhou.svg);
-    background-size:120% 120%;
-    background-position:center;
-    clip-path:inset(50% 75% 0 0);
+  35%{
+    clip-path:polygon(
+      0       37.5vh,
+      37.5vw  37.5vh,
+      37.5vw  37.5vh,
+      37.5vw  50vh,
+      37.5vw  50vh,
+      37.5vw  50vh,
+      37.5vw  100vh,
+      37.5vw  100vh,
+      0       100vh
+    )  
   }
-  #about:hover>.clip>.clip,#about:focus>.clip>.clip{
-    clip-path:inset(0 0% 0% 0);
+  40%{
+    clip-path:polygon(
+      0       37.5vh,
+      37.5vw  37.5vh,
+      37.5vw  37.5vh,
+      50vw    50vh,
+      50vw    50vh,
+      37.5vw  50vh,
+      37.5vw  100vh,
+      37.5vw  100vh,
+      0       100vh
+    )  
   }
-  #about:focus>.clip{
-    clip-path:polygon(0 0,0 0,0 0,100vw 0,100vw 50vh,100vw 50vh,100vw 100vh,25vw 100vh,0 100vh);
+  100%{
+    clip-path:polygon(
+      0       37.5vh,
+      37.5vw  37.5vh,
+      37.5vw  0,
+      50vw    0,
+      50vw    50vh,
+      37.5vw  50vh,
+      37.5vw  100vh,
+      25vw    100vh,
+      0       100vh
+    );
   }
-  #about>h1{
-    left:0;
-    bottom:0;
-    color:#fff;
-  }
-  #about>.clip>.clip>p{
-    left:37.5vw;
-    width:37.5vw;
-    top:50vh;
-    text-align:center;
-  }
+}
+#about:focus{
+  clip-path:polygon(0 0,0 0,0 0,100vw 0,100vw 50vh,100vw 50vh,100vw 100vh,25vw 100vh,0 100vh);
+}
+#about>h1{
+  left:0;
+  bottom:0;
+  color:#fff;
+}
+#about>p{
+  left:37.5vw;
+  width:37.5vw;
+  top:50vh;
+  text-align:center;
+}
 h1{
   position:absolute;
   width:12.5vw;
@@ -125,100 +176,93 @@ h2{
   height:200vh;
   text-align:right;
 }
-  #art>.clip{
-    clip-path:polygon(0 12.5vh,12.5vw 12.5vh,12.5vw 0,50vw 0,50vw 50vh,37.5vw 50vh,37.5vw 100vh,25vw 100vh,25vw 50vh,0 50vh);
-  }
-  #art>.clip>.clip{
-    background-image:url(showcase/reentry.png);
-    background-size:cover;
-    background-position:center;
-    clip-path:polygon(0 25vh,25vw 25vh,25vw 0,37.5vw 0,37.5vw 37.5vh,37.5vw 37.5vh,37.5vw 37.5vh,25vw 37.5vh,25vw 37.5vh,0 37.5vh);
-  }
-  #art:hover>.clip>.clip,#art:focus>.clip>.clip{
-    clip-path:polygon(0 0,0 0,0 0,100vw 0,100vw 100vh,37.5vw 100vh,37.5vw 100vh,25vw 100vh,25vw 100vh,0 100vh);
-  }
-  #art:focus>.clip{
-    clip-path:polygon(0 0,12.5vw 0,12.5vw 0,100vw 0,100vw 100vh,37.5vw 100vh,37.5vw 100vh,25vw 100vh,25vw 100vh,0 100vh);
-  }
-  #art>h1{
-    width:37.5vw;
-    line-height:12.5vh;
-    left:0;
-    top:25vh;
-  }
-  #curiosity{
-    position:static;
-    margin-top:100vh;
-    height:100vh;
-    background:#fff;
-  }
+#art{
+  clip-path:polygon(0 12.5vh,12.5vw 12.5vh,12.5vw 0,50vw 0,50vw 50vh,37.5vw 50vh,37.5vw 100vh,25vw 100vh,25vw 50vh,0 50vh);
+}
+#art{
+  background-image:url(showcase/reentry.png);
+  background-size:cover;
+  background-position:center;
+  clip-path:polygon(0 25vh,25vw 25vh,25vw 0,37.5vw 0,37.5vw 37.5vh,37.5vw 37.5vh,37.5vw 37.5vh,25vw 37.5vh,25vw 37.5vh,0 37.5vh);
+}
+#art:hover,#art:focus{
+  clip-path:polygon(0 0,0 0,0 0,100vw 0,100vw 100vh,37.5vw 100vh,37.5vw 100vh,25vw 100vh,25vw 100vh,0 100vh);
+}
+#art:focus{
+  clip-path:polygon(0 0,12.5vw 0,12.5vw 0,100vw 0,100vw 100vh,37.5vw 100vh,37.5vw 100vh,25vw 100vh,25vw 100vh,0 100vh);
+}
+#art>h1{
+  width:37.5vw;
+  line-height:12.5vh;
+  left:0;
+  top:25vh;
+}
+#curiosity{
+  position:static;
+  margin-top:100vh;
+  height:100vh;
+  background:#fff;
+}
 #web{
   width:100vw;
   height:100vh;
 }
-  #web>.clip{
-    clip-path:polygon(0 37.5vh,37.5vw 37.5vh,37.5vw 0,100vw 0,100vw 37.5vh,87.5vw 37.5vh,87.5vw 100vh,25vw 100vh,25vw 50vh,0 50vh);
-  }
-  #web>.clip>.clip{
-    clip-path:polygon(50vw 37.5vh,50vw 37.5vh,50vw 0,62.5vw 0,62.5vw 12.5vh,100vw 12.5vh,100vw 25vh,62.5vw 25vh,62.5vw 37.5vh,75vw 37.5vh,75vw 87.5vh,62.5vw 87.5vh,62.5vw 100vh,37.5vw 100vh,37.5vw 50vh,50vw 50vh);
-    background-image:url(showcase/kessler.svg);
-    background-size:cover;
-  }
-  #web:hover>.clip>.clip,#web:focus>.clip>.clip{
-    clip-path:polygon(0 0,0 0,0 0,62.5vw 0,62.5vw 0,100vw 0,100vw 25vh,100vw 25vh,100vw 37.5vh,100vw 37.5vh,100vw 87.5vh,100vw 87.5vh,100vw 100vh,0vw 100vh,0vw 50vh,0vw 50vh);
-  }
-  #web:focus>.clip{
-    clip-path:polygon(0 0,0 0,0 0,100vw 0,100vw 37.5vh,100vw 37.5vh,100vw 100vh,25vw 100vh,25vw 100vh,0 100vh);
-  }
-  #web>h1{
-    text-align:right;
-    width:50vw;
-    top:12.5vh;
-    line-height:12.5vh;
-    left:50vw;
-  }
-  #web-showcase{
-    position:static;
-    background:#fff;
-    margin-top:100vh;
-  }
-#git{
+#web{
+  clip-path:polygon(0 37.5vh,37.5vw 37.5vh,37.5vw 0,100vw 0,100vw 37.5vh,87.5vw 37.5vh,87.5vw 100vh,25vw 100vh,25vw 50vh,0 50vh);
+}
+#web{
+  clip-path:polygon(50vw 37.5vh,50vw 37.5vh,50vw 0,62.5vw 0,62.5vw 12.5vh,100vw 12.5vh,100vw 25vh,62.5vw 25vh,62.5vw 37.5vh,75vw 37.5vh,75vw 87.5vh,62.5vw 87.5vh,62.5vw 100vh,37.5vw 100vh,37.5vw 50vh,50vw 50vh);
+  background-image:url(showcase/kessler.svg);
+  background-size:cover;
+}
+#web:hover,#web:focus{
+  clip-path:polygon(0 0,0 0,0 0,62.5vw 0,62.5vw 0,100vw 0,100vw 25vh,100vw 25vh,100vw 37.5vh,100vw 37.5vh,100vw 87.5vh,100vw 87.5vh,100vw 100vh,0vw 100vh,0vw 50vh,0vw 50vh);
+}
+#web:focus{
+  clip-path:polygon(0 0,0 0,0 0,100vw 0,100vw 37.5vh,100vw 37.5vh,100vw 100vh,25vw 100vh,25vw 100vh,0 100vh);
+}
+#web>h1{
+  text-align:right;
+  width:50vw;
+  top:12.5vh;
+  line-height:12.5vh;
+  left:50vw;
+}
+#github{
   width:100vw;
   height:100vh;
 }
-  #git>.clip{
-    clip-path:polygon(62.5vw 37.5vh,62.5vw 25vh,100vw 25vh,100vw 100vh,62.5vw 100vh,62.5vw 87.5vh,75vw 87.5vh,75vw 37.5vh);
-  }
-  #git>.clip>.clip{
-    background:#333;
-    clip-path:inset(37.5% 0 0 87.5%);
-  }
-  #git:hover>.clip>.clip,#git:focus>.clip>.clip{
-    clip-path:inset(0 0 0 0);
-  }
-  #git:focus>.clip>.clip{
-    background:#fff;
-  }
-  #git:focus>.clip{
-    clip-path:polygon(0 37.5vh,0vw 0,100vw 0,100vw 100vh,0 100vh,0 87.5vh,0 87.5vh,0 37.5vh);
-  }
-  #git>h1{
-    color:#fff;
-    position:fixed;
-    bottom:0;
-    right:0;
-  }
+#github{
+  clip-path:polygon(62.5vw 37.5vh,62.5vw 25vh,100vw 25vh,100vw 100vh,62.5vw 100vh,62.5vw 87.5vh,75vw 87.5vh,75vw 37.5vh);
+}
+#github{
+  background:#333;
+  clip-path:inset(37.5% 0 0 87.5%);
+}
+#github:hover,#github:focus{
+  clip-path:inset(0 0 0 0);
+}
+#github:focus{
+  background:#fff;
+}
+#github:focus{
+  clip-path:polygon(0 37.5vh,0vw 0,100vw 0,100vw 100vh,0 100vh,0 87.5vh,0 87.5vh,0 37.5vh);
+}
+#github>h1{
+  color:#fff;
+  position:fixed;
+  bottom:0;
+  right:0;
+}
 #blocker{
-  width:100vw;
-  height:100vh;
   pointer-events:none;
   z-index:90;
 }
-  #blocker>*{
-    pointer-events:auto;
-    cursor:auto;
-  }
-.exit{
+#blocker>*{
+  pointer-events:auto;
+  cursor:auto;
+}
+exit{
   position:fixed;
   backdrop-filter:blur(1vw);
   background:#fff8;
@@ -233,77 +277,82 @@ h2{
   text-align:right;
   line-height:12.5vh;
 }
-.exit::before{
+exit::before{
   content:'back';
 }
-:focus>.clip>.exit,:focus>.clip>.clip>.exit{
+:focus>exit,:focus>exit{
   height:12.5vh;
 }
-.exit:hover{
+exit:hover{
   opacity:1;
 }
     </style>
   </head>
   <body>
-    <div id='start'>
-      <div id='about' tabindex='10'>
-        <div class='clip'><div class='clip'>
-          <p>Hi! I'm Xing Liu, and I use code to make art, among other things.</p>
-          <div class='exit' tabindex='11'></div>
-        </div></div>
+    <main id='start'>
+      <section id='about' tabindex='0'>
         <h1>About</h1>
-      </div>
-      <div id='art' tabindex='30'>
-        <div class='clip'><div class='clip'>
-          <div id='curiosity'></div>
-          <div class='exit' tabindex='31'></div>
-        </div></div>
+        <p>Hi! I'm Xing, and I use code to make art, among other things.</p>
+        <exit tabindex='0'></exit>
+      </section>
+      <section id='art' tabindex='1'>
         <h1>Art</h1>
-      </div>
-      <div id='contact' tabindex='20'>
-        <div class='clip'>
-          <div class='exit' tabindex='31'></div>
-        </div>
-        <h1>@</h1>
-      </div>
-      <div id='web' tabindex='40'>
-        <div class='clip'><div class='clip'>
-          <div id='web-showcase'>
-            <a href='cliques' id='cliques'><h2>Cliques</h2></a>
-              <p>A browser-based open-source version of the card game Set.</p>
-            <a href='kessler' id='kessler'><h2>Kessler</h2></a>
-              <p>A space shooter where bullets stay around your tiny universe forever.</p>
-            <a href='rocket' id='rocket'><h2>Mercury-Redstone simulator</h2></a>
-              <p>Suborbital rocket 2D sim.</p>
-            <a href='robotics' class='dark'>
-              <h1>FTC 15303 Space Rocks</h1>
-              Robotics team website.
-            </a>
-          </div>
-          <div class='exit' tabindex='41'></div>
-        </div></div>
+        <div id='curiosity'></div>
+        <exit tabindex='0'></exit>
+      </section>
+      <section id='web' tabindex='2'>
         <h1>Websites</h1>
-      </div>
-      <a id='git' tabindex='50' href='https://github.com/flyorboom/'>
-        <div class='clip'><div class='clip'>
-        </div></div>
-        <h1>GitHub</h1>
-      </a>
+        <a href='cliques' id='cliques'><h2>Cliques</h2></a>
+        <p>A browser-based open-source version of the card game Set.</p>
+        <a href='kessler' id='kessler'><h2>Kessler</h2></a>
+        <p>A space shooter where bullets stay around your tiny universe forever.</p>
+        <a href='rocket' id='rocket'><h2>Mercury-Redstone simulator</h2></a>
+        <p>Suborbital rocket 2D sim.</p>
+        <a href='robotics' class='dark'>
+          <h1>FTC 15303 Space Rocks</h1>
+          Robotics team website.
+        </a>
+        <exit tabindex='0'></exit>
+      </section>
+      <section id='contact' tabindex='3'>
+        <h1>@</h1>
+        <exit tabindex='0'></exit>
+      </section>
+      <section id='github' tabindex='4'>
+        <a tabindex='50' href='https://github.com/flyorboom/'>
+          <h1>GitHub</h1>
+        </a>
+      </section>
       <svg id='blocker' viewBox='0 0 16 16' preserveAspectRatio='none'>
         <path d='M0 3h3v-3M0 7h7v-7M5 7v9M16 1h-5.5M16 5h-5.5M13 5v10h-2.5' fill='none' stroke-width='2' stroke='#0000'/>
       </svg>
-    </div>
+    </main>
     <script>
-const doc = document;
+const doc = document
+
+Array.from(doc.getElementsByTagName('section')).forEach((element)=>{
+  element.addEventListener('mouseenter',()=>{
+    element.classList.remove('unhover')
+    element.classList.add('hover')
+    console.log(true)
+  })
+  element.addEventListener('mouseleave',()=>{
+    element.classList.remove('hover')
+    element.classList.add('unhover')
+    console.log(false)
+  })
+})
+
+
 function delay(url){
-  setTimeout(function(){window.location=url},200);
+  setTimeout(function(){window.location=url},200)
 }
-doc.onkeydown=function(e){
+doc.addEventListener('keydown',(e)=>{
   if(e.key==='Escape'){
     doc.activeElement.blur();
   }
-};
-doc.getElementById('git-wrapper').href=`delay(``https://github.com/flyorboom/``)`;
+})
+doc.getElementById('git-wrapper').href=`delay(``https://github.com/flyorboom/``)`
     </script>
   </body>
 </html>
