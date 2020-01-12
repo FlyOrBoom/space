@@ -26,7 +26,7 @@ body{
 }
 *{
   transition:clip-path .3s,
-             opacity .3s;
+             opacity   .3s;
 }
 h1{
   display:block;
@@ -75,9 +75,10 @@ section{
 section.highlight{
   cursor:auto;
   outline:none;
-  z-index:100;
+  z-index:90;
 }
-section:hover{
+section:hover,section:focus{
+  z-index:100
 }
 #contact{
   color:#fff;
@@ -155,6 +156,18 @@ section:hover{
       0       100vh
     )  
   }
+  50%{
+    clip-path:polygon(
+      0       37.5vh,
+      37.5vw  37.5vh,
+      37.5vw  37.5vh,
+      50vw    37.5vh,
+      50vw    50vh,
+      37.5vw  50vh,
+      37.5vw  100vh,
+      0       100vh
+    )  
+  }
   100%{
     clip-path:polygon(
       0       37.5vh,
@@ -199,6 +212,18 @@ section:hover{
       37.5vw  37.5vh,
       37.5vw  37.5vh,
       50vw    50vh,
+      50vw    50vh,
+      37.5vw  50vh,
+      37.5vw  100vh,
+      0       100vh
+    )  
+  }
+  50%{
+    clip-path:polygon(
+      0       37.5vh,
+      37.5vw  37.5vh,
+      37.5vw  37.5vh,
+      50vw    37.5vh,
       50vw    50vh,
       37.5vw  50vh,
       37.5vw  100vh,
@@ -282,6 +307,7 @@ section:hover{
       37.5vw  0,
       37.5vw  37.5vh,
       37.5vw  37.5vh,
+      37.5vw  37.5vh,
       25vw    37.5vh,
       25vw    37.5vh,
       0       37.5vh
@@ -295,6 +321,7 @@ section:hover{
       50vw    0,
       50vw    50vh,
       37.5vw  50vh,
+      37.5vw  50vh,
       25vw    50vh,
       25vw    50vh,
       0       50vh
@@ -307,9 +334,10 @@ section:hover{
       0       0,
       50vw    0,
       50vw    50vh,
+      37.5vw  50vh,
       37.5vw  100vh,
       25vw    100vh,
-      25vw     50vh,
+      25vw    50vh,
       0       50vh
     )
   }
@@ -361,30 +389,280 @@ section:hover{
   height:100vh;
   background:#fff;
 }
-#web{
-  width:100vw;
-  height:100vh;
-}
-#web{
-  clip-path:polygon(0 37.5vh,37.5vw 37.5vh,37.5vw 0,100vw 0,100vw 37.5vh,87.5vw 37.5vh,87.5vw 100vh,25vw 100vh,25vw 50vh,0 50vh);
-}
-#web{
-  clip-path:polygon(50vw 37.5vh,50vw 37.5vh,50vw 0,62.5vw 0,62.5vw 12.5vh,100vw 12.5vh,100vw 25vh,62.5vw 25vh,62.5vw 37.5vh,75vw 37.5vh,75vw 87.5vh,62.5vw 87.5vh,62.5vw 100vh,37.5vw 100vh,37.5vw 50vh,50vw 50vh);
+#website{
   background-image:url(showcase/kessler.svg);
-  background-size:cover;
+  animation-name:website-reverse
 }
-#web:hover,#web:focus{
-  clip-path:polygon(0 0,0 0,0 0,62.5vw 0,62.5vw 0,100vw 0,100vw 25vh,100vw 25vh,100vw 37.5vh,100vw 37.5vh,100vw 87.5vh,100vw 87.5vh,100vw 100vh,0vw 100vh,0vw 50vh,0vw 50vh);
+#website:hover,#website:focus{
+  animation-name:website
 }
-#web:focus{
-  clip-path:polygon(0 0,0 0,0 0,100vw 0,100vw 37.5vh,100vw 37.5vh,100vw 100vh,25vw 100vh,25vw 100vh,0 100vh);
+#website.highlight{
+  animation-name:website-highlight
 }
-#web>h1{
+#website>h1{
   top:0;
   left:37.5vw;
   width:62.5vw;
   height:100vh;
   background-image:url('h1/websites.png')
+}
+@keyframes website{
+  0%{
+    clip-path:polygon(
+      50vw    37.5vh,
+      50vw    37.5vh,
+      50vw    37.5vh,
+      50vw    0,
+      62.5vw  0,
+      62.5vw  12.5vh,
+      100vw   12.5vh,
+      100vw   25vh,
+      62.5vw  25vh,
+      62.5vw  37.5vh,
+      75vw    37.5vh,
+      75vw    87.5vh,
+      62.5vw  87.5vh,
+      62.5vw  100vh,
+      37.5vw  100vh,
+      37.5vw  50vh,
+      50vw    50vh
+    )
+  }
+  25%{
+    clip-path:polygon(
+      37.5vw  37.5vh,
+      37.5vw  37.5vh,
+      37.5vw  37.5vh,
+      37.5vw  0,
+      75vw    0,
+      75vw    12.5vh,
+      100vw   12.5vh,
+      100vw   25vh,
+      75vw    25vh,
+      75vw    37.5vh,
+      75vw    37.5vh,
+      75vw    87.5vh,
+      75vw    87.5vh,
+      75vw    100vh,
+      37.5vw  100vh,
+      37.5vw  50vh,
+      37.5vw  50vh
+    )
+  }
+  50%{
+    clip-path:polygon(
+      25vw    37.5vh,
+      25vw    37.5vh,
+      37.5vw  37.5vh,
+      37.5vw  0,
+      87.5vw  0,
+      87.5vw  12.5vh,
+      100vw   12.5vh,
+      100vw   25vh,
+      87.5vw  25vh,
+      87.5vw  37.5vh,
+      87.5vw  37.5vh,
+      87.5vw  87.5vh,
+      87.5vw  87.5vh,
+      87.5vw  100vh,
+      25vw    100vh,
+      25vw    50vh,
+      25vw    50vh
+    )
+  }
+  75%{
+    clip-path:polygon(
+      12.5vw  37.5vh,
+      25vw    37.5vh,
+      37.5vw  37.5vh,
+      37.5vw  0,
+      100vw   0,
+      100vw   12.5vh,
+      100vw   12.5vh,
+      100vw   25vh,
+      100vw   25vh,
+      100vw   37.5vh,
+      87.5vw  37.5vh,
+      87.5vw  87.5vh,
+      87.5vw  87.5vh,
+      87.5vw  100vh,
+      25vw    100vh,
+      25vw    50vh,
+      12.5vw  50vh
+    )
+  }
+  100%{
+    clip-path:polygon(
+      0       37.5vh,
+      25vw    37.5vh,
+      37.5vw  37.5vh,
+      37.5vw  0,
+      100vw   0,
+      100vw   12.5vh,
+      100vw   12.5vh,
+      100vw   25vh,
+      100vw   25vh,
+      100vw   37.5vh,
+      87.5vw  37.5vh,
+      87.5vw  87.5vh,
+      87.5vw  87.5vh,
+      87.5vw  100vh,
+      25vw    100vh,
+      25vw    50vh,
+      0       50vh
+    )
+  }
+}
+@keyframes website-reverse{
+  100%{
+    clip-path:polygon(
+      50vw    37.5vh,
+      50vw    37.5vh,
+      50vw    37.5vh,
+      50vw    0,
+      62.5vw  0,
+      62.5vw  12.5vh,
+      100vw   12.5vh,
+      100vw   25vh,
+      62.5vw  25vh,
+      62.5vw  37.5vh,
+      75vw    37.5vh,
+      75vw    87.5vh,
+      62.5vw  87.5vh,
+      62.5vw  100vh,
+      37.5vw  100vh,
+      37.5vw  50vh,
+      50vw    50vh
+    )
+  }
+  75%{
+    clip-path:polygon(
+      37.5vw  37.5vh,
+      37.5vw  37.5vh,
+      37.5vw  37.5vh,
+      37.5vw  0,
+      75vw    0,
+      75vw    12.5vh,
+      100vw   12.5vh,
+      100vw   25vh,
+      75vw    25vh,
+      75vw    37.5vh,
+      75vw    37.5vh,
+      75vw    87.5vh,
+      75vw    87.5vh,
+      75vw    100vh,
+      37.5vw  100vh,
+      37.5vw  50vh,
+      37.5vw  50vh
+    )
+  }
+  50%{
+    clip-path:polygon(
+      25vw    37.5vh,
+      25vw    37.5vh,
+      37.5vw  37.5vh,
+      37.5vw  0,
+      87.5vw  0,
+      87.5vw  12.5vh,
+      100vw   12.5vh,
+      100vw   25vh,
+      87.5vw  25vh,
+      87.5vw  37.5vh,
+      87.5vw  37.5vh,
+      87.5vw  87.5vh,
+      87.5vw  87.5vh,
+      87.5vw  100vh,
+      25vw    100vh,
+      25vw    50vh,
+      25vw    50vh
+    )
+  }
+  25%{
+    clip-path:polygon(
+      12.5vw  37.5vh,
+      25vw    37.5vh,
+      37.5vw  37.5vh,
+      37.5vw  0,
+      100vw   0,
+      100vw   12.5vh,
+      100vw   12.5vh,
+      100vw   25vh,
+      100vw   25vh,
+      100vw   37.5vh,
+      87.5vw  37.5vh,
+      87.5vw  87.5vh,
+      87.5vw  87.5vh,
+      87.5vw  100vh,
+      25vw    100vh,
+      25vw    50vh,
+      12.5vw  50vh
+    )
+  }
+  0%{
+    clip-path:polygon(
+      0       37.5vh,
+      25vw    37.5vh,
+      37.5vw  37.5vh,
+      37.5vw  0,
+      100vw   0,
+      100vw   12.5vh,
+      100vw   12.5vh,
+      100vw   25vh,
+      100vw   25vh,
+      100vw   37.5vh,
+      87.5vw  37.5vh,
+      87.5vw  87.5vh,
+      87.5vw  87.5vh,
+      87.5vw  100vh,
+      25vw    100vh,
+      25vw    50vh,
+      0       50vh
+    )
+  }
+}
+@keyframes website-highlight{
+  0%{
+    clip-path:polygon(
+      0       37.5vh,
+      25vw    37.5vh,
+      37.5vw  37.5vh,
+      37.5vw  0,
+      100vw   0,
+      100vw   12.5vh,
+      100vw   12.5vh,
+      100vw   25vh,
+      100vw   25vh,
+      100vw   37.5vh,
+      87.5vw  37.5vh,
+      87.5vw  87.5vh,
+      87.5vw  87.5vh,
+      87.5vw  100vh,
+      25vw    100vh,
+      25vw    50vh,
+      0       50vh
+    )
+  }
+  100%{
+    clip-path:polygon(
+      0       0,
+      0       0,
+      0       0,
+      0       0,
+      100vw   0,
+      100vw   12.5vh,
+      100vw   12.5vh,
+      100vw   25vh,
+      100vw   25vh,
+      100vw   37.5vh,
+      100vw   37.5vh,
+      100vw   87.5vh,
+      100vw   87.5vh,
+      100vw   100vh,
+      0       100vh,
+      0       50vh,
+      0       50vh
+    )
+  }
 }
 #github{
   width:100vw;
@@ -443,6 +721,9 @@ exit::before{
 exit:hover{
   opacity:1;
 }
+#blocker{
+  z-index:100
+}
     </style>
   </head>
   <body>
@@ -457,7 +738,7 @@ exit:hover{
         <div id='curiosity'></div>
         <exit tabindex='0'></exit>
       </section>
-      <section id='web' tabindex='2'>
+      <section id='website' tabindex='2'>
         <h1>Websites</h1>
         <a href='cliques' id='cliques'><h2>Cliques</h2></a>
         <p>A browser-based open-source version of the card game Set.</p>
@@ -506,7 +787,8 @@ function delay(url){
 }
 doc.addEventListener('keydown',(e)=>{
   if(e.key==='Escape'){
-    doc.getElementsByClassName('highlight').classList.remove('highlight')
+    doc.getElementsByClassName('highlight')[0].classList.remove('highlight')
+    doc.activeElement.blur()
   }
 })
 doc.getElementById('git-wrapper').href=`delay(``https://github.com/flyorboom/``)`
