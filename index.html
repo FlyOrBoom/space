@@ -24,9 +24,36 @@ body{
   font-size:16px;
   overflow:hidden
 }
+@media(prefers-color-scheme:dark){
+  body{
+    background:#000;
+  }
+}
 *{
-  transition:clip-path .3s,
-             opacity   .3s;
+  transition:clip-path var(--duration),opacity var(--duration)
+}
+section,#blocker{
+  position:fixed;
+  width:100vw;
+  height:100vh;
+}
+section{
+  overflow:scroll;
+  animation-timing-function:linear;
+  animation-duration:var(--duration);
+  animation-fill-mode:both;
+  pointer-events:auto;
+  cursor:pointer;
+  background-color:#888;
+  background-position:cover;
+}
+section:hover,section:focus{
+  z-index:90;
+}
+section.highlight{
+  cursor:auto;
+  outline:none;
+  z-index:100;
 }
 h1{
   display:block;
@@ -36,11 +63,17 @@ h1{
   color:transparent;
   user-select:none;
   background-size:100% 100%;
-  mix-blend-mode:exclusion;
   image-rendering:pixelated;
+  opacity:0.1
 }
 section:hover>h1,section:focus>h1,section.highlight>h1{
-  opacity:0.2
+  opacity:0.8
+}
+main:hover>section:not(:hover){
+  opacity:0.1
+}
+section:focus{
+  outline:none
 }
 h2{
   position:relative;
@@ -57,38 +90,17 @@ a{
   text-decoration:none;
   cursor:pointer;
 }
-section,#blocker{
-  position:fixed;
-  width:100vw;
-  height:100vh;
-}
-section{
-  overflow:scroll;
-  animation-timing-function:linear;
-  animation-duration:.3s;
-  animation-fill-mode:both;
-  pointer-events:auto;
-  cursor:pointer;
-  background-color:#888;
-  background-position:cover;
-}
-section.highlight{
-  cursor:auto;
-  outline:none;
-  z-index:90;
-}
-section:hover,section:focus{
-  z-index:100
-}
 #contact{
+  --duration:.15s;
   color:#fff;
-  background-image:conic-gradient(from 135deg,#000,#222,#000);
+  background-image:conic-gradient(from 135deg,#000,#208,#000);
   clip-path:inset(0 87.5% 87.5% 0);
 }
-#contact:hover{
+#contact:hover,#contact:focus{
   clip-path:inset(0 75% 75% 0);
 }
 #contact.highlight{
+  --duration:.2s;
   clip-path:inset(0 0 0 0);
 }
 #contact>h1{
@@ -97,6 +109,7 @@ section:hover,section:focus{
   background-image:url('h1/contact.png')
 }
 #about{
+  --duration:.25s;
   color:#052222;
   background-image:url(showcase/suzhou.svg);
   animation-name:about-reverse
@@ -105,6 +118,7 @@ section:hover,section:focus{
   animation-name:about
 }
 #about.highlight{
+  --duration:.15s;
   animation-name:about-highlight
 }
 #about>h1{
@@ -132,7 +146,7 @@ section:hover,section:focus{
       0       100vh
     )  
   }
-  30%{
+  10%{
     clip-path:polygon(
       0       37.5vh,
       37.5vw  37.5vh,
@@ -144,7 +158,7 @@ section:hover,section:focus{
       0       100vh
     )  
   }
-  40%{
+  30%{
     clip-path:polygon(
       0       37.5vh,
       37.5vw  37.5vh,
@@ -194,7 +208,7 @@ section:hover,section:focus{
       0       100vh
     )  
   }
-  70%{
+  90%{
     clip-path:polygon(
       0       37.5vh,
       37.5vw  37.5vh,
@@ -206,7 +220,7 @@ section:hover,section:focus{
       0       100vh
     )  
   }
-  60%{
+  70%{
     clip-path:polygon(
       0       37.5vh,
       37.5vw  37.5vh,
@@ -282,6 +296,7 @@ section:hover,section:focus{
   }
 }
 #art{
+  --duration:.25s;
   width:100vw;
   height:200vh;
   text-align:right;
@@ -290,6 +305,9 @@ section:hover,section:focus{
 }
 #art:hover,#art:focus{
   animation-name:art
+}
+#art.highlight{
+  animation-name:art-highlight
 }
 #art>h1{
   left:0;
@@ -313,11 +331,11 @@ section:hover,section:focus{
       0       37.5vh
     )
   }
-  50%{
+  30%{
     clip-path:polygon(
-      0       0,
-      0       0,
-      0       0,
+      0       12.5vh,
+      12.5vw  12.5vh,
+      12.5vw  0,
       50vw    0,
       50vw    50vh,
       37.5vw  50vh,
@@ -329,9 +347,9 @@ section:hover,section:focus{
   }
   100%{
     clip-path:polygon(
-      0       0,
-      0       0,
-      0       0,
+      0       12.5vh,
+      12.5vw  12.5vh,
+      12.5vw  0,
       50vw    0,
       50vw    50vh,
       37.5vw  50vh,
@@ -351,18 +369,20 @@ section:hover,section:focus{
       37.5vw  0,
       37.5vw  37.5vh,
       37.5vw  37.5vh,
+      37.5vw  37.5vh,
       25vw    37.5vh,
       25vw    37.5vh,
       0       37.5vh
     )
   }
-  50%{
+  70%{
     clip-path:polygon(
-      0       0,
-      0       0,
-      0       0,
+      0       12.5vh,
+      12.5vw  12.5vh,
+      12.5vw  0,
       50vw    0,
       50vw    50vh,
+      37.5vw  50vh,
       37.5vw  50vh,
       25vw    50vh,
       25vw    50vh,
@@ -371,15 +391,74 @@ section:hover,section:focus{
   }
   0%{
     clip-path:polygon(
+      0       12.5vh,
+      12.5vw  12.5vh,
+      12.5vw  0,
+      50vw    0,
+      50vw    50vh,
+      37.5vw  50vh,
+      37.5vw  100vh,
+      25vw    100vh,
+      25vw    50vh,
+      0       50vh
+    )
+  }
+}
+@keyframes art-highlight{
+  0%{
+    clip-path:polygon(
+      0       12.5vh,
+      12.5vw  12.5vh,
+      12.5vw  0,
+      50vw    0,
+      50vw    50vh,
+      37.5vw  50vh,
+      37.5vw  100vh,
+      25vw    100vh,
+      25vw    50vh,
+      0       50vh
+    )
+  }
+  20%{
+    clip-path:polygon(
       0       0,
       0       0,
       0       0,
       50vw    0,
       50vw    50vh,
-      37.5vw  100vh,
-      25vw    100vh,
-      25vw     50vh,
-      0       50vh
+      50vw    50vh,
+      50vw    100vh,
+      12.5vw  100vh,
+      12.5vw  62.5vh,
+      0       62.5vh
+    )
+  }
+  40%{
+    clip-path:polygon(
+      0       0,
+      0       0,
+      0       0,
+      62.5vw  0,
+      62.5vw  50vh,
+      62.5vw  50vh,
+      62.5vw  100vh,
+      0       100vh,
+      0       75vh,
+      0       75vh
+    )
+  }
+  100%{
+    clip-path:polygon(
+      0       0,
+      0       0,
+      0       0,
+      100vw   0,
+      100vw   50vh,
+      100vw   50vh,
+      100vw   100vh,
+      0       100vh,
+      0       75vh,
+      0       75vh
     )
   }
 }
@@ -389,24 +468,26 @@ section:hover,section:focus{
   height:100vh;
   background:#fff;
 }
-#website{
+#websites{
+  --duration:.2s;
   background-image:url(showcase/kessler.svg);
-  animation-name:website-reverse
+  animation-name:websites-reverse
 }
-#website:hover,#website:focus{
-  animation-name:website
+#websites:hover,#websites:focus{
+  animation-name:websites
 }
-#website.highlight{
-  animation-name:website-highlight
+#websites.highlight{
+  --duration:.08s;
+  animation-name:websites-highlight
 }
-#website>h1{
+#websites>h1{
   top:0;
   left:37.5vw;
   width:62.5vw;
   height:100vh;
   background-image:url('h1/websites.png')
 }
-@keyframes website{
+@keyframes websites{
   0%{
     clip-path:polygon(
       50vw    37.5vh,
@@ -513,7 +594,7 @@ section:hover,section:focus{
     )
   }
 }
-@keyframes website-reverse{
+@keyframes websites-reverse{
   100%{
     clip-path:polygon(
       50vw    37.5vh,
@@ -620,7 +701,7 @@ section:hover,section:focus{
     )
   }
 }
-@keyframes website-highlight{
+@keyframes websites-highlight{
   0%{
     clip-path:polygon(
       0       37.5vh,
@@ -664,32 +745,150 @@ section:hover,section:focus{
     )
   }
 }
-#github{
-  width:100vw;
-  height:100vh;
-}
-#github{
-  clip-path:polygon(62.5vw 37.5vh,62.5vw 25vh,100vw 25vh,100vw 100vh,62.5vw 100vh,62.5vw 87.5vh,75vw 87.5vh,75vw 37.5vh);
-}
-#github{
+#fun{
+  --duration:.15s;
   background:#333;
-  clip-path:inset(37.5% 0 0 87.5%);
+  animation-name:fun-reverse
 }
-#github:hover,#github:focus{
-  clip-path:inset(0 0 0 0);
+#fun:hover,#fun:focus{
+  animation-name:fun
 }
-#github:focus{
-  background:#fff;
+#fun.highlight{
+  --duration:.2s;
+  animation-name:fun-highlight
 }
-#github:focus{
-  clip-path:polygon(0 37.5vh,0vw 0,100vw 0,100vw 100vh,0 100vh,0 87.5vh,0 87.5vh,0 37.5vh);
-}
-#github>h1{
+#fun>h1{
   bottom:0;
   right:0;
   width:12.5vw;
   height:62.5vh;
-  background-image:url('h1/github.png')
+  background-image:url('h1/fun.png')
+}
+@keyframes fun{
+  0%{
+    clip-path:polygon(
+      87.5vw  37.5vh,
+      87.5vw  37.5vh,
+      100vw   37.5vh,
+      100vw   100vh,
+      87.5vw  100vh,
+      87.5vw  87.5vh,
+      87.5vw  87.5vh,
+      87.5vw  37.5vh
+    )
+  }
+  50%{
+    clip-path:polygon(
+      75vw    37.5vh,
+      75vw    25vh,
+      100vw   25vh,
+      100vw   100vh,
+      75vw    100vh,
+      75vw    87.5vh,
+      75vw    87.5vh,
+      75vw    37.5vh
+    )
+  }
+  100%{
+    clip-path:polygon(
+      62.5vw  37.5vh,
+      62.5vw  25vh,
+      100vw   25vh,
+      100vw   100vh,
+      62.5vw  100vh,
+      62.5vw  87.5vh,
+      75vw    87.5vh,
+      75vw    37.5vh
+    )
+  }
+}
+@keyframes fun-reverse{
+  100%{
+    clip-path:polygon(
+      87.5vw  37.5vh,
+      87.5vw  37.5vh,
+      100vw   37.5vh,
+      100vw   100vh,
+      87.5vw  100vh,
+      87.5vw  87.5vh,
+      87.5vw  87.5vh,
+      87.5vw  37.5vh
+    )
+  }
+  50%{
+    clip-path:polygon(
+      75vw    37.5vh,
+      75vw    25vh,
+      100vw   25vh,
+      100vw   100vh,
+      75vw    100vh,
+      75vw    87.5vh,
+      75vw    87.5vh,
+      75vw    37.5vh
+    )
+  }
+  0%{
+    clip-path:polygon(
+      62.5vw  37.5vh,
+      62.5vw  25vh,
+      100vw   25vh,
+      100vw   100vh,
+      62.5vw  100vh,
+      62.5vw  87.5vh,
+      75vw    87.5vh,
+      75vw    37.5vh
+    )
+  }
+}
+@keyframes fun-highlight{
+  0%{
+    clip-path:polygon(
+      62.5vw  37.5vh,
+      62.5vw  25vh,
+      100vw   25vh,
+      100vw   100vh,
+      62.5vw  100vh,
+      62.5vw  87.5vh,
+      75vw    87.5vh,
+      75vw    37.5vh
+    )
+  }
+  10%{
+    clip-path:polygon(
+      62.5vw  37.5vh,
+      62.5vw  25vh,
+      100vw   25vh,
+      100vw   100vh,
+      62.5vw  100vh,
+      62.5vw  87.5vh,
+      62.5vw  87.5vh,
+      62.5vw  37.5vh
+    )
+  }
+  30%{
+    clip-path:polygon(
+      50vw    37.5vh,
+      50vw    0,
+      100vw   0,
+      100vw   100vh,
+      50vw    100vh,
+      50vw    87.5vh,
+      50vw    87.5vh,
+      50vw    37.5vh
+    )
+  }
+  100%{
+    clip-path:polygon(
+      0       37.5vh,
+      0       0,
+      100vw   0,
+      100vw   100vh,
+      0       100vh,
+      0       87.5vh,
+      0       87.5vh,
+      0       37.5vh
+    )
+  }
 }
 #blocker{
   pointer-events:none;
@@ -728,17 +927,17 @@ exit:hover{
   </head>
   <body>
     <main>
-      <section id='about' tabindex='0'>
+      <section id='about' title='about' tabindex='1'>
         <h1>About</h1>
         <p>Hi! I'm Xing, and I use code to make art, among other things.</p>
         <exit tabindex='0'></exit>
       </section>
-      <section id='art' tabindex='1'>
+      <section id='art' title='art' tabindex='2'>
         <h1>Art</h1>
         <div id='curiosity'></div>
         <exit tabindex='0'></exit>
       </section>
-      <section id='website' tabindex='2'>
+      <section id='websites' title='websites' tabindex='3'>
         <h1>Websites</h1>
         <a href='cliques' id='cliques'><h2>Cliques</h2></a>
         <p>A browser-based open-source version of the card game Set.</p>
@@ -752,19 +951,17 @@ exit:hover{
         </a>
         <exit tabindex='0'></exit>
       </section>
-      <section id='contact' tabindex='3'>
+      <section id='contact' title='contact' tabindex='4'>
         <h1>@</h1>
         <exit tabindex='0'></exit>
       </section>
-      <section id='github' tabindex='4'>
-        <h1>GitHub</h1>
-        <a tabindex='50' href='https://github.com/flyorboom/'>
-        </a>
+      <section id='fun' title='fun' tabindex='5'>
+        <h1>Fun</h1>
       </section>
-      <svg id='blocker' viewBox='0 0 16 16' preserveAspectRatio='none'>
-        <path d='M0 3h3v-3M0 7h7v-7M5 7v9M16 1h-5.5M16 5h-5.5M13 5v10h-2.5' fill='none' stroke-width='2' stroke='#0000'/>
-      </svg>
     </main>
+    <svg id='blocker' viewBox='0 0 16 16' preserveAspectRatio='none'>
+      <path d='M0 3h3v-3M0 7h7v-7M5 7v9M16 1h-5.5M16 5h-5.5M13 5v10h-2.5' fill='none' stroke-width='2' stroke='#0000'/>
+    </svg>
     <script>
 const doc = document
 
@@ -772,6 +969,9 @@ Array.from(doc.getElementsByTagName('section')).forEach((element)=>{
   element.addEventListener('click',()=>{
     element.classList.add('highlight')
     element.focus()
+  })
+  element.addEventListener('mouseleave',()=>{
+    element.blur()
   })
 })
       
@@ -782,16 +982,12 @@ Array.from(doc.getElementsByTagName('exit')).forEach((element)=>{
   })
 })
 
-function delay(url){
-  setTimeout(function(){window.location=url},200)
-}
 doc.addEventListener('keydown',(e)=>{
   if(e.key==='Escape'){
     doc.getElementsByClassName('highlight')[0].classList.remove('highlight')
     doc.activeElement.blur()
   }
 })
-doc.getElementById('git-wrapper').href=`delay(``https://github.com/flyorboom/``)`
     </script>
   </body>
 </html>
