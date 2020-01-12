@@ -4,13 +4,13 @@
     <title>LXing</title>
     <link rel='shortcut icon' type='image/png' href='assets/favi.png' />
     <meta charset='UTF-8'>
-    <meta name='description' content='Hi, I&apos;m Xing. These are some of the stuff I&apos;ve made!'>
+    <meta name='description' content='Artist, programmer, space geek'>
     <meta name='keywords' content='art,html,design,web,developer,lxing'>
     <meta name='author' content='Xing'>
     <style>
-:root{
-  --color:#A6F;
-  --color4:#A6F4
+@font-face{
+  font-family:'IBM Plex';
+  src:url('assets/plex/var-roman.woff2') format('woff2');
 }
 html,body{
   margin:0;
@@ -18,84 +18,976 @@ html,body{
   height:100%;
 }
 body{
-  background-image:linear-gradient(var(--color),#000);
-  font-family:monospace,monospace;
-  box-sizing:border-box;
-  font-size:calc(.5vw + 1.5rem);
+  background:#fff;
+  background-size:100% 100%;
+  font-family:'IBM Plex',monospace;
+  font-size:16px;
+  overflow:hidden
 }
-#rest{
+@media(prefers-color-scheme:dark){
+  body{
+    background:#000;
+  }
+}
+*{
+  transition:clip-path var(--duration),opacity var(--duration)
+}
+section,#blocker{
   position:fixed;
-  width:80vw;
-  height:100%;
-  right:0;
-  overflow:scroll;
-}
-#rest>*{
-  padding:1rem;
-}
-#logo{
-  position:fixed;
-  width:20vw;
+  width:100vw;
   height:100vh;
 }
-#desc{
-  font-size:calc(1vw + 2rem);
+section{
+  overflow:scroll;
+  animation-timing-function:linear;
+  animation-duration:var(--duration);
+  animation-fill-mode:both;
+  pointer-events:auto;
+  cursor:pointer;
+  background-color:#888;
+  background-position:cover;
 }
-.dark{
-  background:#000;
-  color:var(--color);
+section:hover,section:focus{
+  z-index:90;
 }
-.light{
-  background:var(--color4);
-  color:#000;
-  border-left:.96vw solid #000;
-  padding:.96vw;
+section.highlight{
+  cursor:auto;
+  outline:none;
+  z-index:100;
 }
-#cliques-img{
-  width:30%;
-  border:.96vw solid #000;
+h1{
+  display:block;
+  position:absolute;
+  margin:0;
+  padding:0;
+  color:transparent;
+  user-select:none;
+  background-size:100% 100%;
   image-rendering:pixelated;
+  opacity:0.1
 }
-::selection{
-  background:var(--color);
-  color:#000;
+section:hover>h1,section:focus>h1,section.highlight>h1{
+  opacity:0.8
+}
+main:hover>section:not(:hover){
+  opacity:0.1
+}
+section:focus{
+  outline:none
+}
+h2{
+  position:relative;
+  font-size:3rem;
+  width:50vw;
+}
+p{
+  font-size:1.8rem;
+  position:absolute;
 }
 a{
-  display:block;
   color:inherit;
   background:inherit;
   text-decoration:none;
+  cursor:pointer;
 }
-a:hover{
-  opacity:.5;
+#contact{
+  --duration:.15s;
+  color:#fff;
+  background-image:conic-gradient(from 135deg,#000,#208,#000);
+  clip-path:inset(0 87.5% 87.5% 0);
+}
+#contact:hover,#contact:focus{
+  clip-path:inset(0 75% 75% 0);
+}
+#contact.highlight{
+  --duration:.2s;
+  clip-path:inset(0 0 0 0);
+}
+#contact>h1{
+  width:12.5vw;
+  height:12.5vh;
+  background-image:url('h1/contact.png')
+}
+#about{
+  --duration:.25s;
+  color:#052222;
+  background-image:url(showcase/suzhou.svg);
+  animation-name:about-reverse
+}
+#about:hover,#about:focus{
+  animation-name:about
+}
+#about.highlight{
+  --duration:.15s;
+  animation-name:about-highlight
+}
+#about>h1{
+  left:0;
+  bottom:0;
+  width:25vw;
+  height:50vh;
+  background-image:url('h1/about.png')
+}
+#about>p{
+  left:37.5vw;
+  top:50vh;
+}
+
+@keyframes about{
+  0%{
+    clip-path:polygon(
+      0       50vh,
+      25vw    50vh,
+      25vw    50vh,
+      25vw    50vh,
+      25vw    50vh,
+      25vw    50vh,
+      25vw    100vh,
+      0       100vh
+    )  
+  }
+  10%{
+    clip-path:polygon(
+      0       37.5vh,
+      37.5vw  37.5vh,
+      37.5vw  37.5vh,
+      37.5vw  50vh,
+      37.5vw  50vh,
+      37.5vw  50vh,
+      37.5vw  100vh,
+      0       100vh
+    )  
+  }
+  30%{
+    clip-path:polygon(
+      0       37.5vh,
+      37.5vw  37.5vh,
+      37.5vw  37.5vh,
+      50vw    50vh,
+      50vw    50vh,
+      37.5vw  50vh,
+      37.5vw  100vh,
+      0       100vh
+    )  
+  }
+  50%{
+    clip-path:polygon(
+      0       37.5vh,
+      37.5vw  37.5vh,
+      37.5vw  37.5vh,
+      50vw    37.5vh,
+      50vw    50vh,
+      37.5vw  50vh,
+      37.5vw  100vh,
+      0       100vh
+    )  
+  }
+  100%{
+    clip-path:polygon(
+      0       37.5vh,
+      37.5vw  37.5vh,
+      37.5vw  0,
+      50vw    0,
+      50vw    50vh,
+      37.5vw  50vh,
+      37.5vw  100vh,
+      0       100vh
+    )
+  }
+}
+@keyframes about-reverse{
+  100%{
+    clip-path:polygon(
+      0       50vh,
+      25vw    50vh,
+      25vw    50vh,
+      25vw    50vh,
+      25vw    50vh,
+      25vw    50vh,
+      25vw    100vh,
+      0       100vh
+    )  
+  }
+  90%{
+    clip-path:polygon(
+      0       37.5vh,
+      37.5vw  37.5vh,
+      37.5vw  37.5vh,
+      37.5vw  50vh,
+      37.5vw  50vh,
+      37.5vw  50vh,
+      37.5vw  100vh,
+      0       100vh
+    )  
+  }
+  70%{
+    clip-path:polygon(
+      0       37.5vh,
+      37.5vw  37.5vh,
+      37.5vw  37.5vh,
+      50vw    50vh,
+      50vw    50vh,
+      37.5vw  50vh,
+      37.5vw  100vh,
+      0       100vh
+    )  
+  }
+  50%{
+    clip-path:polygon(
+      0       37.5vh,
+      37.5vw  37.5vh,
+      37.5vw  37.5vh,
+      50vw    37.5vh,
+      50vw    50vh,
+      37.5vw  50vh,
+      37.5vw  100vh,
+      0       100vh
+    )  
+  }
+  0%{
+    clip-path:polygon(
+      0       37.5vh,
+      37.5vw  37.5vh,
+      37.5vw  0,
+      50vw    0,
+      50vw    50vh,
+      37.5vw  50vh,
+      37.5vw  100vh,
+      0       100vh
+    )
+  }
+}
+@keyframes about-highlight{
+  0%{
+    clip-path:polygon(
+      0       37.5vh,
+      37.5vw  37.5vh,
+      37.5vw  0,
+      50vw    0,
+      50vw    50vh,
+      37.5vw  50vh,
+      37.5vw  100vh,
+      0       100vh
+    )
+  }
+  30%{
+    clip-path:polygon(
+      0       0,
+      0       0,
+      0       0,
+      50vw    0,
+      50vw    50vh,
+      50vw    50vh,
+      50vw    100vh,
+      0       100vh
+    )
+  }
+  100%{
+    clip-path:polygon(
+      0       0,
+      0       0,
+      0       0,
+      100vw   0,
+      100vw   50vh,
+      100vw   50vh,
+      100vw   100vh,
+      0       100vh
+    )
+  }
+}
+#art{
+  --duration:.25s;
+  width:100vw;
+  height:200vh;
+  text-align:right;
+  background-image:url(showcase/reentry.png);
+  animation-name:art-reverse
+}
+#art:hover,#art:focus{
+  animation-name:art
+}
+#art.highlight{
+  animation-name:art-highlight
+}
+#art>h1{
+  left:0;
+  top:0;
+  width:37.5vw;
+  height:37.5vh;
+  background-image:url('h1/art.png')
+}
+@keyframes art{
+  0%{
+    clip-path:polygon(
+      0       25vh,
+      25vw    25vh,
+      25vw    0,
+      37.5vw  0,
+      37.5vw  37.5vh,
+      37.5vw  37.5vh,
+      37.5vw  37.5vh,
+      25vw    37.5vh,
+      25vw    37.5vh,
+      0       37.5vh
+    )
+  }
+  30%{
+    clip-path:polygon(
+      0       12.5vh,
+      12.5vw  12.5vh,
+      12.5vw  0,
+      50vw    0,
+      50vw    50vh,
+      37.5vw  50vh,
+      37.5vw  50vh,
+      25vw    50vh,
+      25vw    50vh,
+      0       50vh
+    )
+  }
+  100%{
+    clip-path:polygon(
+      0       12.5vh,
+      12.5vw  12.5vh,
+      12.5vw  0,
+      50vw    0,
+      50vw    50vh,
+      37.5vw  50vh,
+      37.5vw  100vh,
+      25vw    100vh,
+      25vw    50vh,
+      0       50vh
+    )
+  }
+}
+@keyframes art-reverse{
+  100%{
+    clip-path:polygon(
+      0       25vh,
+      25vw    25vh,
+      25vw    0,
+      37.5vw  0,
+      37.5vw  37.5vh,
+      37.5vw  37.5vh,
+      37.5vw  37.5vh,
+      25vw    37.5vh,
+      25vw    37.5vh,
+      0       37.5vh
+    )
+  }
+  70%{
+    clip-path:polygon(
+      0       12.5vh,
+      12.5vw  12.5vh,
+      12.5vw  0,
+      50vw    0,
+      50vw    50vh,
+      37.5vw  50vh,
+      37.5vw  50vh,
+      25vw    50vh,
+      25vw    50vh,
+      0       50vh
+    )
+  }
+  0%{
+    clip-path:polygon(
+      0       12.5vh,
+      12.5vw  12.5vh,
+      12.5vw  0,
+      50vw    0,
+      50vw    50vh,
+      37.5vw  50vh,
+      37.5vw  100vh,
+      25vw    100vh,
+      25vw    50vh,
+      0       50vh
+    )
+  }
+}
+@keyframes art-highlight{
+  0%{
+    clip-path:polygon(
+      0       12.5vh,
+      12.5vw  12.5vh,
+      12.5vw  0,
+      50vw    0,
+      50vw    50vh,
+      37.5vw  50vh,
+      37.5vw  100vh,
+      25vw    100vh,
+      25vw    50vh,
+      0       50vh
+    )
+  }
+  20%{
+    clip-path:polygon(
+      0       0,
+      0       0,
+      0       0,
+      50vw    0,
+      50vw    50vh,
+      50vw    50vh,
+      50vw    100vh,
+      12.5vw  100vh,
+      12.5vw  62.5vh,
+      0       62.5vh
+    )
+  }
+  40%{
+    clip-path:polygon(
+      0       0,
+      0       0,
+      0       0,
+      62.5vw  0,
+      62.5vw  50vh,
+      62.5vw  50vh,
+      62.5vw  100vh,
+      0       100vh,
+      0       75vh,
+      0       75vh
+    )
+  }
+  100%{
+    clip-path:polygon(
+      0       0,
+      0       0,
+      0       0,
+      100vw   0,
+      100vw   50vh,
+      100vw   50vh,
+      100vw   100vh,
+      0       100vh,
+      0       75vh,
+      0       75vh
+    )
+  }
+}
+#curiosity{
+  position:static;
+  margin-top:100vh;
+  height:100vh;
+  background:#fff;
+}
+#websites{
+  --duration:.2s;
+  background-image:url(showcase/kessler.svg);
+  animation-name:websites-reverse
+}
+#websites:hover,#websites:focus{
+  animation-name:websites
+}
+#websites.highlight{
+  --duration:.08s;
+  animation-name:websites-highlight
+}
+#websites>h1{
+  top:0;
+  left:37.5vw;
+  width:62.5vw;
+  height:100vh;
+  background-image:url('h1/websites.png')
+}
+@keyframes websites{
+  0%{
+    clip-path:polygon(
+      50vw    37.5vh,
+      50vw    37.5vh,
+      50vw    37.5vh,
+      50vw    0,
+      62.5vw  0,
+      62.5vw  12.5vh,
+      100vw   12.5vh,
+      100vw   25vh,
+      62.5vw  25vh,
+      62.5vw  37.5vh,
+      75vw    37.5vh,
+      75vw    87.5vh,
+      62.5vw  87.5vh,
+      62.5vw  100vh,
+      37.5vw  100vh,
+      37.5vw  50vh,
+      50vw    50vh
+    )
+  }
+  25%{
+    clip-path:polygon(
+      37.5vw  37.5vh,
+      37.5vw  37.5vh,
+      37.5vw  37.5vh,
+      37.5vw  0,
+      75vw    0,
+      75vw    12.5vh,
+      100vw   12.5vh,
+      100vw   25vh,
+      75vw    25vh,
+      75vw    37.5vh,
+      75vw    37.5vh,
+      75vw    87.5vh,
+      75vw    87.5vh,
+      75vw    100vh,
+      37.5vw  100vh,
+      37.5vw  50vh,
+      37.5vw  50vh
+    )
+  }
+  50%{
+    clip-path:polygon(
+      25vw    37.5vh,
+      25vw    37.5vh,
+      37.5vw  37.5vh,
+      37.5vw  0,
+      87.5vw  0,
+      87.5vw  12.5vh,
+      100vw   12.5vh,
+      100vw   25vh,
+      87.5vw  25vh,
+      87.5vw  37.5vh,
+      87.5vw  37.5vh,
+      87.5vw  87.5vh,
+      87.5vw  87.5vh,
+      87.5vw  100vh,
+      25vw    100vh,
+      25vw    50vh,
+      25vw    50vh
+    )
+  }
+  75%{
+    clip-path:polygon(
+      12.5vw  37.5vh,
+      25vw    37.5vh,
+      37.5vw  37.5vh,
+      37.5vw  0,
+      100vw   0,
+      100vw   12.5vh,
+      100vw   12.5vh,
+      100vw   25vh,
+      100vw   25vh,
+      100vw   37.5vh,
+      87.5vw  37.5vh,
+      87.5vw  87.5vh,
+      87.5vw  87.5vh,
+      87.5vw  100vh,
+      25vw    100vh,
+      25vw    50vh,
+      12.5vw  50vh
+    )
+  }
+  100%{
+    clip-path:polygon(
+      0       37.5vh,
+      25vw    37.5vh,
+      37.5vw  37.5vh,
+      37.5vw  0,
+      100vw   0,
+      100vw   12.5vh,
+      100vw   12.5vh,
+      100vw   25vh,
+      100vw   25vh,
+      100vw   37.5vh,
+      87.5vw  37.5vh,
+      87.5vw  87.5vh,
+      87.5vw  87.5vh,
+      87.5vw  100vh,
+      25vw    100vh,
+      25vw    50vh,
+      0       50vh
+    )
+  }
+}
+@keyframes websites-reverse{
+  100%{
+    clip-path:polygon(
+      50vw    37.5vh,
+      50vw    37.5vh,
+      50vw    37.5vh,
+      50vw    0,
+      62.5vw  0,
+      62.5vw  12.5vh,
+      100vw   12.5vh,
+      100vw   25vh,
+      62.5vw  25vh,
+      62.5vw  37.5vh,
+      75vw    37.5vh,
+      75vw    87.5vh,
+      62.5vw  87.5vh,
+      62.5vw  100vh,
+      37.5vw  100vh,
+      37.5vw  50vh,
+      50vw    50vh
+    )
+  }
+  75%{
+    clip-path:polygon(
+      37.5vw  37.5vh,
+      37.5vw  37.5vh,
+      37.5vw  37.5vh,
+      37.5vw  0,
+      75vw    0,
+      75vw    12.5vh,
+      100vw   12.5vh,
+      100vw   25vh,
+      75vw    25vh,
+      75vw    37.5vh,
+      75vw    37.5vh,
+      75vw    87.5vh,
+      75vw    87.5vh,
+      75vw    100vh,
+      37.5vw  100vh,
+      37.5vw  50vh,
+      37.5vw  50vh
+    )
+  }
+  50%{
+    clip-path:polygon(
+      25vw    37.5vh,
+      25vw    37.5vh,
+      37.5vw  37.5vh,
+      37.5vw  0,
+      87.5vw  0,
+      87.5vw  12.5vh,
+      100vw   12.5vh,
+      100vw   25vh,
+      87.5vw  25vh,
+      87.5vw  37.5vh,
+      87.5vw  37.5vh,
+      87.5vw  87.5vh,
+      87.5vw  87.5vh,
+      87.5vw  100vh,
+      25vw    100vh,
+      25vw    50vh,
+      25vw    50vh
+    )
+  }
+  25%{
+    clip-path:polygon(
+      12.5vw  37.5vh,
+      25vw    37.5vh,
+      37.5vw  37.5vh,
+      37.5vw  0,
+      100vw   0,
+      100vw   12.5vh,
+      100vw   12.5vh,
+      100vw   25vh,
+      100vw   25vh,
+      100vw   37.5vh,
+      87.5vw  37.5vh,
+      87.5vw  87.5vh,
+      87.5vw  87.5vh,
+      87.5vw  100vh,
+      25vw    100vh,
+      25vw    50vh,
+      12.5vw  50vh
+    )
+  }
+  0%{
+    clip-path:polygon(
+      0       37.5vh,
+      25vw    37.5vh,
+      37.5vw  37.5vh,
+      37.5vw  0,
+      100vw   0,
+      100vw   12.5vh,
+      100vw   12.5vh,
+      100vw   25vh,
+      100vw   25vh,
+      100vw   37.5vh,
+      87.5vw  37.5vh,
+      87.5vw  87.5vh,
+      87.5vw  87.5vh,
+      87.5vw  100vh,
+      25vw    100vh,
+      25vw    50vh,
+      0       50vh
+    )
+  }
+}
+@keyframes websites-highlight{
+  0%{
+    clip-path:polygon(
+      0       37.5vh,
+      25vw    37.5vh,
+      37.5vw  37.5vh,
+      37.5vw  0,
+      100vw   0,
+      100vw   12.5vh,
+      100vw   12.5vh,
+      100vw   25vh,
+      100vw   25vh,
+      100vw   37.5vh,
+      87.5vw  37.5vh,
+      87.5vw  87.5vh,
+      87.5vw  87.5vh,
+      87.5vw  100vh,
+      25vw    100vh,
+      25vw    50vh,
+      0       50vh
+    )
+  }
+  100%{
+    clip-path:polygon(
+      0       0,
+      0       0,
+      0       0,
+      0       0,
+      100vw   0,
+      100vw   12.5vh,
+      100vw   12.5vh,
+      100vw   25vh,
+      100vw   25vh,
+      100vw   37.5vh,
+      100vw   37.5vh,
+      100vw   87.5vh,
+      100vw   87.5vh,
+      100vw   100vh,
+      0       100vh,
+      0       50vh,
+      0       50vh
+    )
+  }
+}
+#fun{
+  --duration:.15s;
+  background:#333;
+  animation-name:fun-reverse
+}
+#fun:hover,#fun:focus{
+  animation-name:fun
+}
+#fun.highlight{
+  --duration:.2s;
+  animation-name:fun-highlight
+}
+#fun>h1{
+  bottom:0;
+  right:0;
+  width:12.5vw;
+  height:62.5vh;
+  background-image:url('h1/fun.png')
+}
+@keyframes fun{
+  0%{
+    clip-path:polygon(
+      87.5vw  37.5vh,
+      87.5vw  37.5vh,
+      100vw   37.5vh,
+      100vw   100vh,
+      87.5vw  100vh,
+      87.5vw  87.5vh,
+      87.5vw  87.5vh,
+      87.5vw  37.5vh
+    )
+  }
+  50%{
+    clip-path:polygon(
+      75vw    37.5vh,
+      75vw    25vh,
+      100vw   25vh,
+      100vw   100vh,
+      75vw    100vh,
+      75vw    87.5vh,
+      75vw    87.5vh,
+      75vw    37.5vh
+    )
+  }
+  100%{
+    clip-path:polygon(
+      62.5vw  37.5vh,
+      62.5vw  25vh,
+      100vw   25vh,
+      100vw   100vh,
+      62.5vw  100vh,
+      62.5vw  87.5vh,
+      75vw    87.5vh,
+      75vw    37.5vh
+    )
+  }
+}
+@keyframes fun-reverse{
+  100%{
+    clip-path:polygon(
+      87.5vw  37.5vh,
+      87.5vw  37.5vh,
+      100vw   37.5vh,
+      100vw   100vh,
+      87.5vw  100vh,
+      87.5vw  87.5vh,
+      87.5vw  87.5vh,
+      87.5vw  37.5vh
+    )
+  }
+  50%{
+    clip-path:polygon(
+      75vw    37.5vh,
+      75vw    25vh,
+      100vw   25vh,
+      100vw   100vh,
+      75vw    100vh,
+      75vw    87.5vh,
+      75vw    87.5vh,
+      75vw    37.5vh
+    )
+  }
+  0%{
+    clip-path:polygon(
+      62.5vw  37.5vh,
+      62.5vw  25vh,
+      100vw   25vh,
+      100vw   100vh,
+      62.5vw  100vh,
+      62.5vw  87.5vh,
+      75vw    87.5vh,
+      75vw    37.5vh
+    )
+  }
+}
+@keyframes fun-highlight{
+  0%{
+    clip-path:polygon(
+      62.5vw  37.5vh,
+      62.5vw  25vh,
+      100vw   25vh,
+      100vw   100vh,
+      62.5vw  100vh,
+      62.5vw  87.5vh,
+      75vw    87.5vh,
+      75vw    37.5vh
+    )
+  }
+  10%{
+    clip-path:polygon(
+      62.5vw  37.5vh,
+      62.5vw  25vh,
+      100vw   25vh,
+      100vw   100vh,
+      62.5vw  100vh,
+      62.5vw  87.5vh,
+      62.5vw  87.5vh,
+      62.5vw  37.5vh
+    )
+  }
+  30%{
+    clip-path:polygon(
+      50vw    37.5vh,
+      50vw    0,
+      100vw   0,
+      100vw   100vh,
+      50vw    100vh,
+      50vw    87.5vh,
+      50vw    87.5vh,
+      50vw    37.5vh
+    )
+  }
+  100%{
+    clip-path:polygon(
+      0       37.5vh,
+      0       0,
+      100vw   0,
+      100vw   100vh,
+      0       100vh,
+      0       87.5vh,
+      0       87.5vh,
+      0       37.5vh
+    )
+  }
+}
+#blocker{
+  pointer-events:none;
+  z-index:90;
+}
+#blocker>*{
+  pointer-events:auto;
+  cursor:auto;
+}
+exit{
+  position:fixed;
+  backdrop-filter:blur(1vw);
+  background:#fff8;
+  color:#000;
+  bottom:0;
+  right:0;
+  opacity:.6;
+  width:12.5vw;
+  height:0;
+  opacity:.6;
+  cursor:pointer;
+  text-align:right;
+  line-height:12.5vh;
+  height:12.5vh;
+}
+exit::before{
+  content:'back';
+}
+exit:hover{
+  opacity:1;
+}
+#blocker{
+  z-index:100
 }
     </style>
   </head>
   <body>
-    <svg id='logo' viewBox='0 0 16 40' preserveAspectRatio='none'>
-      <path d='
-      M0 0h4v7l12 1h-12l4 2l4 -2h4l-6 4l6 4h-4l-4 -2l-4 2h12l-6 1v6l6 1v8l-12 1v5l8 1v-3l-2 -1h6v5h-12l-4 -1v-7h12l-8 -4v4h-4v-8h4l8 4v-4h-12l6 -1v-6l-6 -1l6 -4l-6 -4z'/>
+    <main>
+      <section id='about' title='about' tabindex='1'>
+        <h1>About</h1>
+        <p>Hi! I'm Xing, and I use code to make art, among other things.</p>
+        <exit tabindex='0'></exit>
+      </section>
+      <section id='art' title='art' tabindex='2'>
+        <h1>Art</h1>
+        <div id='curiosity'></div>
+        <exit tabindex='0'></exit>
+      </section>
+      <section id='websites' title='websites' tabindex='3'>
+        <h1>Websites</h1>
+        <a href='cliques' id='cliques'><h2>Cliques</h2></a>
+        <p>A browser-based open-source version of the card game Set.</p>
+        <a href='kessler' id='kessler'><h2>Kessler</h2></a>
+        <p>A space shooter where bullets stay around your tiny universe forever.</p>
+        <a href='rocket' id='rocket'><h2>Mercury-Redstone simulator</h2></a>
+        <p>Suborbital rocket 2D sim.</p>
+        <a href='robotics' class='dark'>
+          <h1>FTC 15303 Space Rocks</h1>
+          Robotics team website.
+        </a>
+        <exit tabindex='0'></exit>
+      </section>
+      <section id='contact' title='contact' tabindex='4'>
+        <h1>@</h1>
+        <exit tabindex='0'></exit>
+      </section>
+      <section id='fun' title='fun' tabindex='5'>
+        <h1>Fun</h1>
+      </section>
+    </main>
+    <svg id='blocker' viewBox='0 0 16 16' preserveAspectRatio='none'>
+      <path d='M0 3h3v-3M0 7h7v-7M5 7v9M16 1h-5.5M16 5h-5.5M13 5v10h-2.5' fill='none' stroke-width='2' stroke='#0000'/>
     </svg>
-    <div id='rest'>
-      <div class='dark' id='desc'>
-        Hi, I'm Xing. These are some of the stuff I've made!
-      </div>
-      <a href='cliques' class='light' id='cliques'>
-        <img id='cliques-img' src='showcase/cliques.png'>
-        <div>A browser-based open-source version of the card game Set.</div>
-      </a>
-      <a href='kessler' class='dark' id='kessler'>
-        <h1>Kessler</h1>
-        A space shooter where bullets stay around your tiny universe forever.
-      </a>
-      <a href='mercury-redstone' class='light' id='rocket'>
-        <h1>Mercury-Redstone simulator</h1>
-        Suborbital rocket 2D sim.
-      </a>
-      <a href='robotics' class='dark'>
-        <h1>FTC 15303 Space Rocks</h1>
-        Robotics team website.
-      </a>
-    </div>
+    <script>
+const doc = document
+
+Array.from(doc.getElementsByTagName('section')).forEach((element)=>{
+  element.addEventListener('click',()=>{
+    element.classList.add('highlight')
+    element.focus()
+  })
+  element.addEventListener('mouseleave',()=>{
+    element.blur()
+  })
+})
+      
+Array.from(doc.getElementsByTagName('exit')).forEach((element)=>{
+  element.addEventListener('click',()=>{
+    alert(true)
+    element.parentElement.classList.remove('highlight')
+  })
+})
+
+doc.addEventListener('keydown',(e)=>{
+  if(e.key==='Escape'){
+    doc.getElementsByClassName('highlight')[0].classList.remove('highlight')
+    doc.activeElement.blur()
+  }
+})
+    </script>
   </body>
 </html>

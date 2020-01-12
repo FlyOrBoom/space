@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+  <head>
+    <style>
+html,body{
+  margin:0;
+  width:100vw;
+  height:100vh;
+  overflow:hidden;
+}
+body{
+  background-image:conic-gradient(from 135deg,#000,#888,#000);
+}
+:focus{
+  outline:none;
+}
+#form{
+  font-size:4rem;
+  position:fixed;
+  top:0;
+  width:100vw;
+  height:6rem;
+  backdrop-filter:blur(1vw);
+  background:#0004;
+  color:#fff;
+}
+#form:focus-within{
+  background:#0004;
+}
+input{
+  font-size:inherit;
+  border:none;
+  background:none;
+  color:inherit;
+  position:absolute;
+  padding:.75rem;
+  height:inherit;
+  box-sizing:border-box;
+}
+input:hover{
+  background:#0004;
+}
+#input{
+  width:90%;
+}
+#submit{
+  width:10%;
+  right:0;
+  cursor:pointer;
+}
+#submit:hover{
+}
+#canvas{
+  position:fixed;
+  width:100%;
+  bottom:0;
+}
+#form.error{
+  animation:error 1s;
+}
+#form.success{
+  animation:success 1s;
+}
+@keyframes error{
+  0%{background:#f004}
+  100%{background:#0004}
+}
+@keyframes success{
+  0%{background:#fff4}
+  100%{background:#0004}
+}
+    </style>
+  </head>
+  <body>
+    <canvas id='canvas' width='2000' height='1000'></canvas>
+    <form id='form'>
+      <input id='input' type='text' name='img' autofocus/>
+      <input id='submit' type='submit' value='>'/>
+    </form>
+    <script>
+const doc=document,
+      img = new Image(),
+      form = doc.getElementById('form'),
+      canvas=document.getElementById('canvas');
+form.onsubmit = function(){
+  form.classList='success';
+  img.src = `showcase/${doc.getElementById('input').value}.svg`;
+  img.onload = function(){
+    doc.body.style.background='#000';
+    canvas.width=img.width;
+    canvas.height=img.height;
+    canvas.getContext('2d').drawImage(img, 0, 0);
+  }
+  img.onerror = function(){
+    form.classList='error';
+  }
+  return false;
+};
+    </script>
+  </body>
+</html>
