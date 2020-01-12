@@ -18,19 +18,34 @@ html,body{
   height:100%;
 }
 body{
-  background:#000;
+  background:#fff;
   background-size:100% 100%;
   font-family:'IBM Plex',monospace;
-  font-size:3rem;
+  font-size:16px;
   overflow:hidden
 }
-@media(prefers-color-scheme:light){
-  body{
-    background:#fff
-  }
-}
 *{
-  transition-duration:.3s;
+  transition:clip-path .3s,
+             opacity .3s;
+}
+h1{
+  display:block;
+  position:absolute;
+  margin:0;
+  padding:0;
+  color:transparent;
+  user-select:none;
+  background-size:100% 100%;
+  mix-blend-mode:exclusion;
+  image-rendering:pixelated;
+}
+section:hover>h1,section:focus>h1,section.highlight>h1{
+  opacity:0.2
+}
+h2{
+  position:relative;
+  font-size:3rem;
+  width:50vw;
 }
 p{
   font-size:1.8rem;
@@ -49,26 +64,20 @@ section,#blocker{
 }
 section{
   overflow:scroll;
-  pointer-events:auto;
   animation-timing-function:linear;
   animation-duration:.3s;
-  animation-play-state:paused;
+  animation-fill-mode:both;
+  pointer-events:auto;
   cursor:pointer;
+  background-color:#888;
+  background-position:cover;
 }
 section.highlight{
   cursor:auto;
   outline:none;
   z-index:100;
 }
-section.hover,section.unhover{
-  animation-play-state:running
-}
-section.unhover{
-  animation-direction:reverse;
-}
-section.hover{
-  z-index:80;
-  animation-direction:normal;
+section:hover{
 }
 #contact{
   color:#fff;
@@ -78,17 +87,37 @@ section.hover{
 #contact:hover{
   clip-path:inset(0 75% 75% 0);
 }
-#contact:focus{
+#contact.highlight{
   clip-path:inset(0 0 0 0);
+}
+#contact>h1{
+  width:12.5vw;
+  height:12.5vh;
+  background-image:url('h1/contact.png')
 }
 #about{
   color:#052222;
   background-image:url(showcase/suzhou.svg);
-  background-size:120% 120%;
-  background-position:center;
-  animation-name:about;
-  animation-fill-mode:forwards
+  animation-name:about-reverse
 }
+#about:hover,#about:focus{
+  animation-name:about
+}
+#about.highlight{
+  animation-name:about-highlight
+}
+#about>h1{
+  left:0;
+  bottom:0;
+  width:25vw;
+  height:50vh;
+  background-image:url('h1/about.png')
+}
+#about>p{
+  left:37.5vw;
+  top:50vh;
+}
+
 @keyframes about{
   0%{
     clip-path:polygon(
@@ -99,11 +128,10 @@ section.hover{
       25vw    50vh,
       25vw    50vh,
       25vw    100vh,
-      25vw    100vh,
       0       100vh
     )  
   }
-  35%{
+  30%{
     clip-path:polygon(
       0       37.5vh,
       37.5vw  37.5vh,
@@ -111,7 +139,6 @@ section.hover{
       37.5vw  50vh,
       37.5vw  50vh,
       37.5vw  50vh,
-      37.5vw  100vh,
       37.5vw  100vh,
       0       100vh
     )  
@@ -125,7 +152,6 @@ section.hover{
       50vw    50vh,
       37.5vw  50vh,
       37.5vw  100vh,
-      37.5vw  100vh,
       0       100vh
     )  
   }
@@ -138,64 +164,196 @@ section.hover{
       50vw    50vh,
       37.5vw  50vh,
       37.5vw  100vh,
-      25vw    100vh,
       0       100vh
-    );
+    )
   }
 }
-#about:focus{
-  clip-path:polygon(0 0,0 0,0 0,100vw 0,100vw 50vh,100vw 50vh,100vw 100vh,25vw 100vh,0 100vh);
+@keyframes about-reverse{
+  100%{
+    clip-path:polygon(
+      0       50vh,
+      25vw    50vh,
+      25vw    50vh,
+      25vw    50vh,
+      25vw    50vh,
+      25vw    50vh,
+      25vw    100vh,
+      0       100vh
+    )  
+  }
+  70%{
+    clip-path:polygon(
+      0       37.5vh,
+      37.5vw  37.5vh,
+      37.5vw  37.5vh,
+      37.5vw  50vh,
+      37.5vw  50vh,
+      37.5vw  50vh,
+      37.5vw  100vh,
+      0       100vh
+    )  
+  }
+  60%{
+    clip-path:polygon(
+      0       37.5vh,
+      37.5vw  37.5vh,
+      37.5vw  37.5vh,
+      50vw    50vh,
+      50vw    50vh,
+      37.5vw  50vh,
+      37.5vw  100vh,
+      0       100vh
+    )  
+  }
+  0%{
+    clip-path:polygon(
+      0       37.5vh,
+      37.5vw  37.5vh,
+      37.5vw  0,
+      50vw    0,
+      50vw    50vh,
+      37.5vw  50vh,
+      37.5vw  100vh,
+      0       100vh
+    )
+  }
 }
-#about>h1{
-  left:0;
-  bottom:0;
-  color:#fff;
-}
-#about>p{
-  left:37.5vw;
-  width:37.5vw;
-  top:50vh;
-  text-align:center;
-}
-h1{
-  position:absolute;
-  width:12.5vw;
-  height:12.5vh;
-  font-size:inherit;
-  font-weight:normal;
-  margin:0;
-  pointer-events:none;
-}
-h2{
-  position:relative;
-  font-size:3rem;
-  width:50vw;
+@keyframes about-highlight{
+  0%{
+    clip-path:polygon(
+      0       37.5vh,
+      37.5vw  37.5vh,
+      37.5vw  0,
+      50vw    0,
+      50vw    50vh,
+      37.5vw  50vh,
+      37.5vw  100vh,
+      0       100vh
+    )
+  }
+  30%{
+    clip-path:polygon(
+      0       0,
+      0       0,
+      0       0,
+      50vw    0,
+      50vw    50vh,
+      50vw    50vh,
+      50vw    100vh,
+      0       100vh
+    )
+  }
+  100%{
+    clip-path:polygon(
+      0       0,
+      0       0,
+      0       0,
+      100vw   0,
+      100vw   50vh,
+      100vw   50vh,
+      100vw   100vh,
+      0       100vh
+    )
+  }
 }
 #art{
   width:100vw;
   height:200vh;
   text-align:right;
-}
-#art{
-  clip-path:polygon(0 12.5vh,12.5vw 12.5vh,12.5vw 0,50vw 0,50vw 50vh,37.5vw 50vh,37.5vw 100vh,25vw 100vh,25vw 50vh,0 50vh);
-}
-#art{
   background-image:url(showcase/reentry.png);
-  background-size:cover;
-  background-position:center;
-  clip-path:polygon(0 25vh,25vw 25vh,25vw 0,37.5vw 0,37.5vw 37.5vh,37.5vw 37.5vh,37.5vw 37.5vh,25vw 37.5vh,25vw 37.5vh,0 37.5vh);
+  animation-name:art-reverse
 }
 #art:hover,#art:focus{
-  clip-path:polygon(0 0,0 0,0 0,100vw 0,100vw 100vh,37.5vw 100vh,37.5vw 100vh,25vw 100vh,25vw 100vh,0 100vh);
-}
-#art:focus{
-  clip-path:polygon(0 0,12.5vw 0,12.5vw 0,100vw 0,100vw 100vh,37.5vw 100vh,37.5vw 100vh,25vw 100vh,25vw 100vh,0 100vh);
+  animation-name:art
 }
 #art>h1{
-  width:37.5vw;
-  line-height:12.5vh;
   left:0;
-  top:25vh;
+  top:0;
+  width:37.5vw;
+  height:37.5vh;
+  background-image:url('h1/art.png')
+}
+@keyframes art{
+  0%{
+    clip-path:polygon(
+      0       25vh,
+      25vw    25vh,
+      25vw    0,
+      37.5vw  0,
+      37.5vw  37.5vh,
+      37.5vw  37.5vh,
+      25vw    37.5vh,
+      25vw    37.5vh,
+      0       37.5vh
+    )
+  }
+  50%{
+    clip-path:polygon(
+      0       0,
+      0       0,
+      0       0,
+      50vw    0,
+      50vw    50vh,
+      37.5vw  50vh,
+      25vw    50vh,
+      25vw    50vh,
+      0       50vh
+    )
+  }
+  100%{
+    clip-path:polygon(
+      0       0,
+      0       0,
+      0       0,
+      50vw    0,
+      50vw    50vh,
+      37.5vw  100vh,
+      25vw    100vh,
+      25vw     50vh,
+      0       50vh
+    )
+  }
+}
+@keyframes art-reverse{
+  100%{
+    clip-path:polygon(
+      0       25vh,
+      25vw    25vh,
+      25vw    0,
+      37.5vw  0,
+      37.5vw  37.5vh,
+      37.5vw  37.5vh,
+      25vw    37.5vh,
+      25vw    37.5vh,
+      0       37.5vh
+    )
+  }
+  50%{
+    clip-path:polygon(
+      0       0,
+      0       0,
+      0       0,
+      50vw    0,
+      50vw    50vh,
+      37.5vw  50vh,
+      25vw    50vh,
+      25vw    50vh,
+      0       50vh
+    )
+  }
+  0%{
+    clip-path:polygon(
+      0       0,
+      0       0,
+      0       0,
+      50vw    0,
+      50vw    50vh,
+      37.5vw  100vh,
+      25vw    100vh,
+      25vw     50vh,
+      0       50vh
+    )
+  }
 }
 #curiosity{
   position:static;
@@ -222,11 +380,11 @@ h2{
   clip-path:polygon(0 0,0 0,0 0,100vw 0,100vw 37.5vh,100vw 37.5vh,100vw 100vh,25vw 100vh,25vw 100vh,0 100vh);
 }
 #web>h1{
-  text-align:right;
-  width:50vw;
-  top:12.5vh;
-  line-height:12.5vh;
-  left:50vw;
+  top:0;
+  left:37.5vw;
+  width:62.5vw;
+  height:100vh;
+  background-image:url('h1/websites.png')
 }
 #github{
   width:100vw;
@@ -249,10 +407,11 @@ h2{
   clip-path:polygon(0 37.5vh,0vw 0,100vw 0,100vw 100vh,0 100vh,0 87.5vh,0 87.5vh,0 37.5vh);
 }
 #github>h1{
-  color:#fff;
-  position:fixed;
   bottom:0;
   right:0;
+  width:12.5vw;
+  height:62.5vh;
+  background-image:url('h1/github.png')
 }
 #blocker{
   pointer-events:none;
@@ -276,12 +435,10 @@ exit{
   cursor:pointer;
   text-align:right;
   line-height:12.5vh;
+  height:12.5vh;
 }
 exit::before{
   content:'back';
-}
-:focus>exit,:focus>exit{
-  height:12.5vh;
 }
 exit:hover{
   opacity:1;
@@ -289,7 +446,7 @@ exit:hover{
     </style>
   </head>
   <body>
-    <main id='start'>
+    <main>
       <section id='about' tabindex='0'>
         <h1>About</h1>
         <p>Hi! I'm Xing, and I use code to make art, among other things.</p>
@@ -319,8 +476,8 @@ exit:hover{
         <exit tabindex='0'></exit>
       </section>
       <section id='github' tabindex='4'>
+        <h1>GitHub</h1>
         <a tabindex='50' href='https://github.com/flyorboom/'>
-          <h1>GitHub</h1>
         </a>
       </section>
       <svg id='blocker' viewBox='0 0 16 16' preserveAspectRatio='none'>
@@ -331,25 +488,25 @@ exit:hover{
 const doc = document
 
 Array.from(doc.getElementsByTagName('section')).forEach((element)=>{
-  element.addEventListener('mouseenter',()=>{
-    element.classList.remove('unhover')
-    element.classList.add('hover')
-    console.log(true)
-  })
-  element.addEventListener('mouseleave',()=>{
-    element.classList.remove('hover')
-    element.classList.add('unhover')
-    console.log(false)
+  element.addEventListener('click',()=>{
+    element.classList.add('highlight')
+    element.focus()
   })
 })
-
+      
+Array.from(doc.getElementsByTagName('exit')).forEach((element)=>{
+  element.addEventListener('click',()=>{
+    alert(true)
+    element.parentElement.classList.remove('highlight')
+  })
+})
 
 function delay(url){
   setTimeout(function(){window.location=url},200)
 }
 doc.addEventListener('keydown',(e)=>{
   if(e.key==='Escape'){
-    doc.activeElement.blur();
+    doc.getElementsByClassName('highlight').classList.remove('highlight')
   }
 })
 doc.getElementById('git-wrapper').href=`delay(``https://github.com/flyorboom/``)`
