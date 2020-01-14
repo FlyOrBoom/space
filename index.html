@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>LXing</title>
+    <title>Xing</title>
     <link rel='shortcut icon' type='image/png' href='assets/favi.png' />
     <meta charset='UTF-8'>
     <meta name='description' content='Artist, programmer, space geek'>
@@ -18,19 +18,61 @@ html,body{
   height:100%;
 }
 body{
-  background:#fff;
+  background:white;
   background-size:100% 100%;
   font-family:'IBM Plex',monospace;
   font-size:16px;
-  overflow:hidden
+  overflow:hidden;
+}
+#blocker{
+  pointer-events:none;
+  z-index:100;
+  animation:fade-out .5s .5s both ease-in-out;
+  stroke:black;
+}
+#blocker>*{
+  pointer-events:auto;
+  cursor:auto;
 }
 @media(prefers-color-scheme:dark){
   body{
-    background:#000;
+    background:black;
+  }
+  #blocker{
+    stroke:white
+  }
+}
+main{
+  animation:fade-in .5s .5s both ease-in-out,
+            block 0s 1s both;
+}
+@keyframes fade-in{
+  0%{
+    opacity:0
+  }
+  100%{
+    opacity:1
+  }
+}
+@keyframes block{
+  0%{
+    pointer-events:none
+  }
+  100%{
+    pointer-events:auto
+  }
+}
+@keyframes fade-out{
+  0%{
+    opacity:1
+  }
+  100%{
+    opacity:0
   }
 }
 *{
-  transition:clip-path var(--duration),opacity var(--duration)
+  transition:clip-path var(--duration),opacity var(--duration);
+  box-sizing:content-box;
 }
 section,#blocker{
   position:fixed;
@@ -38,42 +80,74 @@ section,#blocker{
   height:100vh;
 }
 section{
-  overflow:scroll;
+  margin:0;
+  padding:0;
+  display:flex;
+  flex-wrap:wrap;
+  overflow:hidden scroll;
+  text-align:center;
   animation-timing-function:linear;
   animation-duration:var(--duration);
   animation-fill-mode:both;
-  pointer-events:auto;
   cursor:pointer;
   background-color:#888;
   background-position:cover;
 }
-section:hover,section:focus{
+section:hover{
   z-index:90;
 }
-section.highlight{
+section:focus{
   cursor:auto;
   outline:none;
   z-index:100;
 }
 h1{
   display:block;
-  position:absolute;
+  position:fixed;
+  z-index:100;
   margin:0;
   padding:0;
   color:transparent;
   user-select:none;
   background-size:100% 100%;
   image-rendering:pixelated;
-  opacity:0.1
+  opacity:0.1;
 }
-section:hover>h1,section:focus>h1,section.highlight>h1{
+section:hover>h1{
   opacity:0.8
+}
+section:focus>h1{
+  opacity:0
 }
 main:hover>section:not(:hover){
   opacity:0.1
 }
 section:focus{
   outline:none
+}
+figure{
+  flex:0 0 100vw;
+  height:100vh;
+  top:0;
+  margin:0;
+  padding:0;
+  position:relative;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  align-content:center;
+  margin-bottom:100vh;
+}
+figcaption{
+  display:block;
+  width:100%;
+  padding:1rem;
+  color:#fff;
+  mix-blend-mode:difference;
+}
+img{
+  max-width:90vmin;
+  max-height:90vmin;
 }
 h2{
   position:relative;
@@ -93,13 +167,13 @@ a{
 #contact{
   --duration:.15s;
   color:#fff;
-  background-image:conic-gradient(from 135deg,#000,#208,#000);
+  background-image:conic-gradient(from 135deg,#000,#64c,#000);
   clip-path:inset(0 87.5% 87.5% 0);
 }
-#contact:hover,#contact:focus{
+#contact:hover{
   clip-path:inset(0 75% 75% 0);
 }
-#contact.highlight{
+#contact:focus{
   --duration:.2s;
   clip-path:inset(0 0 0 0);
 }
@@ -111,13 +185,13 @@ a{
 #about{
   --duration:.25s;
   color:#052222;
-  background-image:url(showcase/suzhou.svg);
+  background:#aba;
   animation-name:about-reverse
 }
-#about:hover,#about:focus{
+#about:hover{
   animation-name:about
 }
-#about.highlight{
+#about:focus{
   --duration:.15s;
   animation-name:about-highlight
 }
@@ -296,17 +370,17 @@ a{
   }
 }
 #art{
-  --duration:.25s;
+  --duration:250ms;
   width:100vw;
   height:200vh;
-  text-align:right;
-  background-image:url(showcase/reentry.png);
+  background:#000;
+  color:#fff;
   animation-name:art-reverse
 }
-#art:hover,#art:focus{
+#art:hover{
   animation-name:art
 }
-#art.highlight{
+#art:focus{
   animation-name:art-highlight
 }
 #art>h1{
@@ -473,10 +547,10 @@ a{
   background-image:url(showcase/kessler.svg);
   animation-name:websites-reverse
 }
-#websites:hover,#websites:focus{
+#websites:hover{
   animation-name:websites
 }
-#websites.highlight{
+#websites:focus{
   --duration:.08s;
   animation-name:websites-highlight
 }
@@ -750,10 +824,10 @@ a{
   background:#333;
   animation-name:fun-reverse
 }
-#fun:hover,#fun:focus{
+#fun:hover{
   animation-name:fun
 }
-#fun.highlight{
+#fun:focus{
   --duration:.2s;
   animation-name:fun-highlight
 }
@@ -890,14 +964,6 @@ a{
     )
   }
 }
-#blocker{
-  pointer-events:none;
-  z-index:90;
-}
-#blocker>*{
-  pointer-events:auto;
-  cursor:auto;
-}
 exit{
   position:fixed;
   backdrop-filter:blur(1vw);
@@ -920,21 +986,36 @@ exit::before{
 exit:hover{
   opacity:1;
 }
-#blocker{
-  z-index:100
-}
     </style>
   </head>
   <body>
     <main>
       <section id='about' title='about' tabindex='1'>
         <h1>About</h1>
-        <p>Hi! I'm Xing, and I use code to make art, among other things.</p>
+        <img alt='suzhou' src='showcase/suzhou.svg'/>
+        <p>Hi! I'm Xing, and I use code to make stuff.</p>
         <exit tabindex='0'></exit>
       </section>
       <section id='art' title='art' tabindex='2'>
         <h1>Art</h1>
-        <div id='curiosity'></div>
+        <figure>
+          <img alt='Falcon 9 reentry' src='showcase/reentry.png'/>
+          <figcaption>
+            A Falcon 9 rocket reentering the atmosphere.
+          </figcaption>
+        </figure>
+        <figure>
+          <img alt='Curiosity rover' src='showcase/curiosity.png'/>
+          <figcaption>
+            The Curiosity rover inside a cavern, looking out at a Martian sunset.
+          </figcaption>
+        </figure>
+        <figure>
+          <img src='showcase/curiosity.png'/>
+          <figcaption>
+            The Curiosity rover inside a cavern, looking out at a Martian sunset.
+          </figcaption>
+        </figure>
         <exit tabindex='0'></exit>
       </section>
       <section id='websites' title='websites' tabindex='3'>
@@ -960,34 +1041,7 @@ exit:hover{
       </section>
     </main>
     <svg id='blocker' viewBox='0 0 16 16' preserveAspectRatio='none'>
-      <path d='M0 3h3v-3M0 7h7v-7M5 7v9M16 1h-5.5M16 5h-5.5M13 5v10h-2.5' fill='none' stroke-width='2' stroke='#0000'/>
+      <path d='M0 3h3v-3M0 7h7v-7M5 7v9M16 1h-6M16 5h-6M13 5v10h-3' fill='none' stroke-width='2'/>
     </svg>
-    <script>
-const doc = document
-
-Array.from(doc.getElementsByTagName('section')).forEach((element)=>{
-  element.addEventListener('click',()=>{
-    element.classList.add('highlight')
-    element.focus()
-  })
-  element.addEventListener('mouseleave',()=>{
-    element.blur()
-  })
-})
-      
-Array.from(doc.getElementsByTagName('exit')).forEach((element)=>{
-  element.addEventListener('click',()=>{
-    alert(true)
-    element.parentElement.classList.remove('highlight')
-  })
-})
-
-doc.addEventListener('keydown',(e)=>{
-  if(e.key==='Escape'){
-    doc.getElementsByClassName('highlight')[0].classList.remove('highlight')
-    doc.activeElement.blur()
-  }
-})
-    </script>
   </body>
 </html>
