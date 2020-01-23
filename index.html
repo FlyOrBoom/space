@@ -4,7 +4,7 @@
     <title>Xing</title>
     <link rel='shortcut icon' type='image/png' href='assets/favi.png' />
     <meta charset='UTF-8'>
-    <meta name='description' content='Artist, programmer, space geek'>
+    <meta name='description' content='Maker of web stuffs.'>
     <meta name='keywords' content='art,html,design,web,developer,lxing'>
     <meta name='author' content='Xing'>
     <style>
@@ -17,22 +17,24 @@ html,body{
   width:100%;
   height:100%;
 }
+::root{
+  --duration:.2s;
+}
 body{
   background:white;
   background-size:100% 100%;
   font-family:'IBM Plex',monospace;
-  font-size:16px;
+  font-size:20px;
   overflow:hidden;
 }
-#blocker{
-  pointer-events:none;
-  z-index:100;
+#blocker-wrapper{
   animation:fade-out .5s .5s both ease-in-out;
-  stroke:black;
+  z-index:90;
 }
-#blocker>*{
+#blocker{
   pointer-events:auto;
   cursor:auto;
+  stroke:black;
 }
 @media(prefers-color-scheme:dark){
   body{
@@ -40,18 +42,6 @@ body{
   }
   #blocker{
     stroke:white
-  }
-}
-main{
-  animation:fade-in .5s .5s both ease-in-out,
-            block 0s 1s both;
-}
-@keyframes fade-in{
-  0%{
-    opacity:0
-  }
-  100%{
-    opacity:1
   }
 }
 @keyframes block{
@@ -64,17 +54,19 @@ main{
 }
 @keyframes fade-out{
   0%{
+    pointer-events:auto;
     opacity:1
   }
   100%{
+    pointer-events:none;
     opacity:0
   }
 }
 *{
   transition:clip-path var(--duration),opacity var(--duration);
-  box-sizing:content-box;
+  box-sizing:border-box;
 }
-section,#blocker{
+section,#blocker-wrapper{
   position:fixed;
   width:100vw;
   height:100vh;
@@ -83,15 +75,14 @@ section{
   margin:0;
   padding:0;
   display:flex;
-  flex-wrap:wrap;
+  flex-direction:column;
+  align-items:center;
   overflow:hidden scroll;
   text-align:center;
   animation-timing-function:linear;
   animation-duration:var(--duration);
   animation-fill-mode:both;
   cursor:pointer;
-  background-color:#888;
-  background-position:cover;
 }
 section:hover{
   z-index:90;
@@ -101,62 +92,60 @@ section:focus{
   outline:none;
   z-index:100;
 }
-h1{
+body:hover>#back:not(:hover)+section:not(:hover){
+  opacity:0.1
+}
+
+section>*{
   display:block;
-  position:fixed;
-  z-index:100;
   margin:0;
   padding:0;
+}
+section>*:not(h1){
+  flex:0 0 100vh;
+  margin-bottom:150vh;
+  opacity:0;
+}
+section:focus>*:not(h1),section:focus-within>*:not(h1){
+  opacity:1;
+}
+h1{
+  position:fixed;
+  z-index:100;
   color:transparent;
-  user-select:none;
+  pointer-events:none;
   background-size:100% 100%;
   image-rendering:pixelated;
-  opacity:0.1;
+  opacity:0.2;
 }
 section:hover>h1{
-  opacity:0.8
+  opacity:0.9
 }
 section:focus>h1{
   opacity:0
 }
-main:hover>section:not(:hover){
-  opacity:0.1
-}
-section:focus{
-  outline:none
+
+p{
+  text-align:center;
+  padding:50vh 0;
+  margin-bottom:100vh;
 }
 figure{
-  flex:0 0 100vw;
-  height:100vh;
-  top:0;
-  margin:0;
-  padding:0;
   position:relative;
   display:flex;
   flex-wrap:wrap;
   justify-content:center;
   align-content:center;
-  margin-bottom:100vh;
 }
 figcaption{
   display:block;
   width:100%;
   padding:1rem;
-  color:#fff;
-  mix-blend-mode:difference;
+  color:inherit;
 }
 img{
   max-width:90vmin;
   max-height:90vmin;
-}
-h2{
-  position:relative;
-  font-size:3rem;
-  width:50vw;
-}
-p{
-  font-size:1.8rem;
-  position:absolute;
 }
 a{
   color:inherit;
@@ -167,7 +156,7 @@ a{
 #contact{
   --duration:.15s;
   color:#fff;
-  background-image:conic-gradient(from 135deg,#000,#64c,#000);
+  background:#208;
   clip-path:inset(0 87.5% 87.5% 0);
 }
 #contact:hover{
@@ -180,12 +169,14 @@ a{
 #contact>h1{
   width:12.5vw;
   height:12.5vh;
+  left:0;
+  top:0;
   background-image:url('h1/contact.png')
 }
 #about{
   --duration:.25s;
   color:#052222;
-  background:#aba;
+  background:#4f8;
   animation-name:about-reverse
 }
 #about:hover{
@@ -218,7 +209,7 @@ a{
       25vw    50vh,
       25vw    100vh,
       0       100vh
-    )  
+    )
   }
   10%{
     clip-path:polygon(
@@ -230,7 +221,7 @@ a{
       37.5vw  50vh,
       37.5vw  100vh,
       0       100vh
-    )  
+    )
   }
   30%{
     clip-path:polygon(
@@ -242,7 +233,7 @@ a{
       37.5vw  50vh,
       37.5vw  100vh,
       0       100vh
-    )  
+    )
   }
   50%{
     clip-path:polygon(
@@ -254,7 +245,7 @@ a{
       37.5vw  50vh,
       37.5vw  100vh,
       0       100vh
-    )  
+    )
   }
   100%{
     clip-path:polygon(
@@ -280,7 +271,7 @@ a{
       25vw    50vh,
       25vw    100vh,
       0       100vh
-    )  
+    )
   }
   90%{
     clip-path:polygon(
@@ -292,7 +283,7 @@ a{
       37.5vw  50vh,
       37.5vw  100vh,
       0       100vh
-    )  
+    )
   }
   70%{
     clip-path:polygon(
@@ -304,7 +295,7 @@ a{
       37.5vw  50vh,
       37.5vw  100vh,
       0       100vh
-    )  
+    )
   }
   50%{
     clip-path:polygon(
@@ -316,7 +307,7 @@ a{
       37.5vw  50vh,
       37.5vw  100vh,
       0       100vh
-    )  
+    )
   }
   0%{
     clip-path:polygon(
@@ -544,7 +535,7 @@ a{
 }
 #websites{
   --duration:.2s;
-  background-image:url(showcase/kessler.svg);
+  background:#0ff;
   animation-name:websites-reverse
 }
 #websites:hover{
@@ -821,7 +812,7 @@ a{
 }
 #fun{
   --duration:.15s;
-  background:#333;
+  background:#f0f;
   animation-name:fun-reverse
 }
 #fun:hover{
@@ -964,84 +955,116 @@ a{
     )
   }
 }
-exit{
+#back{
   position:fixed;
-  backdrop-filter:blur(1vw);
-  background:#fff8;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:#fff;
   color:#000;
   bottom:0;
   right:0;
   opacity:.6;
-  width:12.5vw;
-  height:0;
-  opacity:.6;
+  width:5rem;
+  height:5rem;
+  min-width:12.5vw;
+  min-height:12.5vh;
+  opacity:0;
   cursor:pointer;
   text-align:right;
-  line-height:12.5vh;
-  height:12.5vh;
+  font-size:3rem;
+  z-index:100;
+  font-family:inherit;
+  font-size:inherit;
+  border:0;
+  transition:opacity .2s;
+  pointer-events:auto;
 }
-exit::before{
+section:focus~#back,section:focus-within~#back{
+  opacity:.5;
+}
+#back::before{
   content:'back';
 }
-exit:hover{
+section:focus~#back:hover{
   opacity:1;
+}
+#back:focus{
+  opacity:0;
+  pointer-events:none;
 }
     </style>
   </head>
   <body>
-    <main>
-      <section id='about' title='about' tabindex='1'>
-        <h1>About</h1>
-        <img alt='suzhou' src='showcase/suzhou.svg'/>
-        <p>Hi! I'm Xing, and I use code to make stuff.</p>
-        <exit tabindex='0'></exit>
-      </section>
-      <section id='art' title='art' tabindex='2'>
-        <h1>Art</h1>
-        <figure>
-          <img alt='Falcon 9 reentry' src='showcase/reentry.png'/>
-          <figcaption>
-            A Falcon 9 rocket reentering the atmosphere.
-          </figcaption>
-        </figure>
-        <figure>
-          <img alt='Curiosity rover' src='showcase/curiosity.png'/>
-          <figcaption>
-            The Curiosity rover inside a cavern, looking out at a Martian sunset.
-          </figcaption>
-        </figure>
-        <figure>
-          <img src='showcase/curiosity.png'/>
-          <figcaption>
-            The Curiosity rover inside a cavern, looking out at a Martian sunset.
-          </figcaption>
-        </figure>
-        <exit tabindex='0'></exit>
-      </section>
-      <section id='websites' title='websites' tabindex='3'>
-        <h1>Websites</h1>
-        <a href='cliques' id='cliques'><h2>Cliques</h2></a>
-        <p>A browser-based open-source version of the card game Set.</p>
-        <a href='kessler' id='kessler'><h2>Kessler</h2></a>
-        <p>A space shooter where bullets stay around your tiny universe forever.</p>
-        <a href='rocket' id='rocket'><h2>Mercury-Redstone simulator</h2></a>
-        <p>Suborbital rocket 2D sim.</p>
-        <a href='robotics' class='dark'>
-          <h1>FTC 15303 Space Rocks</h1>
-          Robotics team website.
-        </a>
-        <exit tabindex='0'></exit>
-      </section>
-      <section id='contact' title='contact' tabindex='4'>
-        <h1>@</h1>
-        <exit tabindex='0'></exit>
-      </section>
-      <section id='fun' title='fun' tabindex='5'>
-        <h1>Fun</h1>
-      </section>
-    </main>
-    <svg id='blocker' viewBox='0 0 16 16' preserveAspectRatio='none'>
-      <path d='M0 3h3v-3M0 7h7v-7M5 7v9M16 1h-6M16 5h-6M13 5v10h-3' fill='none' stroke-width='2'/>
+    <section id='about' tabindex='0'>
+      <h1>About</h1>
+      <p>I'm Xing. I use code to make stuff because it's cheaper and usually smells less funny than paint.</p>
+      <p>I love designing, be it tinkering with SVGs in a text editor or crosshatching a miniaturized rhinosaurus.</p>
+      <p>I have two years of experience with JS, but can make things work without them, this website included.</p>
+      <img alt='suzhou' src='showcase/suzhou.svg'/>
+    </section>
+    <section id='art' tabindex='0'>
+      <h1>Art</h1>
+      <p>Pen, acryllic, vectors, scalars, doodles, animations.</p>
+      <figure>
+        <img alt='Curiosity rover' src='showcase/curiosity.png'/>
+        <figcaption>
+          The Curiosity rover inside a cavern, looking out at a Martian sunset. SVG. Animatron. 2018.
+        </figcaption>
+      </figure>
+      <figure>
+        <img alt='Falcon 9 reentry' src='showcase/reentry.png'/>
+        <figcaption>
+          A Falcon 9 rocket reentering the atmosphere. SVG. Text editor. 2019.
+        </figcaption>
+      </figure>
+      <figure>
+        <img src='showcase/curiosity.png'/>
+        <figcaption>
+          Planetary Adventures with Ballsy McBallface. Animation. Adobe Animate. 2020.
+        </figcaption>
+      </figure>
+    </section>
+    <section id='websites' tabindex='0'>
+      <h1>Websites</h1>
+      <p>For clients or something.</p>
+      <figure>
+        <img alt='ahs.app screenshot, showing a horizontal news feed' src='showcase/curiosity.png'/>
+        <figcaption>
+          ahs.app, a student-oriented feed for Arcadia High School
+        </figcaption>
+      </figure>
+      <figure>
+        <img alt='robotics.majorstem.org screenshot, showing a cool landing page rotating thing' src='showcase/curiosity.png'/>
+        <figcaption>
+          FTC robotics team landing page
+        </figcaption>
+      </figure>
+    </section>
+    <section id='contact' tabindex='0'>
+      <h1>@</h1>
+      <p>Scream at the general direction of Los Angeles.</p>
+    </section>
+    <section id='fun' tabindex='0'>
+      <h1>Fun</h1>
+      <p>Javascript things, inspired by awesome maths and maths teachers</p>
+      <figure>
+        <img alt='Cliques screenshot showing colored cards with markings on them' src='showcase/curiosity.png'/>
+        <figcaption>
+          Cliques, a card game introducing set theory.
+        </figcaption>
+      </figure>
+      <figure>
+        <img alt='Rippleweave screenshot showing a colorful plot of sin(x^2) + cos(y^2) = 0' src='showcase/curiosity.png'/>
+        <figcaption>
+          RippleWeave, a really cool graph.
+        </figcaption>
+      </figure>
+    </section>
+    <button id='back'></button>
+    <svg id='blocker-wrapper' viewBox='0 0 16 16' preserveAspectRatio='none'>
+      <rect width='16' height='16' fill='white'/>
+      <path id='blocker' d='M0 3h3v-3M0 7h7v-7M5 7v9M16 1h-6M16 5h-6M13 5v10h-3' fill='none' stroke-width='2'/>
     </svg>
   </body>
 </html>
