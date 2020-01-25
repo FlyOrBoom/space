@@ -20,15 +20,19 @@ html,body{
 ::root{
   --duration:.2s;
 }
-body{
+html{
   background:white;
+}
+body{
   background-size:100% 100%;
   font-family:'IBM Plex',monospace;
   font-size:20px;
   overflow:hidden;
+  filter:drop-shadow(0 0 calc(1vw + 1vh) #0004);
 }
 #blocker-wrapper{
-  animation:fade-out .5s .5s both ease-in-out;
+  pointer-events:none;
+  opacity:0;
   z-index:90;
 }
 #blocker{
@@ -37,8 +41,11 @@ body{
   stroke:black;
 }
 @media(prefers-color-scheme:dark){
+  html{
+    background:#111;
+  }
   body{
-    background:black;
+    filter:drop-shadow(0 0 calc(1vw + 1vh) #0008);
   }
   #blocker{
     stroke:white
@@ -50,16 +57,6 @@ body{
   }
   100%{
     pointer-events:auto
-  }
-}
-@keyframes fade-out{
-  0%{
-    pointer-events:auto;
-    opacity:1
-  }
-  100%{
-    pointer-events:none;
-    opacity:0
   }
 }
 *{
@@ -116,7 +113,7 @@ h1{
   pointer-events:none;
   background-size:100% 100%;
   image-rendering:pixelated;
-  opacity:0.2;
+  opacity:0.4;
 }
 section:hover>h1{
   opacity:0.9
@@ -211,31 +208,31 @@ a{
       0       100vh
     )
   }
-  10%{
-    clip-path:polygon(
-      0       37.5vh,
-      37.5vw  37.5vh,
-      37.5vw  37.5vh,
-      37.5vw  50vh,
-      37.5vw  50vh,
-      37.5vw  50vh,
-      37.5vw  100vh,
-      0       100vh
-    )
-  }
   30%{
     clip-path:polygon(
       0       37.5vh,
       37.5vw  37.5vh,
       37.5vw  37.5vh,
-      50vw    50vh,
-      50vw    50vh,
+      37.5vw  50vh,
+      37.5vw  50vh,
       37.5vw  50vh,
       37.5vw  100vh,
       0       100vh
     )
   }
   50%{
+    clip-path:polygon(
+      0       37.5vh,
+      37.5vw  37.5vh,
+      37.5vw  37.5vh,
+      50vw    50vh,
+      50vw    50vh,
+      37.5vw  50vh,
+      37.5vw  100vh,
+      0       100vh
+    )
+  }
+  60%{
     clip-path:polygon(
       0       37.5vh,
       37.5vw  37.5vh,
@@ -273,31 +270,31 @@ a{
       0       100vh
     )
   }
-  90%{
-    clip-path:polygon(
-      0       37.5vh,
-      37.5vw  37.5vh,
-      37.5vw  37.5vh,
-      37.5vw  50vh,
-      37.5vw  50vh,
-      37.5vw  50vh,
-      37.5vw  100vh,
-      0       100vh
-    )
-  }
   70%{
     clip-path:polygon(
       0       37.5vh,
       37.5vw  37.5vh,
       37.5vw  37.5vh,
-      50vw    50vh,
-      50vw    50vh,
+      37.5vw  50vh,
+      37.5vw  50vh,
       37.5vw  50vh,
       37.5vw  100vh,
       0       100vh
     )
   }
   50%{
+    clip-path:polygon(
+      0       37.5vh,
+      37.5vw  37.5vh,
+      37.5vw  37.5vh,
+      50vw    50vh,
+      50vw    50vh,
+      37.5vw  50vh,
+      37.5vw  100vh,
+      0       100vh
+    )
+  }
+  40%{
     clip-path:polygon(
       0       37.5vh,
       37.5vw  37.5vh,
@@ -962,7 +959,7 @@ a{
   align-items:center;
   background:#fff;
   color:#000;
-  bottom:0;
+  top:0;
   right:0;
   opacity:.6;
   width:5rem;
