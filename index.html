@@ -530,26 +530,26 @@ a{
   height:100vh;
   background:#fff;
 }
-#websites{
+#design{
   --duration:.2s;
   background:#0ff;
-  animation-name:websites-reverse
+  animation-name:design-reverse
 }
-#websites:hover{
-  animation-name:websites
+#design:hover{
+  animation-name:design
 }
-#websites:focus{
+#design:focus{
   --duration:.08s;
-  animation-name:websites-highlight
+  animation-name:design-highlight
 }
-#websites>h1{
+#design>h1{
   top:0;
   left:37.5vw;
   width:62.5vw;
   height:100vh;
-  background-image:url('h1/websites.png')
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 32' preserveAspectRatio='none'%3E%3Cpath fill-rule='evenodd' d=' M4 0H7V3H4M5 1H8V2H5 M4 4H20V5H5V8H8V9H5V12H12V13H4 M4 14H12V15H5V16H12V19H0V17H1V18H11V17H4 M0 20H3V21H2V31H3V32H0V31H1V21H0 M4 20H8V21H5V31H7V29H6V28H8V32H4 M6 22H7V24H9V26H11V20H12V28H11V27H10V25H8V23H7V27H6'/%3E%3C/svg%3E")
 }
-@keyframes websites{
+@keyframes design{
   0%{
     clip-path:polygon(
       50vw    37.5vh,
@@ -656,7 +656,7 @@ a{
     )
   }
 }
-@keyframes websites-reverse{
+@keyframes design-reverse{
   100%{
     clip-path:polygon(
       50vw    37.5vh,
@@ -763,7 +763,7 @@ a{
     )
   }
 }
-@keyframes websites-highlight{
+@keyframes design-highlight{
   0%{
     clip-path:polygon(
       0       37.5vh,
@@ -1022,8 +1022,8 @@ section:focus~#back:hover{
         </figcaption>
       </figure>
     </section>
-    <section id='websites' tabindex='0'>
-      <h1>Websites</h1>
+    <section id='design' tabindex='0'>
+      <h1>design</h1>
       <p>For clients or something.</p>
       <figure>
         <img alt='ahs.app screenshot, showing a horizontal news feed' src='showcase/curiosity.png'/>
