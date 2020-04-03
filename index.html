@@ -9,8 +9,16 @@
     <meta name='author' content='Xing'>
     <style>
 @font-face{
-  font-family:'IBM Plex';
-  src:url('assets/plex/var-roman.woff2') format('woff2');
+  font-family:'Computer Modern';
+  src:url('assets/computer-modern-italic.woff') format('woff');
+  font-weight:normal;
+  font-style:italic;
+}
+@font-face{
+  font-family:'Computer Modern';
+  src:url('assets/computer-modern-bold-italic.woff') format('woff');
+  font-weight:bold;
+  font-style:italic;
 }
 html,body{
   margin:0;
@@ -25,10 +33,15 @@ html{
 }
 body{
   background-size:100% 100%;
-  font-family:'IBM Plex',monospace;
-  font-size:20px;
+  font-family:'Computer Modern',serif;
+  font-style:italic;
+  font-size:30px;
   overflow:hidden;
   filter:drop-shadow(0 0 calc(1vw + 1vh) #0004);
+}
+::selection{
+	background:grey;
+	color:white;
 }
 #blocker-wrapper{
   pointer-events:none;
@@ -71,9 +84,6 @@ section,#blocker-wrapper{
 section{
   margin:0;
   padding:0;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
   overflow:hidden scroll;
   text-align:center;
   animation-timing-function:linear;
@@ -97,10 +107,7 @@ section>*{
   display:block;
   margin:0;
   padding:0;
-}
-section>*:not(h1){
-  flex:0 0 100vh;
-  margin-bottom:150vh;
+  height:150vh;
   opacity:0;
 }
 section:focus>*:not(h1),section:focus-within>*:not(h1){
@@ -111,8 +118,7 @@ h1{
   z-index:100;
   color:transparent;
   pointer-events:none;
-  background-size:100% 100%;
-  image-rendering:pixelated;
+  background-size:100%;
   opacity:0.4;
 }
 section:hover>h1{
@@ -124,8 +130,7 @@ section:focus>h1{
 
 p{
   text-align:center;
-  padding:50vh 0;
-  margin-bottom:100vh;
+  padding-top:calc(50vh - 1rem);
 }
 figure{
   position:relative;
@@ -140,6 +145,7 @@ figcaption{
   padding:1rem;
   color:inherit;
 }
+
 img{
   max-width:90vmin;
   max-height:90vmin;
@@ -547,7 +553,7 @@ a{
   left:37.5vw;
   width:62.5vw;
   height:100vh;
-	background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 32' preserveAspectRatio='none'%3E%3Cpath fill-rule='evenodd' d='M4 0H7V3H4M5 1H8V2H5M4 4H20V5H5V8H8V9H5V12H12V13H4M4 14H12V15H5V16H12V19H0V17H1V18H11V17H4M0 20H3V21H2V31H3V32H0V31H1V21H0M4 20H8V21H5V31H7V29H6V28H8V32H4M6 22H7V24H9V26H11V20H12V28H11V27H10V25H8V23H7V27H6'/%3E%3C/svg%3E")
+	background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 32' preserveAspectRatio='none'%3E%3Cpath fill-rule='evenodd' d='M4 0H7V3H4M5 1H8V2H5M4 4H20V5H5V8H8V9H5V12H12V13H4M4 14H12V15H5V16H12V19H0V16H1V18H11V17H4M0 20H3V21H2V31H3V32H0V31H1V21H0M4 20H8V21H5V31H7V29H6V28H8V32H4M6 22H7V24H9V26H11V20H12V28H11V27H10V25H8V23H7V27H6'/%3E%3C/svg%3E")
 }
 @keyframes design{
   0%{
@@ -973,6 +979,7 @@ a{
   z-index:100;
   font-family:inherit;
   font-size:inherit;
+  font-style:inherit;
   border:0;
   transition:opacity .2s;
   pointer-events:auto;
@@ -995,40 +1002,38 @@ section:focus~#back:hover{
   <body>
     <section id='about' tabindex='0'>
       <h1>About</h1>
-      <p>I'm Xing. I use code to make stuff because it's cheaper and usually smells less funny than paint.</p>
-      <p>I love designing, be it tinkering with SVGs in a text editor or crosshatching a miniaturized rhinosaurus.</p>
-      <p>I have two years of experience with JS, but can make things work without them, this website included.</p>
+      <p><strong>About: </strong>Xing Liu</p>
       <img alt='suzhou' src='showcase/suzhou.svg'/>
     </section>
     <section id='art' tabindex='0'>
       <h1>Art</h1>
-      <p>Pen, acryllic, vectors, scalars, doodles, animations.</p>
+      <p><strong>Art: </strong>An assortment of colors made by pens, brushes, vectors, pixels, and frames.</p>
       <figure>
         <img alt='Curiosity rover' src='showcase/curiosity.png'/>
         <figcaption>
-          The Curiosity rover inside a cavern, looking out at a Martian sunset. SVG. Animatron. 2018.
+          <strong>Curiosity</strong>. Martian rover vector art. 2018.
         </figcaption>
       </figure>
       <figure>
         <img alt='Falcon 9 reentry' src='showcase/reentry.png'/>
         <figcaption>
-          A Falcon 9 rocket reentering the atmosphere. SVG. Text editor. 2019.
+          <strong>Reentry</strong>. SpaceX booster vector art. 2019.
         </figcaption>
       </figure>
       <figure>
         <img src='showcase/curiosity.png'/>
         <figcaption>
-          Planetary Adventures with Ballsy McBallface. Animation. Adobe Animate. 2020.
+          <strong>Planetary Adventures with Ballsy McBallface</strong>. Short cartoon. 2020.
         </figcaption>
       </figure>
     </section>
     <section id='design' tabindex='0'>
       <h1>design</h1>
-      <p>For clients or something.</p>
+      <p><strong>Design: </strong>Webpages handcrafted in semantic HTML and zen CSS, with sprinkles of JS.</p>
       <figure>
         <img alt='ahs.app screenshot, showing a horizontal news feed' src='showcase/curiosity.png'/>
         <figcaption>
-          ahs.app, a student-oriented feed for Arcadia High School
+          <strong>AHS.app</strong>. A student-oriented feed for Arcadia High School. HTML. 2020.
         </figcaption>
       </figure>
       <figure>
@@ -1040,11 +1045,11 @@ section:focus~#back:hover{
     </section>
     <section id='contact' tabindex='0'>
       <h1>@</h1>
-      <p>Scream at the general direction of Los Angeles.</p>
+      <p><strong>Contact: </strong>Scream at the general direction of Los Angeles.</p>
     </section>
     <section id='fun' tabindex='0'>
       <h1>Fun</h1>
-      <p>Javascript things, inspired by awesome maths and maths teachers</p>
+      <p><strong>Fun: </strong>Javascript game-things.</p>
       <figure>
         <img alt='Cliques screenshot showing colored cards with markings on them' src='showcase/curiosity.png'/>
         <figcaption>
