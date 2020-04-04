@@ -34,6 +34,7 @@ body{
 	font-size:30px;
 	overflow:hidden;
 	filter:drop-shadow(0 0 calc(1vw + 1vh) #0004);
+	--duration:200ms;
 }
 ::selection{
 	background:grey;
@@ -65,7 +66,7 @@ article:hover~#fog{
 	}
 }
 *{
-	transition:background 200ms,opacity 200ms;
+	transition:clip-path var(--duration),background var(--duration),opacity var(--duration);
 	box-sizing:border-box;
 	margin:0;
 	padding:0;
@@ -151,7 +152,7 @@ a{
 	cursor:pointer;
 }
 #contact{
-	--duration:150ms;
+	--duration:200ms;
 	color:#fff;
 	background:#208;
 	clip-path:inset(0 87.5% 87.5% 0);
@@ -988,54 +989,36 @@ remove-focus:focus{
 		<article id='about' tabindex='0'>
 			<h1>About</h1>
 			<figure>
-				<figcaption>
-					<dt>
-						About
-					</dt><dd>
-						Xing Liu
-					</dd>
-				</figcaption>
+				<figcaption><dt>About</dt><dd>Xing Liu</dd></figcaption>
 			</figure>
 			<img alt='suzhou' src='showcase/suzhou.svg'/>
 		</article>
 		<article id='art' tabindex='0'>
 			<h1>Art</h1>
 			<figure>
-				<figcaption>
-					<dt>Art</dt><dd>An assortment of colors made by pens, brushes, vectors, pixels, and frames.</dd>
-				</figcaption>
+				<figcaption><dt>Art</dt><dd>An assortment of colors made by pens, brushes, vectors, pixels, and frames.</dd></figcaption>
 			</figure>
 			<figure>
 				<img alt='Curiosity rover' src='showcase/curiosity.png'/>
-				<figcaption>
-					<dt>Curiosity</dt><dd>Martian rover vector art. 2018.</dd>
-				</figcaption>
+				<figcaption><dt>Curiosity</dt><dd>Martian rover vector art. 2018.</dd></figcaption>
 			</figure>
 			<figure>
 				<img alt='Falcon 9 reentry' src='showcase/reentry.png'/>
-				<figcaption>
-					<dt>Reentry</dt><dd>SpaceX booster vector art. 2019.</dd>
-				</figcaption>
+				<figcaption><dt>Reentry</dt><dd>SpaceX booster vector art. 2019.</dd></figcaption>
 			</figure>
 			<figure>
 				<img src='showcase/curiosity.png'/>
-				<figcaption>
-					<dt>Planetary Adventures with Ballsy McBallface</dt><dd>Short cartoon. 2020.</dd>
-				</figcaption>
+				<figcaption><dt>Planetary Adventures with Ballsy McBallface</dt><dd>Short cartoon. 2020.</dd></figcaption>
 			</figure>
 		</article>
 		<article id='design' tabindex='0'>
 			<h1>design</h1>
 			<figure>
-				<figcaption>
-					<dt>Design</dt><dd>Neat-looking posters and webpages designed with zen CSS.</dd>
-				</figcaption>
+				<figcaption><dt>Design</dt><dd>Neat-looking posters and webpages designed with zen CSS.</dd></figcaption>
 			</figure>
 			<figure>
 				<img alt='ahs.app screenshot, showing a horizontal news feed' src='showcase/curiosity.png'/>
-				<figcaption>
-					<dt>AHS.app</dt><dd>A student-oriented feed for Arcadia High School. HTML. 2020.</dd>
-				</figcaption>
+				<figcaption><dt>AHS.app</dt><dd>A student-oriented feed for Arcadia High School. HTML. 2020.</dd></figcaption>
 			</figure>
 			<figure>
 				<img alt='robotics.majorstem.org screenshot, showing a cool landing page rotating thing' src='showcase/curiosity.png'/>
@@ -1047,34 +1030,26 @@ remove-focus:focus{
 		<article id='contact' tabindex='0'>
 			<h1>@</h1>
 			<figure>
-				<figcaption>
-					<dt>Contact</dt><dd>Scream at the general direction of Los Angeles.</dd>
-				</figcaption>
+				<figcaption><dt>Contact</dt><dd>Scream at the general direction of Los Angeles.</dd></figcaption>
 			</figure>
 		</article>
 		<article id='fun' tabindex='0'>
 			<h1>Fun</h1>
 			<figure>
-				<figcaption>
-					<dt>Fun</dt><dd>Javascript game-things.</dd>
-				</figcaption>
+				<figcaption><dt>Fun</dt><dd>Javascript game-things.</dd></figcaption>
 			</figure>
 			<figure>
 				<img alt='Cliques screenshot showing colored cards with markings on them' src='showcase/curiosity.png'/>
-				<figcaption>
-					<dt>Cliques</dt><dd>a card game introducing set theory.</dd>
-				</figcaption>
+				<figcaption><dt>Cliques</dt><dd>a card game introducing set theory.</dd></figcaption>
 			</figure>
 			<figure>
 				<img alt='Rippleweave screenshot showing a colorful plot of sin(x^2) + cos(y^2) = 0' src='showcase/curiosity.png'/>
-				<figcaption>
-					<dt>RippleWeave</dt><dd>Colorful function grapher</dd>
-				</figcaption>
+				<figcaption><dt>RippleWeave</dt><dd>Colorful function grapher</dd></figcaption>
 			</figure>
 		</article>
-		<div id='fog'></div>
 		<remove-focus>back</remove-focus>
-		<svg id='blocker' viewBox='0 0 16 16' preserveAspectRatio='none'>
+		<div id='fog' aria-hidden></div>
+		<svg id='blocker' viewBox='0 0 16 16' preserveAspectRatio='none' aria-hidden>
 			<path d='M0 3h3v-3M0 7h7v-7M5 7v9M16 1h-6M16 5h-6M13 5v10h-3' fill='none' stroke-width='2'/>
 		</svg>
 	</body>
