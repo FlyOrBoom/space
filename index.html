@@ -1,1074 +1,1077 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Xing</title>
-    <link rel='shortcut icon' type='image/png' href='assets/favi.png' />
-    <meta charset='UTF-8'>
-    <meta name='description' content='Maker of web stuffs.'>
-    <meta name='keywords' content='art,html,design,web,developer,lxing'>
-    <meta name='author' content='Xing'>
-    <style>
+	<head>
+		<title>Xing</title>
+		<link rel='shortcut icon' type='image/png' href='assets/favi.png' />
+		<meta charset='UTF-8'>
+		<meta name='description' content='Maker of web stuffs.'>
+		<meta name='keywords' content='art,html,design,web,developer,lxing'>
+		<meta name='author' content='Xing'>
+		<style>
 @font-face{
-  font-family:'Computer Modern';
-  src:url('assets/computer-modern-italic.woff') format('woff');
-  font-weight:normal;
-  font-style:italic;
-  font-rendering:swap
+	font-family:'Computer Modern';
+	src:url('assets/computer-modern-italic.woff') format('woff');
+	font-weight:normal;
+	font-style:italic;
+	font-rendering:swap
 }
 @font-face{
-  font-family:'Computer Modern';
-  src:url('assets/computer-modern-bold-italic.woff') format('woff');
-  font-weight:bold;
-  font-style:italic;
-  font-rendering:swap
+	font-family:'Computer Modern';
+	src:url('assets/computer-modern-bold-italic.woff') format('woff');
+	font-weight:bold;
+	font-style:italic;
+	font-rendering:swap
 }
 html,body{
-  margin:0;
-  width:100%;
-  height:100%;
+	margin:0;
+	width:100%;
+	height:100%;
 }
 ::root{
-  --duration:.2s;
+	--duration:200ms;
 }
 html{
-  background:white;
+	background:white;
 }
 body{
-  background-size:100% 100%;
-  font-family:'Computer Modern',serif;
-  font-style:italic;
-  font-size:30px;
-  overflow:hidden;
-  filter:drop-shadow(0 0 calc(1vw + 1vh) #0004);
+	background-size:100% 100%;
+	font-family:'Computer Modern',serif;
+	font-style:italic;
+	font-size:30px;
+	overflow:hidden;
+	filter:drop-shadow(0 0 calc(1vw + 1vh) #0004);
 }
 ::selection{
 	background:grey;
 	color:white;
 }
 #blocker-wrapper{
-  pointer-events:none;
-  opacity:0;
-  z-index:90;
+	pointer-events:none;
+	opacity:0;
+	z-index:90;
 }
 #blocker{
-  pointer-events:auto;
-  cursor:auto;
-  stroke:black;
+	pointer-events:auto;
+	cursor:default;
+	stroke:black;
 }
 @media(prefers-color-scheme:dark){
-  html{
-    background:#111;
-  }
-  body{
-    filter:drop-shadow(0 0 calc(1vw + 1vh) #0008);
-  }
-  #blocker{
-    stroke:white
-  }
-}
-@keyframes block{
-  0%{
-    pointer-events:none
-  }
-  100%{
-    pointer-events:auto
-  }
+	html{
+		background:#222;
+	}
 }
 *{
-  transition:clip-path var(--duration),opacity var(--duration);
-  box-sizing:border-box;
+	transition:clip-path var(--duration),opacity var(--duration);
+	box-sizing:border-box;
+	margin:0;
+	padding:0;
 }
-section,#blocker-wrapper{
-  position:fixed;
-  width:100vw;
-  height:100vh;
+:focus{
+	outline:none;
 }
-section{
-  margin:0;
-  padding:0;
-  overflow:hidden scroll;
-  text-align:center;
-  animation-timing-function:linear;
-  animation-duration:var(--duration);
-  animation-fill-mode:both;
-  cursor:pointer;
+article,#blocker-wrapper{
+	position:fixed;
+	width:100vw;
+	height:100vh !important;
 }
-section:hover{
-  z-index:90;
+article{
+	display:block;
+	margin:0;
+	padding:0;
+	overflow:hidden scroll;
+	text-align:center;
+	animation-timing-function:linear;
+	animation-duration:var(--duration);
+	animation-fill-mode:both;
+	cursor:pointer;
 }
-section:focus{
-  cursor:auto;
-  outline:none;
-  z-index:100;
+article:hover{
+	z-index:90;
 }
-body:hover>#back:not(:hover)+section:not(:hover){
-  opacity:0.1
-}
-
-section>*{
-  display:block;
-  margin:0;
-  padding:0;
-  height:150vh;
-  opacity:0;
-}
-section:focus>*:not(h1),section:focus-within>*:not(h1){
-  opacity:1;
+article:focus{
+	cursor:default;
+	z-index:100;
 }
 h1{
-  position:fixed;
-  z-index:100;
-  color:transparent;
-  pointer-events:none;
-  background-size:100%;
-  opacity:0.4;
+	position:fixed;
+	color:transparent;
+	pointer-events:none;
+	background-size:100%;
+	opacity:0.4;
 }
-section:hover>h1{
-  opacity:0.9
+:hover>h1{
+	opacity:0.9
 }
-section:focus>h1{
-  opacity:0
-}
-
-p{
-  text-align:center;
-  padding-top:calc(50vh - 1rem);
+:focus>h1,
+:focus-within>h1{
+	opacity:0
 }
 figure{
-  position:relative;
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
-  align-content:center;
+	position:static;
+	height:100vh;
+	display:flex;
+	flex-wrap:wrap;
+	justify-content:center;
+	align-content:center;
+	opacity:0;
+	margin-bottom:50vh;
+}
+:focus>figure,
+:focus-within>figure{
+	opacity:1;
 }
 figcaption{
-  display:block;
-  width:100%;
-  padding:1rem;
-  color:inherit;
+	display:block;
+	width:100%;
+	padding:1rem;
+	color:inherit;
 }
-
+dt,dd{
+	display:inline;
+}
+dt{
+	font-weight:bold;
+}
+dt::after{
+	content:': ';
+	user-select:auto;
+}
 img{
-  max-width:90vmin;
-  max-height:90vmin;
+	max-width:90vmin;
+	max-height:90vmin;
 }
 a{
-  color:inherit;
-  background:inherit;
-  text-decoration:none;
-  cursor:pointer;
+	color:inherit;
+	background:inherit;
+	text-decoration:none;
+	cursor:pointer;
 }
 #contact{
-  --duration:.15s;
-  color:#fff;
-  background:#208;
-  clip-path:inset(0 87.5% 87.5% 0);
+	--duration:150ms;
+	color:#fff;
+	background:#208;
+	clip-path:inset(0 87.5% 87.5% 0);
 }
 #contact:hover{
-  clip-path:inset(0 75% 75% 0);
+	clip-path:inset(0 75% 75% 0);
 }
 #contact:focus{
-  --duration:.2s;
-  clip-path:inset(0 0 0 0);
+	--duration:200ms;
+	clip-path:inset(0 0 0 0);
 }
 #contact>h1{
-  width:12.5vw;
-  height:12.5vh;
-  left:0;
-  top:0;
+	width:12.5vw;
+	height:12.5vh;
+	left:0;
+	top:0;
 	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 4' preserveAspectRatio='none'%3E%3Cpath fill='%23fff' fill-rule='evenodd' d='M0 0H4V1H3V3H1V1H0M0 2H4V4H0'/%3E%3C/svg%3E")
 }
 #about{
-  --duration:.25s;
-  color:#052222;
-  background:#4f8;
-  animation-name:about-reverse
+	--duration:250ms;
+	color:#052222;
+	background:#4f8;
+	animation-name:about-reverse
 }
 #about:hover{
-  animation-name:about
+	animation-name:about
 }
 #about:focus{
-  --duration:.15s;
-  animation-name:about-highlight
+	--duration:150ms;
+	animation-name:about-highlight
 }
 #about>h1{
-  left:0;
-  bottom:0;
-  width:25vw;
-  height:50vh;
+	left:0;
+	bottom:0;
+	width:25vw;
+	height:50vh;
 	background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 16' preserveAspectRatio='none'%3E%3Cpath fill-rule='evenodd' d='M0 0H3V5H2V3H1V5H0V2H2V1H1V2H0V0M4 0H8V2H5V1H7V4H5V3H8V5H4M0 6H8V9H0V8H7V7H1V8H0M0 10V16H4V10H3V15H1V10M5 10H8V11H7V18H6V11H5'/%3E%3C/svg%3E")
-}
-#about>p{
-  left:37.5vw;
-  top:50vh;
 }
 
 @keyframes about{
-  0%{
-    clip-path:polygon(
-      0       50vh,
-      25vw    50vh,
-      25vw    50vh,
-      25vw    50vh,
-      25vw    50vh,
-      25vw    50vh,
-      25vw    100vh,
-      0       100vh
-    )
-  }
-  30%{
-    clip-path:polygon(
-      0       37.5vh,
-      37.5vw  37.5vh,
-      37.5vw  37.5vh,
-      37.5vw  50vh,
-      37.5vw  50vh,
-      37.5vw  50vh,
-      37.5vw  100vh,
-      0       100vh
-    )
-  }
-  50%{
-    clip-path:polygon(
-      0       37.5vh,
-      37.5vw  37.5vh,
-      37.5vw  37.5vh,
-      50vw    50vh,
-      50vw    50vh,
-      37.5vw  50vh,
-      37.5vw  100vh,
-      0       100vh
-    )
-  }
-  60%{
-    clip-path:polygon(
-      0       37.5vh,
-      37.5vw  37.5vh,
-      37.5vw  37.5vh,
-      50vw    37.5vh,
-      50vw    50vh,
-      37.5vw  50vh,
-      37.5vw  100vh,
-      0       100vh
-    )
-  }
-  100%{
-    clip-path:polygon(
-      0       37.5vh,
-      37.5vw  37.5vh,
-      37.5vw  0,
-      50vw    0,
-      50vw    50vh,
-      37.5vw  50vh,
-      37.5vw  100vh,
-      0       100vh
-    )
-  }
+	0%{
+		clip-path:polygon(
+			0			 50vh,
+			25vw		50vh,
+			25vw		50vh,
+			25vw		50vh,
+			25vw		50vh,
+			25vw		50vh,
+			25vw		100vh,
+			0			 100vh
+		)
+	}
+	30%{
+		clip-path:polygon(
+			0			 37.5vh,
+			37.5vw	37.5vh,
+			37.5vw	37.5vh,
+			37.5vw	50vh,
+			37.5vw	50vh,
+			37.5vw	50vh,
+			37.5vw	100vh,
+			0			 100vh
+		)
+	}
+	50%{
+		clip-path:polygon(
+			0			 37.5vh,
+			37.5vw	37.5vh,
+			37.5vw	37.5vh,
+			50vw		50vh,
+			50vw		50vh,
+			37.5vw	50vh,
+			37.5vw	100vh,
+			0			 100vh
+		)
+	}
+	60%{
+		clip-path:polygon(
+			0			 37.5vh,
+			37.5vw	37.5vh,
+			37.5vw	37.5vh,
+			50vw		37.5vh,
+			50vw		50vh,
+			37.5vw	50vh,
+			37.5vw	100vh,
+			0			 100vh
+		)
+	}
+	100%{
+		clip-path:polygon(
+			0			 37.5vh,
+			37.5vw	37.5vh,
+			37.5vw	0,
+			50vw		0,
+			50vw		50vh,
+			37.5vw	50vh,
+			37.5vw	100vh,
+			0			 100vh
+		)
+	}
 }
 @keyframes about-reverse{
-  100%{
-    clip-path:polygon(
-      0       50vh,
-      25vw    50vh,
-      25vw    50vh,
-      25vw    50vh,
-      25vw    50vh,
-      25vw    50vh,
-      25vw    100vh,
-      0       100vh
-    )
-  }
-  70%{
-    clip-path:polygon(
-      0       37.5vh,
-      37.5vw  37.5vh,
-      37.5vw  37.5vh,
-      37.5vw  50vh,
-      37.5vw  50vh,
-      37.5vw  50vh,
-      37.5vw  100vh,
-      0       100vh
-    )
-  }
-  50%{
-    clip-path:polygon(
-      0       37.5vh,
-      37.5vw  37.5vh,
-      37.5vw  37.5vh,
-      50vw    50vh,
-      50vw    50vh,
-      37.5vw  50vh,
-      37.5vw  100vh,
-      0       100vh
-    )
-  }
-  40%{
-    clip-path:polygon(
-      0       37.5vh,
-      37.5vw  37.5vh,
-      37.5vw  37.5vh,
-      50vw    37.5vh,
-      50vw    50vh,
-      37.5vw  50vh,
-      37.5vw  100vh,
-      0       100vh
-    )
-  }
-  0%{
-    clip-path:polygon(
-      0       37.5vh,
-      37.5vw  37.5vh,
-      37.5vw  0,
-      50vw    0,
-      50vw    50vh,
-      37.5vw  50vh,
-      37.5vw  100vh,
-      0       100vh
-    )
-  }
+	100%{
+		clip-path:polygon(
+			0			 50vh,
+			25vw		50vh,
+			25vw		50vh,
+			25vw		50vh,
+			25vw		50vh,
+			25vw		50vh,
+			25vw		100vh,
+			0			 100vh
+		)
+	}
+	70%{
+		clip-path:polygon(
+			0			 37.5vh,
+			37.5vw	37.5vh,
+			37.5vw	37.5vh,
+			37.5vw	50vh,
+			37.5vw	50vh,
+			37.5vw	50vh,
+			37.5vw	100vh,
+			0			 100vh
+		)
+	}
+	50%{
+		clip-path:polygon(
+			0			 37.5vh,
+			37.5vw	37.5vh,
+			37.5vw	37.5vh,
+			50vw		50vh,
+			50vw		50vh,
+			37.5vw	50vh,
+			37.5vw	100vh,
+			0			 100vh
+		)
+	}
+	40%{
+		clip-path:polygon(
+			0			 37.5vh,
+			37.5vw	37.5vh,
+			37.5vw	37.5vh,
+			50vw		37.5vh,
+			50vw		50vh,
+			37.5vw	50vh,
+			37.5vw	100vh,
+			0			 100vh
+		)
+	}
+	0%{
+		clip-path:polygon(
+			0			 37.5vh,
+			37.5vw	37.5vh,
+			37.5vw	0,
+			50vw		0,
+			50vw		50vh,
+			37.5vw	50vh,
+			37.5vw	100vh,
+			0			 100vh
+		)
+	}
 }
 @keyframes about-highlight{
-  0%{
-    clip-path:polygon(
-      0       37.5vh,
-      37.5vw  37.5vh,
-      37.5vw  0,
-      50vw    0,
-      50vw    50vh,
-      37.5vw  50vh,
-      37.5vw  100vh,
-      0       100vh
-    )
-  }
-  30%{
-    clip-path:polygon(
-      0       0,
-      0       0,
-      0       0,
-      50vw    0,
-      50vw    50vh,
-      50vw    50vh,
-      50vw    100vh,
-      0       100vh
-    )
-  }
-  100%{
-    clip-path:polygon(
-      0       0,
-      0       0,
-      0       0,
-      100vw   0,
-      100vw   50vh,
-      100vw   50vh,
-      100vw   100vh,
-      0       100vh
-    )
-  }
+	0%{
+		clip-path:polygon(
+			0			 37.5vh,
+			37.5vw	37.5vh,
+			37.5vw	0,
+			50vw		0,
+			50vw		50vh,
+			37.5vw	50vh,
+			37.5vw	100vh,
+			0			 100vh
+		)
+	}
+	30%{
+		clip-path:polygon(
+			0			 0,
+			0			 0,
+			0			 0,
+			50vw		0,
+			50vw		50vh,
+			50vw		50vh,
+			50vw		100vh,
+			0			 100vh
+		)
+	}
+	100%{
+		clip-path:polygon(
+			0			 0,
+			0			 0,
+			0			 0,
+			100vw	 0,
+			100vw	 50vh,
+			100vw	 50vh,
+			100vw	 100vh,
+			0			 100vh
+		)
+	}
 }
 #art{
-  --duration:250ms;
-  width:100vw;
-  height:200vh;
-  background:#000;
-  color:#fff;
-  animation-name:art-reverse
+	--duration:250ms;
+	width:100vw;
+	height:200vh;
+	background:#000;
+	color:#fff;
+	animation-name:art-reverse
 }
 #art:hover{
-  animation-name:art
+	animation-name:art
 }
 #art:focus{
-  animation-name:art-highlight
+	animation-name:art-highlight
 }
 #art>h1{
-  left:0;
-  top:0;
-  width:37.5vw;
-  height:37.5vh;
+	left:0;
+	top:0;
+	width:37.5vw;
+	height:37.5vh;
 	background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' preserveAspectRatio='none'%3E%3Cpath fill='%23fff' fill-rule='evenodd' d='M0 8H4V12H3V11H1V12H0V10H3V9H1V10H0M5 8H9V10H6V9H8V11H9V12H7V11H6V12H5M8 0V7H10V12H11V7H12V0'/%3E%3C/svg%3E")
 }
 @keyframes art{
-  0%{
-    clip-path:polygon(
-      0       25vh,
-      25vw    25vh,
-      25vw    0,
-      37.5vw  0,
-      37.5vw  37.5vh,
-      37.5vw  37.5vh,
-      37.5vw  37.5vh,
-      25vw    37.5vh,
-      25vw    37.5vh,
-      0       37.5vh
-    )
-  }
-  30%{
-    clip-path:polygon(
-      0       12.5vh,
-      12.5vw  12.5vh,
-      12.5vw  0,
-      50vw    0,
-      50vw    50vh,
-      37.5vw  50vh,
-      37.5vw  50vh,
-      25vw    50vh,
-      25vw    50vh,
-      0       50vh
-    )
-  }
-  100%{
-    clip-path:polygon(
-      0       12.5vh,
-      12.5vw  12.5vh,
-      12.5vw  0,
-      50vw    0,
-      50vw    50vh,
-      37.5vw  50vh,
-      37.5vw  100vh,
-      25vw    100vh,
-      25vw    50vh,
-      0       50vh
-    )
-  }
+	0%{
+		clip-path:polygon(
+			0			 25vh,
+			25vw		25vh,
+			25vw		0,
+			37.5vw	0,
+			37.5vw	37.5vh,
+			37.5vw	37.5vh,
+			37.5vw	37.5vh,
+			25vw		37.5vh,
+			25vw		37.5vh,
+			0			 37.5vh
+		)
+	}
+	30%{
+		clip-path:polygon(
+			0			 12.5vh,
+			12.5vw	12.5vh,
+			12.5vw	0,
+			50vw		0,
+			50vw		50vh,
+			37.5vw	50vh,
+			37.5vw	50vh,
+			25vw		50vh,
+			25vw		50vh,
+			0			 50vh
+		)
+	}
+	100%{
+		clip-path:polygon(
+			0			 12.5vh,
+			12.5vw	12.5vh,
+			12.5vw	0,
+			50vw		0,
+			50vw		50vh,
+			37.5vw	50vh,
+			37.5vw	100vh,
+			25vw		100vh,
+			25vw		50vh,
+			0			 50vh
+		)
+	}
 }
 @keyframes art-reverse{
-  100%{
-    clip-path:polygon(
-      0       25vh,
-      25vw    25vh,
-      25vw    0,
-      37.5vw  0,
-      37.5vw  37.5vh,
-      37.5vw  37.5vh,
-      37.5vw  37.5vh,
-      25vw    37.5vh,
-      25vw    37.5vh,
-      0       37.5vh
-    )
-  }
-  70%{
-    clip-path:polygon(
-      0       12.5vh,
-      12.5vw  12.5vh,
-      12.5vw  0,
-      50vw    0,
-      50vw    50vh,
-      37.5vw  50vh,
-      37.5vw  50vh,
-      25vw    50vh,
-      25vw    50vh,
-      0       50vh
-    )
-  }
-  0%{
-    clip-path:polygon(
-      0       12.5vh,
-      12.5vw  12.5vh,
-      12.5vw  0,
-      50vw    0,
-      50vw    50vh,
-      37.5vw  50vh,
-      37.5vw  100vh,
-      25vw    100vh,
-      25vw    50vh,
-      0       50vh
-    )
-  }
+	100%{
+		clip-path:polygon(
+			0			 25vh,
+			25vw		25vh,
+			25vw		0,
+			37.5vw	0,
+			37.5vw	37.5vh,
+			37.5vw	37.5vh,
+			37.5vw	37.5vh,
+			25vw		37.5vh,
+			25vw		37.5vh,
+			0			 37.5vh
+		)
+	}
+	70%{
+		clip-path:polygon(
+			0			 12.5vh,
+			12.5vw	12.5vh,
+			12.5vw	0,
+			50vw		0,
+			50vw		50vh,
+			37.5vw	50vh,
+			37.5vw	50vh,
+			25vw		50vh,
+			25vw		50vh,
+			0			 50vh
+		)
+	}
+	0%{
+		clip-path:polygon(
+			0			 12.5vh,
+			12.5vw	12.5vh,
+			12.5vw	0,
+			50vw		0,
+			50vw		50vh,
+			37.5vw	50vh,
+			37.5vw	100vh,
+			25vw		100vh,
+			25vw		50vh,
+			0			 50vh
+		)
+	}
 }
 @keyframes art-highlight{
-  0%{
-    clip-path:polygon(
-      0       12.5vh,
-      12.5vw  12.5vh,
-      12.5vw  0,
-      50vw    0,
-      50vw    50vh,
-      37.5vw  50vh,
-      37.5vw  100vh,
-      25vw    100vh,
-      25vw    50vh,
-      0       50vh
-    )
-  }
-  20%{
-    clip-path:polygon(
-      0       0,
-      0       0,
-      0       0,
-      50vw    0,
-      50vw    50vh,
-      50vw    50vh,
-      50vw    100vh,
-      12.5vw  100vh,
-      12.5vw  62.5vh,
-      0       62.5vh
-    )
-  }
-  40%{
-    clip-path:polygon(
-      0       0,
-      0       0,
-      0       0,
-      62.5vw  0,
-      62.5vw  50vh,
-      62.5vw  50vh,
-      62.5vw  100vh,
-      0       100vh,
-      0       75vh,
-      0       75vh
-    )
-  }
-  100%{
-    clip-path:polygon(
-      0       0,
-      0       0,
-      0       0,
-      100vw   0,
-      100vw   50vh,
-      100vw   50vh,
-      100vw   100vh,
-      0       100vh,
-      0       75vh,
-      0       75vh
-    )
-  }
+	0%{
+		clip-path:polygon(
+			0			 12.5vh,
+			12.5vw	12.5vh,
+			12.5vw	0,
+			50vw		0,
+			50vw		50vh,
+			37.5vw	50vh,
+			37.5vw	100vh,
+			25vw		100vh,
+			25vw		50vh,
+			0			 50vh
+		)
+	}
+	20%{
+		clip-path:polygon(
+			0			 0,
+			0			 0,
+			0			 0,
+			50vw		0,
+			50vw		50vh,
+			50vw		50vh,
+			50vw		100vh,
+			12.5vw	100vh,
+			12.5vw	62.5vh,
+			0			 62.5vh
+		)
+	}
+	40%{
+		clip-path:polygon(
+			0			 0,
+			0			 0,
+			0			 0,
+			62.5vw	0,
+			62.5vw	50vh,
+			62.5vw	50vh,
+			62.5vw	100vh,
+			0			 100vh,
+			0			 75vh,
+			0			 75vh
+		)
+	}
+	100%{
+		clip-path:polygon(
+			0			 0,
+			0			 0,
+			0			 0,
+			100vw	 0,
+			100vw	 50vh,
+			100vw	 50vh,
+			100vw	 100vh,
+			0			 100vh,
+			0			 75vh,
+			0			 75vh
+		)
+	}
 }
 #curiosity{
-  position:static;
-  margin-top:100vh;
-  height:100vh;
-  background:#fff;
+	position:static;
+	margin-top:100vh;
+	height:100vh;
+	background:#fff;
 }
 #design{
-  --duration:.2s;
-  background:#0ff;
-  animation-name:design-reverse
+	--duration:200ms;
+	background:#0ff;
+	animation-name:design-reverse
 }
 #design:hover{
-  animation-name:design
+	animation-name:design
 }
 #design:focus{
-  --duration:.08s;
-  animation-name:design-highlight
+	--duration:80ms;
+	animation-name:design-highlight
 }
 #design>h1{
-  top:0;
-  left:37.5vw;
-  width:62.5vw;
-  height:100vh;
+	top:0;
+	left:37.5vw;
+	width:62.5vw;
+	height:100vh;
 	background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 32' preserveAspectRatio='none'%3E%3Cpath fill-rule='evenodd' d='M4 0H7V3H4M5 1H8V2H5M4 4H20V5H5V8H8V9H5V12H12V13H4M4 14H12V15H5V16H12V19H0V16H1V18H11V17H4M0 20H3V21H2V31H3V32H0V31H1V21H0M4 20H8V21H5V31H7V29H6V28H8V32H4M6 22H7V24H9V26H11V20H12V28H11V27H10V25H8V23H7V27H6'/%3E%3C/svg%3E")
 }
 @keyframes design{
-  0%{
-    clip-path:polygon(
-      50vw    37.5vh,
-      50vw    37.5vh,
-      50vw    37.5vh,
-      50vw    0,
-      62.5vw  0,
-      62.5vw  12.5vh,
-      100vw   12.5vh,
-      100vw   25vh,
-      62.5vw  25vh,
-      62.5vw  37.5vh,
-      75vw    37.5vh,
-      75vw    87.5vh,
-      62.5vw  87.5vh,
-      62.5vw  100vh,
-      37.5vw  100vh,
-      37.5vw  50vh,
-      50vw    50vh
-    )
-  }
-  25%{
-    clip-path:polygon(
-      37.5vw  37.5vh,
-      37.5vw  37.5vh,
-      37.5vw  37.5vh,
-      37.5vw  0,
-      75vw    0,
-      75vw    12.5vh,
-      100vw   12.5vh,
-      100vw   25vh,
-      75vw    25vh,
-      75vw    37.5vh,
-      75vw    37.5vh,
-      75vw    87.5vh,
-      75vw    87.5vh,
-      75vw    100vh,
-      37.5vw  100vh,
-      37.5vw  50vh,
-      37.5vw  50vh
-    )
-  }
-  50%{
-    clip-path:polygon(
-      25vw    37.5vh,
-      25vw    37.5vh,
-      37.5vw  37.5vh,
-      37.5vw  0,
-      87.5vw  0,
-      87.5vw  12.5vh,
-      100vw   12.5vh,
-      100vw   25vh,
-      87.5vw  25vh,
-      87.5vw  37.5vh,
-      87.5vw  37.5vh,
-      87.5vw  87.5vh,
-      87.5vw  87.5vh,
-      87.5vw  100vh,
-      25vw    100vh,
-      25vw    50vh,
-      25vw    50vh
-    )
-  }
-  75%{
-    clip-path:polygon(
-      12.5vw  37.5vh,
-      25vw    37.5vh,
-      37.5vw  37.5vh,
-      37.5vw  0,
-      100vw   0,
-      100vw   12.5vh,
-      100vw   12.5vh,
-      100vw   25vh,
-      100vw   25vh,
-      100vw   37.5vh,
-      87.5vw  37.5vh,
-      87.5vw  87.5vh,
-      87.5vw  87.5vh,
-      87.5vw  100vh,
-      25vw    100vh,
-      25vw    50vh,
-      12.5vw  50vh
-    )
-  }
-  100%{
-    clip-path:polygon(
-      0       37.5vh,
-      25vw    37.5vh,
-      37.5vw  37.5vh,
-      37.5vw  0,
-      100vw   0,
-      100vw   12.5vh,
-      100vw   12.5vh,
-      100vw   25vh,
-      100vw   25vh,
-      100vw   37.5vh,
-      87.5vw  37.5vh,
-      87.5vw  87.5vh,
-      87.5vw  87.5vh,
-      87.5vw  100vh,
-      25vw    100vh,
-      25vw    50vh,
-      0       50vh
-    )
-  }
+	0%{
+		clip-path:polygon(
+			50vw		37.5vh,
+			50vw		37.5vh,
+			50vw		37.5vh,
+			50vw		0,
+			62.5vw	0,
+			62.5vw	12.5vh,
+			100vw	 12.5vh,
+			100vw	 25vh,
+			62.5vw	25vh,
+			62.5vw	37.5vh,
+			75vw		37.5vh,
+			75vw		87.5vh,
+			62.5vw	87.5vh,
+			62.5vw	100vh,
+			37.5vw	100vh,
+			37.5vw	50vh,
+			50vw		50vh
+		)
+	}
+	25%{
+		clip-path:polygon(
+			37.5vw	37.5vh,
+			37.5vw	37.5vh,
+			37.5vw	37.5vh,
+			37.5vw	0,
+			75vw		0,
+			75vw		12.5vh,
+			100vw	 12.5vh,
+			100vw	 25vh,
+			75vw		25vh,
+			75vw		37.5vh,
+			75vw		37.5vh,
+			75vw		87.5vh,
+			75vw		87.5vh,
+			75vw		100vh,
+			37.5vw	100vh,
+			37.5vw	50vh,
+			37.5vw	50vh
+		)
+	}
+	50%{
+		clip-path:polygon(
+			25vw		37.5vh,
+			25vw		37.5vh,
+			37.5vw	37.5vh,
+			37.5vw	0,
+			87.5vw	0,
+			87.5vw	12.5vh,
+			100vw	 12.5vh,
+			100vw	 25vh,
+			87.5vw	25vh,
+			87.5vw	37.5vh,
+			87.5vw	37.5vh,
+			87.5vw	87.5vh,
+			87.5vw	87.5vh,
+			87.5vw	100vh,
+			25vw		100vh,
+			25vw		50vh,
+			25vw		50vh
+		)
+	}
+	75%{
+		clip-path:polygon(
+			12.5vw	37.5vh,
+			25vw		37.5vh,
+			37.5vw	37.5vh,
+			37.5vw	0,
+			100vw	 0,
+			100vw	 12.5vh,
+			100vw	 12.5vh,
+			100vw	 25vh,
+			100vw	 25vh,
+			100vw	 37.5vh,
+			87.5vw	37.5vh,
+			87.5vw	87.5vh,
+			87.5vw	87.5vh,
+			87.5vw	100vh,
+			25vw		100vh,
+			25vw		50vh,
+			12.5vw	50vh
+		)
+	}
+	100%{
+		clip-path:polygon(
+			0			 37.5vh,
+			25vw		37.5vh,
+			37.5vw	37.5vh,
+			37.5vw	0,
+			100vw	 0,
+			100vw	 12.5vh,
+			100vw	 12.5vh,
+			100vw	 25vh,
+			100vw	 25vh,
+			100vw	 37.5vh,
+			87.5vw	37.5vh,
+			87.5vw	87.5vh,
+			87.5vw	87.5vh,
+			87.5vw	100vh,
+			25vw		100vh,
+			25vw		50vh,
+			0			 50vh
+		)
+	}
 }
 @keyframes design-reverse{
-  100%{
-    clip-path:polygon(
-      50vw    37.5vh,
-      50vw    37.5vh,
-      50vw    37.5vh,
-      50vw    0,
-      62.5vw  0,
-      62.5vw  12.5vh,
-      100vw   12.5vh,
-      100vw   25vh,
-      62.5vw  25vh,
-      62.5vw  37.5vh,
-      75vw    37.5vh,
-      75vw    87.5vh,
-      62.5vw  87.5vh,
-      62.5vw  100vh,
-      37.5vw  100vh,
-      37.5vw  50vh,
-      50vw    50vh
-    )
-  }
-  75%{
-    clip-path:polygon(
-      37.5vw  37.5vh,
-      37.5vw  37.5vh,
-      37.5vw  37.5vh,
-      37.5vw  0,
-      75vw    0,
-      75vw    12.5vh,
-      100vw   12.5vh,
-      100vw   25vh,
-      75vw    25vh,
-      75vw    37.5vh,
-      75vw    37.5vh,
-      75vw    87.5vh,
-      75vw    87.5vh,
-      75vw    100vh,
-      37.5vw  100vh,
-      37.5vw  50vh,
-      37.5vw  50vh
-    )
-  }
-  50%{
-    clip-path:polygon(
-      25vw    37.5vh,
-      25vw    37.5vh,
-      37.5vw  37.5vh,
-      37.5vw  0,
-      87.5vw  0,
-      87.5vw  12.5vh,
-      100vw   12.5vh,
-      100vw   25vh,
-      87.5vw  25vh,
-      87.5vw  37.5vh,
-      87.5vw  37.5vh,
-      87.5vw  87.5vh,
-      87.5vw  87.5vh,
-      87.5vw  100vh,
-      25vw    100vh,
-      25vw    50vh,
-      25vw    50vh
-    )
-  }
-  25%{
-    clip-path:polygon(
-      12.5vw  37.5vh,
-      25vw    37.5vh,
-      37.5vw  37.5vh,
-      37.5vw  0,
-      100vw   0,
-      100vw   12.5vh,
-      100vw   12.5vh,
-      100vw   25vh,
-      100vw   25vh,
-      100vw   37.5vh,
-      87.5vw  37.5vh,
-      87.5vw  87.5vh,
-      87.5vw  87.5vh,
-      87.5vw  100vh,
-      25vw    100vh,
-      25vw    50vh,
-      12.5vw  50vh
-    )
-  }
-  0%{
-    clip-path:polygon(
-      0       37.5vh,
-      25vw    37.5vh,
-      37.5vw  37.5vh,
-      37.5vw  0,
-      100vw   0,
-      100vw   12.5vh,
-      100vw   12.5vh,
-      100vw   25vh,
-      100vw   25vh,
-      100vw   37.5vh,
-      87.5vw  37.5vh,
-      87.5vw  87.5vh,
-      87.5vw  87.5vh,
-      87.5vw  100vh,
-      25vw    100vh,
-      25vw    50vh,
-      0       50vh
-    )
-  }
+	100%{
+		clip-path:polygon(
+			50vw		37.5vh,
+			50vw		37.5vh,
+			50vw		37.5vh,
+			50vw		0,
+			62.5vw	0,
+			62.5vw	12.5vh,
+			100vw	 12.5vh,
+			100vw	 25vh,
+			62.5vw	25vh,
+			62.5vw	37.5vh,
+			75vw		37.5vh,
+			75vw		87.5vh,
+			62.5vw	87.5vh,
+			62.5vw	100vh,
+			37.5vw	100vh,
+			37.5vw	50vh,
+			50vw		50vh
+		)
+	}
+	75%{
+		clip-path:polygon(
+			37.5vw	37.5vh,
+			37.5vw	37.5vh,
+			37.5vw	37.5vh,
+			37.5vw	0,
+			75vw		0,
+			75vw		12.5vh,
+			100vw	 12.5vh,
+			100vw	 25vh,
+			75vw		25vh,
+			75vw		37.5vh,
+			75vw		37.5vh,
+			75vw		87.5vh,
+			75vw		87.5vh,
+			75vw		100vh,
+			37.5vw	100vh,
+			37.5vw	50vh,
+			37.5vw	50vh
+		)
+	}
+	50%{
+		clip-path:polygon(
+			25vw		37.5vh,
+			25vw		37.5vh,
+			37.5vw	37.5vh,
+			37.5vw	0,
+			87.5vw	0,
+			87.5vw	12.5vh,
+			100vw	 12.5vh,
+			100vw	 25vh,
+			87.5vw	25vh,
+			87.5vw	37.5vh,
+			87.5vw	37.5vh,
+			87.5vw	87.5vh,
+			87.5vw	87.5vh,
+			87.5vw	100vh,
+			25vw		100vh,
+			25vw		50vh,
+			25vw		50vh
+		)
+	}
+	25%{
+		clip-path:polygon(
+			12.5vw	37.5vh,
+			25vw		37.5vh,
+			37.5vw	37.5vh,
+			37.5vw	0,
+			100vw	 0,
+			100vw	 12.5vh,
+			100vw	 12.5vh,
+			100vw	 25vh,
+			100vw	 25vh,
+			100vw	 37.5vh,
+			87.5vw	37.5vh,
+			87.5vw	87.5vh,
+			87.5vw	87.5vh,
+			87.5vw	100vh,
+			25vw		100vh,
+			25vw		50vh,
+			12.5vw	50vh
+		)
+	}
+	0%{
+		clip-path:polygon(
+			0			 37.5vh,
+			25vw		37.5vh,
+			37.5vw	37.5vh,
+			37.5vw	0,
+			100vw	 0,
+			100vw	 12.5vh,
+			100vw	 12.5vh,
+			100vw	 25vh,
+			100vw	 25vh,
+			100vw	 37.5vh,
+			87.5vw	37.5vh,
+			87.5vw	87.5vh,
+			87.5vw	87.5vh,
+			87.5vw	100vh,
+			25vw		100vh,
+			25vw		50vh,
+			0			 50vh
+		)
+	}
 }
 @keyframes design-highlight{
-  0%{
-    clip-path:polygon(
-      0       37.5vh,
-      25vw    37.5vh,
-      37.5vw  37.5vh,
-      37.5vw  0,
-      100vw   0,
-      100vw   12.5vh,
-      100vw   12.5vh,
-      100vw   25vh,
-      100vw   25vh,
-      100vw   37.5vh,
-      87.5vw  37.5vh,
-      87.5vw  87.5vh,
-      87.5vw  87.5vh,
-      87.5vw  100vh,
-      25vw    100vh,
-      25vw    50vh,
-      0       50vh
-    )
-  }
-  100%{
-    clip-path:polygon(
-      0       0,
-      0       0,
-      0       0,
-      0       0,
-      100vw   0,
-      100vw   12.5vh,
-      100vw   12.5vh,
-      100vw   25vh,
-      100vw   25vh,
-      100vw   37.5vh,
-      100vw   37.5vh,
-      100vw   87.5vh,
-      100vw   87.5vh,
-      100vw   100vh,
-      0       100vh,
-      0       50vh,
-      0       50vh
-    )
-  }
+	0%{
+		clip-path:polygon(
+			0			 37.5vh,
+			25vw		37.5vh,
+			37.5vw	37.5vh,
+			37.5vw	0,
+			100vw	 0,
+			100vw	 12.5vh,
+			100vw	 12.5vh,
+			100vw	 25vh,
+			100vw	 25vh,
+			100vw	 37.5vh,
+			87.5vw	37.5vh,
+			87.5vw	87.5vh,
+			87.5vw	87.5vh,
+			87.5vw	100vh,
+			25vw		100vh,
+			25vw		50vh,
+			0			 50vh
+		)
+	}
+	100%{
+		clip-path:polygon(
+			0			 0,
+			0			 0,
+			0			 0,
+			0			 0,
+			100vw	 0,
+			100vw	 12.5vh,
+			100vw	 12.5vh,
+			100vw	 25vh,
+			100vw	 25vh,
+			100vw	 37.5vh,
+			100vw	 37.5vh,
+			100vw	 87.5vh,
+			100vw	 87.5vh,
+			100vw	 100vh,
+			0			 100vh,
+			0			 50vh,
+			0			 50vh
+		)
+	}
 }
 #fun{
-  --duration:.15s;
-  background:#f0f;
-  animation-name:fun-reverse
+	--duration:150ms;
+	background:#f0f;
+	animation-name:fun-reverse
 }
 #fun:hover{
-  animation-name:fun
+	animation-name:fun
 }
 #fun:focus{
-  --duration:.2s;
-  animation-name:fun-highlight
+	--duration:200ms;
+	animation-name:fun-highlight
 }
 #fun>h1{
-  bottom:0;
-  right:0;
-  width:12.5vw;
-  height:62.5vh;
+	bottom:0;
+	right:0;
+	width:12.5vw;
+	height:62.5vh;
 	background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 20' preserveAspectRatio='none'%3E%3Cpath fill-rule='evenodd' d='M0 0H4V1H1V2H3V3H1V4H0M0 5V15H4V5H3V14H1V5M0 16H1V18H3V16H4V20H3V19H2V17H1V20H0'/%3E%3C/svg%3E")
 }
 @keyframes fun{
-  0%{
-    clip-path:polygon(
-      87.5vw  37.5vh,
-      87.5vw  37.5vh,
-      100vw   37.5vh,
-      100vw   100vh,
-      87.5vw  100vh,
-      87.5vw  87.5vh,
-      87.5vw  87.5vh,
-      87.5vw  37.5vh
-    )
-  }
-  50%{
-    clip-path:polygon(
-      75vw    37.5vh,
-      75vw    25vh,
-      100vw   25vh,
-      100vw   100vh,
-      75vw    100vh,
-      75vw    87.5vh,
-      75vw    87.5vh,
-      75vw    37.5vh
-    )
-  }
-  100%{
-    clip-path:polygon(
-      62.5vw  37.5vh,
-      62.5vw  25vh,
-      100vw   25vh,
-      100vw   100vh,
-      62.5vw  100vh,
-      62.5vw  87.5vh,
-      75vw    87.5vh,
-      75vw    37.5vh
-    )
-  }
+	0%{
+		clip-path:polygon(
+			87.5vw	37.5vh,
+			87.5vw	37.5vh,
+			100vw	 37.5vh,
+			100vw	 100vh,
+			87.5vw	100vh,
+			87.5vw	87.5vh,
+			87.5vw	87.5vh,
+			87.5vw	37.5vh
+		)
+	}
+	50%{
+		clip-path:polygon(
+			75vw		37.5vh,
+			75vw		25vh,
+			100vw	 25vh,
+			100vw	 100vh,
+			75vw		100vh,
+			75vw		87.5vh,
+			75vw		87.5vh,
+			75vw		37.5vh
+		)
+	}
+	100%{
+		clip-path:polygon(
+			62.5vw	37.5vh,
+			62.5vw	25vh,
+			100vw	 25vh,
+			100vw	 100vh,
+			62.5vw	100vh,
+			62.5vw	87.5vh,
+			75vw		87.5vh,
+			75vw		37.5vh
+		)
+	}
 }
 @keyframes fun-reverse{
-  100%{
-    clip-path:polygon(
-      87.5vw  37.5vh,
-      87.5vw  37.5vh,
-      100vw   37.5vh,
-      100vw   100vh,
-      87.5vw  100vh,
-      87.5vw  87.5vh,
-      87.5vw  87.5vh,
-      87.5vw  37.5vh
-    )
-  }
-  50%{
-    clip-path:polygon(
-      75vw    37.5vh,
-      75vw    25vh,
-      100vw   25vh,
-      100vw   100vh,
-      75vw    100vh,
-      75vw    87.5vh,
-      75vw    87.5vh,
-      75vw    37.5vh
-    )
-  }
-  0%{
-    clip-path:polygon(
-      62.5vw  37.5vh,
-      62.5vw  25vh,
-      100vw   25vh,
-      100vw   100vh,
-      62.5vw  100vh,
-      62.5vw  87.5vh,
-      75vw    87.5vh,
-      75vw    37.5vh
-    )
-  }
+	100%{
+		clip-path:polygon(
+			87.5vw	37.5vh,
+			87.5vw	37.5vh,
+			100vw	 37.5vh,
+			100vw	 100vh,
+			87.5vw	100vh,
+			87.5vw	87.5vh,
+			87.5vw	87.5vh,
+			87.5vw	37.5vh
+		)
+	}
+	50%{
+		clip-path:polygon(
+			75vw		37.5vh,
+			75vw		25vh,
+			100vw	 25vh,
+			100vw	 100vh,
+			75vw		100vh,
+			75vw		87.5vh,
+			75vw		87.5vh,
+			75vw		37.5vh
+		)
+	}
+	0%{
+		clip-path:polygon(
+			62.5vw	37.5vh,
+			62.5vw	25vh,
+			100vw	 25vh,
+			100vw	 100vh,
+			62.5vw	100vh,
+			62.5vw	87.5vh,
+			75vw		87.5vh,
+			75vw		37.5vh
+		)
+	}
 }
 @keyframes fun-highlight{
-  0%{
-    clip-path:polygon(
-      62.5vw  37.5vh,
-      62.5vw  25vh,
-      100vw   25vh,
-      100vw   100vh,
-      62.5vw  100vh,
-      62.5vw  87.5vh,
-      75vw    87.5vh,
-      75vw    37.5vh
-    )
-  }
-  10%{
-    clip-path:polygon(
-      62.5vw  37.5vh,
-      62.5vw  25vh,
-      100vw   25vh,
-      100vw   100vh,
-      62.5vw  100vh,
-      62.5vw  87.5vh,
-      62.5vw  87.5vh,
-      62.5vw  37.5vh
-    )
-  }
-  30%{
-    clip-path:polygon(
-      50vw    37.5vh,
-      50vw    0,
-      100vw   0,
-      100vw   100vh,
-      50vw    100vh,
-      50vw    87.5vh,
-      50vw    87.5vh,
-      50vw    37.5vh
-    )
-  }
-  100%{
-    clip-path:polygon(
-      0       37.5vh,
-      0       0,
-      100vw   0,
-      100vw   100vh,
-      0       100vh,
-      0       87.5vh,
-      0       87.5vh,
-      0       37.5vh
-    )
-  }
+	0%{
+		clip-path:polygon(
+			62.5vw	37.5vh,
+			62.5vw	25vh,
+			100vw	 25vh,
+			100vw	 100vh,
+			62.5vw	100vh,
+			62.5vw	87.5vh,
+			75vw		87.5vh,
+			75vw		37.5vh
+		)
+	}
+	10%{
+		clip-path:polygon(
+			62.5vw	37.5vh,
+			62.5vw	25vh,
+			100vw	 25vh,
+			100vw	 100vh,
+			62.5vw	100vh,
+			62.5vw	87.5vh,
+			62.5vw	87.5vh,
+			62.5vw	37.5vh
+		)
+	}
+	30%{
+		clip-path:polygon(
+			50vw		37.5vh,
+			50vw		0,
+			100vw	 0,
+			100vw	 100vh,
+			50vw		100vh,
+			50vw		87.5vh,
+			50vw		87.5vh,
+			50vw		37.5vh
+		)
+	}
+	100%{
+		clip-path:polygon(
+			0			 37.5vh,
+			0			 0,
+			100vw	 0,
+			100vw	 100vh,
+			0			 100vh,
+			0			 87.5vh,
+			0			 87.5vh,
+			0			 37.5vh
+		)
+	}
 }
-#back{
-  position:fixed;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  background:#fff;
-  color:#000;
-  top:0;
-  right:0;
-  opacity:.6;
-  width:5rem;
-  height:5rem;
-  min-width:12.5vw;
-  min-height:12.5vh;
-  opacity:0;
-  cursor:pointer;
-  text-align:right;
-  font-size:3rem;
-  z-index:100;
-  font-family:inherit;
-  font-size:inherit;
-  font-style:inherit;
-  border:0;
-  transition:opacity .2s;
-  pointer-events:auto;
+remove-focus{
+	position:fixed;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	background:#fff;
+	color:#000;
+	right:0;
+	opacity:.6;
+	width:5rem;
+	height:5rem;
+	min-width:12.5vw;
+	min-height:12.5vh;
+	opacity:0;
+	font-size:2rem;
+	z-index:100;
+	transition:opacity 200ms;
 }
-section:focus~#back,section:focus-within~#back{
-  opacity:.5;
+remove-focus:active{
+	background:black;
+	color:white;
 }
-#back::before{
-  content:'back';
+article:focus~remove-focus,
+article:focus-within~remove-focus{
+	cursor:pointer;
+	opacity:.5;
 }
-section:focus~#back:hover{
-  opacity:1;
+article:focus~remove-focus:hover,
+article:focus-within~remove-focus:hover{
+	opacity:1;
 }
-#back:focus{
-  opacity:0;
-  pointer-events:none;
+remove-focus:focus{
+	opacity:0;
+	pointer-events:none;
 }
-    </style>
-  </head>
-  <body>
-    <section id='about' tabindex='0'>
-      <h1>About</h1>
-      <p><strong>About: </strong>Xing Liu</p>
-      <img alt='suzhou' src='showcase/suzhou.svg'/>
-    </section>
-    <section id='art' tabindex='0'>
-      <h1>Art</h1>
-      <p><strong>Art: </strong>An assortment of colors made by pens, brushes, vectors, pixels, and frames.</p>
-      <figure>
-        <img alt='Curiosity rover' src='showcase/curiosity.png'/>
-        <figcaption>
-          <strong>Curiosity</strong>. Martian rover vector art. 2018.
-        </figcaption>
-      </figure>
-      <figure>
-        <img alt='Falcon 9 reentry' src='showcase/reentry.png'/>
-        <figcaption>
-          <strong>Reentry</strong>. SpaceX booster vector art. 2019.
-        </figcaption>
-      </figure>
-      <figure>
-        <img src='showcase/curiosity.png'/>
-        <figcaption>
-          <strong>Planetary Adventures with Ballsy McBallface</strong>. Short cartoon. 2020.
-        </figcaption>
-      </figure>
-    </section>
-    <section id='design' tabindex='0'>
-      <h1>design</h1>
-      <p><strong>Design: </strong>Webpages handcrafted in semantic HTML and zen CSS, with sprinkles of JS.</p>
-      <figure>
-        <img alt='ahs.app screenshot, showing a horizontal news feed' src='showcase/curiosity.png'/>
-        <figcaption>
-          <strong>AHS.app</strong>. A student-oriented feed for Arcadia High School. HTML. 2020.
-        </figcaption>
-      </figure>
-      <figure>
-        <img alt='robotics.majorstem.org screenshot, showing a cool landing page rotating thing' src='showcase/curiosity.png'/>
-        <figcaption>
-          FTC robotics team landing page
-        </figcaption>
-      </figure>
-    </section>
-    <section id='contact' tabindex='0'>
-      <h1>@</h1>
-      <p><strong>Contact: </strong>Scream at the general direction of Los Angeles.</p>
-    </section>
-    <section id='fun' tabindex='0'>
-      <h1>Fun</h1>
-      <p><strong>Fun: </strong>Javascript game-things.</p>
-      <figure>
-        <img alt='Cliques screenshot showing colored cards with markings on them' src='showcase/curiosity.png'/>
-        <figcaption>
-          Cliques, a card game introducing set theory.
-        </figcaption>
-      </figure>
-      <figure>
-        <img alt='Rippleweave screenshot showing a colorful plot of sin(x^2) + cos(y^2) = 0' src='showcase/curiosity.png'/>
-        <figcaption>
-          RippleWeave, a really cool graph.
-        </figcaption>
-      </figure>
-    </section>
-    <button id='back'></button>
-    <svg id='blocker-wrapper' viewBox='0 0 16 16' preserveAspectRatio='none'>
-      <rect width='16' height='16' fill='white'/>
-      <path id='blocker' d='M0 3h3v-3M0 7h7v-7M5 7v9M16 1h-6M16 5h-6M13 5v10h-3' fill='none' stroke-width='2'/>
-    </svg>
-  </body>
+		</style>
+	</head>
+	<body>
+		<article id='about' tabindex='0'>
+			<h1>About</h1>
+			<figure>
+				<figcaption>
+					<dt>
+						About
+					</dt><dd>
+						Xing Liu
+					</dd>
+				</figcaption>
+			</figure>
+			<img alt='suzhou' src='showcase/suzhou.svg'/>
+		</article>
+		<article id='art' tabindex='0'>
+			<h1>Art</h1>
+			<figure>
+				<figcaption>
+					<dt>Art</dt><dd>An assortment of colors made by pens, brushes, vectors, pixels, and frames.</dd>
+				</figcaption>
+			</figure>
+			<figure>
+				<img alt='Curiosity rover' src='showcase/curiosity.png'/>
+				<figcaption>
+					<dt>Curiosity</dt><dd>Martian rover vector art. 2018.</dd>
+				</figcaption>
+			</figure>
+			<figure>
+				<img alt='Falcon 9 reentry' src='showcase/reentry.png'/>
+				<figcaption>
+					<dt>Reentry</dt><dd>SpaceX booster vector art. 2019.</dd>
+				</figcaption>
+			</figure>
+			<figure>
+				<img src='showcase/curiosity.png'/>
+				<figcaption>
+					<dt>Planetary Adventures with Ballsy McBallface</dt><dd>Short cartoon. 2020.</dd>
+				</figcaption>
+			</figure>
+		</article>
+		<article id='design' tabindex='0'>
+			<h1>design</h1>
+			<figure>
+				<figcaption>
+					<dt>Design</dt><dd>Neat-looking posters and webpages designed with zen CSS.</dd>
+				</figcaption>
+			</figure>
+			<figure>
+				<img alt='ahs.app screenshot, showing a horizontal news feed' src='showcase/curiosity.png'/>
+				<figcaption>
+					<dt>AHS.app</dt><dd>A student-oriented feed for Arcadia High School. HTML. 2020.</dd>
+				</figcaption>
+			</figure>
+			<figure>
+				<img alt='robotics.majorstem.org screenshot, showing a cool landing page rotating thing' src='showcase/curiosity.png'/>
+				<figcaption>
+					<dt>Robotics team landing page</dt><dd>HTML. 2020.</dd>
+				</figcaption>
+			</figure>
+		</article>
+		<article id='contact' tabindex='0'>
+			<h1>@</h1>
+			<figure>
+				<figcaption>
+					<dt>Contact</dt><dd>Scream at the general direction of Los Angeles.</dd>
+				</figcaption>
+			</figure>
+		</article>
+		<article id='fun' tabindex='0'>
+			<h1>Fun</h1>
+			<figure>
+				<figcaption>
+					<dt>Fun</dt><dd>Javascript game-things.</dd>
+				</figcaption>
+			</figure>
+			<figure>
+				<img alt='Cliques screenshot showing colored cards with markings on them' src='showcase/curiosity.png'/>
+				<figcaption>
+					<dt>Cliques</dt><dd>a card game introducing set theory.</dd>
+				</figcaption>
+			</figure>
+			<figure>
+				<img alt='Rippleweave screenshot showing a colorful plot of sin(x^2) + cos(y^2) = 0' src='showcase/curiosity.png'/>
+				<figcaption>
+					<dt>RippleWeave</dt><dd>Colorful function grapher</dd>
+				</figcaption>
+			</figure>
+		</article>
+		<remove-focus>back</remove-focus>
+		<svg id='blocker-wrapper' viewBox='0 0 16 16' preserveAspectRatio='none'>
+			<path id='blocker' d='M0 3h3v-3M0 7h7v-7M5 7v9M16 1h-6M16 5h-6M13 5v10h-3' fill='none' stroke-width='2'/>
+		</svg>
+	</body>
 </html>
