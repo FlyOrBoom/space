@@ -1,7 +1,7 @@
-<svg width='1000' height='1000' viewBox='0 0 1000 1000' xmlns='http://www.w3.org/2000/svg'>
+<svg width='2000' height='2000' viewBox='0 0 1000 1000' xmlns='http://www.w3.org/2000/svg'>
 <filter id='cave-turbul'>
-  <feTurbulence in='SourceGraphic' baseFrequency='0.01' seed='50' type='fractalNoise' result='cave-turbulence'/>
-  <feDisplacementMap in2='cave-turbulence' in='SourceGraphic' scale='40' xChannelSelector='RGB' yChannelSelector='RGB' result='displace'/>
+  <feTurbulence in='SourceGraphic' baseFrequency='0.01' seed='50' numOctaves='1' type='fractalNoise' result='cave-turbulence'/>
+  <feDisplacementMap in2='cave-turbulence' in='SourceGraphic' scale='40' xChannelSelector='G' yChannelSelector='RB' result='displace'/>
 </filter>
 <mask id='cave0'>
   <rect width='100%' height='100%' fill='#fff'/>
@@ -34,14 +34,14 @@
 <rect width='100%' height='100%' fill='rgba(32,0,0)' mask='url(#cave0)'/>
 <circle cx='500' cy='510' r='480' fill='none' stroke='rgba(44,2,4)' stroke-width='72' filter='url(#cave-turbul)'/>
 <circle cx='500' cy='510' r='420' fill='none' stroke='rgba(48,4,8)' stroke-width='64' filter='url(#cave-turbul)'/>
-<circle cx='500' cy='510' r='390' fill='none' stroke='rgba(64,8,24)' stroke-width='24' filter='url(#cave-turbul)'/>
+<circle cx='500' cy='510' r='384' fill='none' stroke='rgba(64,8,24)' stroke-width='28' filter='url(#cave-turbul)'/>
 <image href='curiosity.png' x='0' y='0' height='1000' width='1000' opacity='0'/>
 
 <path d='
 M518 852
 A200 300 -50 0 1 459 861
 L460 848
-A300 400 0 0 1 440 848
+A300 400 -50 0 1 440 848
 L438 860
 L432 847
 A200 300 -50 0 1 424 845
@@ -59,9 +59,14 @@ M460 848
 A400 600 15 0 1 385 830
 A200 300 -50 0 1 362 824
 A400 600 15 0 0 424 845
+A200 300 -50 0 1 432 847
+L429 846
+L440 848
+A300 400 -50 0 0 460 848
 ' fill='hsl(300deg,50%,15%)'/>
 <path d='M500 0V1000'
 stroke='red'
 stroke-width='0.2'
 transform='rotate(23,500,500)'/>
+<circle cx='424' cy='845' r='1'/>
 </svg>
