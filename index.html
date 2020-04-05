@@ -93,7 +93,7 @@ article{
 article:hover{
 	z-index:90;
 }
-article:focus{
+article:focus,article:focus-within{
 	cursor:default;
 	z-index:100;
 }
@@ -160,7 +160,8 @@ a{
 #contact:hover{
 	clip-path:inset(0 75% 75% 0);
 }
-#contact:focus{
+#contact:focus,
+#contact:focus-within{
 	--duration:200ms;
 	clip-path:inset(0 0 0 0);
 }
@@ -180,7 +181,8 @@ a{
 #about:hover{
 	animation-name:about
 }
-#about:focus{
+#about:focus,
+#about:focus-within{
 	--duration:150ms;
 	animation-name:about-highlight
 }
@@ -365,7 +367,8 @@ a{
 #art:hover{
 	animation-name:art
 }
-#art:focus{
+#art:focus,
+#art:focus-within{
 	animation-name:art-highlight
 }
 #art>h1{
@@ -535,7 +538,8 @@ a{
 #design:hover{
 	animation-name:design
 }
-#design:focus{
+#design:focus,
+#design:focus-within{
 	--duration:80ms;
 	animation-name:design-highlight
 }
@@ -812,7 +816,8 @@ a{
 #fun:hover{
 	animation-name:fun
 }
-#fun:focus{
+#fun:focus,
+#fun:focus-within{
 	--duration:200ms;
 	animation-name:fun-highlight
 }
@@ -999,16 +1004,19 @@ remove-focus:focus{
 				<figcaption><dt>Art</dt><dd>An assortment of colors made by pens, brushes, vectors, pixels, and frames.</dd></figcaption>
 			</figure>
 			<figure>
+				<video controls width='720' poster='showcase/planetary-adventures-with-ballsy-mcballface-poster.png'>
+					<source src='showcase/planetary-adventures-with-ballsy-mcballface-720p.webm' type='video/webm'>
+					<source src='showcase/planetary-adventures-with-ballsy-mcballface-720p.mp4' type='video/mp4'>
+				</video>
+				<figcaption><dt>Planetary Adventures with Ballsy McBallface</dt><dd>Ridiculous animated cartoon. 2020.</dd></figcaption>
+			</figure>
+			<figure>
 				<img alt='Curiosity rover' src='showcase/curiosity.png'/>
 				<figcaption><dt>Curiosity</dt><dd>Martian rover vector art. 2018.</dd></figcaption>
 			</figure>
 			<figure>
-				<img alt='Falcon 9 reentry' src='showcase/reentry.png'/>
+				<a href='render.html?svg=reentry'><img alt='Falcon 9 reentry' src='showcase/reentry.svg'/></a>
 				<figcaption><dt>Reentry</dt><dd>SpaceX booster vector art. 2019.</dd></figcaption>
-			</figure>
-			<figure>
-				<img src='showcase/curiosity.png'/>
-				<figcaption><dt>Planetary Adventures with Ballsy McBallface</dt><dd>Short cartoon. 2020.</dd></figcaption>
 			</figure>
 		</article>
 		<article id='design' tabindex='0'>
@@ -1048,8 +1056,8 @@ remove-focus:focus{
 			</figure>
 		</article>
 		<remove-focus>back</remove-focus>
-		<div id='fog' aria-hidden></div>
-		<svg id='blocker' viewBox='0 0 16 16' preserveAspectRatio='none' aria-hidden>
+		<div id='fog' aria-hidden='true'></div>
+		<svg id='blocker' viewBox='0 0 16 16' preserveAspectRatio='none' aria-hidden='true'>
 			<path d='M0 3h3v-3M0 7h7v-7M5 7v9M16 1h-6M16 5h-6M13 5v10h-3' fill='none' stroke-width='2'/>
 		</svg>
 	</body>
