@@ -141,7 +141,7 @@ dt::after{
 	content:': ';
 	user-select:auto;
 }
-img{
+img height='405'{
 	max-width:90vmin;
 	max-height:90vmin;
 }
@@ -988,6 +988,11 @@ remove-focus:focus{
 	opacity:0;
 	pointer-events:none;
 }
+img,video{
+	height:auto;
+	width:720px;
+	max-width:100vw;
+}
 		</style>
 	</head>
 	<body>
@@ -996,7 +1001,6 @@ remove-focus:focus{
 			<figure>
 				<figcaption><dt>About</dt><dd>Xing Liu</dd></figcaption>
 			</figure>
-			<img alt='suzhou' src='showcase/suzhou.svg'/>
 		</article>
 		<article id='art' tabindex='0'>
 			<h1>Art</h1>
@@ -1004,18 +1008,39 @@ remove-focus:focus{
 				<figcaption><dt>Art</dt><dd>An assortment of colors made by pens, brushes, vectors, pixels, and frames.</dd></figcaption>
 			</figure>
 			<figure>
-				<video controls width='720' poster='showcase/planetary-adventures-with-ballsy-mcballface-poster.png'>
-					<source src='showcase/planetary-adventures-with-ballsy-mcballface-720p.webm' type='video/webm'>
-					<source src='showcase/planetary-adventures-with-ballsy-mcballface-720p.mp4' type='video/mp4'>
+				<video controls width='720' poster='showcase/planetary-adventures-with-ballsy-mcballface-w720.png'>
+					<source src='showcase/planetary-adventures-with-ballsy-mcballface-w720.webm' type='video/webm'>
+					<source src='showcase/planetary-adventures-with-ballsy-mcballface-w720.mp4' type='video/mp4'>
 				</video>
 				<figcaption><dt>Planetary Adventures with Ballsy McBallface</dt><dd>Ridiculous animated cartoon. 2020.</dd></figcaption>
 			</figure>
 			<figure>
-				<img alt='Curiosity rover' src='showcase/curiosity.png'/>
+				<a href='render?svg=curiosity'>
+					<img height='405'
+							 alt='Curiosity rover'
+							 srcset='showcase/curiosity-w480.png 480w,
+											 showcase/curiosity-w720.png 720w,
+											 showcase/curiosity-w1366.png 1366w,
+											 showcase/curiosity-w2000.png 2000w,
+											 showcase/curiosity-w4000.png 4000w'
+							 src='showcase/curiosity-w4000.png'
+							 sizes='(max-width:480px) 480px, (max-width:720px) 720px, (max-width:1366px) 1366px, (max-width:2000px) 2000px, 4000px'
+							 />
+				</a>
 				<figcaption><dt>Curiosity</dt><dd>Martian rover vector art. 2018.</dd></figcaption>
 			</figure>
 			<figure>
-				<a href='render.html?svg=reentry'><img alt='Falcon 9 reentry' src='showcase/reentry.svg'/></a>
+				<a href='render?svg=reentry'>
+					<img height='405'
+							 alt='Falcon 9 reentry'
+							 srcset='showcase/reentry-w480.png 480w,
+											 showcase/reentry-w720.png 720w,
+											 showcase/reentry-w1366.png 1366w,
+											 showcase/reentry-w2000.png 2000w'
+							 src='showcase/reentry-w2000.png'
+							 sizes='(max-width:480px) 480px, (max-width:720px) 720px, (max-width:1366px) 1366px, (max-width:2000px) 2000px, 4000px'
+							 />
+				</a>
 				<figcaption><dt>Reentry</dt><dd>SpaceX booster vector art. 2019.</dd></figcaption>
 			</figure>
 		</article>
@@ -1025,13 +1050,31 @@ remove-focus:focus{
 				<figcaption><dt>Design</dt><dd>Neat-looking posters and webpages designed with zen CSS.</dd></figcaption>
 			</figure>
 			<figure>
-				<img alt='ahs.app screenshot, showing a horizontal news feed' src='showcase/curiosity.png'/>
-				<figcaption><dt>AHS.app</dt><dd>A student-oriented feed for Arcadia High School. HTML. 2020.</dd></figcaption>
+				<a href='https:/ahs.app'>
+					<img height='405'
+							 alt='ahs.app screenshot, showing a horizontal news feed'
+							 srcset='showcase/ahs-app-w480.png 480w,
+											 showcase/ahs-app-w720.png 720w,
+											 showcase/ahs-app-w1366.png 1366w'
+							 src='showcase/ahs-app-w1366.png'
+							 sizes='(max-width:480px) 480px, (max-width:720px) 720px, (max-width:1366px) 1366px, (max-width:2000px) 2000px, 4000px'
+					/>
+				</a>
+				<figcaption><dt>AHS.app</dt><dd>A student-oriented feed for Arcadia High School. 2020.</dd></figcaption>
 			</figure>
 			<figure>
-				<img alt='robotics.majorstem.org screenshot, showing a cool landing page rotating thing' src='showcase/curiosity.png'/>
+				<a href='https://robotics.majorstem.org'>
+					<img height='405'
+							 alt='robotics.majorstem.org screenshot, showing a rotating double-pyramid'
+							 srcset='showcase/robotics-w480.png 480w,
+											 showcase/robotics-w720.png 720w,
+											 showcase/robotics-w1366.png 1366w'
+							 src='showcase/robotics-w1366.png'
+							 sizes='(max-width:480px) 480px, (max-width:720px) 720px, (max-width:1366px) 1366px, (max-width:2000px) 2000px, 4000px'
+					/>
+				</a>
 				<figcaption>
-					<dt>Robotics team landing page</dt><dd>HTML. 2020.</dd>
+					<dt>Robotics.majorstem.org</dt><dd>Landing page and blog for a robotics team. 2020.</dd>
 				</figcaption>
 			</figure>
 		</article>
@@ -1047,12 +1090,21 @@ remove-focus:focus{
 				<figcaption><dt>Fun</dt><dd>Javascript game-things.</dd></figcaption>
 			</figure>
 			<figure>
-				<img alt='Cliques screenshot showing colored cards with markings on them' src='showcase/curiosity.png'/>
-				<figcaption><dt>Cliques</dt><dd>a card game introducing set theory.</dd></figcaption>
+				<a href='rippleweave'>
+					<img height='405'
+							 alt='a colorful function graphed by rippleweave'
+							 srcset='showcase/rippleweave-w480.png 480w,
+											 showcase/rippleweave-w720.png 720w,
+											 showcase/rippleweave-w1366.png 1366w'
+							 src='showcase/robotics-w1366.png'
+							 sizes='(max-width:960px) 480px, (max-width:1440px) 720px, (max-width:2732px) 1366px, (max-width:4000px 2000px), 4000px'
+					/>
+				</a>
+				<figcaption><dt>RippleWeave</dt><dd>Colorful function grapher. 2020</dd></figcaption>
 			</figure>
 			<figure>
-				<img alt='Rippleweave screenshot showing a colorful plot of sin(x^2) + cos(y^2) = 0' src='showcase/curiosity.png'/>
-				<figcaption><dt>RippleWeave</dt><dd>Colorful function grapher</dd></figcaption>
+				<img height='405' alt='Cliques screenshot showing colored cards with markings on them' src='showcase/cliques.png'/>
+				<figcaption><dt>Cliques</dt><dd>a card game introducing set theory. 2018&mdash;2019</dd></figcaption>
 			</figure>
 		</article>
 		<remove-focus>back</remove-focus>
