@@ -6,19 +6,15 @@ html,body{
   margin:0;
   width:100vw;
   height:100vh;
-  overflow:hidden;
+  overflow:scroll;
 }
 body{
   background:black
 }
-canvas{
-  position:fixed;
-  width:calc(100vw - 12rem);
-  top:0;
-  right:0;
-  z-index:-1;
-}
 aside{
+	position:fixed;
+	top:0;
+	left:0;
 	font-size:1rem;
 	font-family:monospace;
 	padding:1rem;
@@ -26,14 +22,8 @@ aside{
 	width:12rem;
 	height:100vh;
 	color:white;
-	background:#222;
 	transition:background 200ms;
-}
-aside:hover{
-	background:#111;
-}
-aside:focus-within{
-	background:#000;
+	filter:drop-shadow(0 0 .5rem black);
 }
 select{
 	font-size:inherit;
@@ -51,6 +41,9 @@ select *{
 select:focus{
 	outline:none;
 	opacity:1;
+}
+canvas{
+	margin-right:0;
 }
     </style>
   </head>
@@ -74,7 +67,7 @@ const draw = function(src){
 img.onload = function(){
   canvas.width=img.width
   canvas.height=img.height
-  canvas.getContext('2d').drawImage(img,0, 0)
+  canvas.getContext('2d').drawImage(img,0,0)
 }
 select.addEventListener('change',()=>{
 	draw(select.value)
