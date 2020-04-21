@@ -1,10 +1,5 @@
 <svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='2000' height='1000'>
   <defs>
-    <linearGradient id='logo' x2='0' y2='1'>
-      <stop offset='0'  stop-color='#000'/>
-      <stop offset='0.2' stop-color='#224'/>
-      <stop offset='1' stop-color='#224'/>
-    </linearGradient>
     <linearGradient id='s0' x1='1' y1='1' x2='0' y2='0' gradientTransform='rotate(-60)'>
       <stop offset='0.5'  stop-color='#ccf'/>
       <stop offset='0.8' stop-color='#eef' stop-opacity='0.6'/>
@@ -170,5 +165,4 @@
     <path d='M0 500zM2000 1000zM610 400h700l-350 425z' fill='url(#g0)' filter='url(#body1)'/>
     <path d='M0 500zM2000 1000zM625 400h650l-325 400z' fill='url(#g0)' filter='url(#body0)'/>
   </g>
-  <path d="M0 0h20v60l60 80l60 -80v-60h20v60l-67.5 90l67.5 90v60h-20v-60l-60 -80l-60 80v60h-20v-60l67.5 -90l-67.5 -90v-60zM180 0h20v60l60 80l60 -80v-60h20v60l-70 93.3333v150h-20v-150l-70 -93.3333 zM360 0h20v60h140l-120 160h120v80h-20v-60h-140l120 -160h-120 zM580 0h20v105h40v20h-40v120l40 53.3333h-20l-40 -53.3333v-120h-40v-20h40z" transform='translate(1895,950) scale(0.1625,0.1625)' fill='url(#logo)'/>
 </svg>

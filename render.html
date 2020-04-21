@@ -6,96 +6,76 @@ html,body{
   margin:0;
   width:100vw;
   height:100vh;
-  overflow:hidden;
+  overflow:scroll;
 }
 body{
-  background-image:conic-gradient(from 135deg,#000,#888,#000);
+  background:black
 }
-:focus{
-  outline:none;
+aside{
+	position:fixed;
+	top:0;
+	left:0;
+	font-size:1rem;
+	font-family:monospace;
+	padding:1rem;
+	box-sizing:border-box;
+	width:12rem;
+	height:100vh;
+	color:white;
+	transition:background 200ms;
+	filter:drop-shadow(0 0 .5rem black);
 }
-#form{
-  font-size:4rem;
-  position:fixed;
-  top:0;
-  width:100vw;
-  height:6rem;
-  backdrop-filter:blur(1vw);
-  background:#0004;
-  color:#fff;
+select{
+	font-size:inherit;
+	font-family:inherit;
+	width:100%;
+	height:auto;
+	color:inherit;
+	border:0;
+	background:none;
+	opacity:.8;
 }
-#form:focus-within{
-  background:#0004;
+select *{
+	cursor:pointer;
 }
-input{
-  font-size:inherit;
-  border:none;
-  background:none;
-  color:inherit;
-  position:absolute;
-  padding:.75rem;
-  height:inherit;
-  box-sizing:border-box;
+select:focus{
+	outline:none;
+	opacity:1;
 }
-input:hover{
-  background:#0004;
-}
-#input{
-  width:90%;
-}
-#submit{
-  width:10%;
-  right:0;
-  cursor:pointer;
-}
-#submit:hover{
-}
-#canvas{
-  position:fixed;
-  width:100%;
-  bottom:0;
-}
-#form.error{
-  animation:error 1s;
-}
-#form.success{
-  animation:success 1s;
-}
-@keyframes error{
-  0%{background:#f004}
-  100%{background:#0004}
-}
-@keyframes success{
-  0%{background:#fff4}
-  100%{background:#0004}
+canvas{
+	margin-right:0;
 }
     </style>
   </head>
   <body>
     <canvas id='canvas' width='2000' height='1000'></canvas>
-    <form id='form'>
-      <input id='input' type='text' name='img' autofocus/>
-      <input id='submit' type='submit' value='>'/>
-    </form>
+    <aside>
+    	SVG Renderer
+	    <select id='select' multiple>
+				<option>reentry</option>
+				<option>curiosity</option>
+	    </select>
+    </aside>
     <script>
-const doc=document,
-      img = new Image(),
-      form = doc.getElementById('form'),
-      canvas=document.getElementById('canvas');
-form.onsubmit = function(){
-  form.classList='success';
-  img.src = `showcase/${doc.getElementById('input').value}.svg`;
-  img.onload = function(){
-    doc.body.style.background='#000';
-    canvas.width=img.width;
-    canvas.height=img.height;
-    canvas.getContext('2d').drawImage(img, 0, 0);
-  }
-  img.onerror = function(){
-    form.classList='error';
-  }
-  return false;
-};
+const img = new Image()
+const select = document.getElementById('select')
+const canvas = document.getElementById('canvas')
+const fresh = window.location.toString().split('?svg=')[1]
+const draw = function(src){
+  img.src=`showcase/${src}.svg`
+}
+img.onload = function(){
+  canvas.width=img.width
+  canvas.height=img.height
+  canvas.getContext('2d').drawImage(img,0,0)
+}
+select.addEventListener('change',()=>{
+	draw(select.value)
+})
+if(fresh){
+	select.value=fresh
+	draw(fresh)
+}
     </script>
   </body>
 </html>

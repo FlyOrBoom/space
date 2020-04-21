@@ -93,7 +93,7 @@ article{
 article:hover{
 	z-index:90;
 }
-article:focus{
+article:focus,article:focus-within{
 	cursor:default;
 	z-index:100;
 }
@@ -141,7 +141,7 @@ dt::after{
 	content:': ';
 	user-select:auto;
 }
-img{
+img height='405'{
 	max-width:90vmin;
 	max-height:90vmin;
 }
@@ -160,7 +160,8 @@ a{
 #contact:hover{
 	clip-path:inset(0 75% 75% 0);
 }
-#contact:focus{
+#contact:focus,
+#contact:focus-within{
 	--duration:200ms;
 	clip-path:inset(0 0 0 0);
 }
@@ -180,7 +181,8 @@ a{
 #about:hover{
 	animation-name:about
 }
-#about:focus{
+#about:focus,
+#about:focus-within{
 	--duration:150ms;
 	animation-name:about-highlight
 }
@@ -365,7 +367,8 @@ a{
 #art:hover{
 	animation-name:art
 }
-#art:focus{
+#art:focus,
+#art:focus-within{
 	animation-name:art-highlight
 }
 #art>h1{
@@ -535,7 +538,8 @@ a{
 #design:hover{
 	animation-name:design
 }
-#design:focus{
+#design:focus,
+#design:focus-within{
 	--duration:80ms;
 	animation-name:design-highlight
 }
@@ -812,7 +816,8 @@ a{
 #fun:hover{
 	animation-name:fun
 }
-#fun:focus{
+#fun:focus,
+#fun:focus-within{
 	--duration:200ms;
 	animation-name:fun-highlight
 }
@@ -983,6 +988,11 @@ remove-focus:focus{
 	opacity:0;
 	pointer-events:none;
 }
+img,video{
+	height:auto;
+	width:720px;
+	max-width:100vw;
+}
 		</style>
 	</head>
 	<body>
@@ -991,7 +1001,9 @@ remove-focus:focus{
 			<figure>
 				<figcaption><dt>About</dt><dd>Xing Liu</dd></figcaption>
 			</figure>
-			<img alt='suzhou' src='showcase/suzhou.svg'/>
+			<figure>
+				<figcaption>An artist on the web</figcaption>
+			</figure>
 		</article>
 		<article id='art' tabindex='0'>
 			<h1>Art</h1>
@@ -999,16 +1011,29 @@ remove-focus:focus{
 				<figcaption><dt>Art</dt><dd>An assortment of colors made by pens, brushes, vectors, pixels, and frames.</dd></figcaption>
 			</figure>
 			<figure>
-				<img alt='Curiosity rover' src='showcase/curiosity.png'/>
+				<video controls width='720' poster='showcase/planetary-adventures-with-ballsy-mcballface-w720.png'>
+					<source src='showcase/planetary-adventures-with-ballsy-mcballface-w720.webm' type='video/webm'>
+					<source src='showcase/planetary-adventures-with-ballsy-mcballface-w720.mp4' type='video/mp4'>
+				</video>
+				<figcaption><dt>Planetary Adventures with Ballsy McBallface</dt><dd>Ridiculous animated cartoon. 2020.</dd></figcaption>
+			</figure>
+			<figure>
+				<a href='render?svg=curiosity'>
+					<img width='720'
+							 alt='Curiosity rover'
+							 src='showcase/curiosity-w720.png'
+							 />
+				</a>
 				<figcaption><dt>Curiosity</dt><dd>Martian rover vector art. 2018.</dd></figcaption>
 			</figure>
 			<figure>
-				<img alt='Falcon 9 reentry' src='showcase/reentry.png'/>
+				<a href='render?svg=reentry'>
+					<img width='720'
+							 alt='Falcon 9 reentry'
+							 src='showcase/reentry-w720.png'
+							 />
+				</a>
 				<figcaption><dt>Reentry</dt><dd>SpaceX booster vector art. 2019.</dd></figcaption>
-			</figure>
-			<figure>
-				<img src='showcase/curiosity.png'/>
-				<figcaption><dt>Planetary Adventures with Ballsy McBallface</dt><dd>Short cartoon. 2020.</dd></figcaption>
 			</figure>
 		</article>
 		<article id='design' tabindex='0'>
@@ -1017,13 +1042,23 @@ remove-focus:focus{
 				<figcaption><dt>Design</dt><dd>Neat-looking posters and webpages designed with zen CSS.</dd></figcaption>
 			</figure>
 			<figure>
-				<img alt='ahs.app screenshot, showing a horizontal news feed' src='showcase/curiosity.png'/>
-				<figcaption><dt>AHS.app</dt><dd>A student-oriented feed for Arcadia High School. HTML. 2020.</dd></figcaption>
+				<a href='https:/ahs.app'>
+					<img width='720'
+							 alt='ahs.app screenshot, showing a horizontal news feed'
+							 src='showcase/ahs-app-w720.png'
+					/>
+				</a>
+				<figcaption><dt>AHS.app</dt><dd>A student-oriented feed for Arcadia High School. 2020.</dd></figcaption>
 			</figure>
 			<figure>
-				<img alt='robotics.majorstem.org screenshot, showing a cool landing page rotating thing' src='showcase/curiosity.png'/>
+				<a href='https://robotics.majorstem.org'>
+					<img width='720'
+							 alt='robotics.majorstem.org screenshot, showing a rotating double-pyramid'
+							 src='showcase/robotics-w720.png'
+					/>
+				</a>
 				<figcaption>
-					<dt>Robotics team landing page</dt><dd>HTML. 2020.</dd>
+					<dt>Robotics.majorstem.org</dt><dd>Landing page and blog for a robotics team. 2020.</dd>
 				</figcaption>
 			</figure>
 		</article>
@@ -1039,17 +1074,22 @@ remove-focus:focus{
 				<figcaption><dt>Fun</dt><dd>Javascript game-things.</dd></figcaption>
 			</figure>
 			<figure>
-				<img alt='Cliques screenshot showing colored cards with markings on them' src='showcase/curiosity.png'/>
-				<figcaption><dt>Cliques</dt><dd>a card game introducing set theory.</dd></figcaption>
+				<a href='rippleweave'>
+					<img width='720'
+							 alt='a colorful function graphed by rippleweave'
+							 src='showcase/robotics-w720.png'
+					/>
+				</a>
+				<figcaption><dt>RippleWeave</dt><dd>Colorful function grapher. 2020</dd></figcaption>
 			</figure>
 			<figure>
-				<img alt='Rippleweave screenshot showing a colorful plot of sin(x^2) + cos(y^2) = 0' src='showcase/curiosity.png'/>
-				<figcaption><dt>RippleWeave</dt><dd>Colorful function grapher</dd></figcaption>
+				<img width='720' alt='Cliques screenshot showing colored cards with markings on them' src='showcase/cliques.png'/>
+				<figcaption><dt>Cliques</dt><dd>a card game introducing set theory. 2018&mdash;2019</dd></figcaption>
 			</figure>
 		</article>
 		<remove-focus>back</remove-focus>
-		<div id='fog' aria-hidden></div>
-		<svg id='blocker' viewBox='0 0 16 16' preserveAspectRatio='none' aria-hidden>
+		<div id='fog' aria-hidden='true'></div>
+		<svg id='blocker' viewBox='0 0 16 16' preserveAspectRatio='none' aria-hidden='true'>
 			<path d='M0 3h3v-3M0 7h7v-7M5 7v9M16 1h-6M16 5h-6M13 5v10h-3' fill='none' stroke-width='2'/>
 		</svg>
 	</body>

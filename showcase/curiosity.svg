@@ -1,13 +1,13 @@
-<svg width='1000' height='1000' viewBox='0 0 1000 1000' xmlns='http://www.w3.org/2000/svg'>
-<filter id='turbul'>
-  <feTurbulence in='SourceGraphic' baseFrequency='0.01' seed='50' type='fractalNoise' result='turbulence'/>
-  <feDisplacementMap in2='turbulence' in='SourceGraphic' scale='40' xChannelSelector='RGB' yChannelSelector='RGB' result='displace'/>
+<svg width='3000' height='3000' viewBox='0 0 1000 1000' xmlns='http://www.w3.org/2000/svg'>
+<filter id='cave-turbul'>
+  <feTurbulence in='SourceGraphic' baseFrequency='0.01' seed='50' numOctaves='1' type='fractalNoise' result='cave-turbulence'/>
+  <feDisplacementMap in2='cave-turbulence' in='SourceGraphic' scale='40' xChannelSelector='G' yChannelSelector='RB' result='displace'/>
 </filter>
 <mask id='cave0'>
   <rect width='100%' height='100%' fill='#fff'/>
-  <circle cx='500' cy='510' r='400' filter='url(#turbul)'/>
+  <circle cx='500' cy='510' r='400' filter='url(#cave-turbul)'/>
 </mask>
-  
+
 <circle cx='500' cy='500' r='420' fill='rgba(48,0,0)'/>
 <circle cx='500' cy='510' r='402.5' fill='rgba(49,0,20)'/>
 <circle cx='500' cy='520' r='385' fill='rgba(50,2,36)'/>
@@ -32,9 +32,65 @@
 <circle cx='500' cy='710' r='52.5' fill='rgba(201,225,249)'/>
 <circle cx='500' cy='720' r='35' fill='rgba(216,246,259)'/>
 <rect width='100%' height='100%' fill='rgba(32,0,0)' mask='url(#cave0)'/>
-<circle cx='500' cy='510' r='480' fill='none' stroke='rgba(44,2,4)' stroke-width='72' filter='url(#turbul)'/>
-<circle cx='500' cy='510' r='420' fill='none' stroke='rgba(48,4,8)' stroke-width='64' filter='url(#turbul)'/>
-<circle cx='500' cy='510' r='390' fill='none' stroke='rgba(64,8,24)' stroke-width='24' filter='url(#turbul)'/>
-<!--<image href='curiosity.png' x='0' y='0' height='1000' width='1000' opacity='.5'/>-->
+<circle cx='500' cy='510' r='480' fill='none' stroke='rgba(44,2,4)' stroke-width='72' filter='url(#cave-turbul)'/>
+<circle cx='500' cy='510' r='420' fill='none' stroke='rgba(48,4,8)' stroke-width='64' filter='url(#cave-turbul)'/>
+<circle cx='500' cy='510' r='384' fill='none' stroke='rgba(64,8,24)' stroke-width='28' filter='url(#cave-turbul)'/>
+<image href='curiosity.png' x='0' y='0' height='1000' width='1000' opacity='0'/>
 
+<path d='
+M518.4 853
+A300 300 0 0 1 480 850
+A250 250 0 0 1 390 840
+V880
+H500
+' fill='hsl(275deg,40%,20%)'/>
+<path d='
+M424 845
+L362 824
+L346 862
+A300 300 0 0 0 413 893
+L420 870
+L429 845
+' fill='hsl(340deg,50%,4%)'/>
+<path d='
+M518.4 853
+A250 250 0 0 1 458.5 860
+L460 848
+L424 845
+L413 893
+A250 250 0 0 0 520 885
+' fill='hsl(320deg,50%,5%)'/>
+<path d='
+M460 848
+A300 300 0 0 1 385 830
+A250 250 0 0 1 362 824
+A300 300 0 0 0 424 845
+A250 250 0 0 0 460 848
+' fill='hsl(280deg,50%,15%)'/>
+<path d='
+M429 845
+L440 846.95
+L438 859
+L432 846.1
+' fill='hsl(340deg,50%,4%)'/>
+<path d='
+M502.5 785
+L507.5 785
+L509.1 854
+A2 .5 0 0 1 503 854
+' fill='hsl(340deg,50%,4%)'/>
+<mask id='a'>
+	<path d='M502.5 785 L507.5 785 L509.1 854 A2 .5 0 0 1 503 854' fill='white' stroke-width='.05' stroke='white'/>
+</mask>
+<path d='
+M507.3 855.1
+L506 785
+L508 785
+L510 854
+' fill='hsl(320deg,50%,5%)' mask='url(#a)'/>
+<path d='M500 0V1000'
+stroke='red'
+stroke-width='0'
+transform='rotate(-0.5,500,500)'/>
+<circle cx='424' cy='845' r='0'/>
 </svg>
