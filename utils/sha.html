@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang='en-us'>
+	<head>
+		<title>Xha256</title>
+	</head>
+	<body>
+		<input type='text'/>
+		<script>
+const input = document.querySelector('input')
+input.addEventListener('input',()=>{
+    const msgBuffer = new TextEncoder('utf-8').encode(input.value)           
+    const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer)
+    const hashArray = Array.from(new Uint8Array(hashBuffer))
+    const hashHex = hashArray.map(b => ('00' + b.toString(16)).slice(-2)).join('')
+    input.value = hashHex
+}
+		</script>
+	</body>
+</html>
