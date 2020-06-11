@@ -2,8 +2,7 @@
 {
 	0%
 	{
-		clip-path:polygon
-		(
+		clip-path:polygon(
 			7	3,
 			7	3,
 			8	3,
@@ -17,8 +16,7 @@
 
 	50%
 	{
-		clip-path:polygon
-		(
+		clip-path:polygon(
 			6	3,
 			6	2,
 			8	2,
@@ -32,8 +30,7 @@
 
 	100%
 	{
-		clip-path:polygon
-		(
+		clip-path:polygon(
 			5	3,
 			5	2,
 			8	2,

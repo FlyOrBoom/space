@@ -1,4 +1,4 @@
-import re
+import re, glob
 
 css_layout='''
 fonts
@@ -27,27 +27,36 @@ interface
 end
 '''[1:].splitlines()
 
-draft = list(open('src/layout.html').read())
 
-for match in re.findall(r'{{\w+}}',''.join(draft)):
-	start = ''.join(draft).index(match)
-	draft [ start : start + len(match) ] = open(
-		'src/html/'
-		+ match[2:-2]
-		+ '.html'
-	).read()
+open('src/css/keyframes.css','w').write(
+	re.sub(
+		r'\d\t\d',
+		lambda m: str(int(m.group()[0])*12.5)+'vw\t'+str(int(m.group()[2])*12.5)+'vh',
+		''.join(
+			map(
+				lambda f: open(f).read(),
+				glob.glob('src/css/keyframes/*.css')
+			)
+		)
+	)
+)
 
 
 open('index.html','w').write(
 	''
-	.join(list(map(
-			lambda match:open('src/html/'+match+'.html').read(),
+	.join(
+		map(
+			lambda f: open('src/html/'+f+'.html').read(),
 			html_layout
-		)))
+		)
+	)
 	.replace(
-		'[[stylesheet]]',''.join(list(map(
-			lambda match:open('src/css/'+match+'.css').read(),
-			css_layout
-		)))
+		'[[stylesheet]]',
+		''.join(
+			map(
+				lambda f: open('src/css/'+f+'.css').read(),
+				css_layout
+			)
+		)
 	)
 )
