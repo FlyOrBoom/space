@@ -4,13 +4,13 @@ css_layout='''
 fonts
 broad
 parts
-interactive
-article/main
-article/about
-article/art
-article/design
-article/contact
-article/fun
+navigation
+articles/main
+articles/about
+articles/art
+articles/design
+articles/contact
+articles/fun
 keyframes
 '''[1:].splitlines()
 
