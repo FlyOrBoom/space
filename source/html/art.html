@@ -1,15 +1,27 @@
-<article id='art' tabindex='0'>
+<article id='art' tabindex=0>
 	<h1>Art</h1>
 	<figure>
 		<figcaption><dt>Art</dt><dd>An assortment of colors made by pens, brushes, vectors, pixels, and frames.</dd></figcaption>
 	</figure>
 	<figure>
-		<img
-			width='480'
+		<video
+			muted loop autoplay
+			width='720'
+			poster='media/planetary-adventures-with-ballsy-mcballface-w720.png'
 			alt='A head lost its brain'
-			src='media/flipbrain-w480.gif'
-				 />
+		>
+			<source src='media/flipbrain-w480.webm' type='video/webm'>
+			<source src='media/flipbrain-w480.mp4' type='video/mp4'>
+		</video>
 		<figcaption><dt>FlipBrain</dt><dd>3D animation test. 2020.</dd></figcaption>
+	</figure>
+	<figure>
+		<img
+			width='720'
+			alt='Transonic flying thing'
+			src='media/speedyboi-w720.png'
+				 />
+		<figcaption><dt>Speedyboi</dt><dd>3D modeling test. 2020.</dd></figcaption>
 	</figure>
 	<figure>
 		<video controls width='720' poster='media/planetary-adventures-with-ballsy-mcballface-w720.png'>
@@ -17,16 +29,6 @@
 			<source src='media/planetary-adventures-with-ballsy-mcballface-w720.mp4' type='video/mp4'>
 		</video>
 		<figcaption><dt>Planetary Adventures with Ballsy McBallface</dt><dd>Ridiculous animated cartoon. 2020.</dd></figcaption>
-	</figure>
-	<figure>
-		<a href='render?svg=curiosity'>
-			<img
-				width='720'
-				alt='Curiosity rover'
-				src='media/curiosity-w720.png'
-					 />
-		</a>
-		<figcaption><dt>Curiosity</dt><dd>Martian rover vector art. 2018.</dd></figcaption>
 	</figure>
 	<figure>
 		<a href='render?svg=reentry'>
@@ -37,5 +39,15 @@
 			/>
 		</a>
 		<figcaption><dt>Reentry</dt><dd>SpaceX booster vector art. 2019.</dd></figcaption>
+	</figure>
+	<figure>
+		<a href='render?svg=curiosity'>
+			<img
+				width='720'
+				alt='Curiosity rover'
+				src='media/curiosity-w720.png'
+					 />
+		</a>
+		<figcaption><dt>Curiosity</dt><dd>Martian rover vector art. 2018.</dd></figcaption>
 	</figure>
 </article>
