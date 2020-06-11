@@ -11,7 +11,7 @@
 @font-face
 {
 	font-family:'Computer Modern';
-	src:url('bin/fonts/computer-modern-italic.woff') format('woff');
+	src:url('fonts/computer-modern-italic.woff') format('woff');
 	font-weight:normal;
 	font-style:italic;
 	font-display:swap;
@@ -20,13 +20,14 @@
 @font-face
 {
 	font-family:'Computer Modern';
-	src:url('bin/fonts/computer-modern-bold-italic.woff') format('woff');
+	src:url('fonts/computer-modern-bold-italic.woff') format('woff');
 	font-weight:bold;
 	font-style:italic;
 	font-display:swap;
 }
 
 /***************************/
+
 html,
 body
 {
@@ -86,7 +87,7 @@ body>:not(#back)
 }
 
 /***************************/
-figure
+figure:not(:last-child)
 {
 	position:static;
 	height:100vh;
@@ -146,12 +147,12 @@ a
 img,
 video
 {
-	height:auto;
-	width:720px;
-	max-width:100vw;
+	max-width:80vmin;
+	max-height:80vmin;
 }
 
 /***************************/
+
 #back{
 	position:fixed;
 	display:flex;
@@ -224,6 +225,7 @@ article:hover~#fog{
 }
 
 /***************************/
+
 article
 {
 	margin:0;
@@ -1202,7 +1204,9 @@ h1
 		</figcaption>
 	</figure>
 	<figure>
-		<figcaption>An artist on the web</figcaption>
+		<figcaption>
+I&rsquo;m an artist. I turn the weird sketches I make into low-entropy collections of ink, dust, code, and whatnot.  
+		</figcaption>
 	</figure>
 </article>
 <article id='art' tabindex='0'>
@@ -1211,27 +1215,37 @@ h1
 		<figcaption><dt>Art</dt><dd>An assortment of colors made by pens, brushes, vectors, pixels, and frames.</dd></figcaption>
 	</figure>
 	<figure>
-		<video controls width='720' poster='bin/pics/planetary-adventures-with-ballsy-mcballface-w720.png'>
-			<source src='bin/pics/planetary-adventures-with-ballsy-mcballface-w720.webm' type='video/webm'>
-			<source src='bin/pics/planetary-adventures-with-ballsy-mcballface-w720.mp4' type='video/mp4'>
+		<img
+			width='480'
+			alt='A head lost its brain'
+			src='media/flipbrain-w480.gif'
+				 />
+		<figcaption><dt>FlipBrain</dt><dd>3D animation test. 2020.</dd></figcaption>
+	</figure>
+	<figure>
+		<video controls width='720' poster='media/planetary-adventures-with-ballsy-mcballface-w720.png'>
+			<source src='media/planetary-adventures-with-ballsy-mcballface-w720.webm' type='video/webm'>
+			<source src='media/planetary-adventures-with-ballsy-mcballface-w720.mp4' type='video/mp4'>
 		</video>
 		<figcaption><dt>Planetary Adventures with Ballsy McBallface</dt><dd>Ridiculous animated cartoon. 2020.</dd></figcaption>
 	</figure>
 	<figure>
 		<a href='render?svg=curiosity'>
-			<img width='720'
-					 alt='Curiosity rover'
-					 src='bin/pics/curiosity-w720.png'
+			<img
+				width='720'
+				alt='Curiosity rover'
+				src='media/curiosity-w720.png'
 					 />
 		</a>
 		<figcaption><dt>Curiosity</dt><dd>Martian rover vector art. 2018.</dd></figcaption>
 	</figure>
 	<figure>
 		<a href='render?svg=reentry'>
-			<img width='720'
-					 alt='Falcon 9 reentry'
-					 src='bin/pics/reentry-w720.png'
-					 />
+			<img
+				width='720'
+				alt='Falcon 9 reentry'
+				src='media/reentry-w720.png'
+			/>
 		</a>
 		<figcaption><dt>Reentry</dt><dd>SpaceX booster vector art. 2019.</dd></figcaption>
 	</figure>
@@ -1249,7 +1263,7 @@ h1
 			<img
 				width='720'
 				alt='ahs.app screenshot, showing a horizontal news feed'
-				src='bin/pics/ahs-app-w720.png'
+				src='media/ahs-app-w720.png'
 			/>
 		</a>
 		<figcaption>
@@ -1262,7 +1276,7 @@ h1
 			<img
 				width='720'
 				alt='robotics.majorstem.org screenshot, showing a rotating double-pyramid'
-				src='bin/pics/robotics-w720.png'
+				src='media/robotics-w720.png'
 			/>
 		</a>
 		<figcaption>
@@ -1293,7 +1307,7 @@ h1
 			<img
 				width='720'
 				alt='a colorful function graphed by rippleweave'
-				src='bin/pics/robotics-w720.png'
+				src='media/robotics-w720.png'
 			/>
 		</a>
 		<figcaption>
@@ -1305,7 +1319,7 @@ h1
 		<img
 			width='720'
 			alt='Cliques screenshot showing colored cards with markings on them'
-			src='bin/pics/cliques.png'
+			src='media/cliques.png'
 		/>
 		<figcaption>
 			<dt>Cliques</dt>

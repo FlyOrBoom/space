@@ -1,4 +1,4 @@
-figure
+figure:not(:last-child)
 {
 	position:static;
 	height:100vh;
@@ -58,9 +58,9 @@ a
 img,
 video
 {
-	height:auto;
-	width:720px;
-	max-width:100vw;
+	max-width:80vmin;
+	max-height:80vmin;
 }
 
 /***************************/
+

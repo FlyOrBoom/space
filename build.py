@@ -28,14 +28,14 @@ end
 '''[1:].splitlines()
 
 
-open('src/css/keyframes.css','w').write(
+open('source/css/keyframes.css','w').write(
 	re.sub(
 		r'\d\t\d',
 		lambda m: str(int(m.group()[0])*12.5)+'vw\t'+str(int(m.group()[2])*12.5)+'vh',
 		''.join(
 			map(
 				lambda f: open(f).read(),
-				glob.glob('src/css/keyframes/*.css')
+				glob.glob('source/css/keyframes/*.css')
 			)
 		)
 	)
@@ -46,7 +46,7 @@ open('index.html','w').write(
 	''
 	.join(
 		map(
-			lambda f: open('src/html/'+f+'.html').read(),
+			lambda f: open('source/html/'+f+'.html').read(),
 			html_layout
 		)
 	)
@@ -54,7 +54,7 @@ open('index.html','w').write(
 		'[[stylesheet]]',
 		''.join(
 			map(
-				lambda f: open('src/css/'+f+'.css').read(),
+				lambda f: open('source/css/'+f+'.css').read(),
 				css_layout
 			)
 		)
