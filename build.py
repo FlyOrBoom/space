@@ -1,15 +1,31 @@
 import re
-draft_css = ''.join(list(
-	map(
-		lambda match:open('src/css/'+match+'.css').read(),
-		re.findall(
-			r'.+',
-			open('src/layout.css').read()
-		)
-	)
-))
 
-print(draft_css)
+css_layout='''
+fonts
+broad
+parts
+interactive
+article/main
+article/about
+article/art
+article/design
+article/contact
+article/fun
+keyframes
+'''[1:].splitlines()
+
+html_layout='''
+start
+meta
+middle
+about
+art
+design
+contact
+fun
+interface
+end
+'''[1:].splitlines()
 
 draft = list(open('src/layout.html').read())
 
@@ -21,5 +37,17 @@ for match in re.findall(r'{{\w+}}',''.join(draft)):
 		+ '.html'
 	).read()
 
-final = ''.join(draft)
-open('index.html','w').write(final)
+
+open('index.html','w').write(
+	''
+	.join(list(map(
+			lambda match:open('src/html/'+match+'.html').read(),
+			html_layout
+		)))
+	.replace(
+		'[[stylesheet]]',''.join(list(map(
+			lambda match:open('src/css/'+match+'.css').read(),
+			css_layout
+		)))
+	)
+)

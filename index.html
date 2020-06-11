@@ -7,9 +7,397 @@
 <meta name='description' content='Maker of web stuffs.'>
 <meta name='keywords' content='art,html,design,web,developer,xing'>
 <meta name='author' content='Xing'>
-
 <style>
-[[layout]]
+@font-face
+{
+	font-family:'Computer Modern';
+	src:url('fonts/computer-modern-italic.woff') format('woff');
+	font-weight:normal;
+	font-style:italic;
+	font-display:swap;
+}
+
+@font-face
+{
+	font-family:'Computer Modern';
+	src:url('fonts/computer-modern-bold-italic.woff') format('woff');
+	font-weight:bold;
+	font-style:italic;
+	font-display:swap;
+}
+html,
+body
+{
+	margin:0;
+	width:100%;
+	height:100%;
+}
+
+body
+{
+	background:white;
+	font-family:'Computer Modern',serif;
+	font-style:italic;
+	font-size:30px;
+	overflow:hidden;
+	filter:drop-shadow(0 0 calc(1vw + 1vh) #0004);
+	--duration:200ms;
+}
+
+@media (screen and refers-color-scheme:dark)
+{
+	body
+	{
+		background:#222;
+	}
+}
+
+/***************************/
+
+::selection{
+	background:grey;
+	color:white;
+}
+
+
+*
+{
+	transition:clip-path var(--duration),background var(--duration),opacity var(--duration);
+	box-sizing:border-box;
+	margin:0;
+	padding:0;
+}
+
+:focus
+{
+	outline:none;
+}
+
+/***************************/
+
+body :not(#back)
+{
+	position:fixed;
+	display:block;
+	width:100vw;
+	height:100vh !important;
+}
+figure
+{
+	position:static;
+	height:100vh;
+	display:flex;
+	flex-wrap:wrap;
+	justify-content:center;
+	align-content:center;
+	opacity:0;
+	margin-bottom:50vh;
+}
+
+:focus>figure,
+:focus-within>figure
+{
+	opacity:1;
+}
+
+figcaption
+{
+	display:block;
+	width:100%;
+	padding:1rem;
+	color:inherit;
+}
+
+/***************************/
+
+dt,
+dd
+{
+	display:inline;
+}
+
+dt
+{
+	font-weight:bold;
+}
+
+dt::after
+{
+	content:': ';
+	user-select:auto;
+}
+
+/***************************/
+
+a
+{
+	color:inherit;
+	background:inherit;
+	text-decoration:none;
+	cursor:pointer;
+}
+
+/***************************/
+
+img,
+video
+{
+	height:auto;
+	width:720px;
+	max-width:100vw;
+}
+#back{
+	position:fixed;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	background:#fff;
+	color:#000;
+	right:0;
+	opacity:.6;
+	width:5rem;
+	height:5rem;
+	min-width:12.5vw;
+	min-height:12.5vh;
+	opacity:0;
+	font-size:2rem;
+	z-index:100;
+}
+
+#back:active
+{
+	background:black;
+	color:white;
+}
+
+article:focus~#back,
+article:focus-within~#back
+{
+	cursor:pointer;
+	opacity:.5;
+}
+
+article:focus~#back:hover,
+article:focus-within~#back:hover
+{
+	opacity:1;
+}
+
+#back:focus{
+	opacity:0;
+	pointer-events:none;
+}
+
+/***************************/
+
+#fog{
+	z-index:50;
+	opacity:.2;
+	backdrop-filter:blur(1vw);
+	pointer-events:none;
+}
+
+article:hover~#fog{
+	background:black;
+	opacity:.5;
+}
+
+/***************************/
+
+#blocker
+{
+	pointer-events:none;
+	opacity:0;
+	z-index:90;
+}
+
+#blocker path{
+	pointer-events:auto;
+	cursor:default;
+	stroke:black;
+}
+article
+{
+	margin:0;
+	padding:0;
+	overflow:hidden scroll;
+	text-align:center;
+	animation-timing-function:linear;
+	animation-duration:var(--duration);
+	animation-fill-mode:both;
+	cursor:pointer;
+}
+
+article:hover
+{
+	z-index:90;
+}
+
+article:focus,
+article:focus-within
+{
+	cursor:default;
+	z-index:100;
+}
+
+h1
+{
+	position:fixed;
+	color:transparent;
+	pointer-events:none;
+	background-size:100% 100%;
+	opacity:0.4;
+}
+
+:hover>h1
+{
+	opacity:0.9
+}
+
+:focus>h1,
+:focus-within>h1
+{
+	opacity:0
+}
+#about
+{
+	--duration:250ms;
+	color:#052222;
+	background:#4f8;
+	animation-name:about-reverse
+}
+
+#about:hover
+{
+	animation-name:about
+}
+
+#about:focus,
+#about:focus-within
+{
+	--duration:150ms;
+	animation-name:about-highlight
+}
+
+#about>h1
+{
+	left:0;
+	bottom:0;
+	width:25vw;
+	height:50vh;
+	background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 16' preserveAspectRatio='none'%3E%3Cpath fill-rule='evenodd' d='M0 0H3V5H2V3H1V5H0V2H2V1H1V2H0V0M4 0H8V2H5V1H7V4H5V3H8V5H4M0 6H8V9H0V8H7V7H1V8H0M0 10V16H4V10H3V15H1V10M5 10H8V11H7V18H6V11H5'/%3E%3C/svg%3E")
+}
+#art
+{
+	--duration:250ms;
+	width:100vw;
+	height:200vh;
+	background:#000;
+	color:#fff;
+	animation-name:art-reverse
+}
+
+#art:hover
+{
+	animation-name:art
+}
+
+#art:focus,
+#art:focus-within
+{
+	animation-name:art-highlight
+}
+
+#art>h1
+{
+	left:0;
+	top:0;
+	width:37.5vw;
+	height:37.5vh;
+	background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' preserveAspectRatio='none'%3E%3Cpath fill='%23fff' fill-rule='evenodd' d='M0 8H4V12H3V11H1V12H0V10H3V9H1V10H0M5 8H9V10H6V9H8V11H9V12H7V11H6V12H5M8 0V7H10V12H11V7H12V0'/%3E%3C/svg%3E")
+}
+
+#design
+{
+	--duration:200ms;
+	background:#0ff;
+	animation-name:design-reverse
+}
+
+#design:hover
+{
+	animation-name:design
+}
+
+#design:focus,
+#design:focus-within
+{
+	--duration:80ms;
+	animation-name:design-highlight
+}
+
+#design>h1{
+	top:0;
+	left:37.5vw;
+	width:62.5vw;
+	height:100vh;
+	background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 32' preserveAspectRatio='none'%3E%3Cpath fill-rule='evenodd' d='M4 0H7V3H4M5 1H8V2H5M4 4H20V5H5V8H8V9H5V12H12V13H4M4 14H12V15H5V16H12V19H0V16H1V18H11V17H4M0 20H3V21H2V31H3V32H0V31H1V21H0M4 20H8V21H5V31H7V29H6V28H8V32H4M6 22H7V24H9V26H11V20H12V28H11V27H10V25H8V23H7V27H6'/%3E%3C/svg%3E")
+}
+#contact
+{
+	--duration:200ms;
+	color:#fff;
+	background:#208;
+	clip-path:inset(0 87.5% 87.5% 0);
+}
+
+#contact:hover
+{
+	clip-path:inset(0 75% 75% 0);
+}
+
+#contact:focus,
+#contact:focus-within
+{
+	--duration:200ms;
+	clip-path:inset(0 0 0 0);
+}
+
+#contact>h1
+{
+	width:12.5vw;
+	height:12.5vh;
+	left:0;
+	top:0;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 4' preserveAspectRatio='none'%3E%3Cpath fill='%23fff' fill-rule='evenodd' d='M0 0H4V1H3V3H1V1H0M0 2H4V4H0'/%3E%3C/svg%3E")
+}
+#fun{
+	--duration:150ms;
+	background:#f0f;
+	animation-name:fun-reverse
+}
+
+#fun:hover
+{
+	animation-name:fun
+}
+
+#fun:focus,
+#fun:focus-within
+{
+	--duration:200ms;
+	animation-name:fun-highlight
+}
+
+#fun>h1
+{
+	bottom:0;
+	right:0;
+	width:12.5vw;
+	height:62.5vh;
+	background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 20' preserveAspectRatio='none'%3E%3Cpath fill-rule='evenodd' d='M0 0H4V1H1V2H3V3H1V4H0M0 5V15H4V5H3V14H1V5M0 16H1V18H3V16H4V20H3V19H2V17H1V20H0'/%3E%3C/svg%3E")
+}
+
 </style>
 </head>
 <body>
@@ -25,7 +413,6 @@
 		<figcaption>An artist on the web</figcaption>
 	</figure>
 </article>
-
 <article id='art' tabindex='0'>
 	<h1>Art</h1>
 	<figure>
@@ -57,7 +444,6 @@
 		<figcaption><dt>Reentry</dt><dd>SpaceX booster vector art. 2019.</dd></figcaption>
 	</figure>
 </article>
-
 <article id='design' tabindex='0'>
 	<h1>Design</h1>
 	<figure>
@@ -93,7 +479,6 @@
 		</figcaption>
 	</figure>
 </article>
-
 <article id='contact' tabindex='0'>
 	<h1>@</h1>
 	<figure>
@@ -103,7 +488,6 @@
 		</figcaption>
 	</figure>
 </article>
-
 <article id='fun' tabindex='0'>
 	<h1>Fun</h1>
 	<figure>
@@ -137,12 +521,10 @@
 		</figcaption>
 	</figure>
 </article>
-
 <div id='back'>back</div>
 <div id='fog' aria-hidden='true'></div>
 <svg id='blocker' viewBox='0 0 16 16' preserveAspectRatio='none' aria-hidden='true'>
 	<path d='M0 3h3v-3M0 7h7v-7M5 7v9M16 1h-6M16 5h-6M13 5v10h-3' fill='none' stroke-width='2'/>
 </svg>
-
 </body>
 </html>
