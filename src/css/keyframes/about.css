@@ -58,8 +58,7 @@
 	
 	100%
 	{
-		clip-path:polygon
-		(
+		clip-path:polygon(
 			0	3,
 			3	3,
 			3	0,
