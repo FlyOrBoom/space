@@ -1,0 +1,28 @@
+#contact
+{
+	--duration:200ms;
+	color:#fff;
+	background:#208;
+	clip-path:inset(0 87.5% 87.5% 0);
+}
+
+#contact:hover
+{
+	clip-path:inset(0 75% 75% 0);
+}
+
+#contact:focus,
+#contact:focus-within
+{
+	--duration:200ms;
+	clip-path:inset(0 0 0 0);
+}
+
+#contact>h1
+{
+	width:12.5vw;
+	height:12.5vh;
+	left:0;
+	top:0;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 4' preserveAspectRatio='none'%3E%3Cpath fill='%23fff' fill-rule='evenodd' d='M0 0H4V1H3V3H1V1H0M0 2H4V4H0'/%3E%3C/svg%3E")
+}

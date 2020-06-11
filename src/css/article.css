@@ -1,0 +1,45 @@
+article
+{
+	margin:0;
+	padding:0;
+	overflow:hidden scroll;
+	text-align:center;
+	animation-timing-function:linear;
+	animation-duration:var(--duration);
+	animation-fill-mode:both;
+	cursor:pointer;
+}
+
+article:hover
+{
+	z-index:90;
+}
+
+article:focus,
+article:focus-within
+{
+	cursor:default;
+	z-index:100;
+}
+
+/***************************/
+
+h1
+{
+	position:fixed;
+	color:transparent;
+	pointer-events:none;
+	background-size:100% 100%;
+	opacity:0.4;
+}
+
+:hover>h1
+{
+	opacity:0.9
+}
+
+:focus>h1,
+:focus-within>h1
+{
+	opacity:0
+}

@@ -1,0 +1,64 @@
+figure
+{
+	position:static;
+	height:100vh;
+	display:flex;
+	flex-wrap:wrap;
+	justify-content:center;
+	align-content:center;
+	opacity:0;
+	margin-bottom:50vh;
+}
+
+:focus>figure,
+:focus-within>figure
+{
+	opacity:1;
+}
+
+figcaption
+{
+	display:block;
+	width:100%;
+	padding:1rem;
+	color:inherit;
+}
+
+/***************************/
+
+dt,
+dd
+{
+	display:inline;
+}
+
+dt
+{
+	font-weight:bold;
+}
+
+dt::after
+{
+	content:': ';
+	user-select:auto;
+}
+
+/***************************/
+
+a
+{
+	color:inherit;
+	background:inherit;
+	text-decoration:none;
+	cursor:pointer;
+}
+
+/***************************/
+
+img,
+video
+{
+	height:auto;
+	width:720px;
+	max-width:100vw;
+}

@@ -1,0 +1,70 @@
+#back{
+	position:fixed;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	background:#fff;
+	color:#000;
+	right:0;
+	opacity:.6;
+	width:5rem;
+	height:5rem;
+	min-width:12.5vw;
+	min-height:12.5vh;
+	opacity:0;
+	font-size:2rem;
+	z-index:100;
+}
+
+#back:active
+{
+	background:black;
+	color:white;
+}
+
+article:focus~#back,
+article:focus-within~#back
+{
+	cursor:pointer;
+	opacity:.5;
+}
+
+article:focus~#back:hover,
+article:focus-within~#back:hover
+{
+	opacity:1;
+}
+
+#back:focus{
+	opacity:0;
+	pointer-events:none;
+}
+
+/***************************/
+
+#fog{
+	z-index:50;
+	opacity:.2;
+	backdrop-filter:blur(1vw);
+	pointer-events:none;
+}
+
+article:hover~#fog{
+	background:black;
+	opacity:.5;
+}
+
+/***************************/
+
+#blocker
+{
+	pointer-events:none;
+	opacity:0;
+	z-index:90;
+}
+
+#blocker path{
+	pointer-events:auto;
+	cursor:default;
+	stroke:black;
+}
