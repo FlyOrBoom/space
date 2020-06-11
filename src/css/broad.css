@@ -17,7 +17,7 @@ body
 	--duration:200ms;
 }
 
-@media (screen and refers-color-scheme:dark)
+@media (screen and prefers-color-scheme:dark)
 {
 	body
 	{
