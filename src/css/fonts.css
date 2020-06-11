@@ -1,7 +1,7 @@
 @font-face
 {
 	font-family:'Computer Modern';
-	src:url('src/bin/fonts/computer-modern-italic.woff') format('woff');
+	src:url('bin/fonts/computer-modern-italic.woff') format('woff');
 	font-weight:normal;
 	font-style:italic;
 	font-display:swap;
@@ -10,7 +10,7 @@
 @font-face
 {
 	font-family:'Computer Modern';
-	src:url('src/bin/fonts/computer-modern-bold-italic.woff') format('woff');
+	src:url('bin/fonts/computer-modern-bold-italic.woff') format('woff');
 	font-weight:bold;
 	font-style:italic;
 	font-display:swap;
