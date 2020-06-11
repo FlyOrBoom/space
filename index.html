@@ -87,7 +87,8 @@ body>:not(#back)
 }
 
 /***************************/
-figure:not(:last-child)
+
+figure
 {
 	position:static;
 	height:100vh;
@@ -96,7 +97,8 @@ figure:not(:last-child)
 	justify-content:center;
 	align-content:center;
 	opacity:0;
-	margin-bottom:50vh;
+	margin-block:50vh;
+	scroll-snap-align:center;
 }
 
 :focus>figure,
@@ -236,6 +238,7 @@ article
 	animation-duration:var(--duration);
 	animation-fill-mode:both;
 	cursor:pointer;
+	scroll-snap-type:y mandatory;
 }
 
 article:hover
@@ -249,6 +252,8 @@ article:focus-within
 	cursor:default;
 	z-index:100;
 }
+
+/***************************/
 
 h1
 {
@@ -269,6 +274,9 @@ h1
 {
 	opacity:0
 }
+
+/***************************/
+
 #about
 {
 	--duration:250ms;
@@ -1024,8 +1032,8 @@ h1
 			87.5vw	87.5vh,
 			87.5vw	87.5vh,
 			87.5vw	100.0vh,
-			12.5vw	100.0vh,
-			12.5vw	50.0vh,
+			25.0vw	100.0vh,
+			25.0vw	50.0vh,
 			12.5vw	50.0vh
 		)
 	}
@@ -1047,8 +1055,8 @@ h1
 			87.5vw	87.5vh,
 			87.5vw	87.5vh,
 			87.5vw	100.0vh,
-			12.5vw	100.0vh,
-			12.5vw	50.0vh,
+			25.0vw	100.0vh,
+			25.0vw	50.0vh,
 			12.5vw	50.0vh
 		)
 	}
@@ -1070,8 +1078,8 @@ h1
 			87.5vw	87.5vh,
 			87.5vw	87.5vh,
 			87.5vw	100.0vh,
-			12.5vw	100.0vh,
-			12.5vw	50.0vh,
+			25.0vw	100.0vh,
+			25.0vw	50.0vh,
 			0.0vw	50.0vh
 		)
 	}

@@ -1,4 +1,4 @@
-figure:not(:last-child)
+figure
 {
 	position:static;
 	height:100vh;
@@ -7,7 +7,8 @@ figure:not(:last-child)
 	justify-content:center;
 	align-content:center;
 	opacity:0;
-	margin-bottom:50vh;
+	margin-block:50vh;
+	scroll-snap-align:center;
 }
 
 :focus>figure,
