@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang='en-us'>
 <head>
 <title>Xing</title>
 <link rel='shortcut icon' type='image/png' href='favicon.png' />
@@ -7,6 +7,7 @@
 <meta name='description' content='Maker of web stuffs.'>
 <meta name='keywords' content='art,html,design,web,developer,xing'>
 <meta name='author' content='Xing'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
 <style>
 @font-face
 {
@@ -28,6 +29,10 @@
 
 /***************************/
 
+html{
+	font-size:16px;
+}
+
 html,
 body
 {
@@ -41,7 +46,6 @@ body
 	background:white;
 	font-family:'Computer Modern',serif;
 	font-style:italic;
-	font-size:30px;
 	overflow:hidden;
 	filter:drop-shadow(0 0 calc(1vw + 1vh) #0004);
 	--duration:200ms;
@@ -70,6 +74,7 @@ body
 	box-sizing:border-box;
 	margin:0;
 	padding:0;
+	font-size:1rem;
 }
 
 :focus
@@ -168,7 +173,6 @@ video
 	right:0;
 	width:12.5vw;
 	height:12.5vh;
-	font-size:5vmin;
 	z-index:100;
 	pointer-events:none;
 	cursor:pointer;
@@ -1342,7 +1346,6 @@ I&rsquo;m an artist. I turn the weird sketches I make into low-entropy collectio
 	</figure>
 </article>
 <div id='back'>⬰</div>
-<div id='fog' aria-hidden='true'></div>
 <svg id='blocker' viewBox='0 0 16 16' preserveAspectRatio='none' aria-hidden='true'>
 	<path d='M0 3h3v-3M0 7h7v-7M5 7v9M16 1h-6M16 5h-6M13 5v10h-3' fill='none' stroke-width='2'/>
 </svg>
