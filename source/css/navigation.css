@@ -3,41 +3,31 @@
 	display:flex;
 	justify-content:center;
 	align-items:center;
-	background:#fff;
-	color:#000;
-	right:0;
-	opacity:.6;
-	width:5rem;
-	height:5rem;
-	min-width:12.5vw;
-	min-height:12.5vh;
-	opacity:0;
-	font-size:2rem;
-	z-index:100;
-}
-
-#back:active
-{
 	background:black;
 	color:white;
+	opacity:0;
+	mix-blend-mode:exclusion;
+	right:0;
+	width:12.5vw;
+	height:12.5vh;
+	font-size:5vmin;
+	z-index:100;
+	pointer-events:none;
+	cursor:pointer;
 }
 
 article:focus~#back,
 article:focus-within~#back
 {
-	cursor:pointer;
-	opacity:.5;
+	opacity:1;
+	pointer-events:auto;
 }
 
 article:focus~#back:hover,
 article:focus-within~#back:hover
 {
-	opacity:1;
-}
-
-#back:focus{
-	opacity:0;
-	pointer-events:none;
+	background:white;
+	color:black;
 }
 
 /***************************/

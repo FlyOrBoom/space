@@ -65,7 +65,8 @@ body
 
 *
 {
-	transition:clip-path var(--duration),background var(--duration),opacity var(--duration);
+	transition:clip-path, background, color, opacity;
+	transition-duration: var(--duration);
 	box-sizing:border-box;
 	margin:0;
 	padding:0;
@@ -160,41 +161,31 @@ video
 	display:flex;
 	justify-content:center;
 	align-items:center;
-	background:#fff;
-	color:#000;
-	right:0;
-	opacity:.6;
-	width:5rem;
-	height:5rem;
-	min-width:12.5vw;
-	min-height:12.5vh;
-	opacity:0;
-	font-size:2rem;
-	z-index:100;
-}
-
-#back:active
-{
 	background:black;
 	color:white;
+	opacity:0;
+	mix-blend-mode:exclusion;
+	right:0;
+	width:12.5vw;
+	height:12.5vh;
+	font-size:5vmin;
+	z-index:100;
+	pointer-events:none;
+	cursor:pointer;
 }
 
 article:focus~#back,
 article:focus-within~#back
 {
-	cursor:pointer;
-	opacity:.5;
+	opacity:1;
+	pointer-events:auto;
 }
 
 article:focus~#back:hover,
 article:focus-within~#back:hover
 {
-	opacity:1;
-}
-
-#back:focus{
-	opacity:0;
-	pointer-events:none;
+	background:white;
+	color:black;
 }
 
 /***************************/
@@ -1350,7 +1341,7 @@ I&rsquo;m an artist. I turn the weird sketches I make into low-entropy collectio
 		</figcaption>
 	</figure>
 </article>
-<div id='back'>back</div>
+<div id='back'>⬰</div>
 <div id='fog' aria-hidden='true'></div>
 <svg id='blocker' viewBox='0 0 16 16' preserveAspectRatio='none' aria-hidden='true'>
 	<path d='M0 3h3v-3M0 7h7v-7M5 7v9M16 1h-6M16 5h-6M13 5v10h-3' fill='none' stroke-width='2'/>

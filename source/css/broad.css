@@ -35,7 +35,8 @@ body
 
 *
 {
-	transition:clip-path var(--duration),background var(--duration),opacity var(--duration);
+	transition:clip-path, background, color, opacity;
+	transition-duration: var(--duration);
 	box-sizing:border-box;
 	margin:0;
 	padding:0;
