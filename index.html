@@ -232,7 +232,7 @@ article
 {
 	margin:0;
 	padding:0;
-	overflow:hidden scroll;
+	overflow:hidden;
 	text-align:center;
 	animation-timing-function:linear;
 	animation-duration:var(--duration);
@@ -250,6 +250,7 @@ article:focus,
 article:focus-within
 {
 	cursor:default;
+	overflow-y:scroll;
 	z-index:100;
 }
 
@@ -262,11 +263,6 @@ h1
 	pointer-events:none;
 	background-size:100% 100%;
 	mix-blend-mode:exclusion;
-}
-
-:hover>h1
-{
-	opacity:0.9
 }
 
 :focus>h1,
