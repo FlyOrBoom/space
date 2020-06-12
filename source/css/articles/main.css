@@ -31,7 +31,7 @@ h1
 	color:transparent;
 	pointer-events:none;
 	background-size:100% 100%;
-	opacity:0.4;
+	mix-blend-mode:exclusion;
 }
 
 :hover>h1
