@@ -1,2 +1,2 @@
 # FlyOrBoom.github.io
-A semantic js-free portfolio page.
+An interactive js-free portfolio page.
