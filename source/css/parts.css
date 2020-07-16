@@ -27,21 +27,9 @@ figcaption
 
 /***************************/
 
-dt,
-dd
-{
-	display:inline;
-}
-
-dt
+h2
 {
 	font-weight:bold;
-}
-
-dt::after
-{
-	content:': ';
-	user-select:auto;
 }
 
 /***************************/
