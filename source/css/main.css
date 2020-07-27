@@ -18,14 +18,7 @@ body
 	overflow:hidden;
 	filter:drop-shadow(0 0 calc(1vw + 1vh) #0004);
 	--duration:200ms;
-}
-
-@media screen and (prefers-color-scheme:dark)
-{
-	body
-	{
-		background:#222;
-	}
+	background:#222;
 }
 
 /***************************/

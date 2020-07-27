@@ -49,14 +49,7 @@ body
 	overflow:hidden;
 	filter:drop-shadow(0 0 calc(1vw + 1vh) #0004);
 	--duration:200ms;
-}
-
-@media screen and (prefers-color-scheme:dark)
-{
-	body
-	{
-		background:#222;
-	}
+	background:#222;
 }
 
 /***************************/
@@ -134,8 +127,11 @@ a
 {
 	color:inherit;
 	background:inherit;
-	text-decoration:none;
 	cursor:pointer;
+}
+
+a:hover{
+	text-decoration:none
 }
 
 /***************************/
@@ -222,6 +218,11 @@ article
 	animation-fill-mode:both;
 	cursor:pointer;
 	scroll-snap-type:y mandatory;
+}
+
+article:not(:focus):not(:focus-within) :not(h1)
+{
+	display:none;
 }
 
 article:hover
@@ -1276,7 +1277,7 @@ I&rsquo;m an artist. I turn the weird sketches I make into low-entropy collectio
 	<figure>
 		<figcaption>
 			<h2>Design</h2>
-			Neat-looking stuff that hopefully won't land me in a career making propaganda for questionably ethical companies.
+			Art, but with code mixed in.
 		</figcaption>
 	</figure>
 	<figure>
@@ -1287,7 +1288,7 @@ I&rsquo;m an artist. I turn the weird sketches I make into low-entropy collectio
 			/>
 		<figcaption>
 			<h2>AHS Emblem</h2>
-			Proposed redesign of the AHS Emblem, Inkscape and Blender, 2020.
+			Proposed redesign of the AHS Emblem. Inkscape and Blender, 2020.
 		</figcaption>
 	</figure>
 	<figure>
@@ -1300,7 +1301,7 @@ I&rsquo;m an artist. I turn the weird sketches I make into low-entropy collectio
 		</a>
 		<figcaption>
 			<h2>Mercator Studio</h2>
-			Web-based camera-feed-editing software for Google Meet, Web, 2020.
+			Web-based camera-feed-editing software for Google Meet. Web, 2020.
 		</figcaption>
 	</figure>
 	<figure>
@@ -1335,7 +1336,9 @@ I&rsquo;m an artist. I turn the weird sketches I make into low-entropy collectio
 	<figure>
 		<figcaption>
 			<h2>Contact</h2>
-			Scream at the general direction of Los Angeles.
+			I&lsquo;m available as a freelance web designer and/or developer.<br>
+			Email me at <a href='mailto:liu@x-ing.space'>liu@x-ing.space</a>,<br>
+			or send a message to Xing#7270 on Discord.
 		</figcaption>
 	</figure>
 </article>

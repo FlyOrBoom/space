@@ -11,6 +11,11 @@ article
 	scroll-snap-type:y mandatory;
 }
 
+article:not(:focus):not(:focus-within) :not(h1)
+{
+	display:none;
+}
+
 article:hover
 {
 	z-index:90;

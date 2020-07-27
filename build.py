@@ -2,7 +2,7 @@ import re, glob
 
 css_layout='''
 fonts
-broad
+main
 parts
 navigation
 articles/main
