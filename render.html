@@ -62,7 +62,7 @@ const select = document.getElementById('select')
 const canvas = document.getElementById('canvas')
 const fresh = window.location.toString().split('?svg=')[1]
 const draw = function(src){
-  img.src=`showcase/${src}.svg`
+  img.src=`media/${src}.svg`
 }
 img.onload = function(){
   canvas.width=img.width
