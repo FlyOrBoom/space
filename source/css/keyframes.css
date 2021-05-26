@@ -1,241 +1,3 @@
-@keyframes about-reverse
-{
-	100%
-	{
-		clip-path:polygon(
-			0.0vw	50.0vh,
-			25.0vw	50.0vh,
-			25.0vw	50.0vh,
-			25.0vw	50.0vh,
-			25.0vw	50.0vh,
-			25.0vw	50.0vh,
-			25.0vw	100.0vh,
-			0.0vw	100.0vh
-		)
-	}
-	
-	70%
-	{
-		clip-path:polygon(
-			0.0vw	37.5vh,
-			37.5vw	37.5vh,
-			37.5vw	37.5vh,
-			37.5vw	50.0vh,
-			37.5vw	50.0vh,
-			37.5vw	50.0vh,
-			37.5vw	100.0vh,
-			0.0vw	100.0vh
-		)
-	}
-	50%
-	{
-		clip-path:polygon(
-			0.0vw	37.5vh,
-			37.5vw	37.5vh,
-			37.5vw	37.5vh,
-			50.0vw	50.0vh,
-			50.0vw	50.0vh,
-			37.5vw	50.0vh,
-			37.5vw	100.0vh,
-			0.0vw	100.0vh
-		)
-	}
-	
-	40%
-	{
-		clip-path:polygon(
-			0.0vw	37.5vh,
-			37.5vw	37.5vh,
-			37.5vw	37.5vh,
-			50.0vw	37.5vh,
-			50.0vw	50.0vh,
-			37.5vw	50.0vh,
-			37.5vw	100.0vh,
-			0.0vw	100.0vh
-		)
-	}
-	
-	0%
-	{
-		clip-path:polygon(
-			0.0vw	37.5vh,
-			37.5vw	37.5vh,
-			37.5vw	0.0vh,
-			50.0vw	0.0vh,
-			50.0vw	50.0vh,
-			37.5vw	50.0vh,
-			37.5vw	100.0vh,
-			0.0vw	100.0vh
-		)
-	}
-}
-@keyframes about
-{
-	0%
-	{
-		clip-path:polygon(
-			0.0vw	50.0vh,
-			25.0vw	50.0vh,
-			25.0vw	50.0vh,
-			25.0vw	50.0vh,
-			25.0vw	50.0vh,
-			25.0vw	50.0vh,
-			25.0vw	100.0vh,
-			0.0vw	100.0vh
-		)
-	}
-	
-	30%
-	{
-		clip-path:polygon(
-			0.0vw	37.5vh,
-			37.5vw	37.5vh,
-			37.5vw	37.5vh,
-			37.5vw	50.0vh,
-			37.5vw	50.0vh,
-			37.5vw	50.0vh,
-			37.5vw	100.0vh,
-			0.0vw	100.0vh
-		)
-	}
-	
-	50%
-	{
-		clip-path:polygon(
-			0.0vw	37.5vh,
-			37.5vw	37.5vh,
-			37.5vw	37.5vh,
-			50.0vw	50.0vh,
-			50.0vw	50.0vh,
-			37.5vw	50.0vh,
-			37.5vw	100.0vh,
-			0.0vw	100.0vh
-		)
-	}
-	
-	60%
-	{
-		clip-path:polygon(
-			0.0vw	37.5vh,
-			37.5vw	37.5vh,
-			37.5vw	37.5vh,
-			50.0vw	37.5vh,
-			50.0vw	50.0vh,
-			37.5vw	50.0vh,
-			37.5vw	100.0vh,
-			0.0vw	100.0vh
-		)
-	}
-	
-	100%
-	{
-		clip-path:polygon(
-			0.0vw	37.5vh,
-			37.5vw	37.5vh,
-			37.5vw	0.0vh,
-			50.0vw	0.0vh,
-			50.0vw	50.0vh,
-			37.5vw	50.0vh,
-			37.5vw	100.0vh,
-			0.0vw	100.0vh
-		)
-	}
-}
-@keyframes fun
-{
-	0%
-	{
-		clip-path:polygon(
-			87.5vw	37.5vh,
-			87.5vw	37.5vh,
-			100.0vw	37.5vh,
-			100.0vw	100.0vh,
-			87.5vw	100.0vh,
-			87.5vw	87.5vh,
-			87.5vw	87.5vh,
-			87.5vw	37.5vh
-		)
-	}
-
-	50%
-	{
-		clip-path:polygon(
-			75.0vw	37.5vh,
-			75.0vw	25.0vh,
-			100.0vw	25.0vh,
-			100.0vw	100.0vh,
-			75.0vw	100.0vh,
-			75.0vw	87.5vh,
-			75.0vw	87.5vh,
-			75.0vw	37.5vh
-		)
-	}
-
-	100%
-	{
-		clip-path:polygon(
-			62.5vw	37.5vh,
-			62.5vw	25.0vh,
-			100.0vw	25.0vh,
-			100.0vw	100.0vh,
-			62.5vw	100.0vh,
-			62.5vw	87.5vh,
-			75.0vw	87.5vh,
-			75.0vw	37.5vh
-		)
-	}
-
-}
-@keyframes art-reverse
-{
-	100%	
-	{
-		clip-path:polygon(
-			0.0vw	25.0vh,
-			25.0vw	25.0vh,
-			25.0vw	0.0vh,
-			37.5vw	0.0vh,
-			37.5vw	37.5vh,
-			37.5vw	37.5vh,
-			37.5vw	37.5vh,
-			25.0vw	37.5vh,
-			25.0vw	37.5vh,
-			0.0vw	37.5vh
-		)
-	}
-	
-	70%	
-	{
-		clip-path:polygon(
-			0.0vw	12.5vh,
-			12.5vw	12.5vh,
-			12.5vw	0.0vh,
-			50.0vw	0.0vh,
-			50.0vw	50.0vh,
-			37.5vw	50.0vh,
-			37.5vw	50.0vh,
-			25.0vw	50.0vh,
-			25.0vw	50.0vh,
-			0.0vw	50.0vh
-		)
-	}
-	
-	0%	
-	{
-		clip-path:polygon(
-			0.0vw	12.5vh,
-			12.5vw	12.5vh,
-			12.5vw	0.0vh,
-			50.0vw	0.0vh,
-			50.0vw	50.0vh,
-			37.5vw	50.0vh,
-			37.5vw	100.0vh,
-			25.0vw	100.0vh,
-			25.0vw	50.0vh,
-			0.0vw	50.0vh
-		)
-	}
-}
 @keyframes design-reverse
 {
 	100%
@@ -353,94 +115,6 @@
 		)
 	}
 }
-@keyframes about-highlight
-{
-	0%
-	{
-		clip-path:polygon(
-			0.0vw	37.5vh,
-			37.5vw	37.5vh,
-			37.5vw	0.0vh,
-			50.0vw	0.0vh,
-			50.0vw	50.0vh,
-			37.5vw	50.0vh,
-			37.5vw	100.0vh,
-			0.0vw	100.0vh
-		)
-	}
-	
-	30%
-	{
-		clip-path:polygon(
-			0.0vw	0.0vh,
-			0.0vw	0.0vh,
-			0.0vw	0.0vh,
-			50.0vw	0.0vh,
-			50.0vw	50.0vh,
-			50.0vw	50.0vh,
-			50.0vw	100.0vh,
-			0.0vw	100.0vh
-		)
-	}
-	
-	100%
-	{
-		clip-path:polygon(
-			0.0vw	0.0vh,
-			0.0vw	0.0vh,
-			0.0vw	0.0vh,
-			100.0vw	0.0vh,
-			100.0vw	50.0vh,
-			100.0vw	50.0vh,
-			100.0vw	100.0vh,
-			0.0vw	100.0vh
-		)
-	}
-}
-@keyframes fun-reverse
-{
-	100%
-	{
-		clip-path:polygon(
-			87.5vw	37.5vh,
-			87.5vw	37.5vh,
-			100.0vw	37.5vh,
-			100.0vw	100.0vh,
-			87.5vw	100.0vh,
-			87.5vw	87.5vh,
-			87.5vw	87.5vh,
-			87.5vw	37.5vh
-		)
-	}
-
-	50%
-	{
-		clip-path:polygon(
-			75.0vw	37.5vh,
-			75.0vw	25.0vh,
-			100.0vw	25.0vh,
-			100.0vw	100.0vh,
-			75.0vw	100.0vh,
-			75.0vw	87.5vh,
-			75.0vw	87.5vh,
-			75.0vw	37.5vh
-		)
-	}
-
-	0%
-	{
-		clip-path:polygon(
-			62.5vw	37.5vh,
-			62.5vw	25.0vh,
-			100.0vw	25.0vh,
-			100.0vw	100.0vh,
-			62.5vw	100.0vh,
-			62.5vw	87.5vh,
-			75.0vw	87.5vh,
-			75.0vw	37.5vh
-		)
-	}
-}
 @keyframes fun-highlight
 {
 	0%
@@ -501,9 +175,80 @@
 		)
 	}
 }
-@keyframes art
+@keyframes about-reverse
 {
+	100%
+	{
+		clip-path:polygon(
+			0.0vw	50.0vh,
+			25.0vw	50.0vh,
+			25.0vw	50.0vh,
+			25.0vw	50.0vh,
+			25.0vw	50.0vh,
+			25.0vw	50.0vh,
+			25.0vw	100.0vh,
+			0.0vw	100.0vh
+		)
+	}
+	
+	70%
+	{
+		clip-path:polygon(
+			0.0vw	37.5vh,
+			37.5vw	37.5vh,
+			37.5vw	37.5vh,
+			37.5vw	50.0vh,
+			37.5vw	50.0vh,
+			37.5vw	50.0vh,
+			37.5vw	100.0vh,
+			0.0vw	100.0vh
+		)
+	}
+	50%
+	{
+		clip-path:polygon(
+			0.0vw	37.5vh,
+			37.5vw	37.5vh,
+			37.5vw	37.5vh,
+			50.0vw	50.0vh,
+			50.0vw	50.0vh,
+			37.5vw	50.0vh,
+			37.5vw	100.0vh,
+			0.0vw	100.0vh
+		)
+	}
+	
+	40%
+	{
+		clip-path:polygon(
+			0.0vw	37.5vh,
+			37.5vw	37.5vh,
+			37.5vw	37.5vh,
+			50.0vw	37.5vh,
+			50.0vw	50.0vh,
+			37.5vw	50.0vh,
+			37.5vw	100.0vh,
+			0.0vw	100.0vh
+		)
+	}
+	
 	0%
+	{
+		clip-path:polygon(
+			0.0vw	37.5vh,
+			37.5vw	37.5vh,
+			37.5vw	0.0vh,
+			50.0vw	0.0vh,
+			50.0vw	50.0vh,
+			37.5vw	50.0vh,
+			37.5vw	100.0vh,
+			0.0vw	100.0vh
+		)
+	}
+}
+@keyframes art-reverse
+{
+	100%	
 	{
 		clip-path:polygon(
 			0.0vw	25.0vh,
@@ -519,7 +264,7 @@
 		)
 	}
 	
-	30%	
+	70%	
 	{
 		clip-path:polygon(
 			0.0vw	12.5vh,
@@ -535,7 +280,7 @@
 		)
 	}
 	
-	100%	
+	0%	
 	{
 		clip-path:polygon(
 			0.0vw	12.5vh,
@@ -548,6 +293,211 @@
 			25.0vw	100.0vh,
 			25.0vw	50.0vh,
 			0.0vw	50.0vh
+		)
+	}
+}
+@keyframes fun
+{
+	0%
+	{
+		clip-path:polygon(
+			87.5vw	37.5vh,
+			87.5vw	37.5vh,
+			100.0vw	37.5vh,
+			100.0vw	100.0vh,
+			87.5vw	100.0vh,
+			87.5vw	87.5vh,
+			87.5vw	87.5vh,
+			87.5vw	37.5vh
+		)
+	}
+
+	50%
+	{
+		clip-path:polygon(
+			75.0vw	37.5vh,
+			75.0vw	25.0vh,
+			100.0vw	25.0vh,
+			100.0vw	100.0vh,
+			75.0vw	100.0vh,
+			75.0vw	87.5vh,
+			75.0vw	87.5vh,
+			75.0vw	37.5vh
+		)
+	}
+
+	100%
+	{
+		clip-path:polygon(
+			62.5vw	37.5vh,
+			62.5vw	25.0vh,
+			100.0vw	25.0vh,
+			100.0vw	100.0vh,
+			62.5vw	100.0vh,
+			62.5vw	87.5vh,
+			75.0vw	87.5vh,
+			75.0vw	37.5vh
+		)
+	}
+
+}
+@keyframes fun-reverse
+{
+	100%
+	{
+		clip-path:polygon(
+			87.5vw	37.5vh,
+			87.5vw	37.5vh,
+			100.0vw	37.5vh,
+			100.0vw	100.0vh,
+			87.5vw	100.0vh,
+			87.5vw	87.5vh,
+			87.5vw	87.5vh,
+			87.5vw	37.5vh
+		)
+	}
+
+	50%
+	{
+		clip-path:polygon(
+			75.0vw	37.5vh,
+			75.0vw	25.0vh,
+			100.0vw	25.0vh,
+			100.0vw	100.0vh,
+			75.0vw	100.0vh,
+			75.0vw	87.5vh,
+			75.0vw	87.5vh,
+			75.0vw	37.5vh
+		)
+	}
+
+	0%
+	{
+		clip-path:polygon(
+			62.5vw	37.5vh,
+			62.5vw	25.0vh,
+			100.0vw	25.0vh,
+			100.0vw	100.0vh,
+			62.5vw	100.0vh,
+			62.5vw	87.5vh,
+			75.0vw	87.5vh,
+			75.0vw	37.5vh
+		)
+	}
+}
+@keyframes about-highlight
+{
+	0%
+	{
+		clip-path:polygon(
+			0.0vw	37.5vh,
+			37.5vw	37.5vh,
+			37.5vw	0.0vh,
+			50.0vw	0.0vh,
+			50.0vw	50.0vh,
+			37.5vw	50.0vh,
+			37.5vw	100.0vh,
+			0.0vw	100.0vh
+		)
+	}
+	
+	30%
+	{
+		clip-path:polygon(
+			0.0vw	0.0vh,
+			0.0vw	0.0vh,
+			0.0vw	0.0vh,
+			50.0vw	0.0vh,
+			50.0vw	50.0vh,
+			50.0vw	50.0vh,
+			50.0vw	100.0vh,
+			0.0vw	100.0vh
+		)
+	}
+	
+	100%
+	{
+		clip-path:polygon(
+			0.0vw	0.0vh,
+			0.0vw	0.0vh,
+			0.0vw	0.0vh,
+			100.0vw	0.0vh,
+			100.0vw	50.0vh,
+			100.0vw	50.0vh,
+			100.0vw	100.0vh,
+			0.0vw	100.0vh
+		)
+	}
+}
+@keyframes about
+{
+	0%
+	{
+		clip-path:polygon(
+			0.0vw	50.0vh,
+			25.0vw	50.0vh,
+			25.0vw	50.0vh,
+			25.0vw	50.0vh,
+			25.0vw	50.0vh,
+			25.0vw	50.0vh,
+			25.0vw	100.0vh,
+			0.0vw	100.0vh
+		)
+	}
+	
+	30%
+	{
+		clip-path:polygon(
+			0.0vw	37.5vh,
+			37.5vw	37.5vh,
+			37.5vw	37.5vh,
+			37.5vw	50.0vh,
+			37.5vw	50.0vh,
+			37.5vw	50.0vh,
+			37.5vw	100.0vh,
+			0.0vw	100.0vh
+		)
+	}
+	
+	50%
+	{
+		clip-path:polygon(
+			0.0vw	37.5vh,
+			37.5vw	37.5vh,
+			37.5vw	37.5vh,
+			50.0vw	50.0vh,
+			50.0vw	50.0vh,
+			37.5vw	50.0vh,
+			37.5vw	100.0vh,
+			0.0vw	100.0vh
+		)
+	}
+	
+	60%
+	{
+		clip-path:polygon(
+			0.0vw	37.5vh,
+			37.5vw	37.5vh,
+			37.5vw	37.5vh,
+			50.0vw	37.5vh,
+			50.0vw	50.0vh,
+			37.5vw	50.0vh,
+			37.5vw	100.0vh,
+			0.0vw	100.0vh
+		)
+	}
+	
+	100%
+	{
+		clip-path:polygon(
+			0.0vw	37.5vh,
+			37.5vw	37.5vh,
+			37.5vw	0.0vh,
+			50.0vw	0.0vh,
+			50.0vw	50.0vh,
+			37.5vw	50.0vh,
+			37.5vw	100.0vh,
+			0.0vw	100.0vh
 		)
 	}
 }
@@ -667,6 +617,55 @@
 		)
 	}
 }
+@keyframes design-highlight
+{
+	0%
+	{
+		clip-path:polygon(
+			0.0vw	37.5vh,
+			12.5vw	37.5vh,
+			37.5vw	37.5vh,
+			37.5vw	0.0vh,
+			100.0vw	0.0vh,
+			100.0vw	12.5vh,
+			100.0vw	12.5vh,
+			100.0vw	25.0vh,
+			100.0vw	25.0vh,
+			100.0vw	37.5vh,
+			87.5vw	37.5vh,
+			87.5vw	87.5vh,
+			87.5vw	87.5vh,
+			87.5vw	100.0vh,
+			12.5vw	100.0vh,
+			12.5vw	50.0vh,
+			0.0vw	50.0vh
+		)
+	}
+	
+	100%
+	{
+		clip-path:polygon(
+			0.0vw	0.0vh,
+			0.0vw	0.0vh,
+			0.0vw	0.0vh,
+			0.0vw	0.0vh,
+			100.0vw	0.0vh,
+			100.0vw	12.5vh,
+			100.0vw	12.5vh,
+			100.0vw	25.0vh,
+			100.0vw	25.0vh,
+			100.0vw	37.5vh,
+			100.0vw	37.5vh,
+			100.0vw	87.5vh,
+			100.0vw	87.5vh,
+			100.0vw	100.0vh,
+			0.0vw	100.0vh,
+			0.0vw	50.0vh,
+			0.0vw	50.0vh
+		)
+	}
+}
+
 @keyframes art-highlight
 {
 	0%	
@@ -733,52 +732,53 @@
 		)
 	}
 }
-@keyframes design-highlight
+@keyframes art
 {
 	0%
 	{
 		clip-path:polygon(
-			0.0vw	37.5vh,
-			12.5vw	37.5vh,
-			37.5vw	37.5vh,
+			0.0vw	25.0vh,
+			25.0vw	25.0vh,
+			25.0vw	0.0vh,
 			37.5vw	0.0vh,
-			100.0vw	0.0vh,
-			100.0vw	12.5vh,
-			100.0vw	12.5vh,
-			100.0vw	25.0vh,
-			100.0vw	25.0vh,
-			100.0vw	37.5vh,
-			87.5vw	37.5vh,
-			87.5vw	87.5vh,
-			87.5vw	87.5vh,
-			87.5vw	100.0vh,
-			12.5vw	100.0vh,
-			12.5vw	50.0vh,
+			37.5vw	37.5vh,
+			37.5vw	37.5vh,
+			37.5vw	37.5vh,
+			25.0vw	37.5vh,
+			25.0vw	37.5vh,
+			0.0vw	37.5vh
+		)
+	}
+	
+	30%	
+	{
+		clip-path:polygon(
+			0.0vw	12.5vh,
+			12.5vw	12.5vh,
+			12.5vw	0.0vh,
+			50.0vw	0.0vh,
+			50.0vw	50.0vh,
+			37.5vw	50.0vh,
+			37.5vw	50.0vh,
+			25.0vw	50.0vh,
+			25.0vw	50.0vh,
 			0.0vw	50.0vh
 		)
 	}
 	
-	100%
+	100%	
 	{
 		clip-path:polygon(
-			0.0vw	0.0vh,
-			0.0vw	0.0vh,
-			0.0vw	0.0vh,
-			0.0vw	0.0vh,
-			100.0vw	0.0vh,
-			100.0vw	12.5vh,
-			100.0vw	12.5vh,
-			100.0vw	25.0vh,
-			100.0vw	25.0vh,
-			100.0vw	37.5vh,
-			100.0vw	37.5vh,
-			100.0vw	87.5vh,
-			100.0vw	87.5vh,
-			100.0vw	100.0vh,
-			0.0vw	100.0vh,
-			0.0vw	50.0vh,
+			0.0vw	12.5vh,
+			12.5vw	12.5vh,
+			12.5vw	0.0vh,
+			50.0vw	0.0vh,
+			50.0vw	50.0vh,
+			37.5vw	50.0vh,
+			37.5vw	100.0vh,
+			25.0vw	100.0vh,
+			25.0vw	50.0vh,
 			0.0vw	50.0vh
 		)
 	}
 }
-

@@ -35,7 +35,7 @@
 <circle cx='500' cy='510' r='480' fill='none' stroke='rgba(44,2,4)' stroke-width='72' filter='url(#cave-turbul)'/>
 <circle cx='500' cy='510' r='420' fill='none' stroke='rgba(48,4,8)' stroke-width='64' filter='url(#cave-turbul)'/>
 <circle cx='500' cy='510' r='384' fill='none' stroke='rgba(64,8,24)' stroke-width='28' filter='url(#cave-turbul)'/>
-<image href='curiosity.png' x='0' y='0' height='1000' width='1000' opacity='0'/>
+<image href=curiosity.png x='0' y='0' height='1000' width='1000' opacity='0'/>
 
 <path d='
 M518.4 853
