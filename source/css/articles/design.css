@@ -20,9 +20,9 @@
 #design>h1
 {
 	top:0;
-	left:37.5vw;
-	width:62.5vw;
-	height:100vh;
+	left:37.5%;
+	width:62.5%;
+	height:100%;
 	background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 32' preserveAspectRatio='none'%3E%3Cpath fill='%23fff' fill-rule='evenodd' d='M4 0H7V3H4M5 1H8V2H5M4 4H20V5H5V8H8V9H5V12H12V13H4M4 14H12V15H5V16H12V19H0V16H1V18H11V17H4M0 20H3V21H2V31H3V32H0V31H1V21H0M4 20H8V21H5V31H7V29H6V28H8V32H4M6 22H7V24H9V26H11V20H12V28H11V27H10V25H8V23H7V27H6'/%3E%3C/svg%3E")
 }
 

@@ -8,8 +8,8 @@
 	opacity:0;
 	mix-blend-mode:exclusion;
 	right:0;
-	width:12.5vw;
-	height:12.5vh;
+	width:12.5%;
+	height:12.5%;
 	z-index:100;
 	pointer-events:none;
 	cursor:pointer;

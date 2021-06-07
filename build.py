@@ -31,7 +31,7 @@ end
 open('source/css/keyframes.css','w').write(
 	re.sub(
 		r'\d\t\d',
-		lambda m: str(int(m.group()[0])*12.5)+'vw\t'+str(int(m.group()[2])*12.5)+'vh',
+		lambda m: '\t'.join([str(int(x)*12.5)+'%' for x in [m.group()[0],m.group()[2]]]),
 		''.join(
 			map(
 				lambda f: open(f).read(),
