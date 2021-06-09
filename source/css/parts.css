@@ -3,9 +3,9 @@ figure
 	position:static;
 	height:100vh;
 	display:flex;
-	flex-wrap:wrap;
+	flex-direction:column;
 	justify-content:center;
-	align-content:center;
+	align-items:center;
 	opacity:0;
 	margin-block:50vh;
 	scroll-snap-align:center;
@@ -41,17 +41,41 @@ a
 	cursor:pointer;
 }
 
-a:hover{
+a:hover
+{
 	text-decoration:none
 }
 
 /***************************/
 
-img,
-video
+figure>:not(figcaption)
 {
 	max-width:80vmin;
 	max-height:80vmin;
+}
+
+/***************************/
+
+ul
+{
+	display:block;
+	font-size:0.8rem;
+	overflow:hidden scroll;
+}
+li
+{
+	display:content;
+	text-align:left;
+}
+
+/***************************/
+
+select
+{
+	background:transparent;
+	font-family:inherit;
+	font-size:inherit;
+	border: 0;
 }
 
 /***************************/
