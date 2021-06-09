@@ -67,7 +67,7 @@ body
 	box-sizing:border-box;
 	margin:0;
 	padding:0;
-	font-size:1rem;
+	font-size:inherit;
 }
 
 :focus
@@ -92,9 +92,9 @@ figure
 	position:static;
 	height:100vh;
 	display:flex;
-	flex-wrap:wrap;
+	flex-direction:column;
 	justify-content:center;
-	align-content:center;
+	align-items:center;
 	opacity:0;
 	margin-block:50vh;
 	scroll-snap-align:center;
@@ -130,17 +130,43 @@ a
 	cursor:pointer;
 }
 
-a:hover{
+a:hover
+{
 	text-decoration:none
 }
 
 /***************************/
 
 img,
-video
+video,
+ul
 {
 	max-width:80vmin;
 	max-height:80vmin;
+}
+
+/***************************/
+
+ul
+{
+	display:block;
+	font-size:0.8rem;
+	overflow:hidden scroll;
+}
+li
+{
+	display:content;
+	text-align:left;
+}
+
+/***************************/
+
+select
+{
+	background:transparent;
+	font-family:inherit;
+	font-size:inherit;
+	border: 0;
 }
 
 /***************************/
@@ -1202,12 +1228,95 @@ h1
 	<figure>
 		<figcaption>
 			<h2>About</h2>
-			Xing Liu
+			I&rsquo;m
+				<select>
+					<option default>Xing Liu</option>
+					<optgroup label=/aka>
+						<option>Shawn</option>
+						<option>Crossing</option>
+						<option>XYZt</option>
+					</optgroup>
+				</select>,
+			a web developer and graphic designer with passion for all sorts of art.
 		</figcaption>
 	</figure>
 	<figure>
+		<ul>
+			<li>
+				2021: Reaching 2nd and 5th place in the <a href=https://scioly.org/wiki/index.php/Cybersecurity'>Cybersecurity event</a> at Science Olympiad&rsquo;s regional and state tournaments.
+			</li><li>
+				2020–2021: Lead developer of <a href=https://edit.ahs.app">Aces</a>, a content management system for Arcadia High School's mobile app and news feed.
+			</li><li>
+				2020–2021: Designer for Arcadia High School's 2021 yearbook at AHS Advanced Journalism and Design.
+			</li><li>
+				2020–2021: Creator of <a href=https://x-ing.space/mercator">Mercator Studio</a>, a browser extension that applies camera effects to Google Meet.
+			</li><li>
+				2020–2021: Creator of <a href=https://x-ing.space/rippleweave">RippleWeave</a>, a colorful 2D function grapher and generative mathematical art project. 
+			</li><li>
+				2019–2021: Creator of <a href=https://ahs.app">ahs.app</a>, a news reader and toolset for Arcadia High School students. 
+			</li><li>
+				2018–2021: Co-captain, programmer, and designer for the FTC 15303 robotics team. 
+			</li><li>
+				2020: Lead graphics programmer and designer for <a href=https://x-ing.space/koipond">Koidoro</a>, a studying app centered around kois in a pond. 
+			</li><li>
+				2019: Creator of FTC 15303’s <a href=https://robotics.majorstem.org">website</a>. 
+			</li><li>
+				2019: Creator of a <a href=https://x-ing.space/mercury-redstone">Mercury-Redstone rocket simulation</a>.
+			</li><li>
+				2018: Creator of <a href=https://x-ing.space/cliques">Cliques</a>, an online single-player card game. 
+			</li>
+		</ul>
 		<figcaption>
-I&rsquo;m an artist. I turn the weird sketches I make into low-entropy collections of ink, dust, code, and whatnot.  
+			<h3>Experience</h3>
+			I have been designing and programming websites and apps for over 3 years. I’ve helped create and maintain over thirty web projects, both professionally and for fun.
+		</figcaption>
+	</figure>
+	<figure>
+			<ul>
+				<li>
+					Modern HTML, CSS, and JS
+				</li><li>
+					Vue.js, React, and HyperApp frameworks
+				</li><li>
+					WebGL and Three.js rendering
+				</li><li>
+					Browser extensions and Progressive Web Apps
+				</li><li>
+					Java/Kotlin Android app development
+				</li><li>
+					Firebase hosting, databases, and functions
+				</li><li>
+					Bash, Jq, Python, Apache, Node.js and Deno
+				</li><li>
+					Discord and Slack bots
+				</li><li>
+					Adobe Photoshop, Lightroom, Illustrator, Animate, and InDesign
+				</li><li>
+					InkScape, Krita, Darktable, and Blender
+				</li>
+			</ul>
+		<figcaption>
+			<h3>Skillset</h3>
+			Though I primarily work in frontend, due to the diversity of formats my projects take on, I&rsquo;ve familiarized myself with every one of these tools.
+		</figcaption>
+	</figure>
+	<figure>
+		<ul>
+			<li>
+				Acrylic painting
+			</li><li>
+				Mathematical art
+			</li><li>
+				Chinese calligraphy
+			</li><li>
+				Chess
+			</li><li>
+				Lakes
+			</li>
+		</ul>
+		<figcaption>
+			<h3>Hobbies</h3>
+			You should try some of these out :D
 		</figcaption>
 	</figure>
 </article>
