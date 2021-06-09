@@ -48,7 +48,9 @@ a:hover
 
 /***************************/
 
-figure>:not(figcaption)
+img,
+video,
+ul
 {
 	max-width:80vmin;
 	max-height:80vmin;
