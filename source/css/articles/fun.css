@@ -9,8 +9,7 @@
 	animation-name:fun
 }
 
-#fun:focus,
-#fun:focus-within
+#fun:target
 {
 	--duration:200ms;
 	animation-name:fun-highlight

@@ -5,7 +5,7 @@ fonts
 main
 parts
 navigation
-articles/main
+article
 articles/about
 articles/art
 articles/design

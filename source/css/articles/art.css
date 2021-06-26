@@ -13,8 +13,7 @@
 	animation-name:art
 }
 
-#art:focus,
-#art:focus-within
+#art:target
 {
 	animation-name:art-highlight
 }

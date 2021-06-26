@@ -54,7 +54,8 @@ body
 
 /***************************/
 
-::selection{
+::selection
+{
 	background:grey;
 	color:white;
 }
@@ -100,8 +101,7 @@ figure
 	scroll-snap-align:center;
 }
 
-:focus>figure,
-:focus-within>figure
+:target>figure
 {
 	opacity:1;
 }
@@ -185,36 +185,17 @@ select
 	width:12.5%;
 	height:12.5%;
 	z-index:100;
-	pointer-events:none;
-	cursor:pointer;
 }
 
-article:focus~#back,
-article:focus-within~#back
+article:target~#back
 {
 	opacity:1;
-	pointer-events:auto;
 }
 
-article:focus~#back:hover,
-article:focus-within~#back:hover
+article:target~#back:hover
 {
 	background:white;
 	color:black;
-}
-
-/***************************/
-
-#fog{
-	z-index:50;
-	opacity:.2;
-	backdrop-filter:blur(1vw);
-	pointer-events:none;
-}
-
-article:hover~#fog{
-	background:black;
-	opacity:.5;
 }
 
 /***************************/
@@ -223,7 +204,7 @@ article:hover~#fog{
 {
 	pointer-events:none;
 	opacity:0;
-	z-index:90;
+	z-index:75;
 }
 
 #blocker path{
@@ -234,7 +215,8 @@ article:hover~#fog{
 
 /***************************/
 
-article {
+article
+{
 	margin:0;
 	padding:0;
 	overflow:hidden;
@@ -246,18 +228,18 @@ article {
 	scroll-snap-type:y mandatory;
 }
 
-article:not(:focus):not(:focus-within) :not(h1)
+article:not(:target)>:not(h1),
+article:target>h1
 {
 	display:none;
 }
 
 article:hover
 {
-	z-index:90;
+	z-index:50;
 }
 
-article:focus,
-article:focus-within
+article:target
 {
 	cursor:default;
 	overflow-y:scroll;
@@ -270,13 +252,17 @@ h1
 {
 	position:fixed;
 	color:transparent;
-	pointer-events:none;
 	background-size:100% 100%;
 	mix-blend-mode:exclusion;
 }
+h1>a
+{
+	display: block;
+	width: 100%;
+	height: 100%;
+}
 
-:focus>h1,
-:focus-within>h1
+:target>h1
 {
 	opacity:0
 }
@@ -296,8 +282,7 @@ h1
 	animation-name:about
 }
 
-#about:focus,
-#about:focus-within
+#about:target
 {
 	--duration:150ms;
 	animation-name:about-highlight
@@ -329,8 +314,7 @@ h1
 	animation-name:art
 }
 
-#art:focus,
-#art:focus-within
+#art:target
 {
 	animation-name:art-highlight
 }
@@ -358,8 +342,7 @@ h1
 	animation-name:design
 }
 
-#design:focus,
-#design:focus-within
+#design:target
 {
 	--duration:80ms;
 	animation-name:design-highlight
@@ -389,8 +372,7 @@ h1
 	clip-path:inset(0 75% 75% 0);
 }
 
-#contact:focus,
-#contact:focus-within
+#contact:target
 {
 	--duration:200ms;
 	clip-path:inset(0 0 0 0);
@@ -418,8 +400,7 @@ h1
 	animation-name:fun
 }
 
-#fun:focus,
-#fun:focus-within
+#fun:target
 {
 	--duration:200ms;
 	animation-name:fun-highlight
@@ -1224,8 +1205,8 @@ h1
 </style>
 </head>
 <body>
-<article id=about tabindex=0>
-	<h1>About</h1>
+<article id=about>
+	<h1><a href=#about>About</a></h1>
 	<figure>
 		<figcaption>
 			<h2>About</h2>
@@ -1321,8 +1302,8 @@ h1
 		</figcaption>
 	</figure>
 </article>
-<article id=art tabindex=0>
-	<h1>Art</h1>
+<article id=art>
+	<h1><a href=#art>Art</a></h1>
 	<figure>
 		<figcaption><h2>Art</h2>An assortment of colors made by pens, brushes, vectors, pixels, and frames.</figcaption>
 	</figure>
@@ -1510,8 +1491,8 @@ h1
 		</figcaption>
 	</figure>
 </article>
-<article id=design tabindex=0>
-	<h1>Design</h1>
+<article id=design>
+	<h1><a href=#design>Design</a></h1>
 	<figure>
 		<figcaption>
 			<h2>Design</h2>
@@ -1606,8 +1587,8 @@ h1
 		</figcaption>
 	</figure>
 </article>
-<article id=contact tabindex=0>
-	<h1>Contact</h1>
+<article id=contact>
+	<h1><a href=#contact>Contact</a></h1>
 	<figure>
 		<figcaption>
 			<h2>Contact</h2>
@@ -1618,7 +1599,7 @@ h1
 	</figure>
 </article>
 <article id=fun tabindex=0>
-	<h1>Fun</h1>
+	<h1><a href=#fun>Fun</a></h1>
 	<figure>
 		<figcaption>
 			<h2>Fun</h2>
@@ -1665,7 +1646,7 @@ h1
 		</figcaption>
 	</figure>
 </article>
-<div id=back role=button aria-hidden=true>back</div>
+<a id=back href=#>back</a>
 <svg id='blocker' viewBox='0 0 16 16' preserveAspectRatio='none' aria-hidden='true'>
 	<path d='M0 3h3v-3M0 7h7v-7M5 7v9M16 1h-6M16 5h-6M13 5v10h-3' fill='none' stroke-width='2'/>
 </svg>

@@ -11,36 +11,17 @@
 	width:12.5%;
 	height:12.5%;
 	z-index:100;
-	pointer-events:none;
-	cursor:pointer;
 }
 
-article:focus~#back,
-article:focus-within~#back
+article:target~#back
 {
 	opacity:1;
-	pointer-events:auto;
 }
 
-article:focus~#back:hover,
-article:focus-within~#back:hover
+article:target~#back:hover
 {
 	background:white;
 	color:black;
-}
-
-/***************************/
-
-#fog{
-	z-index:50;
-	opacity:.2;
-	backdrop-filter:blur(1vw);
-	pointer-events:none;
-}
-
-article:hover~#fog{
-	background:black;
-	opacity:.5;
 }
 
 /***************************/
@@ -49,7 +30,7 @@ article:hover~#fog{
 {
 	pointer-events:none;
 	opacity:0;
-	z-index:90;
+	z-index:75;
 }
 
 #blocker path{

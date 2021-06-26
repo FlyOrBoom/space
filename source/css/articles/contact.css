@@ -11,8 +11,7 @@
 	clip-path:inset(0 75% 75% 0);
 }
 
-#contact:focus,
-#contact:focus-within
+#contact:target
 {
 	--duration:200ms;
 	clip-path:inset(0 0 0 0);

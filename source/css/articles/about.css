@@ -11,8 +11,7 @@
 	animation-name:about
 }
 
-#about:focus,
-#about:focus-within
+#about:target
 {
 	--duration:150ms;
 	animation-name:about-highlight

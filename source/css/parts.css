@@ -11,8 +11,7 @@ figure
 	scroll-snap-align:center;
 }
 
-:focus>figure,
-:focus-within>figure
+:target>figure
 {
 	opacity:1;
 }

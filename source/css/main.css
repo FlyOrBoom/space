@@ -23,7 +23,8 @@ body
 
 /***************************/
 
-::selection{
+::selection
+{
 	background:grey;
 	color:white;
 }

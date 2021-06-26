@@ -10,8 +10,7 @@
 	animation-name:design
 }
 
-#design:focus,
-#design:focus-within
+#design:target
 {
 	--duration:80ms;
 	animation-name:design-highlight
