@@ -54,6 +54,7 @@ ul
 {
 	max-width:80vmin;
 	max-height:80vmin;
+	object-fit:contain;
 }
 
 /***************************/
