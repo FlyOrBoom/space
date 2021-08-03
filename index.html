@@ -116,7 +116,7 @@ figcaption
 
 /***************************/
 
-h2
+h3
 {
 	font-weight:bold;
 }
@@ -228,8 +228,8 @@ article
 	scroll-snap-type:y mandatory;
 }
 
-article:not(:target)>:not(h1),
-article:target>h1
+article:not(:target)>:not(h2),
+article:target>h2
 {
 	display:none;
 }
@@ -248,21 +248,21 @@ article:target
 
 /***************************/
 
-h1
+h2
 {
 	position:fixed;
 	color:transparent;
 	background-size:100% 100%;
 	mix-blend-mode:exclusion;
 }
-h1>a
+h2>a
 {
 	display: block;
 	width: 100%;
 	height: 100%;
 }
 
-:target>h1
+:target>h2
 {
 	opacity:0
 }
@@ -288,7 +288,7 @@ h1>a
 	animation-name:about-highlight
 }
 
-#about>h1
+#about>h2
 {
 	left:0;
 	bottom:0;
@@ -319,7 +319,7 @@ h1>a
 	animation-name:art-highlight
 }
 
-#art>h1
+#art>h2
 {
 	left:0;
 	top:0;
@@ -348,7 +348,7 @@ h1>a
 	animation-name:design-highlight
 }
 
-#design>h1
+#design>h2
 {
 	top:0;
 	left:37.5%;
@@ -378,7 +378,7 @@ h1>a
 	clip-path:inset(0 0 0 0);
 }
 
-#contact>h1
+#contact>h2
 {
 	width:12.5%;
 	height:12.5%;
@@ -406,7 +406,7 @@ h1>a
 	animation-name:fun-highlight
 }
 
-#fun>h1
+#fun>h2
 {
 	bottom:0;
 	right:0;
@@ -417,244 +417,6 @@ h1>a
 
 /***************************/
 
-@keyframes about-reverse
-{
-	100%
-	{
-		clip-path:polygon(
-			0.0%	50.0%,
-			25.0%	50.0%,
-			25.0%	50.0%,
-			25.0%	50.0%,
-			25.0%	50.0%,
-			25.0%	50.0%,
-			25.0%	100.0%,
-			0.0%	100.0%
-		)
-	}
-	
-	70%
-	{
-		clip-path:polygon(
-			0.0%	37.5%,
-			37.5%	37.5%,
-			37.5%	37.5%,
-			37.5%	50.0%,
-			37.5%	50.0%,
-			37.5%	50.0%,
-			37.5%	100.0%,
-			0.0%	100.0%
-		)
-	}
-	50%
-	{
-		clip-path:polygon(
-			0.0%	37.5%,
-			37.5%	37.5%,
-			37.5%	37.5%,
-			50.0%	50.0%,
-			50.0%	50.0%,
-			37.5%	50.0%,
-			37.5%	100.0%,
-			0.0%	100.0%
-		)
-	}
-	
-	40%
-	{
-		clip-path:polygon(
-			0.0%	37.5%,
-			37.5%	37.5%,
-			37.5%	37.5%,
-			50.0%	37.5%,
-			50.0%	50.0%,
-			37.5%	50.0%,
-			37.5%	100.0%,
-			0.0%	100.0%
-		)
-	}
-	
-	0%
-	{
-		clip-path:polygon(
-			0.0%	37.5%,
-			37.5%	37.5%,
-			37.5%	0.0%,
-			50.0%	0.0%,
-			50.0%	50.0%,
-			37.5%	50.0%,
-			37.5%	100.0%,
-			0.0%	100.0%
-		)
-	}
-}
-@keyframes about
-{
-	0%
-	{
-		clip-path:polygon(
-			0.0%	50.0%,
-			25.0%	50.0%,
-			25.0%	50.0%,
-			25.0%	50.0%,
-			25.0%	50.0%,
-			25.0%	50.0%,
-			25.0%	100.0%,
-			0.0%	100.0%
-		)
-	}
-	
-	30%
-	{
-		clip-path:polygon(
-			0.0%	37.5%,
-			37.5%	37.5%,
-			37.5%	37.5%,
-			37.5%	50.0%,
-			37.5%	50.0%,
-			37.5%	50.0%,
-			37.5%	100.0%,
-			0.0%	100.0%
-		)
-	}
-	
-	50%
-	{
-		clip-path:polygon(
-			0.0%	37.5%,
-			37.5%	37.5%,
-			37.5%	37.5%,
-			50.0%	50.0%,
-			50.0%	50.0%,
-			37.5%	50.0%,
-			37.5%	100.0%,
-			0.0%	100.0%
-		)
-	}
-	
-	60%
-	{
-		clip-path:polygon(
-			0.0%	37.5%,
-			37.5%	37.5%,
-			37.5%	37.5%,
-			50.0%	37.5%,
-			50.0%	50.0%,
-			37.5%	50.0%,
-			37.5%	100.0%,
-			0.0%	100.0%
-		)
-	}
-	
-	100%
-	{
-		clip-path:polygon(
-			0.0%	37.5%,
-			37.5%	37.5%,
-			37.5%	0.0%,
-			50.0%	0.0%,
-			50.0%	50.0%,
-			37.5%	50.0%,
-			37.5%	100.0%,
-			0.0%	100.0%
-		)
-	}
-}
-@keyframes fun
-{
-	0%
-	{
-		clip-path:polygon(
-			87.5%	37.5%,
-			87.5%	37.5%,
-			100.0%	37.5%,
-			100.0%	100.0%,
-			87.5%	100.0%,
-			87.5%	87.5%,
-			87.5%	87.5%,
-			87.5%	37.5%
-		)
-	}
-
-	50%
-	{
-		clip-path:polygon(
-			75.0%	37.5%,
-			75.0%	25.0%,
-			100.0%	25.0%,
-			100.0%	100.0%,
-			75.0%	100.0%,
-			75.0%	87.5%,
-			75.0%	87.5%,
-			75.0%	37.5%
-		)
-	}
-
-	100%
-	{
-		clip-path:polygon(
-			62.5%	37.5%,
-			62.5%	25.0%,
-			100.0%	25.0%,
-			100.0%	100.0%,
-			62.5%	100.0%,
-			62.5%	87.5%,
-			75.0%	87.5%,
-			75.0%	37.5%
-		)
-	}
-
-}
-@keyframes art-reverse
-{
-	100%	
-	{
-		clip-path:polygon(
-			0.0%	25.0%,
-			25.0%	25.0%,
-			25.0%	0.0%,
-			37.5%	0.0%,
-			37.5%	37.5%,
-			37.5%	37.5%,
-			37.5%	37.5%,
-			25.0%	37.5%,
-			25.0%	37.5%,
-			0.0%	37.5%
-		)
-	}
-	
-	70%	
-	{
-		clip-path:polygon(
-			0.0%	12.5%,
-			12.5%	12.5%,
-			12.5%	0.0%,
-			50.0%	0.0%,
-			50.0%	50.0%,
-			37.5%	50.0%,
-			37.5%	50.0%,
-			25.0%	50.0%,
-			25.0%	50.0%,
-			0.0%	50.0%
-		)
-	}
-	
-	0%	
-	{
-		clip-path:polygon(
-			0.0%	12.5%,
-			12.5%	12.5%,
-			12.5%	0.0%,
-			50.0%	0.0%,
-			50.0%	50.0%,
-			37.5%	50.0%,
-			37.5%	100.0%,
-			25.0%	100.0%,
-			25.0%	50.0%,
-			0.0%	50.0%
-		)
-	}
-}
 @keyframes design-reverse
 {
 	100%
@@ -772,47 +534,53 @@ h1>a
 		)
 	}
 }
-@keyframes about-highlight
+@keyframes art-reverse
 {
-	0%
+	100%	
 	{
 		clip-path:polygon(
-			0.0%	37.5%,
-			37.5%	37.5%,
+			0.0%	25.0%,
+			25.0%	25.0%,
+			25.0%	0.0%,
 			37.5%	0.0%,
+			37.5%	37.5%,
+			37.5%	37.5%,
+			37.5%	37.5%,
+			25.0%	37.5%,
+			25.0%	37.5%,
+			0.0%	37.5%
+		)
+	}
+	
+	70%	
+	{
+		clip-path:polygon(
+			0.0%	12.5%,
+			12.5%	12.5%,
+			12.5%	0.0%,
+			50.0%	0.0%,
+			50.0%	50.0%,
+			37.5%	50.0%,
+			37.5%	50.0%,
+			25.0%	50.0%,
+			25.0%	50.0%,
+			0.0%	50.0%
+		)
+	}
+	
+	0%	
+	{
+		clip-path:polygon(
+			0.0%	12.5%,
+			12.5%	12.5%,
+			12.5%	0.0%,
 			50.0%	0.0%,
 			50.0%	50.0%,
 			37.5%	50.0%,
 			37.5%	100.0%,
-			0.0%	100.0%
-		)
-	}
-	
-	30%
-	{
-		clip-path:polygon(
-			0.0%	0.0%,
-			0.0%	0.0%,
-			0.0%	0.0%,
-			50.0%	0.0%,
-			50.0%	50.0%,
-			50.0%	50.0%,
-			50.0%	100.0%,
-			0.0%	100.0%
-		)
-	}
-	
-	100%
-	{
-		clip-path:polygon(
-			0.0%	0.0%,
-			0.0%	0.0%,
-			0.0%	0.0%,
-			100.0%	0.0%,
-			100.0%	50.0%,
-			100.0%	50.0%,
-			100.0%	100.0%,
-			0.0%	100.0%
+			25.0%	100.0%,
+			25.0%	50.0%,
+			0.0%	50.0%
 		)
 	}
 }
@@ -860,6 +628,55 @@ h1>a
 		)
 	}
 }
+@keyframes design-highlight
+{
+	0%
+	{
+		clip-path:polygon(
+			0.0%	37.5%,
+			12.5%	37.5%,
+			37.5%	37.5%,
+			37.5%	0.0%,
+			100.0%	0.0%,
+			100.0%	12.5%,
+			100.0%	12.5%,
+			100.0%	25.0%,
+			100.0%	25.0%,
+			100.0%	37.5%,
+			87.5%	37.5%,
+			87.5%	87.5%,
+			87.5%	87.5%,
+			87.5%	100.0%,
+			12.5%	100.0%,
+			12.5%	50.0%,
+			0.0%	50.0%
+		)
+	}
+	
+	100%
+	{
+		clip-path:polygon(
+			0.0%	0.0%,
+			0.0%	0.0%,
+			0.0%	0.0%,
+			0.0%	0.0%,
+			100.0%	0.0%,
+			100.0%	12.5%,
+			100.0%	12.5%,
+			100.0%	25.0%,
+			100.0%	25.0%,
+			100.0%	37.5%,
+			100.0%	37.5%,
+			100.0%	87.5%,
+			100.0%	87.5%,
+			100.0%	100.0%,
+			0.0%	100.0%,
+			0.0%	50.0%,
+			0.0%	50.0%
+		)
+	}
+}
+
 @keyframes fun-highlight
 {
 	0%
@@ -920,6 +737,161 @@ h1>a
 		)
 	}
 }
+@keyframes art-highlight
+{
+	0%	
+	{
+		clip-path:polygon(
+			0.0%	12.5%,
+			12.5%	12.5%,
+			12.5%	0.0%,
+			50.0%	0.0%,
+			50.0%	50.0%,
+			37.5%	50.0%,
+			37.5%	100.0%,
+			25.0%	100.0%,
+			25.0%	50.0%,
+			0.0%	50.0%
+		)
+	}
+	
+	20%	
+	{
+		clip-path:polygon(
+			0.0%	0.0%,
+			0.0%	0.0%,
+			0.0%	0.0%,
+			50.0%	0.0%,
+			50.0%	50.0%,
+			50.0%	50.0%,
+			50.0%	100.0%,
+			12.5%	100.0%,
+			12.5%	62.5%,
+			0.0%	62.5%
+		)
+	}
+	
+	40%	
+	{
+		clip-path:polygon(
+			0.0%	0.0%,
+			0.0%	0.0%,
+			0.0%	0.0%,
+			62.5%	0.0%,
+			62.5%	50.0%,
+			62.5%	50.0%,
+			62.5%	100.0%,
+			0.0%	100.0%,
+			0.0%	75.0%,
+			0.0%	75.0%
+		)
+	}
+	
+	100%
+	{
+		clip-path:polygon(
+			0.0%	0.0%,
+			0.0%	0.0%,
+			0.0%	0.0%,
+			100.0%	0.0%,
+			100.0%	50.0%,
+			100.0%	50.0%,
+			100.0%	100.0%,
+			0.0%	100.0%,
+			0.0%	75.0%,
+			0.0%	75.0%
+		)
+	}
+}
+@keyframes about-highlight
+{
+	0%
+	{
+		clip-path:polygon(
+			0.0%	37.5%,
+			37.5%	37.5%,
+			37.5%	0.0%,
+			50.0%	0.0%,
+			50.0%	50.0%,
+			37.5%	50.0%,
+			37.5%	100.0%,
+			0.0%	100.0%
+		)
+	}
+	
+	30%
+	{
+		clip-path:polygon(
+			0.0%	0.0%,
+			0.0%	0.0%,
+			0.0%	0.0%,
+			50.0%	0.0%,
+			50.0%	50.0%,
+			50.0%	50.0%,
+			50.0%	100.0%,
+			0.0%	100.0%
+		)
+	}
+	
+	100%
+	{
+		clip-path:polygon(
+			0.0%	0.0%,
+			0.0%	0.0%,
+			0.0%	0.0%,
+			100.0%	0.0%,
+			100.0%	50.0%,
+			100.0%	50.0%,
+			100.0%	100.0%,
+			0.0%	100.0%
+		)
+	}
+}
+@keyframes fun
+{
+	0%
+	{
+		clip-path:polygon(
+			87.5%	37.5%,
+			87.5%	37.5%,
+			100.0%	37.5%,
+			100.0%	100.0%,
+			87.5%	100.0%,
+			87.5%	87.5%,
+			87.5%	87.5%,
+			87.5%	37.5%
+		)
+	}
+
+	50%
+	{
+		clip-path:polygon(
+			75.0%	37.5%,
+			75.0%	25.0%,
+			100.0%	25.0%,
+			100.0%	100.0%,
+			75.0%	100.0%,
+			75.0%	87.5%,
+			75.0%	87.5%,
+			75.0%	37.5%
+		)
+	}
+
+	100%
+	{
+		clip-path:polygon(
+			62.5%	37.5%,
+			62.5%	25.0%,
+			100.0%	25.0%,
+			100.0%	100.0%,
+			62.5%	100.0%,
+			62.5%	87.5%,
+			75.0%	87.5%,
+			75.0%	37.5%
+		)
+	}
+
+}
 @keyframes art
 {
 	0%
@@ -967,6 +939,77 @@ h1>a
 			25.0%	100.0%,
 			25.0%	50.0%,
 			0.0%	50.0%
+		)
+	}
+}
+@keyframes about-reverse
+{
+	100%
+	{
+		clip-path:polygon(
+			0.0%	50.0%,
+			25.0%	50.0%,
+			25.0%	50.0%,
+			25.0%	50.0%,
+			25.0%	50.0%,
+			25.0%	50.0%,
+			25.0%	100.0%,
+			0.0%	100.0%
+		)
+	}
+	
+	70%
+	{
+		clip-path:polygon(
+			0.0%	37.5%,
+			37.5%	37.5%,
+			37.5%	37.5%,
+			37.5%	50.0%,
+			37.5%	50.0%,
+			37.5%	50.0%,
+			37.5%	100.0%,
+			0.0%	100.0%
+		)
+	}
+	50%
+	{
+		clip-path:polygon(
+			0.0%	37.5%,
+			37.5%	37.5%,
+			37.5%	37.5%,
+			50.0%	50.0%,
+			50.0%	50.0%,
+			37.5%	50.0%,
+			37.5%	100.0%,
+			0.0%	100.0%
+		)
+	}
+	
+	40%
+	{
+		clip-path:polygon(
+			0.0%	37.5%,
+			37.5%	37.5%,
+			37.5%	37.5%,
+			50.0%	37.5%,
+			50.0%	50.0%,
+			37.5%	50.0%,
+			37.5%	100.0%,
+			0.0%	100.0%
+		)
+	}
+	
+	0%
+	{
+		clip-path:polygon(
+			0.0%	37.5%,
+			37.5%	37.5%,
+			37.5%	0.0%,
+			50.0%	0.0%,
+			50.0%	50.0%,
+			37.5%	50.0%,
+			37.5%	100.0%,
+			0.0%	100.0%
 		)
 	}
 }
@@ -1086,130 +1129,87 @@ h1>a
 		)
 	}
 }
-@keyframes art-highlight
-{
-	0%	
-	{
-		clip-path:polygon(
-			0.0%	12.5%,
-			12.5%	12.5%,
-			12.5%	0.0%,
-			50.0%	0.0%,
-			50.0%	50.0%,
-			37.5%	50.0%,
-			37.5%	100.0%,
-			25.0%	100.0%,
-			25.0%	50.0%,
-			0.0%	50.0%
-		)
-	}
-	
-	20%	
-	{
-		clip-path:polygon(
-			0.0%	0.0%,
-			0.0%	0.0%,
-			0.0%	0.0%,
-			50.0%	0.0%,
-			50.0%	50.0%,
-			50.0%	50.0%,
-			50.0%	100.0%,
-			12.5%	100.0%,
-			12.5%	62.5%,
-			0.0%	62.5%
-		)
-	}
-	
-	40%	
-	{
-		clip-path:polygon(
-			0.0%	0.0%,
-			0.0%	0.0%,
-			0.0%	0.0%,
-			62.5%	0.0%,
-			62.5%	50.0%,
-			62.5%	50.0%,
-			62.5%	100.0%,
-			0.0%	100.0%,
-			0.0%	75.0%,
-			0.0%	75.0%
-		)
-	}
-	
-	100%
-	{
-		clip-path:polygon(
-			0.0%	0.0%,
-			0.0%	0.0%,
-			0.0%	0.0%,
-			100.0%	0.0%,
-			100.0%	50.0%,
-			100.0%	50.0%,
-			100.0%	100.0%,
-			0.0%	100.0%,
-			0.0%	75.0%,
-			0.0%	75.0%
-		)
-	}
-}
-@keyframes design-highlight
+@keyframes about
 {
 	0%
 	{
 		clip-path:polygon(
+			0.0%	50.0%,
+			25.0%	50.0%,
+			25.0%	50.0%,
+			25.0%	50.0%,
+			25.0%	50.0%,
+			25.0%	50.0%,
+			25.0%	100.0%,
+			0.0%	100.0%
+		)
+	}
+	
+	30%
+	{
+		clip-path:polygon(
 			0.0%	37.5%,
-			12.5%	37.5%,
 			37.5%	37.5%,
-			37.5%	0.0%,
-			100.0%	0.0%,
-			100.0%	12.5%,
-			100.0%	12.5%,
-			100.0%	25.0%,
-			100.0%	25.0%,
-			100.0%	37.5%,
-			87.5%	37.5%,
-			87.5%	87.5%,
-			87.5%	87.5%,
-			87.5%	100.0%,
-			12.5%	100.0%,
-			12.5%	50.0%,
-			0.0%	50.0%
+			37.5%	37.5%,
+			37.5%	50.0%,
+			37.5%	50.0%,
+			37.5%	50.0%,
+			37.5%	100.0%,
+			0.0%	100.0%
+		)
+	}
+	
+	50%
+	{
+		clip-path:polygon(
+			0.0%	37.5%,
+			37.5%	37.5%,
+			37.5%	37.5%,
+			50.0%	50.0%,
+			50.0%	50.0%,
+			37.5%	50.0%,
+			37.5%	100.0%,
+			0.0%	100.0%
+		)
+	}
+	
+	60%
+	{
+		clip-path:polygon(
+			0.0%	37.5%,
+			37.5%	37.5%,
+			37.5%	37.5%,
+			50.0%	37.5%,
+			50.0%	50.0%,
+			37.5%	50.0%,
+			37.5%	100.0%,
+			0.0%	100.0%
 		)
 	}
 	
 	100%
 	{
 		clip-path:polygon(
-			0.0%	0.0%,
-			0.0%	0.0%,
-			0.0%	0.0%,
-			0.0%	0.0%,
-			100.0%	0.0%,
-			100.0%	12.5%,
-			100.0%	12.5%,
-			100.0%	25.0%,
-			100.0%	25.0%,
-			100.0%	37.5%,
-			100.0%	37.5%,
-			100.0%	87.5%,
-			100.0%	87.5%,
-			100.0%	100.0%,
-			0.0%	100.0%,
-			0.0%	50.0%,
-			0.0%	50.0%
+			0.0%	37.5%,
+			37.5%	37.5%,
+			37.5%	0.0%,
+			50.0%	0.0%,
+			50.0%	50.0%,
+			37.5%	50.0%,
+			37.5%	100.0%,
+			0.0%	100.0%
 		)
 	}
 }
-
 
 </style>
 </head>
 <body>
 <article id=about>
-	<h1><a href=#about>About</a></h1>
+	<h2><a href=#about>About</a></h2>
 	<figure>
 		<figcaption>
-			<h2>About</h2>
+			<h3>About</h3>
 			I&rsquo;m
 				<select>
 					<option default>Xing Liu</option>
@@ -1249,7 +1249,7 @@ h1>a
 			</li>
 		</ul>
 		<figcaption>
-			<h3>Experience</h3>
+			<h4>Experience</h4>
 			I have been designing and programming websites and apps for over 3 years. I’ve helped create and maintain over thirty web projects, both professionally and for fun.
 		</figcaption>
 	</figure>
@@ -1278,7 +1278,7 @@ h1>a
 				</li>
 			</ul>
 		<figcaption>
-			<h3>Skillset</h3>
+			<h4>Skillset</h4>
 			Though I primarily work in frontend, due to the diversity of formats my projects take on, I&rsquo;ve familiarized myself with every one of these tools.
 		</figcaption>
 	</figure>
@@ -1297,15 +1297,15 @@ h1>a
 			</li>
 		</ul>
 		<figcaption>
-			<h3>Hobbies</h3>
+			<h4>Hobbies</h4>
 			You should try some of these out :D
 		</figcaption>
 	</figure>
 </article>
 <article id=art>
-	<h1><a href=#art>Art</a></h1>
+	<h2><a href=#art>Art</a></h2>
 	<figure>
-		<figcaption><h2>Art</h2>An assortment of colors made by pens, brushes, vectors, pixels, and frames.</figcaption>
+		<figcaption><h3>Art</h3>An assortment of colors made by pens, brushes, vectors, pixels, and frames.</figcaption>
 	</figure>
 	<figure>
 		<video
@@ -1318,7 +1318,7 @@ h1>a
 			<track src=media/the-sermon.vtt label=English kind=subtitles srclang=en default mode=showing>
 		</video>
 		<figcaption>
-			<h2>The Sermon</h2>
+			<h3>The Sermon</h3>
 			An absurdist parody of <em>The Importance of Being Earnest</em>. Wick Editor, 2022.
 		</figcaption>
 	</figure>
@@ -1331,7 +1331,7 @@ h1>a
 			/>
 		</a>
 		<figcaption>
-			<h2>Ripple Weave Collection</h2>
+			<h3>Ripple Weave Collection</h3>
 			Nested trigonometric functions mapped onto HSL space. RippleWeave, 2021.
 		</figcaption>
 	</figure>
@@ -1344,7 +1344,7 @@ h1>a
 			/>
 		</a>
 		<figcaption>
-			<h2>Starship 13</h2>
+			<h3>Starship 13</h3>
 			Should a Starship meet the same fate as Apollo 13’s <em>Odyssey</em>. Krita, 2021.
 		</figcaption>
 	</figure>
@@ -1357,7 +1357,7 @@ h1>a
 			/>
 		</a>
 		<figcaption>
-			<h2>Gorman’s Hill</h2>
+			<h3>Gorman’s Hill</h3>
 			Illustration of Amanda Gorman’s <em>The Hill We Climb</em>. Krita, 2021.
 		</figcaption>
 	</figure>
@@ -1372,7 +1372,7 @@ h1>a
 			<source src=media/flipbrain-w480.mp4 type=video/mp4>
 		</video>
 		<figcaption>
-			<h2>FlipBrain</h2>
+			<h3>FlipBrain</h3>
 			In which a panicking head is trying to get its brain back. Blender, 2020.
 		</figcaption>
 	</figure>
@@ -1385,7 +1385,7 @@ h1>a
 					 />
 		</a>
 		<figcaption>
-			<h2>Speedyboi</h2>
+			<h3>Speedyboi</h3>
 			3D modeling practice. Blender, 2020.
 		</figcaption>
 	</figure>
@@ -1395,7 +1395,7 @@ h1>a
 			<source src=media/planetary-adventures-with-ballsy-mcballface-w720.mp4 type=video/mp4>
 		</video>
 		<figcaption>
-			<h2>Planetary Adventures with Ballsy McBallface</h2>
+			<h3>Planetary Adventures with Ballsy McBallface</h3>
 			Ridiculous animated cartoon. Adobe Animate, 2020.
 		</figcaption>
 	</figure>
@@ -1408,7 +1408,7 @@ h1>a
 			>
 		</a>
 		<figcaption>
-			<h2>Reentry</h2>
+			<h3>Reentry</h3>
 			SpaceX booster vector art. Text editor, 2019.
 		</figcaption>
 	</figure>
@@ -1421,7 +1421,7 @@ h1>a
 		 	>
 		</a>
 		<figcaption>
-			<h2>Curiosity</h2>
+			<h3>Curiosity</h3>
 			Martian rover vector art. Animatron, 2018.
 		</figcaption>
 	</figure>
@@ -1434,7 +1434,7 @@ h1>a
 					 />
 		</a>
 		<figcaption>
-			<h2>Starship</h2>
+			<h3>Starship</h3>
 			Launching against a starry starry night. Animatron, 2018.
 		</figcaption>
 	</figure>
@@ -1447,7 +1447,7 @@ h1>a
 					 />
 		</a>
 		<figcaption>
-			<h2>Falcon Heavy</h2>
+			<h3>Falcon Heavy</h3>
 			 The launch of a giant. Animatron, 2018.
 		</figcaption>
 	</figure>
@@ -1460,7 +1460,7 @@ h1>a
 					 />
 		</a>
 		<figcaption>
-			<h2>Starman</h2>
+			<h3>Starman</h3>
 			 He’s waiting in the sky. Animatron, 2018.
 		</figcaption>
 	</figure>
@@ -1473,7 +1473,7 @@ h1>a
 					 />
 		</a>
 		<figcaption>
-			<h2>Falcon 9</h2>
+			<h3>Falcon 9</h3>
 			A SpaceX rocket booster about to land. Animatron, 2018.
 		</figcaption>
 	</figure>
@@ -1486,16 +1486,16 @@ h1>a
 		 	>
 		</a>
 		<figcaption>
-			<h2>First Avenue 110th</h2>
+			<h3>First Avenue 110th</h3>
 			Cover illustration for the First Avenue Middle School anniversary calendar. Animatron, 2017.
 		</figcaption>
 	</figure>
 </article>
 <article id=design>
-	<h1><a href=#design>Design</a></h1>
+	<h2><a href=#design>Design</a></h2>
 	<figure>
 		<figcaption>
-			<h2>Design</h2>
+			<h3>Design</h3>
 			Things that are a touch more practical than art.
 		</figcaption>
 	</figure>
@@ -1508,7 +1508,7 @@ h1>a
 			>
 		</a>
 		<figcaption>
-			<h2>Mercator Studio 2.0</h2>
+			<h3>Mercator Studio 2.0</h3>
 			Just as it surpasses 10,000 users, Mercator gets a new look for a redesigned Google Meet. Web, 2021.
 		</figcaption>
 	</figure>
@@ -1519,7 +1519,7 @@ h1>a
 				src=media/hoodiefowl-w720.jpg
 			>
 		<figcaption>
-			<h2>Hoodiefowl</h2>
+			<h3>Hoodiefowl</h3>
 			Duotone AHS 2023 screen-printing design entry. Inkscape, Krita, and Blender, 2020.
 		</figcaption>
 	</figure>
@@ -1530,7 +1530,7 @@ h1>a
 				src=media/ahs-emblem-w720.png
 			>
 		<figcaption>
-			<h2>Fowl on a Mailbox</h2>
+			<h3>Fowl on a Mailbox</h3>
 			Concept redesign of the AHS Emblem. Inkscape and Blender, 2020.
 		</figcaption>
 	</figure>
@@ -1543,7 +1543,7 @@ h1>a
 			>
 		</a>
 		<figcaption>
-			<h2>Mercator Studio</h2>
+			<h3>Mercator Studio</h3>
 			Web-based camera-feed-editing software for Google Meet. Web, 2020.
 		</figcaption>
 	</figure>
@@ -1556,7 +1556,7 @@ h1>a
 			>
 		</a>
 		<figcaption>
-			<h2>AHS.app</h2>
+			<h3>AHS.app</h3>
 			A student-oriented feed for Arcadia High School. Web, 2020.
 		</figcaption>
 	</figure>
@@ -1569,7 +1569,7 @@ h1>a
 			>
 		</a>
 		<figcaption>
-			<h2>Robotics.majorstem.org</h2>
+			<h3>Robotics.majorstem.org</h3>
 			Landing page and blog for a robotics team. Web, 2020.
 		</figcaption>
 	</figure>
@@ -1582,16 +1582,16 @@ h1>a
 		 	>
 		</a>
 		<figcaption>
-			<h2>AUSD Holiday Card</h2>
+			<h3>AUSD Holiday Card</h3>
 			Design of the Arcadia Unified School District&rsquo;s holiday card. Animatron, 2017.
 		</figcaption>
 	</figure>
 </article>
 <article id=contact>
-	<h1><a href=#contact>Contact</a></h1>
+	<h2><a href=#contact>Contact</a></h2>
 	<figure>
 		<figcaption>
-			<h2>Contact</h2>
+			<h3>Contact</h3>
 			Email me at <a href=mailto:liu@x-ing.space>liu@x-ing.space</a>,<br>
 			or send a message to Xing#7270 on Discord.<br>
 			I&rsquo;m available for hire as a freelance designer and/or web developer.
@@ -1599,10 +1599,10 @@ h1>a
 	</figure>
 </article>
 <article id=fun tabindex=0>
-	<h1><a href=#fun>Fun</a></h1>
+	<h2><a href=#fun>Fun</a></h2>
 	<figure>
 		<figcaption>
-			<h2>Fun</h2>
+			<h3>Fun</h3>
 			JavaScript game-things.
 		</figcaption>
 	</figure>
@@ -1615,7 +1615,7 @@ h1>a
 			>
 		</a>
 		<figcaption>
-			<h2>Koidoro Pond</h2>
+			<h3>Koidoro Pond</h3>
 			2D WebGL fish pond. 2021
 		</figcaption>
 	</figure>
@@ -1628,7 +1628,7 @@ h1>a
 			>
 		</a>
 		<figcaption>
-			<h2>RippleWeave</h2>
+			<h3>RippleWeave</h3>
 			Colorful function grapher. 2020&ndash;2021
 		</figcaption>
 	</figure>
@@ -1641,7 +1641,7 @@ h1>a
 			>
 		</a>
 		<figcaption>
-			<h2>Cliques</h2>
+			<h3>Cliques</h3>
 			a card game introducing set theory. 2018&mdash;2019
 		</figcaption>
 	</figure>
