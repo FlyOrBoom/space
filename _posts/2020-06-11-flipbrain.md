@@ -2,7 +2,7 @@
 layout: post
 title:  "flipbrain"
 date:   2020-06-11
-categories: art animation
+categories: blog art animation
 ---
 
 <video
@@ -17,4 +17,4 @@ categories: art animation
 
 In which a panicking head is trying to get its brain back.
 
-Blender
+made with Blender

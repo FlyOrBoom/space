@@ -2,8 +2,10 @@
 layout: post
 title:  "Polarizar: Visual odometry for the 2023 FTC robotics competition"
 date:   2023-02-12
-categories: code robotics
+categories: blog code robotics
 ---
+
+**The problem: Our robot needs to precisely navigate a field of poles.**
 
 <video controls="" width="720">
   <source src="/media/polarizar-w720.mp4" type="video/mp4"/>
