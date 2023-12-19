@@ -1,0 +1,59 @@
+html{
+	font-size:24px;
+}
+
+html,
+body
+{
+	margin:0;
+	width:100%;
+	height:100%;
+}
+
+body
+{
+	background:white;
+	font-family:'Computer Modern',serif;
+	font-style:italic;
+	overflow:hidden;
+	/*filter:drop-shadow(0 0 calc(1vw + 1vh) #0004); */
+	--duration:200ms;
+	background:#222;
+}
+
+/***************************/
+
+::selection
+{
+	background:grey;
+	color:white;
+}
+
+
+*
+{
+	transition:clip-path, background, color, opacity;
+	transition-duration: var(--duration);
+	box-sizing:border-box;
+	margin:0;
+	padding:0;
+	font-size:inherit;
+}
+
+:focus
+{
+	outline:none;
+}
+
+/***************************/
+
+body>:not(#back)
+{
+	position:fixed;
+	display:block;
+	width:100%;
+	height:100% !important;
+}
+
+/***************************/
+
