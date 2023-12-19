@@ -2,7 +2,7 @@
 layout: post
 title:  "Rippleweave: Swirls of math"
 date:   2021-03-22
-categories: blog art shader
+categories: blog art code
 ---
 
 ![Six swirling mathematical equations in a grid](/media/ripple-weave-collage-w720.png)
