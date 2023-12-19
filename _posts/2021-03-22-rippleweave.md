@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Rippleweave"
+title:  "Rippleweave: Swirls of math"
 date:   2021-03-22
 categories: art shader
 ---
