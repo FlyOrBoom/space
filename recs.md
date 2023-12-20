@@ -1,7 +1,7 @@
 ---
 layout: page
-title: resources
-permalink: /resources/
+title: recs
+permalink: /recs/
 ---
 
 ## Textbooks & high-quality notes
