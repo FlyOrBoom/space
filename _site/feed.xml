@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-12-19T17:59:57-08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">xing liu ∧ 刘行</title><subtitle>local thoughtspace of a possible boltzmann brain in awe of the cosmic infinite</subtitle><entry><title type="html">The background of the universe</title><link href="http://localhost:4000/blog/astro/2023/12/19/medium.html" rel="alternate" type="text/html" title="The background of the universe" /><published>2023-12-19T00:00:00-08:00</published><updated>2023-12-19T00:00:00-08:00</updated><id>http://localhost:4000/blog/astro/2023/12/19/medium</id><content type="html" xml:base="http://localhost:4000/blog/astro/2023/12/19/medium.html">&lt;p&gt;When we try to picture the cosmos, we tend to only think about the shiny stuff — 
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-12-19T18:18:44-08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">xing liu ∧ 刘行</title><subtitle>local thoughtspace of a possible boltzmann brain in awe of the cosmic infinite</subtitle><entry><title type="html">The background of the universe</title><link href="http://localhost:4000/blog/astro/2023/12/19/medium.html" rel="alternate" type="text/html" title="The background of the universe" /><published>2023-12-19T00:00:00-08:00</published><updated>2023-12-19T00:00:00-08:00</updated><id>http://localhost:4000/blog/astro/2023/12/19/medium</id><content type="html" xml:base="http://localhost:4000/blog/astro/2023/12/19/medium.html">&lt;p&gt;When we try to picture the cosmos, we tend to only think about the shiny stuff — 
 stars, galaxies, and very very hungry black holes. But stars could not burn without hydrogen to collapse from,
 galaxies could not coalesce without dark matter to attract the stars, and black holes cannot shine without gas and dust to feed on.
 The background medium, as it turns out, has as much importance to astronomy as the objects under the spotlights.&lt;/p&gt;
@@ -57,13 +57,23 @@ infinitude to savor is kinda neat&lt;/p&gt;
       &lt;li&gt;The residence of the last Ottoman sultan before his empire’s fall.&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
+  &lt;li&gt;David Tong. &lt;a href=&quot;http://www.damtp.cam.ac.uk/user/tong/gaugetheory.html&quot;&gt;“Lecture notes on Gauge Theory.”&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Every once in a while, I try to get a glimpse of some topic years beyond my current level of understanding. 
+Two years ago it was general relativity, last summer it was inflationary cosmology, and last week it was gauge theory 
+— basically, fields in which the concepts and equations nearly completely lose me. 
+Even though I am not really ready to efficiently learn these topics, I think it’s helpful to have a somewhat tangible sense of the long road ahead.
+With this goal in mind, I began reading and promptly lost myself by the second chapter.
+I did manage to make a video out of it though.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
   &lt;li&gt;Matthew McQuinn. &lt;a href=&quot;https://doi.org/10.1146/annurev-astro-082214-122355&quot;&gt;“The Evolution of the Intergalactic Medium.”&lt;/a&gt;
     &lt;ul&gt;
       &lt;li&gt;When we try to picture the cosmos, we tend to only think about the shiny stuff — 
 stars, galaxies, and very very hungry black holes. But stars could not burn without hydrogen to collapse from,
 galaxies could not coalesce without dark matter to attract the stars, and black holes cannot shine without gas and dust to feed on.
 The background medium, as it turns out, has as much importance to astronomy as the objects under the spotlights.
-&lt;em&gt;Full article: &lt;a href=&quot;/blog/astro/2023/12/19/medium.html&quot;&gt;The stuff between all the universe’s bright lights!&lt;/a&gt;&lt;/em&gt;&lt;/li&gt;
+I wrote a more layperson explanation of the above in &lt;a href=&quot;/blog/astro/2023/12/19/medium.html&quot;&gt;“The stuff between all the universe’s bright lights.”&lt;/a&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;Cade Metz et al. &lt;a href=&quot;https://www.nytimes.com/2023/12/03/technology/ai-openai-musk-page-altman.html&quot;&gt;“Ego, Fear and Money: How the A.I. Fuse Was Lit”&lt;/a&gt;
@@ -71,7 +81,12 @@ The background medium, as it turns out, has as much importance to astronomy as t
       &lt;li&gt;These people have strange sights for the future.&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><category term="blog" /><category term="monthly" /><summary type="html">decision paralysis but also, recognizing in a finite lifespan I get to pick a few things out of an infinitude to savor is kinda neat</summary></entry><entry><title type="html">November 2023</title><link href="http://localhost:4000/blog/monthly/2023/11/20/monthly.html" rel="alternate" type="text/html" title="November 2023" /><published>2023-11-20T00:00:00-08:00</published><updated>2023-11-20T00:00:00-08:00</updated><id>http://localhost:4000/blog/monthly/2023/11/20/monthly</id><content type="html" xml:base="http://localhost:4000/blog/monthly/2023/11/20/monthly.html">&lt;p&gt;in summary, month of reading too many things&lt;/p&gt;
+&lt;/ul&gt;</content><author><name></name></author><category term="blog" /><category term="monthly" /><summary type="html">decision paralysis but also, recognizing in a finite lifespan I get to pick a few things out of an infinitude to savor is kinda neat</summary></entry><entry><title type="html">A rough sketch of gauge theory</title><link href="http://localhost:4000/blog/physics/animation/2023/12/08/gauge.html" rel="alternate" type="text/html" title="A rough sketch of gauge theory" /><published>2023-12-08T00:00:00-08:00</published><updated>2023-12-08T00:00:00-08:00</updated><id>http://localhost:4000/blog/physics/animation/2023/12/08/gauge</id><content type="html" xml:base="http://localhost:4000/blog/physics/animation/2023/12/08/gauge.html">&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/vEN4uXE8rkg&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;A very rough introduction to one of the building blocks of modern theoretical particle physics,
+starting with its humble origins in the field of classical electrodynamics, 
+and showing how this almost “redundant” description of electromagnetism 
+grew into the language with which physicists think about the fundamental nature of the universe.&lt;/p&gt;</content><author><name></name></author><category term="blog" /><category term="physics" /><category term="animation" /><summary type="html"></summary></entry><entry><title type="html">November 2023</title><link href="http://localhost:4000/blog/monthly/2023/11/20/monthly.html" rel="alternate" type="text/html" title="November 2023" /><published>2023-11-20T00:00:00-08:00</published><updated>2023-11-20T00:00:00-08:00</updated><id>http://localhost:4000/blog/monthly/2023/11/20/monthly</id><content type="html" xml:base="http://localhost:4000/blog/monthly/2023/11/20/monthly.html">&lt;p&gt;in summary, month of reading too many things&lt;/p&gt;
 
 &lt;p&gt;red,&lt;/p&gt;
 &lt;ul&gt;
@@ -208,8 +223,4 @@ Rationals are pairs of Integers, bound in fractions. Half is One and Two, or Two
 
 &lt;p&gt;Outlines are funny. You cut out a square, but then it begin folding into itself and all hell breaks loose.&lt;/p&gt;</content><author><name></name></author><category term="blog" /><category term="art" /><category term="pixel" /><summary type="html"></summary></entry><entry><title type="html">Mie</title><link href="http://localhost:4000/blog/art/pixel/2021/08/25/mie.html" rel="alternate" type="text/html" title="Mie" /><published>2021-08-25T00:00:00-07:00</published><updated>2021-08-25T00:00:00-07:00</updated><id>http://localhost:4000/blog/art/pixel/2021/08/25/mie</id><content type="html" xml:base="http://localhost:4000/blog/art/pixel/2021/08/25/mie.html">&lt;p&gt;&lt;img src=&quot;/media/mie-w1024.png&quot; alt=&quot;Mie scattering&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;The Rayleigh–Taylor instabilities project themselves onto the great wispy clouds. Two figures stand against on dark soil.&lt;/p&gt;</content><author><name></name></author><category term="blog" /><category term="art" /><category term="pixel" /><summary type="html"></summary></entry><entry><title type="html">Rippleweave: Swirls of math</title><link href="http://localhost:4000/blog/art/code/2021/03/22/rippleweave.html" rel="alternate" type="text/html" title="Rippleweave: Swirls of math" /><published>2021-03-22T00:00:00-07:00</published><updated>2021-03-22T00:00:00-07:00</updated><id>http://localhost:4000/blog/art/code/2021/03/22/rippleweave</id><content type="html" xml:base="http://localhost:4000/blog/art/code/2021/03/22/rippleweave.html">&lt;p&gt;&lt;img src=&quot;/media/ripple-weave-collage-w720.png&quot; alt=&quot;Six swirling mathematical equations in a grid&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Nested trigonometric functions mapped onto HSL space. Some really pretty ones were published on &lt;a href=&quot;https://www.imaginary.org/gallery/ripple-weave&quot;&gt;IMAGINARY&lt;/a&gt;. Play around for yourself at &lt;a href=&quot;https://xingyzt.net/rippleweave&quot;&gt;xingyzt.net/rippleweave&lt;/a&gt;!&lt;/p&gt;
-
-&lt;p&gt;Very much a direct consequence of messing around with Desmos, bored in math class. Inspired by the work done in Shadertoy, though this is more limited, and in turn gives a bit more control.&lt;/p&gt;</content><author><name></name></author><category term="blog" /><category term="art" /><category term="code" /><summary type="html"></summary></entry></feed>
+&lt;p&gt;The Rayleigh–Taylor instabilities project themselves onto the great wispy clouds. Two figures stand against on dark soil.&lt;/p&gt;</content><author><name></name></author><category term="blog" /><category term="art" /><category term="pixel" /><summary type="html"></summary></entry></feed>
