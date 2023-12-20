@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-12-20T00:20:02-08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">{ xing liu ∘ 刘行 }</title><subtitle>local thoughtspace of a possible boltzmann brain in awe of the cosmic infinite</subtitle><entry><title type="html">The background of the universe</title><link href="http://localhost:4000/blog/astro/2023/12/19/medium.html" rel="alternate" type="text/html" title="The background of the universe" /><published>2023-12-19T00:00:00-08:00</published><updated>2023-12-19T00:00:00-08:00</updated><id>http://localhost:4000/blog/astro/2023/12/19/medium</id><content type="html" xml:base="http://localhost:4000/blog/astro/2023/12/19/medium.html">&lt;p&gt;When we try to picture the cosmos, we tend to only think about the shiny stuff — 
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-12-20T02:48:19-08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">{ xing liu ∘ 刘行 }</title><subtitle>local thoughtspace of a possible boltzmann brain in awe of the cosmic infinite</subtitle><entry><title type="html">The background of the universe</title><link href="http://localhost:4000/blog/astro/2023/12/19/medium.html" rel="alternate" type="text/html" title="The background of the universe" /><published>2023-12-19T00:00:00-08:00</published><updated>2023-12-19T00:00:00-08:00</updated><id>http://localhost:4000/blog/astro/2023/12/19/medium</id><content type="html" xml:base="http://localhost:4000/blog/astro/2023/12/19/medium.html">&lt;p&gt;When we try to picture the cosmos, we tend to only think about the shiny stuff — 
 stars, galaxies, and very very hungry black holes. But stars cannot burn their hearts without cold hydrogen to collapse from,
 cannot coalesce into galaxies without dark matter to pull them together, and cannot shine as black holes after death without more gas and dust to feed on.
 The background medium, as it turns out, has as much tremendous importance to astronomy as the objects underneath the spotlights.&lt;/p&gt;
@@ -125,13 +125,33 @@ grew into the language with which physicists think about the fundamental nature 
       &lt;li&gt;.&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><category term="blog" /><category term="monthly" /><summary type="html">in summary, month of reading too many things</summary></entry><entry><title type="html">ADS-CFT</title><link href="http://localhost:4000/blog/physics/2023/11/04/adscft.html" rel="alternate" type="text/html" title="ADS-CFT" /><published>2023-11-04T00:00:00-07:00</published><updated>2023-11-04T00:00:00-07:00</updated><id>http://localhost:4000/blog/physics/2023/11/04/adscft</id><content type="html" xml:base="http://localhost:4000/blog/physics/2023/11/04/adscft.html">&lt;p&gt;&lt;img src=&quot;/media/ads-cft-w1011.png&quot; alt=&quot;ADS-CFT&quot; /&gt;&lt;/p&gt;
+&lt;/ul&gt;</content><author><name></name></author><category term="blog" /><category term="monthly" /><summary type="html">in summary, month of reading too many things</summary></entry><entry><title type="html">AdS-CFT</title><link href="http://localhost:4000/blog/physics/2023/11/04/adscft.html" rel="alternate" type="text/html" title="AdS-CFT" /><published>2023-11-04T00:00:00-07:00</published><updated>2023-11-04T00:00:00-07:00</updated><id>http://localhost:4000/blog/physics/2023/11/04/adscft</id><content type="html" xml:base="http://localhost:4000/blog/physics/2023/11/04/adscft.html">&lt;p&gt;&lt;img src=&quot;/media/ads-cft-w1011.png&quot; alt=&quot;ADS-CFT&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;hyperbolic tilings are so cool&lt;/p&gt;
 
 &lt;p&gt;the way this is going, geometry might be both my first and last subject in math.&lt;/p&gt;</content><author><name></name></author><category term="blog" /><category term="physics" /><summary type="html"></summary></entry><entry><title type="html">Cracks</title><link href="http://localhost:4000/blog/art/pastel/2023/10/06/cracks.html" rel="alternate" type="text/html" title="Cracks" /><published>2023-10-06T00:00:00-07:00</published><updated>2023-10-06T00:00:00-07:00</updated><id>http://localhost:4000/blog/art/pastel/2023/10/06/cracks</id><content type="html" xml:base="http://localhost:4000/blog/art/pastel/2023/10/06/cracks.html">&lt;p&gt;&lt;img src=&quot;/media/cracks-w2696.jpg&quot; alt=&quot;Cracks&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Offering shade to the skies in the dead of night.&lt;/p&gt;</content><author><name></name></author><category term="blog" /><category term="art" /><category term="pastel" /><summary type="html"></summary></entry><entry><title type="html">Redshift surveys</title><link href="http://localhost:4000/blog/astro/2023/08/28/desi.html" rel="alternate" type="text/html" title="Redshift surveys" /><published>2023-08-28T00:00:00-07:00</published><updated>2023-08-28T00:00:00-07:00</updated><id>http://localhost:4000/blog/astro/2023/08/28/desi</id><content type="html" xml:base="http://localhost:4000/blog/astro/2023/08/28/desi.html">&lt;p&gt;Watching fly-throughs of galaxy maps reminds me of shining a flashlight in a dusty room; 
+&lt;p&gt;Offering shade to the skies in the dead of night.&lt;/p&gt;</content><author><name></name></author><category term="blog" /><category term="art" /><category term="pastel" /><summary type="html"></summary></entry><entry><title type="html">What is the Hubble Tension?</title><link href="http://localhost:4000/blog/astro/2023/09/02/tension.html" rel="alternate" type="text/html" title="What is the Hubble Tension?" /><published>2023-09-02T00:00:00-07:00</published><updated>2023-09-02T00:00:00-07:00</updated><id>http://localhost:4000/blog/astro/2023/09/02/tension</id><content type="html" xml:base="http://localhost:4000/blog/astro/2023/09/02/tension.html">&lt;p&gt;Work in progress&lt;/p&gt;
+
+&lt;p&gt;Converting from slideshow&lt;/p&gt;
+
+&lt;p&gt;Overviews&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Carroll, S.M. Spacetime and Geometry (2004)&lt;/li&gt;
+  &lt;li&gt;Liddle, A. An Introduction to Modern Cosmology, 3e (2015)&lt;/li&gt;
+  &lt;li&gt;Seife, C. ‘Tired-Light’ Hypothesis Gets Re-Tired. Science (2021)&lt;/li&gt;
+  &lt;li&gt;Essinger-Hileman, T.M. et al. Hubble Constant. NASA Lambda (2021)&lt;/li&gt;
+  &lt;li&gt;Ananthaswamy, A. Astronomers Gear Up to Grapple with the High-Tension Cosmos. Scientific American (2022)
+Research articles&lt;/li&gt;
+  &lt;li&gt;Jedamzik, K. et al. Why reducing the cosmic sound horizon alone can not fully resolve the Hubble tension. Commun Phys 4 (2021)&lt;/li&gt;
+  &lt;li&gt;Oppenheimer, J.R. et al. On Massive Neutron Cores. Physical Review 55, 4 (1939)&lt;/li&gt;
+  &lt;li&gt;Riess, A.G. et al.  A Comprehensive Measurement of the Local Value of the Hubble Constant. ApJL 934, 1 (2021)&lt;/li&gt;
+  &lt;li&gt;Addison, G.E. et al. Cosmological constraints from BAOs and clustering of LSS. MNRAS, 436, 2 (2013)
+Images&lt;/li&gt;
+  &lt;li&gt;Budassi, P.C. CMB sphere mapped by ESA and Planck collaboration. Wikimedia Commons (2020)&lt;/li&gt;
+  &lt;li&gt;Keel, W.C. The Road to Galaxy Formation, 2e (2007)&lt;/li&gt;
+  &lt;li&gt;Gutierrez, A.M. James Webb Space Telescope rendering. (2022)&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><category term="blog" /><category term="astro" /><summary type="html">Work in progress</summary></entry><entry><title type="html">Redshift surveys</title><link href="http://localhost:4000/blog/astro/2023/08/28/desi.html" rel="alternate" type="text/html" title="Redshift surveys" /><published>2023-08-28T00:00:00-07:00</published><updated>2023-08-28T00:00:00-07:00</updated><id>http://localhost:4000/blog/astro/2023/08/28/desi</id><content type="html" xml:base="http://localhost:4000/blog/astro/2023/08/28/desi.html">&lt;p&gt;Watching fly-throughs of galaxy maps reminds me of shining a flashlight in a dusty room; 
 the illuminated particles, each clinging on tight to its own little world of unfathomably many tiny creatures, dance chaotically on the dark undercurrents of air. 
 By observing their Brownian motion, Einstein was able to deduce the atomic nature of the unseen medium.&lt;/p&gt;
 
@@ -141,20 +161,4 @@ By observing their Brownian motion, Einstein was able to deduce the atomic natur
 written in a combination of markdown and LaTeX for the optimal mix of 
 accessibility and mathematical typographic beauty, are available at
 &lt;a href=&quot;https://xingyzt.net/notes/intro-to-modern-astrophysics&quot;&gt;xingyzt.net/notes/intro-to-modern-astrophysics&lt;/a&gt;. 
-Enjoy studying the universe!&lt;/p&gt;</content><author><name></name></author><category term="blog" /><category term="notes" /><category term="astro" /><summary type="html">My notes for the first two parts of Carroll &amp;amp; Ostlie’s “Big Orange Book”, written in a combination of markdown and LaTeX for the optimal mix of accessibility and mathematical typographic beauty, are available at xingyzt.net/notes/intro-to-modern-astrophysics. Enjoy studying the universe!</summary></entry><entry><title type="html">{}</title><link href="http://localhost:4000/blog/story/2023/02/13/set.html" rel="alternate" type="text/html" title="{}" /><published>2023-02-13T00:00:00-08:00</published><updated>2023-02-13T00:00:00-08:00</updated><id>http://localhost:4000/blog/story/2023/02/13/set</id><content type="html" xml:base="http://localhost:4000/blog/story/2023/02/13/set.html">&lt;p&gt;They call the piece a Set, the basic boundary between an Inside and an Outside.&lt;/p&gt;
-
-&lt;p&gt;I like to tell the creation story of numbers, something like this:&lt;/p&gt;
-
-&lt;p&gt;Let a Set which bounds nothing and excludes everything be named Zero.&lt;/p&gt;
-
-&lt;p&gt;Let every Set after it bind together the preceding Set, and a Set of the preceding Set.&lt;/p&gt;
-
-&lt;p&gt;From this simple duet, a floodgate to the Naturals opens. One is the Set which bounds the Zero; Two is the set which bounds Zero, One, and Two. So on and so forth. A countable infinity of numerals, each unique and orderable, born from drawing boundaries between Insides and Outs.&lt;/p&gt;
-
-&lt;p&gt;To make the Negatives, first examine their true nature: the difference between two naturals. To make Negative One, bind together One and Two, or Two and Three, or Three and Four… The floodgates now point in two directions, and the Integers were born.
-.
-Rationals are pairs of Integers, bound in fractions. Half is One and Two, or Two and Four, or Three and Six… The steppes of numbers become smooth slopes.&lt;/p&gt;
-
-&lt;p&gt;Reals are harder to define: A pair of two infinite sets of Rationals, one binding all that’s less than the Real, the other binding all that’s more. They race like Zeno towards each other, converging from opposite ends, Negative and Positive Infinities, after an eternity, onto their final destination.&lt;/p&gt;
-
-&lt;p&gt;Pair the two Reals, and out come the Complexes. Pair four, Quaternions. Pair every number in an infinity of them to another to get maps and functions. Flip the definitions on their heads to get p-adic numbers, a separate breed of beasts who behave like nothing else. From a set, a universe.&lt;/p&gt;</content><author><name></name></author><category term="blog" /><category term="story" /><summary type="html">They call the piece a Set, the basic boundary between an Inside and an Outside.</summary></entry></feed>
+Enjoy studying the universe!&lt;/p&gt;</content><author><name></name></author><category term="blog" /><category term="notes" /><category term="astro" /><summary type="html">My notes for the first two parts of Carroll &amp;amp; Ostlie’s “Big Orange Book”, written in a combination of markdown and LaTeX for the optimal mix of accessibility and mathematical typographic beauty, are available at xingyzt.net/notes/intro-to-modern-astrophysics. Enjoy studying the universe!</summary></entry></feed>
