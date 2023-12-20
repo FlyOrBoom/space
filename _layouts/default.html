@@ -1,8 +1,8 @@
 <!doctype html>
-<html lang="en">
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
   <head>
     <meta charset="utf-8">
-    <title>friends!</title>
+    <title>{{ page.title }}</title>
     <meta name=viewport content='width=device-width, initial-scale=1'>
     <link rel="shortcut icon" type=image/png href="https://x-ing.space/favicon.png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css" integrity="sha384-GvrOXuhMATgEsSwCs4smul74iXGOixntILdUW9XmUC6+HX0sLNAK3q71HotJqlAn" crossorigin="anonymous">
@@ -172,65 +172,12 @@ img, video {
     
     </style>
   </head>
-  <body><header class="site-header">
-  <style>
-.site-header .site-nav{
-    display: flex;
-    gap: 1em;
-  } 
-.site-header .site-title {
-    flex-grow: 1;
-  }
-  </style>
-
-  <nav class="site-nav"><a class="site-title" rel="author" href="/">{ xing liu ∘ 刘行 }</a><a class="page-link" href="/about/">about</a><a class="page-link" href="/friends/">friends!</a></nav>
-
-  <p>local thoughtspace of a possible boltzmann brain in awe of the cosmic infinite</p>
-</header>
-<main>
-      <article class="post">
-
-  <header class="post-header">
-    <h1 class="post-title">friends!</h1>
-  </header>
-
-  <div class="post-content">
-    <ul>
-  <li><a href="https://archiveofshan.substack.com">shannon’s thoughts</a></li>
-</ul>
-
-  </div>
-
-</article>
-
-    </main><footer class="site-footer">
-  <style>
-.site-footer .site-end {
-  display: flex;
-}
-.site-footer .site-title {
-  flex-grow: 1;
-  text-align: center;
-}
-  </style>
-  <div class="site-end">
-    <span> fin. </span>
-    <a class="site-title" rel="author" href="/"> { xing liu ∘ 刘行 } </a>
-    <span> □ </span>
-  </div><ul class="social-media-list">
-  <style>
-.social-media-list {
-  display: flex;
-  list-style: none;
-  gap: 1em;
-  justify-content: space-between;
-}
-  </style><li><a href="https://github.com/flyorboom">
-      gh @flyorboom</span>
-  </a></li><li> <a href="https://instagram.com/xingyzt">
-      ig @xingyzt
-  </a></li></ul>
-</footer>
-</body>
+  <body>
+    {%- include header.html -%}
+    <main>
+      {{ content }}
+    </main>
+    {%- include footer.html -%}
+  </body>
 </html>
 

@@ -1,0 +1,17 @@
+<footer class="site-footer">
+  <style>
+.site-footer .site-end {
+  display: flex;
+}
+.site-footer .site-title {
+  flex-grow: 1;
+  text-align: center;
+}
+  </style>
+  <div class="site-end">
+    <span> fin. </span>
+    <a class="site-title" rel="author" href="/"> {{ site.title | escape }} </a>
+    <span> □ </span>
+  </div>
+  {%- include social.html -%}
+</footer>

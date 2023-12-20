@@ -1,43 +1,194 @@
-<!DOCTYPE html>
-<html lang="en"><head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>November 2023 | xing liu ∧ 刘行</title>
-<meta name="generator" content="Jekyll v3.9.3" />
-<meta property="og:title" content="November 2023" />
-<meta property="og:locale" content="en_US" />
-<meta name="description" content="in summary, month of reading too many things" />
-<meta property="og:description" content="in summary, month of reading too many things" />
-<link rel="canonical" href="http://localhost:4000/blog/monthly/2023/11/20/monthly.html" />
-<meta property="og:url" content="http://localhost:4000/blog/monthly/2023/11/20/monthly.html" />
-<meta property="og:site_name" content="xing liu ∧ 刘行" />
-<meta property="og:type" content="article" />
-<meta property="article:published_time" content="2023-11-20T00:00:00-08:00" />
-<meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="November 2023" />
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-11-20T00:00:00-08:00","datePublished":"2023-11-20T00:00:00-08:00","description":"in summary, month of reading too many things","headline":"November 2023","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/monthly/2023/11/20/monthly.html"},"url":"http://localhost:4000/blog/monthly/2023/11/20/monthly.html"}</script>
-<!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="xing liu ∧ 刘行" /></head>
-<body><header class="site-header" role="banner">
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>November 2023</title>
+    <meta name=viewport content='width=device-width, initial-scale=1'>
+    <link rel="shortcut icon" type=image/png href="https://x-ing.space/favicon.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css" integrity="sha384-GvrOXuhMATgEsSwCs4smul74iXGOixntILdUW9XmUC6+HX0sLNAK3q71HotJqlAn" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js" integrity="sha384-cpW21h6RZv/phavutF+AuVYrr+dA8xD9zs6FwLpaCct6O9ctzYFfFr4dgmgccOTx" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            renderMathInElement(document.body, {
+              delimiters: [
+                  //{left: '$$', right: '$$', display: true},
+                  {left: '$', right: '$', display: false},
+                  //{left: '\\(', right: '\\)', display: false},
+                  {left: '\\[', right: '\\]', display: true}
+              ],
+              throwOnError : false
+            });
+            const headings = document.querySelectorAll("h1[id], h2[id], h3[id], h4[id], h5[id], h6[id]");
+            headings.forEach(heading =>{
+              heading.innerHTML = `<a href="#${heading.id}">${heading.textContent}</a>`;
+            });
+        });
+    </script>
+    <style>
 
-  <div class="wrapper"><a class="site-title" rel="author" href="/">xing liu ∧ 刘行</a><nav class="site-nav">
-        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
-        <label for="nav-trigger">
-          <span class="menu-icon">
-            <svg viewBox="0 0 18 15" width="18px" height="15px">
-              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
-            </svg>
-          </span>
-        </label>
+:root {
+  --text: #416;
+  --text-accent: #000;
+  --link: #146;
+  --link-accent: #012;
+  --deco: #84e;
+  --bg: #ecf;
+  --bg-accent: #daf;
+}
 
-        <div class="trigger"><a class="page-link" href="/about/">about</a><a class="page-link" href="/friends/">friends!</a></div>
-      </nav></div>
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text: #ecf;
+    --text-accent: #fff;
+    --link: #adf;
+    --link-accent: #cef;
+    --deco: #84e;
+    --bg: #416;
+    --bg-accent: #417;
+  }
+}
+
+@media print {
+  :root {
+    --text: #000;
+    --link: #000;
+    --deco: #000;
+    --bg: #fff;
+  }
+  details {
+    display: none;
+  }
+}
+
+
+@font-face {
+    font-family: 'cmu';
+    src: url('/fonts/cmunrm.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'cmu';
+    src: url('/fonts/cmunti.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+
+@font-face {
+    font-family: 'cmu';
+    src: url('/fonts/cmunbx.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'cmu';
+    src: url('/fonts/cmunbi.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-image: url("/tile.png");
+}
+html, body {
+  font-size: 16px;
+  font-family: cmu, serif;
+  background-color: var(--bg);
+}
+html * {
+  box-sizing: border-box;
+}
+body {
+  margin: 0 auto;
+  width: 50rem;
+  height: auto;
+  padding: 1rem;
+  max-width: 100%;
+  color: var(--text);
+}
+
+h1 {
+  text-align: center;
+}
+h2 {
+  border-bottom: 1px solid var(--deco);
+}
+h3 {
+  scroll-margin: 3rem;
+}
+::selection {
+  background: var(--text);
+  color: var(--bg);
+}
+strong {
+  font-weight: normal;
+  text-decoration: dotted underline var(--deco);
+}
+
+a, summary {
+  text-decoration: none;
+  color: var(--link);
+}
+
+a:hover, a:focus, summary:hover, summary:focus {
+  text-decoration: underline;
+  color: var(--link-accent);
+}
+a:active, summary:active {
+  background: var(--link);
+  color: var(--bg-accent);
+}
+
+ul, ol {
+  margin-left: 0rem;
+  padding-left: 1rem;
+}
+li:hover {
+  color: var(--text-accent);
+}
+
+table {
+  border: 1px solid var(--deco);
+  border-collapse: collapse;
+}
+th, td {
+  border: 1px dashed var(--deco);
+  text-align: center;
+}
+
+img, video {
+  width: 30rem;
+  max-width: 100%;
+}
+    
+    </style>
+  </head>
+  <body><header class="site-header">
+  <style>
+.site-header .site-nav{
+    display: flex;
+    gap: 1em;
+  } 
+.site-header .site-title {
+    flex-grow: 1;
+  }
+  </style>
+
+  <nav class="site-nav"><a class="site-title" rel="author" href="/">{ xing liu ∘ 刘行 }</a><a class="page-link" href="/about/">about</a><a class="page-link" href="/friends/">friends!</a></nav>
+
+  <p>local thoughtspace of a possible boltzmann brain in awe of the cosmic infinite</p>
 </header>
-<main class="page-content" aria-label="Content">
-      <div class="wrapper">
-        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+<main>
+      <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
     <h1 class="post-title p-name" itemprop="name headline">November 2023</h1>
@@ -91,31 +242,34 @@
   </div><a class="u-url" href="/blog/monthly/2023/11/20/monthly.html" hidden></a>
 </article>
 
-      </div>
-    </main><footer class="site-footer h-card">
-  <data class="u-url" href="/"></data>
-
-  <div class="wrapper">
-
-    <h2 class="footer-heading">xing liu ∧ 刘行</h2>
-
-    <div class="footer-col-wrapper">
-      <div class="footer-col footer-col-1">
-        <ul class="contact-list">
-          <li class="p-name">xing liu ∧ 刘行</li><li><a class="u-email" href="mailto:xing@xingyzt.net">xing@xingyzt.net</a></li></ul>
-      </div>
-
-      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/flyorboom"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">flyorboom</span></a></li><li><a href="https://instagram.com/xingyzt"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#instagram"></use></svg> <span class="username">xingyzt</span></a></li></ul>
-</div>
-
-      <div class="footer-col footer-col-3">
-        <p>local thoughtspace of a possible boltzmann brain in awe of the cosmic infinite</p>
-      </div>
-    </div>
-
-  </div>
-
+    </main><footer class="site-footer">
+  <style>
+.site-footer .site-end {
+  display: flex;
+}
+.site-footer .site-title {
+  flex-grow: 1;
+  text-align: center;
+}
+  </style>
+  <div class="site-end">
+    <span> fin. </span>
+    <a class="site-title" rel="author" href="/"> { xing liu ∘ 刘行 } </a>
+    <span> □ </span>
+  </div><ul class="social-media-list">
+  <style>
+.social-media-list {
+  display: flex;
+  list-style: none;
+  gap: 1em;
+  justify-content: space-between;
+}
+  </style><li><a href="https://github.com/flyorboom">
+      gh @flyorboom</span>
+  </a></li><li> <a href="https://instagram.com/xingyzt">
+      ig @xingyzt
+  </a></li></ul>
 </footer>
 </body>
-
 </html>
+
