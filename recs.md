@@ -4,7 +4,7 @@ title: recs
 permalink: /recs/
 ---
 
-## Textbooks & high-quality notes
+## Textbooks & co
 
 Unless marked by ?, these are documents that I have read significant portions of and found helpful in my studies. They are roughly sorted by stars in their difficulty. Their categories are approximate, and get increasingly blended with each other at the more advanced levels.
 
@@ -70,3 +70,7 @@ Unless marked by ?, these are documents that I have read significant portions of
     - \* Susskind & Hrabovsky - The Theoretical Minimum (book)
     - \*\*? Susskind & Friedman - Special Relativity and Classical Field Theory (book)
     - \*\*\*? Lindner - A Complete Guide to Theoretical Physics (book)
+
+## My own notes
+
+For trashier notes on select astrophysics stuff, [head here!](/notes)
