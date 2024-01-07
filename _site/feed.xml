@@ -1,4 +1,54 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-12-28T17:33:46-08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">{ xing liu ∘ 刘行 }</title><subtitle>local thoughtspace of a possible boltzmann brain in awe of the cosmic infinite</subtitle><entry><title type="html">The background of the universe</title><link href="http://localhost:4000/blog/astro/2023/12/19/medium.html" rel="alternate" type="text/html" title="The background of the universe" /><published>2023-12-19T00:00:00-08:00</published><updated>2023-12-19T00:00:00-08:00</updated><id>http://localhost:4000/blog/astro/2023/12/19/medium</id><content type="html" xml:base="http://localhost:4000/blog/astro/2023/12/19/medium.html">&lt;p&gt;When we try to picture the cosmos, we tend to only think about the shiny stuff — 
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-01-07T05:34:06-08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">{ xing liu ∘ 刘行 }</title><subtitle>local thoughtspace of a possible boltzmann brain in awe of the cosmic infinite</subtitle><entry><title type="html">Dichotomies of physics</title><link href="http://localhost:4000/blog/physics/2024/01/07/fields.html" rel="alternate" type="text/html" title="Dichotomies of physics" /><published>2024-01-07T00:00:00-08:00</published><updated>2024-01-07T00:00:00-08:00</updated><id>http://localhost:4000/blog/physics/2024/01/07/fields</id><content type="html" xml:base="http://localhost:4000/blog/physics/2024/01/07/fields.html">&lt;p&gt;Revolutions in physics are forever memorialized by the dichotomies they introduce.
+While the hot new topics are given trendy labels of “quantum” or “relativistic” or whatnot,
+the old established players are relegated to the catch-all drawer of “classical stuff”.
+As with all human endeavors in categorizing things, these divisions should not be interpreted too rigidly.
+Some of the most interesting work in physics is done at their intersections.
+Conversely, these relatively modern divisions should not be regarded as the only useful ones.
+I want to bring up a less glamorized, yet no less important dichotomy which cuts across the more popular labels: 
+the discrete versus the continuous.&lt;/p&gt;
+
+&lt;p&gt;To motivate this discussion, let’s talk about quantum field theory, or rather, the spooky allure it has to underinformed freshmen like me.
+Before coming to college, I had only ever associated the mysterious “QFT” as some vague concept possibly useful in particle physics. 
+It felt far removed from any physics I had done or was ever planning to do — 
+After all, high school didn’t exactly teach quantum mechanics, let alone field theories, or so I thought.&lt;/p&gt;
+
+&lt;p&gt;I did not know that linear algebra, for all its talk on eigenvalues and eigenvectors, forms the basis for quantization;
+Nor did I realize that electromagnetism, for all its talk of the electric and magnetic fields, is a classical field theory!&lt;/p&gt;
+
+&lt;p&gt;Over the years, I’ve come to realize that the barrier for me to learn new areas of physics is generally not my mathematical skills
+(a solid grasp of multivariable calculus and linear algebra is sufficient for most things) or conceptual understanding
+(science YouTubers and Wikipedia are more than enough for that), but the ability to somehow connect them together;
+to &lt;em&gt;know&lt;/em&gt; how the things I’m learning now prepare me for the off-chance that I decide to study theoretical physics.&lt;/p&gt;
+
+&lt;p&gt;Which brings us back to my point about categories — they should never be treated as very sharp and hard-to-cross borders.
+(There’s an interesting parallel here to periodization in historiography that my amazing history professors are way more qualified to talk about.)
+And while part of this is just naivité, I think physics educators should also communicate the connections better.&lt;/p&gt;
+
+&lt;figure&gt;
+&lt;img src=&quot;/media/fields-bad-w838.png&quot; /&gt;
+&lt;figcaption&gt;
+Fig 1. Cool diagram, but these jumps just feel too sudden!
+&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;One can add more transitional steps, like what &lt;a href=&quot;http://hyperphysics.phy-astr.gsu.edu/hbase/index.html&quot;&gt;Hyperphysics&lt;/a&gt; is doing:&lt;/p&gt;
+
+&lt;figure&gt;
+&lt;img src=&quot;/media/fields-good-w601.gif&quot; /&gt;
+&lt;figcaption&gt;
+Fig 2. These jumps are much more granulated, with helpful labels too.
+&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;But to better organize the bigger picture, I believe we just ought to come up with more dichotomies than the trendy nonrelativistic-relativistic
+and classical-quantum duals. It’s like how points on a page can be put closer together if we can crumble the paper into 3D:
+more broad categories reveals more connections.&lt;/p&gt;
+
+&lt;p&gt;So let’s talk about the discrete-vs-continuous dichotomy, a.k.a. particles-vs-fields, or few-things-vs-lots-of-things.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/media/fields-w895.png&quot; alt=&quot;Diagram of fields&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;(btw sorry I haven’t wrapped up the intergalactic medium post yet winter break is busyy)&lt;/p&gt;</content><author><name></name></author><category term="blog" /><category term="physics" /><summary type="html">Revolutions in physics are forever memorialized by the dichotomies they introduce. While the hot new topics are given trendy labels of “quantum” or “relativistic” or whatnot, the old established players are relegated to the catch-all drawer of “classical stuff”. As with all human endeavors in categorizing things, these divisions should not be interpreted too rigidly. Some of the most interesting work in physics is done at their intersections. Conversely, these relatively modern divisions should not be regarded as the only useful ones. I want to bring up a less glamorized, yet no less important dichotomy which cuts across the more popular labels: the discrete versus the continuous.</summary></entry><entry><title type="html">The background of the universe</title><link href="http://localhost:4000/blog/astro/2023/12/19/medium.html" rel="alternate" type="text/html" title="The background of the universe" /><published>2023-12-19T00:00:00-08:00</published><updated>2023-12-19T00:00:00-08:00</updated><id>http://localhost:4000/blog/astro/2023/12/19/medium</id><content type="html" xml:base="http://localhost:4000/blog/astro/2023/12/19/medium.html">&lt;p&gt;When we try to picture the cosmos, we tend to only think about the shiny stuff — 
 stars, galaxies, and very very hungry black holes. But stars cannot burn their hearts without cold hydrogen to collapse from,
 cannot coalesce into galaxies without dark matter to pull them together, and cannot shine as black holes after death without more gas and dust to feed on.
 The background medium, as it turns out, has as much tremendous importance to astronomy as the objects underneath the spotlights.&lt;/p&gt;
@@ -180,8 +230,4 @@ By observing their Brownian motion, Einstein was able to deduce the atomic natur
 
 &lt;p&gt;A hundred years later, with galaxies suspended in spacetime, might we be able to do the same thing?&lt;/p&gt;</content><author><name></name></author><category term="blog" /><category term="astro" /><summary type="html">Watching fly-throughs of galaxy maps reminds me of shining a flashlight in a dusty room; the illuminated particles, each clinging on tight to its own little world of unfathomably many tiny creatures, dance chaotically on the dark undercurrents of air. By observing their Brownian motion, Einstein was able to deduce the atomic nature of the unseen medium.</summary></entry><entry><title type="html">Decanting</title><link href="http://localhost:4000/blog/art/pastel/2023/08/12/decanting.html" rel="alternate" type="text/html" title="Decanting" /><published>2023-08-12T00:00:00-07:00</published><updated>2023-08-12T00:00:00-07:00</updated><id>http://localhost:4000/blog/art/pastel/2023/08/12/decanting</id><content type="html" xml:base="http://localhost:4000/blog/art/pastel/2023/08/12/decanting.html">&lt;p&gt;&lt;img src=&quot;/media/decanting-w1909.jpg&quot; alt=&quot;Decanting&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Accretion disks make for fun ruffs&lt;/p&gt;</content><author><name></name></author><category term="blog" /><category term="art" /><category term="pastel" /><summary type="html"></summary></entry><entry><title type="html">Notes on Carroll &amp;amp; Ostlie, Introduction to Modern Astrophysics, parts I &amp;amp; II</title><link href="http://localhost:4000/blog/notes/astro/2023/07/20/notes.html" rel="alternate" type="text/html" title="Notes on Carroll &amp;amp; Ostlie, Introduction to Modern Astrophysics, parts I &amp;amp; II" /><published>2023-07-20T00:00:00-07:00</published><updated>2023-07-20T00:00:00-07:00</updated><id>http://localhost:4000/blog/notes/astro/2023/07/20/notes</id><content type="html" xml:base="http://localhost:4000/blog/notes/astro/2023/07/20/notes.html">&lt;p&gt;My notes for the first two parts of Carroll &amp;amp; Ostlie’s “Big Orange Book”, 
-written in a combination of markdown and LaTeX for the optimal mix of 
-accessibility and mathematical typographic beauty, are available at
-&lt;a href=&quot;https://xingyzt.net/notes/intro-to-modern-astrophysics&quot;&gt;xingyzt.net/notes/intro-to-modern-astrophysics&lt;/a&gt;. 
-Enjoy studying the universe!&lt;/p&gt;</content><author><name></name></author><category term="blog" /><category term="notes" /><category term="astro" /><summary type="html">My notes for the first two parts of Carroll &amp;amp; Ostlie’s “Big Orange Book”, written in a combination of markdown and LaTeX for the optimal mix of accessibility and mathematical typographic beauty, are available at xingyzt.net/notes/intro-to-modern-astrophysics. Enjoy studying the universe!</summary></entry></feed>
+&lt;p&gt;Accretion disks make for fun ruffs&lt;/p&gt;</content><author><name></name></author><category term="blog" /><category term="art" /><category term="pastel" /><summary type="html"></summary></entry></feed>
