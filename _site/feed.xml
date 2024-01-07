@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-01-07T06:11:54-08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">{ xing liu ∘ 刘行 }</title><subtitle>local thoughtspace of a possible boltzmann brain in awe of the cosmic infinite</subtitle><entry><title type="html">Dichotomies of physics</title><link href="http://localhost:4000/blog/physics/2024/01/07/fields.html" rel="alternate" type="text/html" title="Dichotomies of physics" /><published>2024-01-07T00:00:00-08:00</published><updated>2024-01-07T00:00:00-08:00</updated><id>http://localhost:4000/blog/physics/2024/01/07/fields</id><content type="html" xml:base="http://localhost:4000/blog/physics/2024/01/07/fields.html">&lt;p&gt;Revolutions in physics are forever memorialized by the dichotomies they introduce.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-01-07T06:27:56-08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">{ xing liu ∘ 刘行 }</title><subtitle>local thoughtspace of a possible boltzmann brain in awe of the cosmic infinite</subtitle><entry><title type="html">Dichotomies of physics</title><link href="http://localhost:4000/blog/physics/2024/01/07/fields.html" rel="alternate" type="text/html" title="Dichotomies of physics" /><published>2024-01-07T00:00:00-08:00</published><updated>2024-01-07T00:00:00-08:00</updated><id>http://localhost:4000/blog/physics/2024/01/07/fields</id><content type="html" xml:base="http://localhost:4000/blog/physics/2024/01/07/fields.html">&lt;p&gt;Revolutions in physics are forever memorialized by the dichotomies they introduce.
 While the hot new topics are given trendy labels of “quantum” or “relativistic” or whatnot,
 the old established players are relegated to the catch-all drawer of “classical stuff”.
 As with all human endeavors in categorizing things, these divisions should not be interpreted too rigidly.
@@ -42,27 +42,30 @@ Fig 2. These jumps are much more granulated, with helpful labels too.
 
 &lt;p&gt;But to better organize the bigger picture, I believe we just ought to come up with more dichotomies than the trendy nonrelativistic-relativistic
 and classical-quantum duals. It’s like how points on a page can be put closer together if we can crumble the paper into 3D:
-more broad categories reveals more connections.&lt;/p&gt;
+having more broad categories can reveal more connections.&lt;/p&gt;
 
 &lt;p&gt;So let’s talk about the discrete-versus-continuous dichotomy.&lt;/p&gt;
 
 &lt;p&gt;Introductory calculus-based physics courses always start off with Newtonian mechanics applied to particles — 
-very few (i.e. discrete) particles, generally less than three, because that’s when the equations begin to get messy and analytic solutions begin to fail.
+very few of them (i.e. discrete), generally less than three, because that’s when the equations begin to get messy and analytic solutions begin to fail.
 There may be some occasional forays into wave motion, 
-but clasical mechanics courses generally stick to discrete systems all the way up to special relativity and Lagrangian mechanics,
+but they generally stick to discrete systems all the way up to special relativity and Lagrangian mechanics,
 seldom considering throwing more particles into the pile.&lt;/p&gt;
 
-&lt;p&gt;On the other hand, introductory electromagnetism courses always introduce fields right away, 
-though they hesitate on electrodynamics and free-space wave propagation until multivariable calculus is satisfied.
+&lt;p&gt;On the other hand, introductory electromagnetism courses always introduce fields right away.
+However, they hesitate on electrodynamics and free-space wave propagation until multivariable calculus is satisfied.
 Lagrangian mechanics is generally not mentioned, nor changes in reference frames.&lt;/p&gt;
 
-&lt;p&gt;Thus, the core of classical field theory is chopped up and scattered between introductory physics courses.
-I don’t think this is necessarily a bad thing — but I believe for students interested in theoretical physics, the connections should be communicated better.&lt;/p&gt;
+&lt;p&gt;So the seeds of classical field theory are scattered between introductory physics courses, and sometimes omitted entirely.
+I don’t think this is necessarily a bad thing — solid foundations are incredibly important — 
+but I believe for students interested in theoretical physics, the connections should be communicated better.&lt;/p&gt;
 
 &lt;p&gt;Demonstrating how wave motion arises from relatively small-scale perturbations applied to very large numbers of particles bridges this jump from discrete to continuous systems,
 and pointing out the classical quantization in the harmonics of standing waves bridges the jump from classical continuums to quantum.&lt;/p&gt;
 
-&lt;p&gt;(WIP)&lt;/p&gt;
+&lt;p&gt;The key realization for me is that these topics are not divided by their categories, but created by their &lt;em&gt;actions&lt;/em&gt;: 
+Quantum mechanics is &lt;em&gt;quantized&lt;/em&gt; mechanics, field theories &lt;em&gt;take the large-number limit&lt;/em&gt; of discrete systems, and so on.
+In that reference frame, the jumps don’t look that scary anymore.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/media/fields-w895.png&quot; alt=&quot;Diagram of fields&quot; /&gt;&lt;/p&gt;
 
