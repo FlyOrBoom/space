@@ -1,0 +1,52 @@
+---
+layout: default
+---
+
+<div class="home">
+  <style>
+.post-list .post-meta {
+  font-style: italic;
+  font-size: 0.8em;
+  margin: 0;
+}
+.post-list .post-title {
+  margin: 1rem 0 0 0;
+}
+.post-list .post-excerpt {
+  border-left: 1rem solid var(--bg-accent);
+  margin: 1rem 0 0 0;
+  padding-left: 1rem;
+}
+  </style>
+
+  {%- if page.title -%}
+    <h1 class="page-heading">{{ page.title }}</h1>
+  {%- endif -%}
+
+  {{ content }}
+
+  {%- if site.posts.size > 0 -%}
+    <ul class="post-list">
+      {%- for post in site.posts -%}
+      <li>
+        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+        <h3 class="post-title">
+          <a class="post-link" href="{{ post.url | relative_url }}">
+            {{ post.title | escape }}
+          </a>
+        </h3>
+        <p class="post-meta">{{ post.date | date: date_format }}</p>
+        {%- if site.show_excerpts -%}
+        <section class="post-excerpt">
+          {{ post.excerpt }}
+          <p> <a class="post-link" href="{{ post.url | relative_url }}"> ... ⇾ </a> </p>
+        </section>
+        {%- endif -%}
+      </li>
+      {%- endfor -%}
+    </ul>
+
+    <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
+  {%- endif -%}
+
+</div>

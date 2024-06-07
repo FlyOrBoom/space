@@ -19,10 +19,6 @@
               ],
               throwOnError : false
             });
-            const headings = document.querySelectorAll("h1[id], h2[id], h3[id], h4[id], h5[id], h6[id]");
-            headings.forEach(heading =>{
-              heading.innerHTML = `<a href="#${heading.id}">${heading.textContent}</a>`;
-            });
         });
     </script>
     <style>
@@ -180,320 +176,154 @@ img, video, iframe {
   }
   </style>
 
-  <nav class="site-nav"><a class="site-title" rel="author" href="/">{ xing liu ∘ 刘行 }</a><a class="page-link" href="/about/">about</a><a class="page-link" href="/friends/">friends!</a><a class="page-link" href="/recs/">recs</a></nav>
+  <nav class="site-nav"><a class="site-title" rel="author" href="/">{ xing liu ∘ 刘行 }</a><a class="page-link" href="/bog/">bog</a></nav>
 
-  <p>local thoughtspace of a possible boltzmann brain in awe of the cosmic infinite</p>
+  <p>in awe of the cosmic infinite</p>
 </header>
 <main>
-      <div class="home">
-  <style>
-.post-list .post-meta {
-  font-style: italic;
-  font-size: 0.8em;
-  margin: 0;
-}
-.post-list .post-title {
-  margin: 1rem 0 0 0;
-}
-.post-list .post-excerpt {
-  border-left: 1rem solid var(--bg-accent);
-  margin: 1rem 0 0 0;
-  padding-left: 1rem;
-}
-  </style>
-<ul class="post-list"><li><h3 class="post-title">
-          <a class="post-link" href="/blog/life/2024/01/09/loop.html">
-            不停循环的时间
-          </a>
-        </h3>
-        <p class="post-meta">Jan 9, 2024</p><section class="post-excerpt">
-          <p>失去人的痛会把你紧紧地困进一圈不停循环的时间。 <br />
-日历收走，只留着一座钟。 <br />
-每一天是那一天， <br />
-全世界取模24。</p>
+      <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title"></h1>
+  </header>
+
+  <div class="post-content">
+    <p>Hallo, I’m an artist, programmer, and astrophysics student.
+I’m currently about to enter my second year of undergraduate studies in math and physics at UC Berkeley.
+This is my little spot on the interwebs.</p>
+
+<h2 id="notes">Notes</h2>
+
+<p>I keep typed-up notes on some astrophysics textbooks, as well as standalone topics</p>
+<ul>
+  <li><a href="/notes/modern-cosmology">Dodelson &amp; Schmidt, <em>Modern Cosmology</em></a></li>
+  <li><a href="/notes/intro-to-modern-astrophysics">Caroll &amp; Ostlie, <em>Introduction to Modern Astrophysics</em></a></li>
+  <li><a href="/notes/relativistic-fluids">Relativistic fluids</a></li>
+</ul>
+
+<h2 id="bog">Bog</h2>
+
+<p><a href="/bog">Bog</a>.</p>
+
+<h2 id="friends">Friends!</h2>
+
+<ul>
+  <li><a href="https://archiveofshan.substack.com">shannon’s thoughts</a></li>
+  <li><a href="https://blog.adl-developments.com/">Shin’s blog</a></li>
+</ul>
+
+<h2 id="textbooks--co">Textbooks &amp; co</h2>
+
+<p>I’m very much a textbooks-and-lecture-notes person — 
+I find going through them to be far more effective at building a deep understanding than listening to live lectures. 
+Here are the documents that I have read significant portions of and found helpful in my studies. They are roughly sorted by stars in their difficulty. Their categories are approximate, and get increasingly blended with each other at the more advanced levels.</p>
+
+<p>* light: no prerequisites <br />
+** introductory: requires some mathematical maturity <br />
+*** medium: a more sophisticated second exposure <br />
+**** advanced: requires specialized mathematical background <br />
+***** hella advanced</p>
+
+<ul>
+  <li>Math
+    <ul>
+      <li>Discrete: modulos, graphs, cryptography
+        <ul>
+          <li>* Rosen - Discrete Mathematics (book) - Introductory concepts in sets, groups, and graphs.</li>
+        </ul>
+      </li>
+      <li>Algebras: linear, clifford, geometric
+        <ul>
+          <li>* Strang, <em>Linear Algebra and Its Applications</em> (book) - Illustrates the many practical uses of matrices.</li>
+          <li>** <a href="https://www.youtube.com/playlist?list=PLJHszsWbB6hrkmmq57lX8BV-o-YIOFsiG">Eigenchris, <em>Tensors for Beginners</em></a> (videos) - This is how my journey into modern physics started.</li>
+          <li>*** <a href="https://linear.axler.net/">Axler, <em>Linear Algebra Done Right</em></a> (book) - The most important proof-based mathematics book for any physicist.</li>
+          <li>*** <a href="https://www.youtube.com/playlist?list=PLJHszsWbB6hpk5h8lSfBkVrpjsqvUGTCx">Eigenchris, <em>Tensor Calculus</em></a> (videos)</li>
+          <li>*** <a href="https://www.youtube.com/playlist?list=PLJHszsWbB6hoOo_wMb0b6T44KM_ABZtBs">Eigenchris, <em>Spinors for Beginners</em></a> (videos)</li>
+        </ul>
+      </li>
+      <li>Analysis
+        <ul>
+          <li>** Abbott, <em>Understanding Analysis</em> (book) - The romantic’s introduction to real analysis, interweaving math and history together into an enthralling story.</li>
+        </ul>
+      </li>
+      <li>Miscellaneous
+        <ul>
+          <li>** Boas - Mathematical Physics (book)</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Physics
+    <ul>
+      <li>Astrophysics: stars, planets, galaxies, cosmology
+        <ul>
+          <li>* Fix - Astronomy: Journey to the Cosmic Frontier (book)</li>
+          <li>** Liddle - An Introduction to Modern Cosmology (book)</li>
+          <li>** Carroll &amp; Ostlie - Introduction to Modern Astrophysics (book)</li>
+          <li>** <a href="http://www.damtp.cam.ac.uk/user/tong/cosmo.html">Tong - Cosmology</a> (notes)</li>
+          <li>*** Dodelson &amp; Schmidt - Modern Cosmology (book)</li>
+        </ul>
+      </li>
+      <li>Classical mechanics: newtonian, lagrangian, hamiltonian, special relativity
+        <ul>
+          <li>** Giancoli - Principles of Physics (part I) (book)</li>
+          <li>*** Kleppner &amp; Kolenkow - Introduction to Classical Mechanics (book)</li>
+          <li>*** Morin - Introduction to Classical Mechanics (book)</li>
+          <li>**** <a href="https://www.damtp.cam.ac.uk/user/tong/dynamics.html">Tong - Classical Dynamics</a> (notes)</li>
+          <li>**** Helliwell &amp; Sahakian - Modern Classical Mechanics (book)</li>
+        </ul>
+      </li>
+      <li>Electromagnetism: circuits, fields, radiation
+        <ul>
+          <li>* Giancoli - Principles of Physics (part II)</li>
+          <li>** <a href="https://web.mit.edu/sahughes/www/8.022/">Hughes - Electricity and Magnetism</a> (notes)</li>
+          <li>** Purcell - Electricity and Magnetism (book)</li>
+          <li>*** Griffiths - Introduction to Electrodynamics (book)</li>
+          <li>**** Jackson - Classical Electrodynamics (book)</li>
+        </ul>
+      </li>
+      <li>General relativity:
+        <ul>
+          <li>**** <a href="https://www.youtube.com/playlist?list=PLJHszsWbB6hqlw73QjgZcFh4DrkQLSCQa">Eigenchris - Relativity</a> (videos)</li>
+          <li>**** <a href="http://www.damtp.cam.ac.uk/user/tong/gr.html">Tong - General Relativity</a> (notes)</li>
+          <li>**** Carroll - Spacetime and Geometry (book)</li>
+          <li>***** Kriele - General Relativity and Differential Geometry (book)</li>
+        </ul>
+      </li>
+      <li>Quantum mechanics:
+        <ul>
+          <li>** <a href="https://www.youtube.com/playlist?list=PL8ER5-vAoiHAWm1UcZsiauUGPlJChgNXC">Quantum Sense - Maths of Quantum Mechanics</a> (videos)</li>
+          <li>** <a href="http://www.damtp.cam.ac.uk/user/tong/quantum.html">Tong - Quantum Mechanics</a> (notes)</li>
+          <li>** Griffiths - Introduction to Quantum Mechanics (book)</li>
+          <li>** <a href="http://www.damtp.cam.ac.uk/user/tong/particle.html">Tong - Introduction to Particle Physics</a> (notes)</li>
+          <li>*** Shankar - Principles of Quantum Mechanics (book)</li>
+          <li>**** <a href="http://www.damtp.cam.ac.uk/user/tong/gaugetheory.html">Tong - Gauge Theory</a> (notes)</li>
+          <li>**** <a href="http://www.damtp.cam.ac.uk/user/tong/qft.html">Tong - Quantum Field Theory</a> (notes)</li>
+        </ul>
+      </li>
+      <li>Statistical mechanics
+        <ul>
+          <li>** Blundell &amp; Blundell - Concepts in Thermal Physics (book)</li>
+          <li>** Schroeder - An Introduction to Thermal Physics (book)</li>
+          <li>** <a href="http://www.damtp.cam.ac.uk/user/tong/statphys.html">Tong - Statistical Physics</a> (notes)</li>
+        </ul>
+      </li>
+      <li>Miscellaneous
+        <ul>
+          <li>* Susskind &amp; Hrabovsky, <em>The Theoretical Minimum</em> (book)</li>
+          <li>** Susskind &amp; Friedman, <em>Special Relativity and Classical Field Theory</em> (book)</li>
+          <li>*** Lindner, <em>A Complete Guide to Theoretical Physics</em> (book) - A grand tour of modern theoretical physics.</li>
+          <li>**** <a href="http://www.pmaweb.caltech.edu/Courses/ph136/yr2012/">Blandford &amp; Thorne, <em>Applications of Classical Physics</em></a> - Another grand-tour book. Has the best optics chapters I’ve ever read.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
 
 
-          <p> <a class="post-link" href="/blog/life/2024/01/09/loop.html"> ... ⇾ </a> </p>
-        </section></li><li><h3 class="post-title">
-          <a class="post-link" href="/blog/physics/2024/01/07/fields.html">
-            Dichotomies of physics
-          </a>
-        </h3>
-        <p class="post-meta">Jan 7, 2024</p><section class="post-excerpt">
-          <p>Revolutions in physics are forever memorialized by the dichotomies they introduce.
-While the hot new topics are given trendy labels of “quantum” or “relativistic” or whatnot,
-the old established players are relegated to the catch-all drawer of “classical stuff”.
-As with all human endeavors in categorizing things, these divisions should not be interpreted too rigidly.
-Some of the most interesting work in physics is done at their intersections.
-Conversely, these relatively modern divisions should not be regarded as the only useful ones.
-I want to bring up a less glamorized, yet no less important dichotomy which cuts across the more popular labels: 
-the discrete versus the continuous.</p>
+  </div>
 
-
-          <p> <a class="post-link" href="/blog/physics/2024/01/07/fields.html"> ... ⇾ </a> </p>
-        </section></li><li><h3 class="post-title">
-          <a class="post-link" href="/blog/astro/2023/12/19/medium.html">
-            The background of the universe
-          </a>
-        </h3>
-        <p class="post-meta">Dec 19, 2023</p><section class="post-excerpt">
-          <p>When we try to picture the cosmos, we tend to only think about the shiny stuff — 
-stars, galaxies, and very very hungry black holes. But stars cannot burn their hearts without cold hydrogen to collapse from,
-cannot coalesce into galaxies without dark matter to pull them together, and cannot shine as black holes after death without more gas and dust to feed on.
-The background medium, as it turns out, has as much tremendous importance to astronomy as the objects underneath the spotlights.</p>
-
-
-          <p> <a class="post-link" href="/blog/astro/2023/12/19/medium.html"> ... ⇾ </a> </p>
-        </section></li><li><h3 class="post-title">
-          <a class="post-link" href="/blog/monthly/2023/12/18/monthly.html">
-            December 2023
-          </a>
-        </h3>
-        <p class="post-meta">Dec 18, 2023</p><section class="post-excerpt">
-          <p>decision paralysis but also, <br />
-recognizing in a finite lifespan I <br />
-get to pick a few things out of an <br />
-infinitude to savor is kinda neat</p>
-
-
-          <p> <a class="post-link" href="/blog/monthly/2023/12/18/monthly.html"> ... ⇾ </a> </p>
-        </section></li><li><h3 class="post-title">
-          <a class="post-link" href="/blog/physics/animation/2023/12/08/gauge.html">
-            A rough sketch of gauge theory
-          </a>
-        </h3>
-        <p class="post-meta">Dec 8, 2023</p><section class="post-excerpt">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/vEN4uXE8rkg" frameborder="0" allowfullscreen=""></iframe>
-
-
-          <p> <a class="post-link" href="/blog/physics/animation/2023/12/08/gauge.html"> ... ⇾ </a> </p>
-        </section></li><li><h3 class="post-title">
-          <a class="post-link" href="/blog/monthly/2023/11/20/monthly.html">
-            November 2023
-          </a>
-        </h3>
-        <p class="post-meta">Nov 20, 2023</p><section class="post-excerpt">
-          <p>in summary, month of reading too many things</p>
-
-
-          <p> <a class="post-link" href="/blog/monthly/2023/11/20/monthly.html"> ... ⇾ </a> </p>
-        </section></li><li><h3 class="post-title">
-          <a class="post-link" href="/blog/physics/2023/11/04/adscft.html">
-            AdS-CFT
-          </a>
-        </h3>
-        <p class="post-meta">Nov 4, 2023</p><section class="post-excerpt">
-          <p><img src="/media/ads-cft-w1011.png" alt="ADS-CFT" /></p>
-
-
-          <p> <a class="post-link" href="/blog/physics/2023/11/04/adscft.html"> ... ⇾ </a> </p>
-        </section></li><li><h3 class="post-title">
-          <a class="post-link" href="/blog/art/pastel/2023/10/06/cracks.html">
-            Cracks
-          </a>
-        </h3>
-        <p class="post-meta">Oct 6, 2023</p><section class="post-excerpt">
-          <p><img src="/media/cracks-w2696.jpg" alt="Cracks" /></p>
-
-
-          <p> <a class="post-link" href="/blog/art/pastel/2023/10/06/cracks.html"> ... ⇾ </a> </p>
-        </section></li><li><h3 class="post-title">
-          <a class="post-link" href="/blog/astro/2023/09/02/tension.html">
-            What is the Hubble Tension?
-          </a>
-        </h3>
-        <p class="post-meta">Sep 2, 2023</p><section class="post-excerpt">
-          <p>Work in progress</p>
-
-
-          <p> <a class="post-link" href="/blog/astro/2023/09/02/tension.html"> ... ⇾ </a> </p>
-        </section></li><li><h3 class="post-title">
-          <a class="post-link" href="/blog/astro/2023/08/28/desi.html">
-            Redshift surveys
-          </a>
-        </h3>
-        <p class="post-meta">Aug 28, 2023</p><section class="post-excerpt">
-          <p>Watching fly-throughs of galaxy maps reminds me of shining a flashlight in a dusty room; 
-the illuminated particles, each clinging on tight to its own little world of unfathomably many tiny creatures, dance chaotically on the dark undercurrents of air. 
-By observing their Brownian motion, Einstein was able to deduce the atomic nature of the unseen medium.</p>
-
-
-          <p> <a class="post-link" href="/blog/astro/2023/08/28/desi.html"> ... ⇾ </a> </p>
-        </section></li><li><h3 class="post-title">
-          <a class="post-link" href="/blog/art/pastel/2023/08/12/decanting.html">
-            Decanting
-          </a>
-        </h3>
-        <p class="post-meta">Aug 12, 2023</p><section class="post-excerpt">
-          <p><img src="/media/decanting-w1909.jpg" alt="Decanting" /></p>
-
-
-          <p> <a class="post-link" href="/blog/art/pastel/2023/08/12/decanting.html"> ... ⇾ </a> </p>
-        </section></li><li><h3 class="post-title">
-          <a class="post-link" href="/blog/notes/astro/2023/07/20/notes.html">
-            Notes on Carroll &amp; Ostlie, Introduction to Modern Astrophysics, parts I &amp; II
-          </a>
-        </h3>
-        <p class="post-meta">Jul 20, 2023</p><section class="post-excerpt">
-          <p>My notes for the first two parts of Carroll &amp; Ostlie’s “Big Orange Book”, 
-written in a combination of markdown and LaTeX for the optimal mix of 
-accessibility and mathematical typographic beauty, are available at
-<a href="https://xingyzt.net/notes/intro-to-modern-astrophysics">xingyzt.net/notes/intro-to-modern-astrophysics</a>. 
-Enjoy studying the universe!</p>
-
-
-          <p> <a class="post-link" href="/blog/notes/astro/2023/07/20/notes.html"> ... ⇾ </a> </p>
-        </section></li><li><h3 class="post-title">
-          <a class="post-link" href="/blog/story/2023/02/13/set.html">
-            {}
-          </a>
-        </h3>
-        <p class="post-meta">Feb 13, 2023</p><section class="post-excerpt">
-          <p>They call the piece a Set, the basic boundary between an Inside and an Outside.</p>
-
-
-          <p> <a class="post-link" href="/blog/story/2023/02/13/set.html"> ... ⇾ </a> </p>
-        </section></li><li><h3 class="post-title">
-          <a class="post-link" href="/blog/code/robotics/2023/02/12/polarizar.html">
-            Polarizar: Visual odometry for the 2023 FTC robotics competition
-          </a>
-        </h3>
-        <p class="post-meta">Feb 12, 2023</p><section class="post-excerpt">
-          <p><strong>The problem: Our robot needs to precisely navigate a field of poles.</strong></p>
-
-
-          <p> <a class="post-link" href="/blog/code/robotics/2023/02/12/polarizar.html"> ... ⇾ </a> </p>
-        </section></li><li><h3 class="post-title">
-          <a class="post-link" href="/blog/story/2022/10/02/gigamesh.html">
-            really bad Gilgamesh scifi fanfiction
-          </a>
-        </h3>
-        <p class="post-meta">Oct 2, 2022</p><section class="post-excerpt">
-          <p><strong>The Space Epic of Gilgamesh</strong></p>
-
-
-          <p> <a class="post-link" href="/blog/story/2022/10/02/gigamesh.html"> ... ⇾ </a> </p>
-        </section></li><li><h3 class="post-title">
-          <a class="post-link" href="/blog/art/code/2022/07/27/map.html">
-            Mapping Arcadia High: Painting a voxel world
-          </a>
-        </h3>
-        <p class="post-meta">Jul 27, 2022</p><section class="post-excerpt">
-          <p>The idea was to use the native WebGL mesh rasterizer instead of the custom distance-field-accelerated raymarching algorithm for the initial rays cast into the scene, while keeping the raymarching for the secondary bounces. At first, this was done with plain mesh rasterization into 1x1 quads, but even with overlap and normals culling, mesh rasterization performs approximately 2x worse than SDF raymarching. So I had to simplify the mesh. By using <a href="https://gist.github.com/Vercidium/a3002bd083cce2bc854c9ff8f0118d33">a greedy voxel meshing algorithm</a> popularized by <a href="https://0fps.net/2012/06/30/meshing-in-a-minecraft-game/">Mikola Lysenko</a>, I was able to significantly reduce the number of polygons, and the performance shifted in the mesh rasterizer’s favor. Without reflections, the mesh rasterizer with a simplified mesh performs approximately 1.5x to 2x better than SDF raymarching.</p>
-
-
-          <p> <a class="post-link" href="/blog/art/code/2022/07/27/map.html"> ... ⇾ </a> </p>
-        </section></li><li><h3 class="post-title">
-          <a class="post-link" href="/blog/art/pixel/2021/09/05/curtain.html">
-            Curtain
-          </a>
-        </h3>
-        <p class="post-meta">Sep 5, 2021</p><section class="post-excerpt">
-          <p><img src="/media/curtain-w1000.png" alt="Mie scattering" /></p>
-
-
-          <p> <a class="post-link" href="/blog/art/pixel/2021/09/05/curtain.html"> ... ⇾ </a> </p>
-        </section></li><li><h3 class="post-title">
-          <a class="post-link" href="/blog/art/pixel/2021/08/25/mie.html">
-            Mie
-          </a>
-        </h3>
-        <p class="post-meta">Aug 25, 2021</p><section class="post-excerpt">
-          <p><img src="/media/mie-w1024.png" alt="Mie scattering" /></p>
-
-
-          <p> <a class="post-link" href="/blog/art/pixel/2021/08/25/mie.html"> ... ⇾ </a> </p>
-        </section></li><li><h3 class="post-title">
-          <a class="post-link" href="/blog/code/2021/05/29/extensions.html">
-            Browser extension scams
-          </a>
-        </h3>
-        <p class="post-meta">May 29, 2021</p><section class="post-excerpt">
-          <p>As a dev of Mercator Studio, an extension with ~10k users, I get 3-4 emails a month in my spam which ask me to monetize my extension by secretly changing its users’ search engines. 
-Mercator is open-source and quite small, but if the change was sneaked in I think most of the users would not notice. 
-I stick to using userscripts for the most part since you can easily check their downloaded source and disable updates.</p>
-
-
-          <p> <a class="post-link" href="/blog/code/2021/05/29/extensions.html"> ... ⇾ </a> </p>
-        </section></li><li><h3 class="post-title">
-          <a class="post-link" href="/blog/art/code/2021/03/22/rippleweave.html">
-            Rippleweave: Swirls of math
-          </a>
-        </h3>
-        <p class="post-meta">Mar 22, 2021</p><section class="post-excerpt">
-          <p><img src="/media/ripple-weave-collage-w720.png" alt="Six swirling mathematical equations in a grid" /></p>
-
-
-          <p> <a class="post-link" href="/blog/art/code/2021/03/22/rippleweave.html"> ... ⇾ </a> </p>
-        </section></li><li><h3 class="post-title">
-          <a class="post-link" href="/blog/art/digital/2021/02/11/gorman.html">
-            Gorman’s Hill
-          </a>
-        </h3>
-        <p class="post-meta">Feb 11, 2021</p><section class="post-excerpt">
-          <p><img src="/media/gorman-w2400.jpg" alt="The Hill We Climb" /></p>
-
-
-          <p> <a class="post-link" href="/blog/art/digital/2021/02/11/gorman.html"> ... ⇾ </a> </p>
-        </section></li><li><h3 class="post-title">
-          <a class="post-link" href="/blog/art/code/2021/01/17/koipond.html">
-            Koipond
-          </a>
-        </h3>
-        <p class="post-meta">Jan 17, 2021</p><section class="post-excerpt">
-          <p><img src="/media/koipond-w720.png" alt="Koipond" /></p>
-
-
-          <p> <a class="post-link" href="/blog/art/code/2021/01/17/koipond.html"> ... ⇾ </a> </p>
-        </section></li><li><h3 class="post-title">
-          <a class="post-link" href="/blog/art/animation/2020/06/11/flipbrain.html">
-            flipbrain
-          </a>
-        </h3>
-        <p class="post-meta">Jun 11, 2020</p><section class="post-excerpt">
-          <video muted="" loop="" autoplay="" width="720" poster="/media/flipbrain-w480.jpg" alt="A continuously looping video of a head juggling its brain">
-  <source src="/media/flipbrain-w480.webm" type="video/webm" />
-  <source src="/media/flipbrain-w480.mp4" type="video/mp4" />
-</video>
-
-
-          <p> <a class="post-link" href="/blog/art/animation/2020/06/11/flipbrain.html"> ... ⇾ </a> </p>
-        </section></li><li><h3 class="post-title">
-          <a class="post-link" href="/blog/art/animation/2019/10/18/planetary.html">
-            Planetary Adventures with Ballsy McBallface
-          </a>
-        </h3>
-        <p class="post-meta">Oct 18, 2019</p><section class="post-excerpt">
-          <video controls="" width="720" poster="/media/planetary-adventures-with-ballsy-mcballface-w720.png">
-  <source src="media/planetary-adventures-with-ballsy-mcballface-w720.webm" type="video/webm" />
-  <source src="/media/planetary-adventures-with-ballsy-mcballface-w720.mp4" type="video/mp4" />
-</video>
-
-
-          <p> <a class="post-link" href="/blog/art/animation/2019/10/18/planetary.html"> ... ⇾ </a> </p>
-        </section></li><li><h3 class="post-title">
-          <a class="post-link" href="/blog/art/vector/2018/05/28/curosity.html">
-            Curiosity
-          </a>
-        </h3>
-        <p class="post-meta">May 28, 2018</p><section class="post-excerpt">
-          <p><img src="/media/curiosity-w4000.png" alt="Curiosity rover" /></p>
-
-
-          <p> <a class="post-link" href="/blog/art/vector/2018/05/28/curosity.html"> ... ⇾ </a> </p>
-        </section></li><li><h3 class="post-title">
-          <a class="post-link" href="/blog/art/vector/2017/12/01/first.html">
-            First Avenue Middle School
-          </a>
-        </h3>
-        <p class="post-meta">Dec 1, 2017</p><section class="post-excerpt">
-          <p><img src="/media/first-ave-calendar-cover-w720.png" alt="First Avenue Middle School" /></p>
-
-
-          <p> <a class="post-link" href="/blog/art/vector/2017/12/01/first.html"> ... ⇾ </a> </p>
-        </section></li></ul>
-
-    <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p></div>
+</article>
 
     </main><footer class="site-footer">
   <style>
