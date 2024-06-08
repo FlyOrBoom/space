@@ -1,8 +1,0 @@
-<svg width='100%' height='100%' viewBox="0 0 1800 1800" xmlns="http://www.w3.org/2000/svg" stroke-linecap='round'>
-  <rect width='100%' height='100%' fill='#ccc'/>
-  <path d='
-  M900 500l500 500l-500 500l-500 -500z
-  M400 1000l600 -100l400 100l-600 100z
-  M900 500l100 400l-100 600l-100 -400z
-  ' stroke='#444' stroke-width='10' fill='none' stroke-linejoin='round'/>
-</svg>
