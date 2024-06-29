@@ -1,5 +1,6 @@
 ---
-layout: page
+layout: default
+title: "xing liu ∘ 刘行"
 ---
 
 Hallo, I'm an artist, programmer, and astrophysics student.
@@ -15,14 +16,14 @@ I keep typed-up notes on some astrophysics textbooks, as well as standalone topi
 
 ## Bog
 
-[Bog](/bog).
+{% include bog.html %}
 
 ## Friends!
 
 - [shannon’s thoughts](https://archiveofshan.substack.com)
 - [Shin’s blog](https://blog.adl-developments.com/)
 
-## Textbooks & co
+## Bookshelf
 
 I'm very much a textbooks-and-lecture-notes person --- 
 I find going through them to be far more effective at building a deep understanding than listening to live lectures. 

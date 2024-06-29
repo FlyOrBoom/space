@@ -4,5 +4,6 @@
 
 layout: bog
 title: bog
+header: yes
 permalink: /bog/
 ---

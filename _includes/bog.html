@@ -1,0 +1,7 @@
+{%- if site.posts.size > 0 -%}
+{%- for post in site.posts limit:32 -%}
+  <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+  &middot;&nbsp;
+{%- endfor -%}
+  <a class="post-link" href="bog"> ... ⇾ </a>
+{%- endif -%}
