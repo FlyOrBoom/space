@@ -4,7 +4,7 @@ title: "xing liu ∘ 刘行"
 ---
 
 Hallo, I'm an artist, programmer, and astrophysics student.
-I'm currently about to enter my second year of undergraduate studies in math and physics at UC Berkeley.
+I'm currently in my second year of undergraduate studies in math and physics at UC Berkeley.
 This is my little spot on the interwebs.
 
 ## Notes
