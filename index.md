@@ -9,12 +9,19 @@ This is my little spot on the interwebs.
 
 ## Notes
 
-I keep typed-up notes on some astrophysics textbooks, as well as standalone topics
-- [Dodelson & Schmidt, *Modern Cosmology*](/notes/modern-cosmology)
-- [Caroll & Ostlie, *Introduction to Modern Astrophysics*](/notes/intro-to-modern-astrophysics)
-- [Relativistic fluids](/notes/relativistic-fluids)
+I keep typed-up notes on some astrophysics textbooks, as well as standalone topics.
+Most of them are very incomplete, but if I end up settling down in astrophysics I hope to complete them :)
+- [Notes on Dodelson & Schmidt, *Modern Cosmology*](/notes/modern-cosmology) (WIP)
+- [Notes on Carroll & Ostlie, *Introduction to Modern Astrophysics*](/notes/intro-to-modern-astrophysics) (Parts I & II)
+- [Relativistic fluids from relativistic dust](/notes/relativistic-fluids)
+- [What’s “topological” about topological defects?](/notes/topological-defects)
+- [The background of the universe](/notes/medium) (WIP)
+- [What is the Hubble Tension?](/notes/hubble-tension)
+- [The wave optics of gravitational lensing](/notes/gravitational-lensing) (WIP)
 
 ## Bog
+
+For other writings
 
 {% include bog.html %}
 
