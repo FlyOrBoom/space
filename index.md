@@ -30,6 +30,11 @@ For other writings
 - [shannon’s thoughts](https://archiveofshan.substack.com)
 - [Shin’s blog](https://blog.adl-developments.com/)
 
+## Links
+
+- [Why haven’t we bent the global emissions curve?](https://www.annualreviews.org/content/journals/10.1146/annurev-environ-012220-011104)
+- [Physics in a diverse world](https://arxiv.org/abs/2203.09485)
+
 ## Bookshelf
 
 I'm very much a textbooks-and-lecture-notes person --- 
